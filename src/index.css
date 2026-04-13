@@ -7,20 +7,21 @@
 }
 
 :root {
-  --bg-primary: #0A0A0C;
-  --bg-card: #111114;
-  --bg-card-hover: #16161a;
-  --bg-surface: #1a1a1f;
-  --border: #2a2a30;
-  --border-accent: #3a3a42;
-  --text-primary: #f0f0f0;
-  --text-secondary: #a0a0a8;
-  --text-muted: #6a6a72;
-  --accent-orange: #FF6B35;
-  --accent-amber: #FF9F1C;
-  --accent-green: #00FF88;
-  --accent-red: #FF4444;
-  --accent-blue: #4A9EFF;
+  --bg-primary: #1A1B2E;
+  --bg-card: #222338;
+  --bg-card-hover: #2A2B42;
+  --bg-surface: #2E2F48;
+  --border: #3A3B55;
+  --border-accent: #4A4B68;
+  --text-primary: #F2F0ED;
+  --text-secondary: #B0AEAD;
+  --text-muted: #7A7877;
+  --accent-primary: #E8764B;
+  --accent-warm: #D4A54A;
+  --accent-green: #5CC9A7;
+  --accent-red: #E05555;
+  --accent-blue: #6BA3D6;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-display: 'Playfair Display', Georgia, serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
   --font-heading: 'Bebas Neue', Impact, sans-serif;
@@ -35,23 +36,11 @@ html {
 body {
   background: var(--bg-primary);
   color: var(--text-primary);
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-weight: 400;
   line-height: 1.6;
   min-height: 100vh;
   overflow-x: hidden;
-}
-
-/* Film grain overlay */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  pointer-events: none;
-  opacity: 0.03;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-  background-repeat: repeat;
 }
 
 #root {
@@ -59,16 +48,17 @@ body::before {
 }
 
 ::selection {
-  background: var(--accent-orange);
+  background: var(--accent-primary);
   color: var(--bg-primary);
 }
 
 ::-webkit-scrollbar {
   width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg-primary);
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -81,11 +71,11 @@ body::before {
 }
 
 a {
-  color: var(--accent-orange);
+  color: var(--accent-primary);
   text-decoration: none;
   transition: color 0.2s;
 }
 
 a:hover {
-  color: var(--accent-amber);
+  color: var(--accent-warm);
 }
