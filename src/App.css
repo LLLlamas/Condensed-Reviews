@@ -72,35 +72,14 @@
 .hero__inner {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 3.5rem 1.5rem 3rem;
-}
-
-.hero__eyebrow {
-  font-family: var(--font-body);
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--secondary);
-  margin-bottom: 0.75rem;
-}
-
-.hero__headline {
-  font-family: var(--font-brand);
-  font-size: clamp(2.25rem, 5vw, 3.75rem);
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-  color: var(--primary);
-  margin-bottom: 1rem;
+  padding: 0.75rem 1.5rem;
 }
 
 .hero__sub {
   font-family: var(--font-body);
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   color: var(--on-surface-variant);
-  line-height: 1.6;
-  max-width: 440px;
+  line-height: 1.4;
 }
 
 /* ── Main ── */
@@ -270,7 +249,7 @@
 
 .shoe-card__brand {
   font-family: var(--font-body);
-  font-size: 0.58rem;
+  font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -280,7 +259,7 @@
 
 .shoe-card__name {
   font-family: var(--font-body);
-  font-size: 0.88rem;
+  font-size: 1rem;
   font-weight: 800;
   line-height: 1.25;
   color: var(--on-surface);
@@ -308,18 +287,18 @@
 
 .shoe-card__score {
   font-family: var(--font-body);
-  font-size: 1.85rem;
+  font-size: 2.1rem;
   font-weight: 800;
   line-height: 1;
 }
 
 .shoe-card__badge {
   font-family: var(--font-body);
-  font-size: 0.52rem;
+  font-size: 0.6rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 0.18rem 0.45rem;
+  padding: 0.2rem 0.5rem;
   border-radius: 0.125rem;
   color: #fff;
 }
@@ -348,7 +327,7 @@
 
 .shoe-card__review-count {
   font-family: var(--font-body);
-  font-size: 0.62rem;
+  font-size: 0.72rem;
   color: var(--outline);
 }
 
@@ -357,7 +336,7 @@
   align-items: center;
   gap: 0.3rem;
   font-family: var(--font-body);
-  font-size: 0.62rem;
+  font-size: 0.7rem;
   font-weight: 700;
   color: var(--on-surface-variant);
   text-decoration: none;
@@ -482,14 +461,14 @@
   display: flex;
   justify-content: space-between;
   font-family: var(--font-body);
-  font-size: 0.63rem;
+  font-size: 0.75rem;
   color: var(--on-surface-variant);
   font-weight: 500;
 }
 
 .rating-bar__value {
   font-weight: 700;
-  font-size: 0.68rem;
+  font-size: 0.78rem;
 }
 
 .rating-bar__track {
@@ -522,6 +501,86 @@
   font-weight: 500;
   margin-right: 2px;
   opacity: 0.7;
+}
+
+.rating-bar__value-group {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.rating-bar__highlight-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 0 1px;
+  cursor: pointer;
+  color: var(--color-elite);
+  opacity: 0.75;
+  transition: opacity 0.15s, transform 0.15s;
+  line-height: 1;
+}
+
+.rating-bar__highlight-btn:hover,
+.rating-bar__highlight-btn--active {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+.rating-bar__highlight-popup {
+  margin-top: 0.5rem;
+  background: var(--surface);
+  border: 1px solid var(--outline-variant);
+  border-radius: 0.375rem;
+  overflow: hidden;
+  grid-column: 1 / -1;
+}
+
+.highlight-item {
+  padding: 0.6rem 0.85rem;
+  border-bottom: 1px solid var(--outline-variant);
+}
+
+.highlight-item:last-child {
+  border-bottom: none;
+}
+
+.highlight-item__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 0.3rem;
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+}
+
+.highlight-item__author {
+  font-weight: 700;
+  color: var(--on-surface);
+}
+
+.highlight-item__sep {
+  color: var(--outline-variant);
+}
+
+.highlight-item__sub {
+  color: var(--outline);
+}
+
+.highlight-item__rating {
+  margin-left: auto;
+  font-weight: 800;
+  font-size: 0.78rem;
+}
+
+.highlight-item__text {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--on-surface-variant);
+  margin: 0;
 }
 
 /* ── Reviews Section ── */
@@ -670,7 +729,7 @@
   align-items: center;
   gap: 0.35rem;
   font-family: var(--font-body);
-  font-size: 0.66rem;
+  font-size: 0.74rem;
   color: var(--on-surface-variant);
   flex-wrap: wrap;
 }
@@ -740,7 +799,7 @@
 .review-card__summary {
   padding: 0.65rem 1.25rem 0;
   font-family: var(--font-body);
-  font-size: 0.875rem;
+  font-size: 0.95rem;
   line-height: 1.65;
   color: var(--on-surface);
 }
@@ -1408,9 +1467,9 @@
 
 .modal__name {
   font-family: var(--font-brand);
-  font-size: 1.75rem;
+  font-size: 2.1rem;
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.1;
   letter-spacing: -0.02em;
   color: var(--on-surface);
   margin: 0.2rem 0 0.6rem;
@@ -1424,14 +1483,14 @@
 
 .modal__score {
   font-family: var(--font-body);
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-weight: 800;
   line-height: 1;
 }
 
 .modal__price {
   font-family: var(--font-body);
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--on-surface-variant);
   margin-left: 0.25rem;
@@ -1474,7 +1533,7 @@
 
 .modal__section-label {
   font-family: var(--font-body);
-  font-size: 0.65rem;
+  font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -1672,4 +1731,116 @@
 @media (max-width: 600px) {
   .compare-heads { grid-template-columns: 1fr; }
   .compare-row { grid-template-columns: 1fr 5rem 1fr; }
+}
+
+/* ── Info Button ── */
+.info-btn {
+  width: 1.6rem;
+  height: 1.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 1px solid var(--outline-variant);
+  border-radius: 50%;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--outline);
+  cursor: pointer;
+  transition: all 0.15s;
+  flex-shrink: 0;
+}
+
+.info-btn:hover {
+  border-color: var(--secondary);
+  color: var(--secondary);
+  background: rgba(176, 47, 0, 0.05);
+}
+
+/* ── Scoring Info Modal ── */
+.modal--info {
+  max-width: 560px;
+}
+
+.score-info-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.score-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.score-info-section__title {
+  font-family: var(--font-body);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--secondary);
+  margin-bottom: 0.1rem;
+}
+
+.score-info-section__body {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--on-surface-variant);
+  margin: 0;
+}
+
+.score-info-tiers {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.35rem;
+}
+
+.score-info-tier {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--on-surface-variant);
+}
+
+.score-info-tier__badge {
+  flex-shrink: 0;
+}
+
+.score-info-conf {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-top: 0.5rem;
+}
+
+.score-info-conf__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--on-surface-variant);
+}
+
+.score-info-conf__marker {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--outline);
+  min-width: 1.4rem;
+  padding: 0.1rem 0.35rem;
+  background: var(--surface-container);
+  border: 1px solid var(--outline-variant);
+  border-radius: 0.125rem;
+  text-align: center;
+  flex-shrink: 0;
 }

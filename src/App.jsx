@@ -30,6 +30,30 @@ const CONFIDENCE_LABELS = {
   low:    { marker: '?', title: 'Low confidence — not meaningfully discussed; best-guess only' }
 };
 
+const TRAIT_KEYWORDS = {
+  cushioning:   ['cushion', 'bouncy', 'bounce', 'plush', 'foam', 'soft', 'impact', 'responsive', 'midsole', 'energy return', 'landing', 'pillow'],
+  traction:     ['traction', 'grip', 'outsole', 'herringbone', 'rubber', 'slip', 'sticky', 'dust', 'gripping', 'grabby', 'bite', 'court floor'],
+  support:      ['support', 'ankle', 'stability', 'lateral', 'containment', 'lockdown', 'stable', 'pronation', 'arch', 'collapse', 'medial', 'heel counter'],
+  fit:          ['fit', 'sizing', 'size', 'wide', 'narrow', 'toebox', 'toe box', 'heel slip', 'snug', 'roomy', 'tts', 'true to size', 'half size', 'length'],
+  breathability:['breath', 'ventilat', 'hot', 'heat', 'air', 'mesh', 'cool', 'airflow', 'sweat'],
+  groundFeel:   ['court feel', 'ground feel', 'road feel', 'feel of the court', 'feel of the road', 'low to the ground', 'low profile', 'feedback', 'connection to', 'proprioception'],
+  durability:   ['durable', 'durability', 'lasting', 'held up', 'hold up', 'wear', 'worn', 'miles', 'breakdown', 'outsole wear', 'lasted'],
+  value:        ['value', 'price', 'worth', 'dollar', 'cheap', 'expensive', 'budget', 'cost', 'money', 'affordable', 'retail'],
+};
+
+function extractTraitSentence(summary, traitKey) {
+  if (!summary) return summary;
+  const keywords = TRAIT_KEYWORDS[traitKey] || [];
+  const sentences = summary.match(/[^.!?]+[.!?]?\s*/g) || [summary];
+  const scored = sentences.map(s => {
+    const sl = s.toLowerCase();
+    const score = keywords.reduce((acc, kw) => acc + (sl.includes(kw) ? 1 : 0), 0);
+    return { s: s.trim(), score };
+  });
+  const best = scored.filter(x => x.score > 0).sort((a, b) => b.score - a.score);
+  return best.length > 0 ? best[0].s : sentences[0].trim();
+}
+
 const SPORT_FILTERS = [
   { key: 'all',        label: 'All Sports' },
   { key: 'basketball', label: '🏀 Basketball' },
@@ -40,11 +64,13 @@ function ratingColor(value) {
   return value >= 8.5 ? 'var(--color-elite)' : value >= 7.0 ? 'var(--color-solid)' : 'var(--color-mediocre)';
 }
 
-function RatingBar({ label, value, max = 10, highlighted = false, confidence = 'high' }) {
+function RatingBar({ label, value, max = 10, highlighted = false, confidence = 'high', highlights = null }) {
+  const [showHighlight, setShowHighlight] = useState(false);
   if (!value) return null;
   const pct = (value / max) * 100;
   const color = ratingColor(value);
   const conf = CONFIDENCE_LABELS[confidence] || CONFIDENCE_LABELS.high;
+  const hasHighlight = value >= 8.8 && highlights && highlights.length > 0;
 
   return (
     <div
@@ -53,14 +79,44 @@ function RatingBar({ label, value, max = 10, highlighted = false, confidence = '
     >
       <div className="rating-bar__label">
         <span>{label}</span>
-        <span className="rating-bar__value" style={{ color }}>
-          {conf.marker && <span className="rating-bar__conf-marker">{conf.marker}</span>}
-          {value.toFixed(1)}
+        <span className="rating-bar__value-group">
+          {hasHighlight && (
+            <button
+              className={`rating-bar__highlight-btn${showHighlight ? ' rating-bar__highlight-btn--active' : ''}`}
+              onClick={() => setShowHighlight(x => !x)}
+              aria-label="View review highlights"
+              title="See what reviewers said"
+            >
+              <svg width="15" height="8" viewBox="0 0 64 32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M3 24 C 3 22, 5 21, 8 21 L 24 21 C 28 21, 31 18, 35 14 L 42 7 C 44 5, 46 5, 48 6 L 50 8 C 50 10, 49 11, 48 12 L 46 14 C 50 14, 55 16, 58 18 C 61 20, 61 24, 58 25 L 8 25 C 5 25, 3 26, 3 24 Z"/>
+                <path d="M14 21 L 14 25 M 20 21 L 20 25 M 26 20 L 28 24 M 33 16 L 35 20"/>
+              </svg>
+            </button>
+          )}
+          <span className="rating-bar__value" style={{ color }}>
+            {conf.marker && <span className="rating-bar__conf-marker">{conf.marker}</span>}
+            {value.toFixed(1)}
+          </span>
         </span>
       </div>
       <div className="rating-bar__track">
         <div className="rating-bar__fill" style={{ width: `${pct}%`, background: color }} />
       </div>
+      {showHighlight && hasHighlight && (
+        <div className="rating-bar__highlight-popup">
+          {highlights.map((h, i) => (
+            <div key={i} className="highlight-item">
+              <div className="highlight-item__meta">
+                <span className="highlight-item__author">{h.author}</span>
+                <span className="highlight-item__sep">&middot;</span>
+                <span className="highlight-item__sub">{h.subreddit}</span>
+                <span className="highlight-item__rating" style={{ color: ratingColor(h.rating) }}>{h.rating.toFixed(1)}</span>
+              </div>
+              <p className="highlight-item__text">{h.summary}</p>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
@@ -259,11 +315,21 @@ function ShoeModal({ shoe, sortBy, onClose }) {
         <div className="modal__ratings">
           <h3 className="modal__section-label">Aggregate Ratings · {shoe.reviews.length} reviews</h3>
           <div className="modal__bars">
-            {Object.entries(shoe.avgRatings).map(([key, val]) => (
-              <RatingBar key={key} label={CATEGORY_LABELS[key]||key} value={val}
-                highlighted={Boolean(CATEGORY_LABELS[sortBy]) && sortBy === key}
-                confidence={shoe.avgConfidences?.[key]||'high'} />
-            ))}
+            {Object.entries(shoe.avgRatings).map(([key, val]) => {
+              const highlights = val >= 8.8
+                ? shoe.reviews
+                    .filter(r => (r.ratings[key] || 0) > 0)
+                    .sort((a, b) => (b.ratings[key] || 0) - (a.ratings[key] || 0))
+                    .slice(0, 3)
+                    .map(r => ({ author: r.author, subreddit: r.subreddit, rating: r.ratings[key], summary: extractTraitSentence(r.summary, key) }))
+                : null;
+              return (
+                <RatingBar key={key} label={CATEGORY_LABELS[key]||key} value={val}
+                  highlighted={Boolean(CATEGORY_LABELS[sortBy]) && sortBy === key}
+                  confidence={shoe.avgConfidences?.[key]||'high'}
+                  highlights={highlights} />
+              );
+            })}
           </div>
         </div>
         <div className="modal__reviews">
@@ -324,9 +390,16 @@ function SwipeView({ shoes, onOpen, onCompare }) {
           {shoe.price && <span className="swipe-card__price">${shoe.price}</span>}
         </div>
         <div className="swipe-card__bars">
-          {Object.entries(shoe.avgRatings).map(([key, val]) => (
-            <RatingBar key={key} label={CATEGORY_LABELS[key]||key} value={val} />
-          ))}
+          {Object.entries(shoe.avgRatings).map(([key, val]) => {
+            const highlights = val >= 8.8
+              ? shoe.reviews
+                  .filter(r => (r.ratings[key] || 0) > 0)
+                  .sort((a, b) => (b.ratings[key] || 0) - (a.ratings[key] || 0))
+                  .slice(0, 3)
+                  .map(r => ({ author: r.author, subreddit: r.subreddit, rating: r.ratings[key], summary: extractTraitSentence(r.summary, key) }))
+              : null;
+            return <RatingBar key={key} label={CATEGORY_LABELS[key]||key} value={val} highlights={highlights} />;
+          })}
         </div>
         <div className="swipe-card__meta">{shoe.reviews.length} review{shoe.reviews.length !== 1 ? 's' : ''}</div>
         <div className="swipe-card__quotes">
@@ -430,6 +503,85 @@ function CompareScreen({ allShoes, compareA, compareB, onSetCompare, onOpen }) {
   );
 }
 
+function ScoringInfoModal({ onClose }) {
+  useEffect(() => {
+    const onKey = e => { if (e.key === 'Escape') onClose(); };
+    document.addEventListener('keydown', onKey);
+    document.body.style.overflow = 'hidden';
+    return () => { document.removeEventListener('keydown', onKey); document.body.style.overflow = ''; };
+  }, [onClose]);
+
+  return (
+    <div className="modal-backdrop" onClick={onClose} role="dialog" aria-modal="true" aria-label="How scores work">
+      <div className="modal modal--info" onClick={e => e.stopPropagation()}>
+        <div className="modal__header">
+          <div className="modal__title-area">
+            <h2 className="modal__name" style={{ fontSize: '1.5rem', marginBottom: '0.15rem' }}>How Scores Work</h2>
+            <p className="section-desc" style={{ marginTop: 0 }}>How we turn Reddit reviews into numbers.</p>
+          </div>
+          <div className="modal__header-actions">
+            <button className="modal__close" onClick={onClose} aria-label="Close">✕</button>
+          </div>
+        </div>
+        <div className="score-info-body">
+          <div className="score-info-section">
+            <div className="score-info-section__title">Overall Score</div>
+            <p className="score-info-section__body">
+              The overall score is a <strong>confidence-weighted average</strong> of all trait ratings across every review for a shoe. Each rating's weight depends on how directly the reviewer addressed that trait — a detailed hands-on assessment counts more than a passing mention.
+            </p>
+          </div>
+
+          <div className="score-info-section">
+            <div className="score-info-section__title">Trait Scores (0–10)</div>
+            <p className="score-info-section__body">
+              Each trait (Cushioning, Traction, Support, Fit, Ground Feel, Breathability, Durability, Value) is rated 0–10 by reading the review for explicit and implied signal. Confidence markers indicate how clearly a trait was covered:
+            </p>
+            <div className="score-info-conf">
+              <div className="score-info-conf__item">
+                <span className="score-info-conf__marker">—</span>
+                <span><strong>High</strong> — directly and explicitly assessed by the reviewer (full weight)</span>
+              </div>
+              <div className="score-info-conf__item">
+                <span className="score-info-conf__marker">~</span>
+                <span><strong>Medium</strong> — mentioned in passing or implied (0.5× weight)</span>
+              </div>
+              <div className="score-info-conf__item">
+                <span className="score-info-conf__marker">?</span>
+                <span><strong>Low</strong> — barely touched; treat as a rough estimate (0.2× weight)</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="score-info-section">
+            <div className="score-info-section__title">Verdict Tiers</div>
+            <div className="score-info-tiers">
+              <div className="score-info-tier">
+                <span className="shoe-card__badge badge--elite score-info-tier__badge">ELITE</span>
+                <span>8.5 and above — genuinely top-tier; excels in its category</span>
+              </div>
+              <div className="score-info-tier">
+                <span className="shoe-card__badge badge--solid score-info-tier__badge">SOLID</span>
+                <span>7.0 – 8.4 — reliably good; recommended for most players</span>
+              </div>
+              <div className="score-info-tier">
+                <span className="shoe-card__badge badge--mediocre score-info-tier__badge">MEDIOCRE</span>
+                <span>Below 7.0 — average or below; notable weaknesses</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="score-info-section">
+            <div className="score-info-section__title">Review Sources</div>
+            <p className="score-info-section__body">
+              All reviews are sourced from real Reddit posts on <strong>r/BBallShoes</strong> (basketball) and running communities including <strong>r/RunningShoeGeeks</strong> and <strong>r/AskRunningShoeGeeks</strong>. Long posts are condensed for readability; short posts are reproduced closely. Every review links back to the original Reddit thread.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function App() {
   const [sportFilter, setSportFilter]   = useState('all');
   const shoes  = useMemo(() => getShoes(sportFilter), [sportFilter]);
@@ -444,6 +596,7 @@ export default function App() {
   const [maxPrice, setMaxPrice] = useState(250);
   const [compareA, setCompareA] = useState(null);
   const [compareB, setCompareB] = useState(null);
+  const [showScoringInfo, setShowScoringInfo] = useState(false);
 
   useEffect(() => {
     setBrandFilter('All');
@@ -526,8 +679,6 @@ export default function App() {
 
       <section className="hero">
         <div className="hero__inner">
-          <p className="hero__eyebrow">Community Intelligence</p>
-          <h1 className="hero__headline">Real Talk.<br />Rated Data.</h1>
           <p className="hero__sub">Real user reviews from Reddit, condensed and rated.</p>
         </div>
       </section>
@@ -605,6 +756,12 @@ export default function App() {
                     {Object.entries(CATEGORY_LABELS).map(([k,l]) => <option key={k} value={k}>{l}</option>)}
                   </optgroup>
                 </select>
+                <button
+                  className="info-btn"
+                  onClick={() => setShowScoringInfo(true)}
+                  aria-label="How scores are calculated"
+                  title="How scores are calculated"
+                >ⓘ</button>
               </div>
             </section>
 
@@ -685,6 +842,7 @@ export default function App() {
       </footer>
 
       {modalShoe && <ShoeModal shoe={modalShoe} sortBy={sortBy} onClose={() => setModalShoeName(null)} />}
+      {showScoringInfo && <ScoringInfoModal onClose={() => setShowScoringInfo(false)} />}
     </div>
   );
 }
