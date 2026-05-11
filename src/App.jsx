@@ -51,7 +51,7 @@ function extractTraitSentence(summary, traitKey) {
     return { s: s.trim(), score };
   });
   const best = scored.filter(x => x.score > 0).sort((a, b) => b.score - a.score);
-  return best.length > 0 ? best[0].s : sentences[0].trim();
+  return best.length > 0 ? best[0].s : null;
 }
 
 const SPORT_FILTERS = [
@@ -185,20 +185,6 @@ function ReviewCard({ review, sortBy, showShoeHeader }) {
         Verdict: <span className="review-card__verdict-text">{review.verdict}</span>
       </div>
 
-      <div className="review-card__body">
-        <div className="review-card__ratings">
-          {Object.entries(review.ratings).map(([key, val]) => (
-            <RatingBar
-              key={key}
-              label={CATEGORY_LABELS[key] || key}
-              value={val}
-              highlighted={Boolean(CATEGORY_LABELS[sortBy]) && sortBy === key}
-              confidence={review.confidences?.[key] || 'high'}
-            />
-          ))}
-        </div>
-      </div>
-
       <div className="review-card__footer">
         <a href={review.redditUrl} target="_blank" rel="noopener noreferrer" className="review-card__link">
           <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
@@ -210,7 +196,24 @@ function ReviewCard({ review, sortBy, showShoeHeader }) {
         </button>
       </div>
 
-      {expanded && <div className="review-card__full-text">{review.fullText}</div>}
+      {expanded && (
+        <>
+          <div className="review-card__body">
+            <div className="review-card__ratings">
+              {Object.entries(review.ratings).map(([key, val]) => (
+                <RatingBar
+                  key={key}
+                  label={CATEGORY_LABELS[key] || key}
+                  value={val}
+                  highlighted={Boolean(CATEGORY_LABELS[sortBy]) && sortBy === key}
+                  confidence={review.confidences?.[key] || 'high'}
+                />
+              ))}
+            </div>
+          </div>
+          <div className="review-card__full-text">{review.fullText}</div>
+        </>
+      )}
     </div>
   );
 }
@@ -322,6 +325,7 @@ function ShoeModal({ shoe, sortBy, onClose }) {
                     .sort((a, b) => (b.ratings[key] || 0) - (a.ratings[key] || 0))
                     .slice(0, 3)
                     .map(r => ({ author: r.author, subreddit: r.subreddit, rating: r.ratings[key], summary: extractTraitSentence(r.summary, key) }))
+                    .filter(h => h.summary !== null)
                 : null;
               return (
                 <RatingBar key={key} label={CATEGORY_LABELS[key]||key} value={val}
