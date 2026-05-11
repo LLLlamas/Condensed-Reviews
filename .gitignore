@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Environment / secrets — never commit
+.env
+.env.local
+.env.*.local
+
+# Vite dev logs
+.vite-dev.log
+.vite-dev.err.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Claude local settings
+.claude/settings.local.json
+
+# Scraper raw cache (intermediate Reddit JSON before condensation)
+scripts/cache/

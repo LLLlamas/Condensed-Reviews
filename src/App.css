@@ -9,8 +9,8 @@
   position: fixed;
   pointer-events: none;
   border-radius: 50%;
-  filter: blur(160px);
-  opacity: 0.05;
+  filter: blur(180px);
+  opacity: 0.18;
   z-index: 0;
 }
 
@@ -35,9 +35,9 @@
 .header {
   position: relative;
   z-index: 1;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   padding: 2.5rem 2rem 2rem;
-  background: linear-gradient(180deg, rgba(232, 118, 75, 0.04) 0%, transparent 100%);
+  background: linear-gradient(180deg, rgba(232, 118, 75, 0.06) 0%, transparent 100%);
 }
 
 .header__inner {
@@ -133,19 +133,23 @@
   min-width: 200px;
   max-width: 400px;
   padding: 0.6rem 1rem;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  backdrop-filter: blur(18px) saturate(160%);
+  border: 1px solid var(--glass-highlight);
   border-radius: 10px;
   color: var(--text-primary);
   font-family: var(--font-body);
   font-size: 0.85rem;
   outline: none;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
 }
 
 .filters__input:focus {
   border-color: var(--accent-primary);
-  box-shadow: 0 0 0 3px rgba(232, 118, 75, 0.1);
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 0 3px rgba(232, 118, 75, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 .filters__input::placeholder {
@@ -160,8 +164,10 @@
 
 .pill {
   padding: 0.35rem 0.85rem;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.45);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  backdrop-filter: blur(14px) saturate(160%);
+  border: 1px solid var(--glass-highlight);
   border-radius: 20px;
   color: var(--text-secondary);
   font-family: var(--font-body);
@@ -170,12 +176,13 @@
   cursor: pointer;
   transition: all 0.2s;
   white-space: nowrap;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 
 .pill:hover {
   border-color: var(--accent-primary);
   color: var(--text-primary);
-  background: var(--bg-card-hover);
+  background: rgba(255, 255, 255, 0.75);
 }
 
 .pill--active {
@@ -247,25 +254,36 @@
   justify-content: space-between;
   padding: 1rem 1rem 0.75rem;
   background: var(--bg-card);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(180%);
   border-radius: 14px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
   scroll-snap-align: start;
   position: relative;
-  border: 1px solid transparent;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--glass-highlight);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 6px 20px rgba(40, 30, 20, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
 .shoe-card:hover {
   background: var(--bg-card-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.05),
+    0 12px 28px rgba(40, 30, 20, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 .shoe-card--active {
   border-color: var(--accent-primary);
-  box-shadow: 0 4px 16px rgba(232, 118, 75, 0.15);
   background: var(--bg-card-hover);
+  box-shadow:
+    0 2px 6px rgba(232, 118, 75, 0.12),
+    0 10px 28px rgba(232, 118, 75, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 .shoe-card__rank {
@@ -365,10 +383,16 @@
 /* ── Shoe Detail Header ── */
 .shoe-detail {
   background: var(--bg-card);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid var(--glass-highlight);
   border-radius: 16px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 10px 32px rgba(40, 30, 20, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
 .shoe-detail__top {
@@ -474,7 +498,7 @@
 
 .rating-bar__track {
   height: 4px;
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(0, 0, 0, 0.08);
   border-radius: 2px;
   overflow: hidden;
 }
@@ -483,6 +507,28 @@
   height: 100%;
   border-radius: 2px;
   transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Confidence treatment ──
+   "high" is the default — full opacity, no marker.
+   "medium" / "low" fade the bar fill and soften the label so a reader can
+   tell at a glance how much the source review actually supported the rating. */
+.rating-bar--conf-medium .rating-bar__fill { opacity: 0.55; }
+.rating-bar--conf-medium .rating-bar__label { opacity: 0.85; }
+
+.rating-bar--conf-low .rating-bar__fill { opacity: 0.28; }
+.rating-bar--conf-low .rating-bar__label { opacity: 0.7; }
+.rating-bar--conf-low .rating-bar__track {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px dashed rgba(0, 0, 0, 0.12);
+  height: 4px;
+  box-sizing: border-box;
+}
+
+.rating-bar__conf-marker {
+  font-weight: 500;
+  margin-right: 2px;
+  opacity: 0.7;
 }
 
 /* ── Reviews Section ── */
@@ -522,16 +568,109 @@
 /* ── Review Cards ── */
 .review-card {
   background: var(--bg-card);
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
+  backdrop-filter: blur(22px) saturate(180%);
+  border: 1px solid var(--glass-highlight);
   border-radius: 14px;
   padding: 1.25rem;
-  transition: box-shadow 0.2s;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.25s, transform 0.25s, background 0.25s;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 6px 20px rgba(40, 30, 20, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
   display: flex;
   flex-direction: column;
 }
 
 .review-card:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  background: var(--bg-card-hover);
+  transform: translateY(-1px);
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.05),
+    0 12px 28px rgba(40, 30, 20, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* ── Review Card: shoe identity (All Reviews state) ── */
+.review-card__shoe {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding-bottom: 0.85rem;
+  margin-bottom: 0.85rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.shoe-image {
+  flex-shrink: 0;
+  width: 84px;
+  height: 64px;
+  border-radius: 10px;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--glass-highlight);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.shoe-image--placeholder {
+  background:
+    linear-gradient(135deg, rgba(232, 118, 75, 0.18) 0%, rgba(201, 145, 43, 0.14) 100%),
+    rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  backdrop-filter: blur(14px) saturate(160%);
+  color: rgba(232, 118, 75, 0.55);
+}
+
+.shoe-image__icon {
+  position: absolute;
+  width: 70%;
+  height: auto;
+  opacity: 0.55;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.shoe-image__initials {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  color: var(--accent-primary);
+  opacity: 0.75;
+}
+
+.review-card__shoe-text {
+  min-width: 0;
+  flex: 1;
+}
+
+.review-card__shoe-brand {
+  display: block;
+  font-size: 0.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent-primary);
+  margin-bottom: 0.15rem;
+}
+
+.review-card__shoe-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  word-break: break-word;
 }
 
 .review-card__header {
@@ -598,17 +737,17 @@
 .tag {
   font-size: 0.62rem;
   padding: 0.18rem 0.5rem;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 5px;
   color: var(--text-secondary);
   font-weight: 500;
 }
 
 .tag--sizing {
-  color: var(--accent-blue);
-  border-color: rgba(107, 163, 214, 0.25);
-  background: rgba(107, 163, 214, 0.06);
+  color: var(--accent-cool);
+  border-color: rgba(122, 115, 108, 0.3);
+  background: rgba(122, 115, 108, 0.08);
 }
 
 .review-card__summary {
@@ -656,7 +795,8 @@
   gap: 0.35rem 1rem;
   margin-bottom: 0.6rem;
   padding: 0.75rem;
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 10px;
 }
 
@@ -675,7 +815,7 @@
   padding: 0.55rem 0;
   background: none;
   border: none;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
   color: var(--text-muted);
   font-family: var(--font-body);
   font-size: 0.72rem;
@@ -704,14 +844,14 @@
   line-height: 1.7;
   color: var(--text-secondary);
   white-space: pre-wrap;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 /* ── Footer ── */
 .footer {
   position: relative;
   z-index: 1;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
   padding: 2rem;
   text-align: center;
   font-size: 0.72rem;

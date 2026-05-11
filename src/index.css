@@ -7,20 +7,23 @@
 }
 
 :root {
-  --bg-primary: #1A1B2E;
-  --bg-card: #222338;
-  --bg-card-hover: #2A2B42;
-  --bg-surface: #2E2F48;
-  --border: #3A3B55;
-  --border-accent: #4A4B68;
-  --text-primary: #F2F0ED;
-  --text-secondary: #B0AEAD;
-  --text-muted: #7A7877;
+  /* Cream/white base */
+  --bg-primary: #F5F1E8;
+  --bg-card: rgba(255, 255, 255, 0.55);
+  --bg-card-hover: rgba(255, 255, 255, 0.78);
+  --bg-surface: rgba(255, 255, 255, 0.4);
+  --glass-highlight: rgba(255, 255, 255, 0.7);
+  --border: rgba(0, 0, 0, 0.08);
+  --border-accent: rgba(0, 0, 0, 0.14);
+  --text-primary: #2A2826;
+  --text-secondary: #5C5854;
+  --text-muted: #8A8580;
+  /* Accents — orange-led, no blue */
   --accent-primary: #E8764B;
-  --accent-warm: #D4A54A;
-  --accent-green: #5CC9A7;
-  --accent-red: #E05555;
-  --accent-blue: #6BA3D6;
+  --accent-warm: #C9912B;
+  --accent-green: #3FA67E;
+  --accent-red: #D04545;
+  --accent-cool: #7A736C; /* warm taupe — replaces former blue */
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-display: 'Playfair Display', Georgia, serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
@@ -34,7 +37,11 @@ html {
 }
 
 body {
-  background: var(--bg-primary);
+  background:
+    radial-gradient(1100px 700px at 80% -10%, rgba(232, 118, 75, 0.18), transparent 60%),
+    radial-gradient(900px 600px at -10% 110%, rgba(201, 145, 43, 0.16), transparent 55%),
+    var(--bg-primary);
+  background-attachment: fixed;
   color: var(--text-primary);
   font-family: var(--font-body);
   font-weight: 400;
@@ -62,12 +69,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--border);
+  background: rgba(0, 0, 0, 0.18);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--text-muted);
+  background: rgba(0, 0, 0, 0.32);
 }
 
 a {
