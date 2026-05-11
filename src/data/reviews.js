@@ -664,13 +664,28 @@ function bucketAggregateConfidence(totalWeight) {
   return "low";
 }
 
+export const shoePrices = {
+  "Nike LeBron 21": 200, "Nike LeBron 20": 200, "Nike KD 14": 150,
+  "Nike Sabrina 2": 110, "Nike AE 1": 120, "Nike Shai 001": 110,
+  "Nike GT Cut 3": 150, "Nike GT Cut 4": 160, "Nike Ja 3": 120,
+  "Nike Kobe 6 Protro": 180, "Nike Kobe AD NXT FF": 160, "Air Jordan 40": 185,
+  "361 Joker 1 GT": 110, "361 Joker 2": 120, "361 Joker 2 GT": 130,
+  "361 Joker 2 Low": 110, "Li-Ning JB3": 150, "Li-Ning Way of Wade 12": 160,
+  "Li-Ning Gamma 1": 130, "Li-Ning Gamma 2": 140, "Li-Ning Liren 6v2": 120,
+  "Li-Ning Wade 808 3 Ultra v2": 170, "ANTA Kai 3": 130,
+  "Adidas Don Issue 7": 110, "Adidas Harden 9": 140, "Adidas Crazy Energy": 100,
+  "SPO Game 1 High": 85, "Li-Ning All City 14": 130,
+  "HOKA Mach 6": 145, "Brooks Ghost 17": 140, "ASICS Superblast 2": 200,
+  "Saucony Endorphin Speed 5": 185, "Nike Pegasus 41": 140,
+};
+
 export function getShoes(sportFilter = 'all') {
   const shoeMap = {};
   for (const review of reviews) {
     if (sportFilter !== 'all' && review.sport !== sportFilter) continue;
     const key = review.shoe;
     if (!shoeMap[key]) {
-      shoeMap[key] = { name: review.shoe, brand: review.brand, sport: review.sport, reviews: [], avgRatings: {}, avgConfidences: {} };
+      shoeMap[key] = { name: review.shoe, brand: review.brand, sport: review.sport, price: shoePrices[review.shoe] || null, reviews: [], avgRatings: {}, avgConfidences: {} };
     }
     shoeMap[key].reviews.push(review);
   }

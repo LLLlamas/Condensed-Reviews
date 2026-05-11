@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect } from 'react';
-import { reviews, getShoes, getAmazonUrl } from './data/reviews';
+import { reviews, getShoes, getAmazonUrl, shoePrices } from './data/reviews';
 import './App.css';
 
 const CATEGORY_LABELS = {
@@ -86,7 +86,7 @@ function ShoeImagePlaceholder({ shoe }) {
   );
 }
 
-function ReviewCard({ review, traitFilter, showShoeHeader }) {
+function ReviewCard({ review, sortBy, showShoeHeader }) {
   const [expanded, setExpanded] = useState(false);
   const isDetailed = review.wordCount >= 200;
 
@@ -136,7 +136,7 @@ function ReviewCard({ review, traitFilter, showShoeHeader }) {
               key={key}
               label={CATEGORY_LABELS[key] || key}
               value={val}
-              highlighted={traitFilter === key}
+              highlighted={Boolean(CATEGORY_LABELS[sortBy]) && sortBy === key}
               confidence={review.confidences?.[key] || 'high'}
             />
           ))}
@@ -159,10 +159,10 @@ function ReviewCard({ review, traitFilter, showShoeHeader }) {
   );
 }
 
-function ShoeCard({ shoe, isActive, onClick, traitFilter, rank }) {
+function ShoeCard({ shoe, onOpen, onCompare, sortBy, rank }) {
   const vals = Object.values(shoe.avgRatings).filter(Boolean);
-  const score = traitFilter
-    ? (shoe.avgRatings[traitFilter] || 0)
+  const score = CATEGORY_LABELS[sortBy]
+    ? (shoe.avgRatings[sortBy] || 0)
     : vals.length > 0 ? vals.reduce((a, b) => a + b, 0) / vals.length : 0;
 
   const scoreColor = ratingColor(score);
@@ -171,13 +171,13 @@ function ShoeCard({ shoe, isActive, onClick, traitFilter, rank }) {
   const amazonUrl = getAmazonUrl(shoe.name, shoe.sport);
 
   return (
-    <div className={`shoe-card ${isActive ? 'shoe-card--active' : ''}`} onClick={onClick}>
+    <div className="shoe-card" onClick={onOpen}>
       <div className="shoe-card__header">
         <div>
           <div className="shoe-card__brand">{shoe.brand}</div>
           <div className="shoe-card__name">{shoe.name}</div>
         </div>
-        {rank && traitFilter && <div className="shoe-card__rank">#{rank}</div>}
+        {rank && CATEGORY_LABELS[sortBy] && <div className="shoe-card__rank">#{rank}</div>}
       </div>
 
       <div className="shoe-card__score-row">
@@ -185,24 +185,247 @@ function ShoeCard({ shoe, isActive, onClick, traitFilter, rank }) {
         <span className={`shoe-card__badge ${ratingClass}`}>{ratingLabel}</span>
       </div>
 
-      {traitFilter && (
-        <div className="shoe-card__trait-label">{CATEGORY_LABELS[traitFilter]}</div>
+      {CATEGORY_LABELS[sortBy] && (
+        <div className="shoe-card__trait-label">{CATEGORY_LABELS[sortBy]}</div>
       )}
 
       <div className="shoe-card__footer">
-        <span className="shoe-card__review-count">{shoe.reviews.length} review{shoe.reviews.length !== 1 ? 's' : ''}</span>
-        <a
-          href={amazonUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="shoe-card__amazon"
-          onClick={e => e.stopPropagation()}
-          title="Find on Amazon"
-        >
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-          Amazon
-        </a>
+        <span className="shoe-card__review-count">
+          {shoe.reviews.length} review{shoe.reviews.length !== 1 ? 's' : ''}
+          {shoe.price ? ` · $${shoe.price}` : ''}
+        </span>
+        <div className="shoe-card__footer-actions">
+          <a
+            href={amazonUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shoe-card__amazon"
+            onClick={e => e.stopPropagation()}
+            title="Find on Amazon"
+          >
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            Amazon
+          </a>
+          <button
+            className="shoe-card__vs"
+            onClick={e => { e.stopPropagation(); onCompare(shoe.name); }}
+          >vs ↔</button>
+        </div>
       </div>
+    </div>
+  );
+}
+
+function avgScore(shoe) {
+  const vals = Object.values(shoe.avgRatings).filter(Boolean);
+  return vals.length ? vals.reduce((a, b) => a + b, 0) / vals.length : 0;
+}
+
+function ScoreBadge({ score }) {
+  const label = score >= 8.5 ? 'ELITE' : score >= 7.0 ? 'SOLID' : 'MEDIOCRE';
+  const cls = score >= 8.5 ? 'badge--elite' : score >= 7.0 ? 'badge--solid' : 'badge--mediocre';
+  return <span className={`shoe-card__badge ${cls}`}>{label}</span>;
+}
+
+function ShoeModal({ shoe, sortBy, onClose }) {
+  const score = avgScore(shoe);
+  const amazonUrl = getAmazonUrl(shoe.name, shoe.sport);
+  useEffect(() => {
+    const onKey = e => { if (e.key === 'Escape') onClose(); };
+    document.addEventListener('keydown', onKey);
+    document.body.style.overflow = 'hidden';
+    return () => { document.removeEventListener('keydown', onKey); document.body.style.overflow = ''; };
+  }, [onClose]);
+  return (
+    <div className="modal-backdrop" onClick={onClose} role="dialog" aria-modal="true">
+      <div className="modal" onClick={e => e.stopPropagation()}>
+        <div className="modal__header">
+          <div className="modal__title-area">
+            <div className="shoe-card__brand">{shoe.brand}</div>
+            <h2 className="modal__name">{shoe.name}</h2>
+            <div className="modal__score-row">
+              <span className="modal__score" style={{ color: ratingColor(score) }}>{score.toFixed(1)}</span>
+              <ScoreBadge score={score} />
+              {shoe.price && <span className="modal__price">${shoe.price}</span>}
+            </div>
+          </div>
+          <div className="modal__header-actions">
+            <a href={amazonUrl} target="_blank" rel="noopener noreferrer" className="shoe-detail__amazon" onClick={e => e.stopPropagation()}>
+              Find on Amazon
+            </a>
+            <button className="modal__close" onClick={onClose} aria-label="Close">✕</button>
+          </div>
+        </div>
+        <div className="modal__ratings">
+          <h3 className="modal__section-label">Aggregate Ratings · {shoe.reviews.length} reviews</h3>
+          <div className="modal__bars">
+            {Object.entries(shoe.avgRatings).map(([key, val]) => (
+              <RatingBar key={key} label={CATEGORY_LABELS[key]||key} value={val}
+                highlighted={Boolean(CATEGORY_LABELS[sortBy]) && sortBy === key}
+                confidence={shoe.avgConfidences?.[key]||'high'} />
+            ))}
+          </div>
+        </div>
+        <div className="modal__reviews">
+          <h3 className="modal__section-label">All Reviews</h3>
+          {shoe.reviews.map((review, i) => (
+            <ReviewCard key={i} review={review} sortBy={sortBy} showShoeHeader={false} />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ListRow({ shoe, rank, onOpen, onCompare, sortBy }) {
+  const score = CATEGORY_LABELS[sortBy] ? (shoe.avgRatings[sortBy] || 0) : avgScore(shoe);
+  return (
+    <div className="list-row" onClick={() => onOpen(shoe.name)}>
+      <span className="list-row__rank">#{rank}</span>
+      <div className="list-row__shoe">
+        <span className="shoe-card__brand" style={{display:'block'}}>{shoe.brand}</span>
+        <span className="list-row__name">{shoe.name}</span>
+      </div>
+      <div className="list-row__score-area">
+        <span className="list-row__score" style={{ color: ratingColor(score) }}>{score.toFixed(1)}</span>
+        <ScoreBadge score={score} />
+      </div>
+      {shoe.price ? <span className="list-row__price">${shoe.price}</span> : <span className="list-row__price">—</span>}
+      <span className="list-row__reviews">{shoe.reviews.length}r</span>
+      <button className="list-row__vs" onClick={e => { e.stopPropagation(); onCompare(shoe.name); }}>vs ↔</button>
+    </div>
+  );
+}
+
+function SwipeView({ shoes, onOpen, onCompare }) {
+  const [idx, setIdx] = useState(0);
+  useEffect(() => {
+    const onKey = e => {
+      if (e.key === 'ArrowLeft') setIdx(x => Math.max(0, x - 1));
+      if (e.key === 'ArrowRight') setIdx(x => Math.min(shoes.length - 1, x + 1));
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [shoes.length]);
+  if (!shoes.length) return <p className="empty-state">No shoes match your filters.</p>;
+  const i = Math.min(idx, shoes.length - 1);
+  const shoe = shoes[i];
+  const score = avgScore(shoe);
+  return (
+    <div className="swipe-view">
+      <button className="swipe-nav swipe-nav--prev" onClick={() => setIdx(x => Math.max(0, x - 1))} disabled={i === 0} aria-label="Previous">‹</button>
+      <div className="swipe-card">
+        <div className="swipe-card__counter">{i + 1} / {shoes.length} · ← → keys or buttons</div>
+        <div className="shoe-card__brand">{shoe.brand}</div>
+        <h2 className="swipe-card__name">{shoe.name}</h2>
+        <div className="swipe-card__score-row">
+          <span className="swipe-card__score" style={{ color: ratingColor(score) }}>{score.toFixed(1)}</span>
+          <ScoreBadge score={score} />
+          {shoe.price && <span className="swipe-card__price">${shoe.price}</span>}
+        </div>
+        <div className="swipe-card__bars">
+          {Object.entries(shoe.avgRatings).map(([key, val]) => (
+            <RatingBar key={key} label={CATEGORY_LABELS[key]||key} value={val} />
+          ))}
+        </div>
+        <div className="swipe-card__meta">{shoe.reviews.length} review{shoe.reviews.length !== 1 ? 's' : ''}</div>
+        <div className="swipe-card__quotes">
+          {shoe.reviews.slice(0, 2).map((r, qi) => (
+            <blockquote key={qi} className="swipe-card__quote">
+              <p>{r.summary?.slice(0, 140)}{r.summary?.length > 140 ? '…' : ''}</p>
+              <cite>{r.author} · {r.subreddit}</cite>
+            </blockquote>
+          ))}
+        </div>
+        <div className="swipe-card__actions">
+          <button className="swipe-card__btn-primary" onClick={() => onOpen(shoe.name)}>Read {shoe.reviews.length} reviews →</button>
+          <button className="swipe-card__btn-ghost" onClick={() => onCompare(shoe.name)}>Compare ↔</button>
+        </div>
+      </div>
+      <button className="swipe-nav swipe-nav--next" onClick={() => setIdx(x => Math.min(shoes.length - 1, x + 1))} disabled={i === shoes.length - 1} aria-label="Next">›</button>
+      <div className="swipe-dots">
+        {shoes.slice(0, 20).map((_, k) => (
+          <button key={k} className={`swipe-dot ${k === i ? 'swipe-dot--active' : ''}`} onClick={() => setIdx(k)} aria-label={`Shoe ${k+1}`} />
+        ))}
+        {shoes.length > 20 && <span className="swipe-dots__more">+{shoes.length - 20}</span>}
+      </div>
+    </div>
+  );
+}
+
+function CompareScreen({ allShoes, compareA, compareB, onSetCompare, onOpen }) {
+  const shoeA = allShoes.find(s => s.name === compareA);
+  const shoeB = allShoes.find(s => s.name === compareB);
+  return (
+    <div className="compare-screen">
+      <div className="compare-screen__intro">
+        <h2 className="section-title" style={{ fontFamily: 'var(--font-brand)', fontSize: '2rem' }}>Head to Head</h2>
+        <p className="section-desc">Pick two shoes — trait winners are highlighted.</p>
+      </div>
+      <div className="compare-pickers">
+        <div className="compare-picker">
+          <label className="filters__label">Shoe A</label>
+          <select className="filters__select" value={compareA || ''} onChange={e => onSetCompare('a', e.target.value || null)}>
+            <option value="">— pick a shoe —</option>
+            {allShoes.map(s => <option key={s.name} value={s.name}>{s.brand} · {s.name}{s.price ? ` · $${s.price}` : ''}</option>)}
+          </select>
+        </div>
+        <div className="compare-vs-label">vs</div>
+        <div className="compare-picker">
+          <label className="filters__label">Shoe B</label>
+          <select className="filters__select" value={compareB || ''} onChange={e => onSetCompare('b', e.target.value || null)}>
+            <option value="">— pick a shoe —</option>
+            {allShoes.map(s => <option key={s.name} value={s.name}>{s.brand} · {s.name}{s.price ? ` · $${s.price}` : ''}</option>)}
+          </select>
+        </div>
+      </div>
+      {shoeA && shoeB ? (
+        <>
+          <div className="compare-heads">
+            {[shoeA, shoeB].map((shoe, si) => {
+              const score = avgScore(shoe);
+              return (
+                <div key={shoe.name} className={`compare-head compare-head--${si === 0 ? 'a' : 'b'}`}>
+                  <div className="shoe-card__brand">{shoe.brand}</div>
+                  <h3 className="compare-head__name">{shoe.name}</h3>
+                  <div className="compare-head__score-row">
+                    <span className="compare-head__score" style={{ color: ratingColor(score) }}>{score.toFixed(1)}</span>
+                    <ScoreBadge score={score} />
+                  </div>
+                  <div className="compare-head__meta">
+                    {shoe.price ? `$${shoe.price} · ` : ''}{shoe.reviews.length} reviews
+                  </div>
+                  <button className="compare-head__open" onClick={() => onOpen(shoe.name)}>All reviews →</button>
+                </div>
+              );
+            })}
+          </div>
+          <div className="compare-traits">
+            <h3 className="section-title" style={{ marginBottom: '1rem' }}>Trait by Trait</h3>
+            {Object.keys(CATEGORY_LABELS).map(key => {
+              const va = shoeA.avgRatings[key] || 0;
+              const vb = shoeB.avgRatings[key] || 0;
+              if (!va && !vb) return null;
+              const aWins = va > vb, bWins = vb > va;
+              return (
+                <div key={key} className="compare-row">
+                  <div className={`compare-bar compare-bar--left ${aWins ? 'compare-bar--win' : ''}`}>
+                    <span className="compare-bar__val">{va ? va.toFixed(1) : '—'}</span>
+                    <div className="compare-bar__track"><div className="compare-bar__fill" style={{ width: `${va*10}%`, background: ratingColor(va) }}/></div>
+                  </div>
+                  <div className="compare-trait-label">{CATEGORY_LABELS[key]}</div>
+                  <div className={`compare-bar compare-bar--right ${bWins ? 'compare-bar--win' : ''}`}>
+                    <div className="compare-bar__track"><div className="compare-bar__fill" style={{ width: `${vb*10}%`, background: ratingColor(vb) }}/></div>
+                    <span className="compare-bar__val">{vb ? vb.toFixed(1) : '—'}</span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </>
+      ) : (
+        <div className="empty-state" style={{ padding: '3rem' }}>Pick two shoes above to compare them side by side.</div>
+      )}
     </div>
   );
 }
@@ -212,51 +435,72 @@ export default function App() {
   const shoes  = useMemo(() => getShoes(sportFilter), [sportFilter]);
   const brands = useMemo(() => [...new Set(shoes.map(s => s.brand))].sort(), [shoes]);
 
-  const [selectedShoe, setSelectedShoe] = useState(null);
   const [brandFilter,  setBrandFilter]  = useState('All');
   const [searchQuery,  setSearchQuery]  = useState('');
-  const [traitFilter,  setTraitFilter]  = useState(null);
+  const [layout, setLayout] = useState('grid');
+  const [screen, setScreen] = useState('browse');
+  const [modalShoeName, setModalShoeName] = useState(null);
+  const [sortBy, setSortBy] = useState('overall');
+  const [maxPrice, setMaxPrice] = useState(250);
+  const [compareA, setCompareA] = useState(null);
+  const [compareB, setCompareB] = useState(null);
 
   useEffect(() => {
-    setSelectedShoe(null);
     setBrandFilter('All');
     setSearchQuery('');
+    setMaxPrice(250);
   }, [sportFilter]);
 
   const filteredShoes = useMemo(() => {
     let result = shoes.filter(s => {
       if (brandFilter !== 'All' && s.brand !== brandFilter) return false;
       if (searchQuery && !s.name.toLowerCase().includes(searchQuery.toLowerCase())) return false;
+      if (s.price && maxPrice < 250 && s.price > maxPrice) return false;
       return true;
     });
-    if (traitFilter) {
-      result = [...result].sort((a, b) => (b.avgRatings[traitFilter] || 0) - (a.avgRatings[traitFilter] || 0));
-    }
-    return result;
-  }, [shoes, brandFilter, searchQuery, traitFilter]);
-
-  const activeShoe = selectedShoe ? shoes.find(s => s.name === selectedShoe) : null;
+    return [...result].sort((a, b) => {
+      if (sortBy === 'price-low') return (a.price || 9999) - (b.price || 9999);
+      if (sortBy === 'price-high') return (b.price || 0) - (a.price || 0);
+      if (sortBy === 'recent') {
+        const la = Math.max(...a.reviews.map(r => new Date(r.date)));
+        const lb = Math.max(...b.reviews.map(r => new Date(r.date)));
+        return lb - la;
+      }
+      if (CATEGORY_LABELS[sortBy]) return (b.avgRatings[sortBy] || 0) - (a.avgRatings[sortBy] || 0);
+      const va = Object.values(a.avgRatings).filter(Boolean);
+      const vb = Object.values(b.avgRatings).filter(Boolean);
+      const sa = va.length ? va.reduce((x,y)=>x+y,0)/va.length : 0;
+      const sb = vb.length ? vb.reduce((x,y)=>x+y,0)/vb.length : 0;
+      return sb - sa;
+    });
+  }, [shoes, brandFilter, searchQuery, sortBy, maxPrice]);
 
   const filteredReviews = useMemo(() => {
-    let r = activeShoe
-      ? activeShoe.reviews
-      : reviews.filter(rv => sportFilter === 'all' || rv.sport === sportFilter);
-    if (!activeShoe) {
-      r = r.filter(rv => {
-        if (brandFilter !== 'All' && rv.brand !== brandFilter) return false;
-        if (searchQuery && !rv.shoe.toLowerCase().includes(searchQuery.toLowerCase())) return false;
-        return true;
-      });
-    }
-    if (traitFilter) {
-      r = [...r].sort((a, b) => (b.ratings[traitFilter] || 0) - (a.ratings[traitFilter] || 0));
-    }
+    let r = reviews.filter(rv => sportFilter === 'all' || rv.sport === sportFilter);
+    r = r.filter(rv => {
+      if (brandFilter !== 'All' && rv.brand !== brandFilter) return false;
+      if (searchQuery && !rv.shoe.toLowerCase().includes(searchQuery.toLowerCase())) return false;
+      return true;
+    });
+    if (CATEGORY_LABELS[sortBy]) r = [...r].sort((a, b) => (b.ratings[sortBy]||0) - (a.ratings[sortBy]||0));
     return r;
-  }, [activeShoe, brandFilter, searchQuery, traitFilter, sportFilter]);
+  }, [brandFilter, searchQuery, sortBy, sportFilter]);
+
+  const modalShoe = modalShoeName ? shoes.find(s => s.name === modalShoeName) : null;
 
   const totalReviews = sportFilter === 'all'
     ? reviews.length
     : reviews.filter(r => r.sport === sportFilter).length;
+
+  function handleCompare(shoeName) {
+    if (!compareA || compareA === shoeName) {
+      setCompareA(shoeName);
+      setCompareB(prev => prev === shoeName ? null : prev);
+    } else {
+      setCompareB(shoeName);
+    }
+    setScreen('compare');
+  }
 
   return (
     <div className="app">
@@ -265,6 +509,10 @@ export default function App() {
           <div className="nav__brand">
             <span className="nav__wordmark">Court Report</span>
             <span className="nav__tag">Reddit Reviews</span>
+          </div>
+          <div className="nav__tabs">
+            <button className={`nav__tab ${screen === 'browse' ? 'nav__tab--active' : ''}`} onClick={() => setScreen('browse')}>Browse</button>
+            <button className={`nav__tab ${screen === 'compare' ? 'nav__tab--active' : ''}`} onClick={() => setScreen('compare')}>Versus</button>
           </div>
           <div className="nav__stats">
             <span>{shoes.length} shoes</span>
@@ -285,147 +533,145 @@ export default function App() {
       </section>
 
       <main className="main">
-        {/* Filters */}
-        <section className="filters">
-          <div className="filters__row">
-            <span className="filters__label">Sport</span>
-            <div className="filters__pills">
-              {SPORT_FILTERS.map(sf => (
-                <button
-                  key={sf.key}
-                  className={`pill ${sportFilter === sf.key ? 'pill--active' : ''}`}
-                  onClick={() => setSportFilter(sf.key)}
-                >
-                  {sf.label}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          <div className="filters__row">
-            <input
-              type="text"
-              placeholder="Search shoes..."
-              value={searchQuery}
-              onChange={e => { setSearchQuery(e.target.value); setSelectedShoe(null); }}
-              className="filters__input"
-            />
-          </div>
-
-          <div className="filters__row">
-            <span className="filters__label">Brand</span>
-            <div className="filters__pills">
-              <button
-                className={`pill ${brandFilter === 'All' ? 'pill--active' : ''}`}
-                onClick={() => { setBrandFilter('All'); setSelectedShoe(null); }}
-              >All</button>
-              {brands.map(brand => (
-                <button
-                  key={brand}
-                  className={`pill ${brandFilter === brand ? 'pill--active' : ''}`}
-                  onClick={() => { setBrandFilter(brand); setSelectedShoe(null); }}
-                >{brand}</button>
-              ))}
-            </div>
-          </div>
-
-          <div className="filters__row">
-            <span className="filters__label">Sort by</span>
-            <div className="filters__pills">
-              <button
-                className={`pill pill--trait ${!traitFilter ? 'pill--active' : ''}`}
-                onClick={() => setTraitFilter(null)}
-              >Overall</button>
-              {Object.entries(CATEGORY_LABELS).map(([key, label]) => (
-                <button
-                  key={key}
-                  className={`pill pill--trait ${traitFilter === key ? 'pill--active' : ''}`}
-                  onClick={() => setTraitFilter(key)}
-                >
-                  <span className="pill__icon">{CATEGORY_ICONS[key]}</span> {label}
-                </button>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Shoe Grid */}
-        <section className="shoe-grid-section">
-          <div className="shoe-grid">
-            {filteredShoes.map((shoe, i) => (
-              <ShoeCard
-                key={shoe.name}
-                shoe={shoe}
-                isActive={selectedShoe === shoe.name}
-                onClick={() => setSelectedShoe(selectedShoe === shoe.name ? null : shoe.name)}
-                traitFilter={traitFilter}
-                rank={traitFilter ? i + 1 : null}
-              />
-            ))}
-            {filteredShoes.length === 0 && <p className="empty-state">No shoes match your filters.</p>}
-          </div>
-        </section>
-
-        {/* Selected shoe aggregate ratings */}
-        {activeShoe && (
-          <section className="shoe-detail">
-            <div className="shoe-detail__top">
-              <div>
-                <span className="shoe-detail__brand">{activeShoe.brand}</span>
-                <h2 className="shoe-detail__name">{activeShoe.name}</h2>
-                <span className="shoe-detail__count">
-                  {activeShoe.reviews.length} review{activeShoe.reviews.length !== 1 ? 's' : ''}
-                </span>
+        {screen === 'browse' ? (
+          <>
+            <section className="filters">
+              <div className="filters__row">
+                <span className="filters__label">Sport</span>
+                <div className="filters__pills">
+                  {SPORT_FILTERS.map(sf => (
+                    <button
+                      key={sf.key}
+                      className={`pill ${sportFilter === sf.key ? 'pill--active' : ''}`}
+                      onClick={() => setSportFilter(sf.key)}
+                    >
+                      {sf.label}
+                    </button>
+                  ))}
+                </div>
               </div>
-              <a
-                href={getAmazonUrl(activeShoe.name, activeShoe.sport)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="shoe-detail__amazon"
-              >
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-                Find on Amazon
-              </a>
-            </div>
-            <div className="shoe-detail__ratings">
-              {Object.entries(activeShoe.avgRatings).map(([key, val]) => (
-                <RatingBar
-                  key={key}
-                  label={CATEGORY_LABELS[key] || key}
-                  value={val}
-                  highlighted={traitFilter === key}
-                  confidence={activeShoe.avgConfidences?.[key] || 'high'}
-                />
-              ))}
-            </div>
-          </section>
-        )}
 
-        {/* Reviews */}
-        <section className="reviews-section">
-          {!activeShoe && (
-            <div className="reviews-section__header">
-              <h2 className="section-title">
-                {traitFilter ? `Top by ${CATEGORY_LABELS[traitFilter]}` : 'All Reviews'}
-              </h2>
-              <p className="section-desc">
-                {filteredReviews.length} review{filteredReviews.length !== 1 ? 's' : ''}
-                {brandFilter !== 'All' ? ` · ${brandFilter}` : ''}
-                {traitFilter ? ` · sorted by ${CATEGORY_LABELS[traitFilter]}` : ''}
-              </p>
-            </div>
-          )}
-          <div className="reviews-grid">
-            {filteredReviews.map((review, i) => (
-              <ReviewCard
-                key={`${review.author}-${review.shoe}-${i}`}
-                review={review}
-                traitFilter={traitFilter}
-                showShoeHeader={!activeShoe}
-              />
-            ))}
-          </div>
-        </section>
+              <div className="filters__row">
+                <input
+                  type="text"
+                  placeholder="Search shoes..."
+                  value={searchQuery}
+                  onChange={e => setSearchQuery(e.target.value)}
+                  className="filters__input"
+                />
+              </div>
+
+              <div className="filters__row">
+                <span className="filters__label">Brand</span>
+                <div className="filters__pills">
+                  <button
+                    className={`pill ${brandFilter === 'All' ? 'pill--active' : ''}`}
+                    onClick={() => setBrandFilter('All')}
+                  >All</button>
+                  {brands.map(brand => (
+                    <button
+                      key={brand}
+                      className={`pill ${brandFilter === brand ? 'pill--active' : ''}`}
+                      onClick={() => setBrandFilter(brand)}
+                    >{brand}</button>
+                  ))}
+                </div>
+              </div>
+
+              <div className="filters__row">
+                <span className="filters__label">View</span>
+                <div className="layout-toggle">
+                  <button className={`layout-btn ${layout === 'list' ? 'layout-btn--active' : ''}`} onClick={() => setLayout('list')}>≡ List</button>
+                  <button className={`layout-btn ${layout === 'grid' ? 'layout-btn--active' : ''}`} onClick={() => setLayout('grid')}>▦ Grid</button>
+                  <button className={`layout-btn ${layout === 'swipe' ? 'layout-btn--active' : ''}`} onClick={() => setLayout('swipe')}>↔ Swipe</button>
+                </div>
+              </div>
+
+              <div className="filters__row">
+                <span className="filters__label">Max price</span>
+                <input type="range" min="80" max="250" step="10" value={maxPrice}
+                  onChange={e => setMaxPrice(+e.target.value)} className="price-slider" />
+                <span className="price-slider__val">${maxPrice}{maxPrice >= 250 ? '+' : ''}</span>
+              </div>
+
+              <div className="filters__row">
+                <span className="filters__label">Sort by</span>
+                <select value={sortBy} onChange={e => setSortBy(e.target.value)} className="filters__select">
+                  <option value="overall">Overall score</option>
+                  <option value="price-low">Price ↑ low to high</option>
+                  <option value="price-high">Price ↓ high to low</option>
+                  <option value="recent">Most recent</option>
+                  <optgroup label="By trait">
+                    {Object.entries(CATEGORY_LABELS).map(([k,l]) => <option key={k} value={k}>{l}</option>)}
+                  </optgroup>
+                </select>
+              </div>
+            </section>
+
+            <section className="shoe-layout-section">
+              {layout === 'list' && (
+                <div className="list-view">
+                  <div className="list-header">
+                    <span>#</span><span>Shoe</span><span>Score</span><span>Price</span><span>Reviews</span><span></span>
+                  </div>
+                  {filteredShoes.map((shoe, i) => (
+                    <ListRow key={shoe.name} shoe={shoe} rank={i+1} onOpen={shoeName => setModalShoeName(shoeName)} onCompare={handleCompare} sortBy={sortBy} />
+                  ))}
+                  {filteredShoes.length === 0 && <p className="empty-state">No shoes match your filters.</p>}
+                </div>
+              )}
+              {layout === 'grid' && (
+                <div className="shoe-grid">
+                  {filteredShoes.map((shoe, i) => (
+                    <ShoeCard
+                      key={shoe.name}
+                      shoe={shoe}
+                      onOpen={() => setModalShoeName(shoe.name)}
+                      onCompare={handleCompare}
+                      sortBy={sortBy}
+                      rank={CATEGORY_LABELS[sortBy] ? i + 1 : null}
+                    />
+                  ))}
+                  {filteredShoes.length === 0 && <p className="empty-state">No shoes match your filters.</p>}
+                </div>
+              )}
+              {layout === 'swipe' && (
+                <SwipeView shoes={filteredShoes} onOpen={shoeName => setModalShoeName(shoeName)} onCompare={handleCompare} />
+              )}
+            </section>
+
+            <section className="reviews-section">
+              <div className="reviews-section__header">
+                <h2 className="section-title">
+                  {CATEGORY_LABELS[sortBy] ? `Top by ${CATEGORY_LABELS[sortBy]}` : 'All Reviews'}
+                </h2>
+                <p className="section-desc">
+                  {filteredReviews.length} review{filteredReviews.length !== 1 ? 's' : ''}
+                  {brandFilter !== 'All' ? ` · ${brandFilter}` : ''}
+                  {CATEGORY_LABELS[sortBy] ? ` · sorted by ${CATEGORY_LABELS[sortBy]}` : ''}
+                </p>
+              </div>
+              <div className="reviews-grid">
+                {filteredReviews.map((review, i) => (
+                  <ReviewCard
+                    key={`${review.author}-${review.shoe}-${i}`}
+                    review={review}
+                    sortBy={sortBy}
+                    showShoeHeader={true}
+                  />
+                ))}
+              </div>
+            </section>
+          </>
+        ) : (
+          <CompareScreen
+            allShoes={shoes}
+            compareA={compareA}
+            compareB={compareB}
+            onSetCompare={(slot, val) => slot === 'a' ? setCompareA(val) : setCompareB(val)}
+            onOpen={shoeName => setModalShoeName(shoeName)}
+          />
+        )}
       </main>
 
       <footer className="footer">
@@ -437,6 +683,8 @@ export default function App() {
           {' '}&middot; Community reviews, condensed
         </p>
       </footer>
+
+      {modalShoe && <ShoeModal shoe={modalShoe} sortBy={sortBy} onClose={() => setModalShoeName(null)} />}
     </div>
   );
 }
