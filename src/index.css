@@ -7,27 +7,37 @@
 }
 
 :root {
-  /* Cream/white base */
-  --bg-primary: #F5F1E8;
-  --bg-card: rgba(255, 255, 255, 0.55);
-  --bg-card-hover: rgba(255, 255, 255, 0.78);
-  --bg-surface: rgba(255, 255, 255, 0.4);
-  --glass-highlight: rgba(255, 255, 255, 0.7);
-  --border: rgba(0, 0, 0, 0.08);
-  --border-accent: rgba(0, 0, 0, 0.14);
-  --text-primary: #2A2826;
-  --text-secondary: #5C5854;
-  --text-muted: #8A8580;
-  /* Accents — orange-led, no blue */
-  --accent-primary: #E8764B;
-  --accent-warm: #C9912B;
-  --accent-green: #3FA67E;
-  --accent-red: #D04545;
-  --accent-cool: #7A736C; /* warm taupe — replaces former blue */
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
-  --font-heading: 'Bebas Neue', Impact, sans-serif;
+  /* Surfaces */
+  --bg: #fcf8f8;
+  --surface: #fcf8f8;
+  --surface-dim: #dcd9d9;
+  --surface-container: #f0eded;
+  --surface-container-high: #ebe7e7;
+  --surface-container-highest: #e5e2e2;
+
+  /* On-surface */
+  --on-surface: #1c1b1c;
+  --on-surface-variant: #45474b;
+
+  /* Borders */
+  --outline: #75777b;
+  --outline-variant: #c5c6cb;
+
+  /* Brand */
+  --primary: #020407;
+  --on-primary: #ffffff;
+  --secondary: #b02f00;
+  --secondary-container: #ff5722;
+  --on-primary-container: #82868c;
+
+  /* Status */
+  --color-elite: #1e8a4a;
+  --color-solid: #b02f00;
+  --color-mediocre: #75777b;
+
+  /* Typography */
+  --font-brand: 'Libre Caslon Text', Georgia, serif;
+  --font-body: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 html {
@@ -38,11 +48,12 @@ html {
 
 body {
   background:
-    radial-gradient(1100px 700px at 80% -10%, rgba(232, 118, 75, 0.18), transparent 60%),
-    radial-gradient(900px 600px at -10% 110%, rgba(201, 145, 43, 0.16), transparent 55%),
-    var(--bg-primary);
+    radial-gradient(at 0% 0%, hsla(11, 100%, 93%, 0.7) 0, transparent 50%),
+    radial-gradient(at 50% 0%, hsla(210, 20%, 92%, 0.6) 0, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(24, 100%, 95%, 0.7) 0, transparent 50%),
+    var(--bg);
   background-attachment: fixed;
-  color: var(--text-primary);
+  color: var(--on-surface);
   font-family: var(--font-body);
   font-weight: 400;
   line-height: 1.6;
@@ -55,8 +66,8 @@ body {
 }
 
 ::selection {
-  background: var(--accent-primary);
-  color: var(--bg-primary);
+  background: var(--secondary-container);
+  color: #fff;
 }
 
 ::-webkit-scrollbar {
@@ -69,20 +80,20 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.18);
+  background: var(--outline-variant);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.32);
+  background: var(--outline);
 }
 
 a {
-  color: var(--accent-primary);
+  color: var(--secondary);
   text-decoration: none;
-  transition: color 0.2s;
+  transition: opacity 0.15s;
 }
 
 a:hover {
-  color: var(--accent-warm);
+  opacity: 0.75;
 }
