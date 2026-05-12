@@ -231,6 +231,17 @@ function ShoeCard({ shoe, onOpen, onCompare, sortBy, rank }) {
 
   return (
     <div className="shoe-card" onClick={onOpen}>
+      <div className="shoe-card__image-wrap">
+        {shoe.imageUrl
+          ? <img className="shoe-card__img" src={shoe.imageUrl} alt={shoe.name} />
+          : (
+            <svg className="shoe-card__img-placeholder" viewBox="0 0 64 32" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M3 24 C 3 22, 5 21, 8 21 L 24 21 C 28 21, 31 18, 35 14 L 42 7 C 44 5, 46 5, 48 6 L 50 8 C 50 10, 49 11, 48 12 L 46 14 C 50 14, 55 16, 58 18 C 61 20, 61 24, 58 25 L 8 25 C 5 25, 3 26, 3 24 Z"/>
+              <path d="M14 21 L 14 25 M 20 21 L 20 25 M 26 20 L 28 24 M 33 16 L 35 20"/>
+            </svg>
+          )
+        }
+      </div>
       <div className="shoe-card__header">
         <div>
           <div className="shoe-card__brand">{shoe.brand}</div>
