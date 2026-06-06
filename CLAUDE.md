@@ -55,6 +55,8 @@ Scripts: `npm run dev` · `build` · `preview` (= `next start`) · `lint` · `sc
 
 ## Growing the dataset (live workflow)
 
+> **Full runbook:** [shoe-review-image-collection-process.md](shoe-review-image-collection-process.md) — self-contained handoff (schema, PullPush usage, dedup rules, image pipeline, pitfalls, current seams) so any agent can continue cold. The summary below mirrors it.
+
 `reddit.com`'s JSON API and direct `WebFetch` are **blocked in this environment**, and the `scripts/` node pipeline (`scrape:backfill`/`scrape:daily`) needs Reddit API creds in `.env` (not configured). So growth happens through a **three-agent pipeline** that reads posts via the **PullPush archive API** (`api.pullpush.io`, not blocked) + `WebSearch`:
 
 1. **Build exclusion lists** from the current data (so nothing repeats):
