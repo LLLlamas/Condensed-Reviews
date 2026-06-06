@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import { reviews, getShoes } from '../src/data/reviews';
 import { CATEGORY_LABELS, SPORT_FILTERS, avgScore } from './constants';
 import Nav from './Nav';
@@ -172,6 +172,10 @@ export default function BrowsePage() {
     }
   }
 
+  const { scrollY } = useScroll();
+  const heroOpacity = useTransform(scrollY, [0, 130], [1, 0]);
+  const heroY = useTransform(scrollY, [0, 130], [0, -22]);
+
   const modalShoe = modalShoeName ? shoes.find(s => s.name === modalShoeName) : null;
 
   const totalReviews = sportFilter === 'all'
@@ -198,16 +202,21 @@ export default function BrowsePage() {
         brandCount={brands.length}
       />
 
-      <section className="hero">
+      <motion.section className="hero" style={{ opacity: heroOpacity, y: heroY }}>
         <div className="hero__inner">
           <p className="hero__sub">Real user reviews from Reddit, condensed and rated.</p>
         </div>
-      </section>
+      </motion.section>
 
       <main className="main">
         {screen === 'browse' ? (
           <>
-            <section className="filters">
+            <motion.section
+              className="filters"
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.38, ease: 'easeOut' }}
+            >
               <div className="filters__row">
                 <span className="filters__label">Sport</span>
                 <div className="filters__pills">
@@ -292,7 +301,7 @@ export default function BrowsePage() {
                   title="How scores are calculated"
                 >ⓘ</button>
               </div>
-            </section>
+            </motion.section>
 
             <section className="shoe-layout-section" id="shoes">
               <div className="shoe-section-header">
@@ -332,7 +341,15 @@ export default function BrowsePage() {
                     <span>#</span><span>Shoe</span><span>Score</span><span>Price</span><span>Reviews</span><span></span>
                   </div>
                   {pagedShoes.map((shoe, i) => (
-                    <ListRow key={shoe.name} shoe={shoe} rank={pageOffset + i + 1} onOpen={shoeName => setModalShoeName(shoeName)} onCompare={handleCompare} sortBy={sortBy} />
+                    <motion.div
+                      key={shoe.name}
+                      initial={{ opacity: 0, x: -14 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true, margin: '0px 0px -24px 0px' }}
+                      transition={{ duration: 0.24, delay: Math.min(i, 6) * 0.04, ease: 'easeOut' }}
+                    >
+                      <ListRow shoe={shoe} rank={pageOffset + i + 1} onOpen={shoeName => setModalShoeName(shoeName)} onCompare={handleCompare} sortBy={sortBy} />
+                    </motion.div>
                   ))}
                   {filteredShoes.length === 0 && <p className="empty-state">No shoes match your filters.</p>}
                 </motion.div>
@@ -348,9 +365,10 @@ export default function BrowsePage() {
                   {pagedShoes.map((shoe, index) => (
                     <motion.div
                       key={shoe.name}
-                      initial={{ opacity: 0, y: 16 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.2, delay: index * 0.035, ease: 'easeOut' }}
+                      initial={{ opacity: 0, y: 24 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: '0px 0px -50px 0px' }}
+                      transition={{ duration: 0.3, delay: Math.min(index, 7) * 0.048, ease: 'easeOut' }}
                     >
                       <ShoeCard
                         shoe={shoe}
@@ -374,8 +392,12 @@ export default function BrowsePage() {
             </section>
 
             <section className="reviews-section">
-              <button
+              <motion.button
                 className="reviews-section__toggle"
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '0px 0px -20px 0px' }}
+                transition={{ duration: 0.3, ease: 'easeOut' }}
                 onClick={() => setReviewsOpen(v => !v)}
                 aria-expanded={reviewsOpen}
               >
@@ -396,7 +418,7 @@ export default function BrowsePage() {
                   transition={{ duration: 0.22, ease: 'easeInOut' }}
                   aria-hidden="true"
                 >▾</motion.span>
-              </button>
+              </motion.button>
               <AnimatePresence>
                 {reviewsOpen && (
                   <motion.div
@@ -425,13 +447,20 @@ export default function BrowsePage() {
                         )}
                       </div>
                       <div className="reviews-grid">
-                        {filteredReviews.map((review) => (
-                          <ReviewCard
+                        {filteredReviews.map((review, i) => (
+                          <motion.div
                             key={`${review.shoe}-${review.author}-${review.redditUrl || review.date}`}
-                            review={review}
-                            sortBy={sortBy}
-                            showShoeHeader={true}
-                          />
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.12 }}
+                            transition={{ duration: 0.32, delay: Math.min(i, 3) * 0.07, ease: 'easeOut' }}
+                          >
+                            <ReviewCard
+                              review={review}
+                              sortBy={sortBy}
+                              showShoeHeader={true}
+                            />
+                          </motion.div>
                         ))}
                         {filteredReviews.length === 0 && (
                           <p className="empty-state" style={{ gridColumn: '1 / -1' }}>No reviews match your search.</p>

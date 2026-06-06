@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { CONFIDENCE_LABELS, ratingColor } from './constants';
 
-export default function RatingBar({ label, value, max = 10, highlighted = false, confidence = 'high', highlights = null }) {
+export default function RatingBar({ label, value, max = 10, highlighted = false, confidence = 'high', highlights = null, fillDelay = 0 }) {
   const [showHighlight, setShowHighlight] = useState(false);
   if (!value) return null;
   const pct = (value / max) * 100;
@@ -45,7 +45,7 @@ export default function RatingBar({ label, value, max = 10, highlighted = false,
           style={{ background: color }}
           initial={{ width: 0 }}
           animate={{ width: `${pct}%` }}
-          transition={{ duration: 0.55, ease: [0.4, 0, 0.2, 1], delay: 0.1 }}
+          transition={{ duration: 0.55, ease: [0.4, 0, 0.2, 1], delay: 0.1 + fillDelay }}
         />
       </div>
       {showHighlight && hasHighlight && (

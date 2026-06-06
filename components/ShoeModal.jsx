@@ -78,13 +78,14 @@ export default function ShoeModal({ shoe, sortBy, onClose }) {
           <div className="modal__ratings">
             <h3 className="modal__section-label">Aggregate Ratings · {shoe.reviews.length} reviews</h3>
             <div className="modal__bars">
-              {Object.entries(shoe.avgRatings).map(([key, val]) => {
+              {Object.entries(shoe.avgRatings).map(([key, val], i) => {
                 const highlights = buildHighlights(shoe, key, val);
                 return (
                   <RatingBar key={key} label={CATEGORY_LABELS[key]||key} value={val}
                     highlighted={Boolean(CATEGORY_LABELS[sortBy]) && sortBy === key}
                     confidence={shoe.avgConfidences?.[key]||'high'}
-                    highlights={highlights} />
+                    highlights={highlights}
+                    fillDelay={i * 0.055} />
                 );
               })}
             </div>

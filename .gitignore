@@ -28,5 +28,9 @@ Thumbs.db
 # Claude local settings
 .claude/settings.local.json
 
+# Codex CLI tooling (not part of the app)
+.codex/
+AGENTS.md
+
 # Scraper raw cache (intermediate Reddit JSON before condensation)
 scripts/cache/
