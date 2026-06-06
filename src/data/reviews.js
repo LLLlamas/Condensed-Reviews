@@ -859,6 +859,26 @@ export const reviews = [
     ratings: { cushioning: 7.0, traction: 8.3, support: 8.0, fit: 8.8, breathability: 7.0, groundFeel: 7.5, durability: 7.0, value: 7.5 },
     confidences: { cushioning: "medium", traction: "high", support: "medium", fit: "high", breathability: "low", groundFeel: "medium", durability: "low", value: "medium" }
   },
+  {
+    shoe: "Nike Book 1", brand: "Nike", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1is9cct/nike_book_1_sun_bleached/",
+    author: "u/notBB05", date: "2025-02-18",
+    summary: "Plush-but-low cushioning setup (Cushlon + heel Zoom) that guards love for court feel despite harder landings. Traction rates 9/10 — bites through dust well, near-GOAT status on a clean court. Best feature is the all-suede upper; snug fit with zero heel slippage and strong lace lockdown. Small outrigger may unsettle bigger players on hard cuts.",
+    playstyle: "Guard", courtType: "Indoor / Outdoor", sizingNote: "Runs narrow; wide feet size up half", verdict: "Solid", wordCount: 175,
+    fullText: "Nike Book 1 \"sun bleached\" performance review\n\nTech: full length cushlon + heel zoom air unit. Cushion feels pretty plush but very low to the ground in the heel. You will feel harder landings, amazing for guards though.\nTraction: 9/10. Solid outsole bites through dust decently well, on a clean court they might be GOAT traction status. Pretty forgiving bite, you won't ever slide out.\nFit: snug, very snug, 2E feet go up 1/2 size and double sock\nMaterials: best part of the shoe. Makes the shoe insanely comfortable. This colorway uses all suede/potato sack-esque material.\nLockdown: super small outrigger, so larger players might feel instability on hard cuts, for guards the lockdown is satisfactory. Laces give a LOT of lockdown, as well as the massive amounts of padding in the heel. Heel slippage=0\nPrice: My colorway was £110, but others will go for around £130-140\nOverall: great guard shoe for those who want a comfy pair of shoes with good court feel and traction, without sacrificing weight.",
+    ratings: { cushioning: 7.0, traction: 9.0, support: 7.5, fit: 7.5, breathability: 6.5, groundFeel: 8.5, durability: 7.0, value: 7.5 },
+    confidences: { cushioning: "high", traction: "high", support: "medium", fit: "high", breathability: "low", groundFeel: "high", durability: "low", value: "medium" }
+  },
+  {
+    shoe: "Nike Book 1", brand: "Nike", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1i3emjx/early_2025_shoe_rotation/",
+    author: "u/Fearless-Formal6249", date: "2025-01-17",
+    summary: "From a 7-shoe rotation: rates Book 1 at 9/10 — fallen in love with the aesthetics and it performs well too. Main knocks are lack of forefoot cushion and poor ventilation; comfort and traction described as A-1. Recommends sizing up half.",
+    playstyle: "Slasher / Guard", courtType: "Indoor", sizingNote: "Size up half", verdict: "Solid", wordCount: 47,
+    fullText: "Book 1: 9/10 — I've really fallen in love with the looks of this shoe and it's a pretty great performer too. The only downside is the lack of forefoot cushion and ventilation, but the comfort and traction is A-1. I suggest to get a half size up.",
+    ratings: { cushioning: 6.5, traction: 9.0, support: 7.0, fit: 7.5, breathability: 6.0, groundFeel: 7.5, durability: 7.0, value: 8.0 },
+    confidences: { cushioning: "medium", traction: "medium", support: "low", fit: "medium", breathability: "medium", groundFeel: "low", durability: "low", value: "low" }
+  },
 
   // --- Li-Ning Speed XI ---
   {
