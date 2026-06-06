@@ -2,9 +2,14 @@
 // worth running through the LLM condense step. Cheap to run; tune as needed.
 
 const TRAIT_KEYWORDS = [
+  // Basketball
   'cushion', 'traction', 'lockdown', 'court feel', 'breathab', 'support', 'fit', 'durabil',
   'heel slip', 'midsole', 'outsole', 'upper', 'sizing', 'true to size', 'tts',
   'half size', 'grip', 'stability', 'impact protection', 'forefoot', 'heel-to-toe',
+  // Running
+  'energy return', 'stack height', 'road feel', 'ground feel', 'heel drop', 'heel-to-toe transition',
+  'rocker', 'plate', 'carbon', 'foam', 'tempo', 'long run', 'daily trainer', 'race day',
+  'miles', 'stride', 'turnover', 'plush', 'responsive', 'heel counter', 'toebox',
 ];
 
 const REVIEW_TITLE_HINTS = [
@@ -15,8 +20,11 @@ const REVIEW_TITLE_HINTS = [
   /\bimpressions?\b/i,
   /\bbreakdown\b/i,
   /\btake\b/i,
-  /\bafter\s+\d+\s+(hours?|games?|sessions?|weeks?|months?)/i,
+  /\bafter\s+\d+\s+(hours?|games?|sessions?|weeks?|months?|miles?|km|runs?)/i,
   /\bhooping in\b/i,
+  /\brunning in\b/i,
+  /\blong.?term\b/i,
+  /\b\d+\s*miles?\s*(in|on)\b/i,
 ];
 
 export function dropDeletedOrRemoved(post) {

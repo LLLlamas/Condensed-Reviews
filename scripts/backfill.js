@@ -4,13 +4,15 @@ import { isLikelyPerformanceReview, dropDeletedOrRemoved } from './lib/filter.js
 import { condensePost } from './lib/condense.js';
 import { loadReviews, saveReviews, mergeByRedditId, OUTPUT_PATH } from './lib/store.js';
 
-const SUBREDDIT = 'BBallShoes';
+// Reddit's listing endpoints cap at ~1000 items per search query, so we sweep
+// multiple queries × time ranges to maximize unique post coverage.
+const TARGETS = [
+  { subreddit: 'BBallShoes', sport: 'basketball' },
+  { subreddit: 'RunningShoeGeeks', sport: 'running' },
+  { subreddit: 'AskRunningShoeGeeks', sport: 'running' },
+];
 
-// Reddit's listing endpoints cap at ~1000 items via pagination, so /new alone
-// can't reach 5y. We sweep the search endpoint with multiple queries × time
-// ranges to maximize unique post coverage. For deeper historical depth (full
-// 5y guarantee) supplement this with Pushshift archive dumps — see scripts/README.md.
-const SEARCH_QUERIES = [
+const SEARCH_QUERIES_BASKETBALL = [
   'review',
   'performance review',
   'thoughts',
@@ -18,32 +20,39 @@ const SEARCH_QUERIES = [
   'impressions',
   'breakdown',
   'after',
+  'hooping in',
 ];
+
+const SEARCH_QUERIES_RUNNING = [
+  'review',
+  'performance review',
+  'thoughts',
+  'verdict',
+  'impressions',
+  'long term',
+  'miles in',
+  'running in',
+  'after',
+];
+
 const TIME_RANGES = ['year', 'all'];
 
-async function main() {
-  console.log('=== backfill: starting ===');
-  console.log(`subreddit: r/${SUBREDDIT}`);
-  console.log(`output:    ${OUTPUT_PATH}\n`);
-
-  // 1. Sweep candidate posts via search
+async function sweepSubreddit({ subreddit, sport }, existing) {
+  const queries = sport === 'running' ? SEARCH_QUERIES_RUNNING : SEARCH_QUERIES_BASKETBALL;
   const seen = new Set();
   const candidates = [];
-  for (const q of SEARCH_QUERIES) {
+
+  console.log(`\n--- sweeping r/${subreddit} (${sport}) ---`);
+  for (const q of queries) {
     for (const t of TIME_RANGES) {
-      console.log(`[search] q="${q}" t=${t}`);
+      console.log(`[search] r/${subreddit} q="${q}" t=${t}`);
       try {
-        const posts = await searchSubredditPosts({
-          subreddit: SUBREDDIT,
-          query: q,
-          sort: 'new',
-          timeRange: t,
-        });
+        const posts = await searchSubredditPosts({ subreddit, query: q, sort: 'new', timeRange: t });
         let added = 0;
         for (const p of posts) {
           if (seen.has(p.id)) continue;
           seen.add(p.id);
-          candidates.push(p);
+          candidates.push({ ...p, _sport: sport, _subreddit: subreddit });
           added++;
         }
         console.log(`  -> ${posts.length} returned, ${added} new (${candidates.length} unique total)`);
@@ -53,26 +62,38 @@ async function main() {
     }
   }
 
-  // 2. Filter to likely performance reviews
-  const reviews = candidates.filter(dropDeletedOrRemoved).filter(isLikelyPerformanceReview);
-  console.log(`\nFiltered ${candidates.length} candidates -> ${reviews.length} likely performance reviews`);
+  const filtered = candidates.filter(dropDeletedOrRemoved).filter(isLikelyPerformanceReview);
+  console.log(`Filtered ${candidates.length} -> ${filtered.length} likely performance reviews`);
 
-  // 3. Skip already-condensed
-  const existing = await loadReviews();
   const existingIds = new Set(existing.map((r) => r.redditId));
-  const todo = reviews.filter((p) => !existingIds.has(p.id));
-  console.log(`${reviews.length - todo.length} already in dataset, ${todo.length} to condense\n`);
+  return filtered.filter((p) => !existingIds.has(p.id));
+}
 
-  // 4. Condense via LLM, persist incrementally so we don't lose progress
+async function main() {
+  console.log('=== backfill: starting ===');
+  console.log(`subreddits: ${TARGETS.map((t) => `r/${t.subreddit}`).join(', ')}`);
+  console.log(`output:     ${OUTPUT_PATH}\n`);
+
+  const existing = await loadReviews();
+
+  // 1. Sweep all subreddits for candidates
+  const allTodo = [];
+  for (const target of TARGETS) {
+    const todo = await sweepSubreddit(target, existing);
+    allTodo.push(...todo);
+  }
+  console.log(`\n${allTodo.length} total posts to condense across all subreddits\n`);
+
+  // 2. Condense via LLM, persist incrementally so we don't lose progress
   const newReviews = [];
   let totals = { input: 0, output: 0, cacheRead: 0, cacheCreate: 0 };
-  for (let i = 0; i < todo.length; i++) {
-    const p = todo[i];
-    const label = `[${i + 1}/${todo.length}] ${p.title.slice(0, 70)}`;
-    process.stdout.write(label.padEnd(80, ' ') + ' ');
+  for (let i = 0; i < allTodo.length; i++) {
+    const p = allTodo[i];
+    const label = `[${i + 1}/${allTodo.length}] r/${p._subreddit} ${p.title.slice(0, 60)}`;
+    process.stdout.write(label.padEnd(85, ' ') + ' ');
     try {
       const { post, comments } = await getPostWithComments(p.id);
-      const review = await condensePost({ post, comments });
+      const review = await condensePost({ post, comments, sport: p._sport, subreddit: p._subreddit });
       if (!review) {
         console.log('SKIP');
         continue;
@@ -95,7 +116,7 @@ async function main() {
     }
   }
 
-  // 5. Final merge + save
+  // 3. Final merge + save
   const merged = mergeByRedditId(existing, newReviews);
   await saveReviews(merged);
 

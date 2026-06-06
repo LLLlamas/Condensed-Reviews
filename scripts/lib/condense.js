@@ -4,17 +4,18 @@ import Anthropic from '@anthropic-ai/sdk';
 const client = new Anthropic();
 const MODEL = process.env.ANTHROPIC_MODEL || 'claude-haiku-4-5-20251001';
 
-const SYSTEM_PROMPT = `You are an expert at reading basketball-shoe performance reviews from r/BBallShoes and extracting structured data.
+const SYSTEM_PROMPT = `You are an expert at reading shoe performance reviews from Reddit (r/BBallShoes for basketball, r/RunningShoeGeeks and r/AskRunningShoeGeeks for running) and extracting structured data.
 
 Given a Reddit post and its top comments, produce a JSON object with EXACTLY these fields:
 
 {
-  "shoe": "<canonical shoe name, e.g. 'Nike LeBron 21'>",
-  "brand": "<brand name: Nike, Adidas, Li-Ning, ANTA, 361 Degrees, SPO, Puma, New Balance, Under Armour, Reebok, Peak, etc>",
+  "shoe": "<canonical shoe name, e.g. 'Nike LeBron 21' or 'HOKA Mach 6'>",
+  "brand": "<brand name: Nike, Adidas, Li-Ning, ANTA, 361 Degrees, SPO, Puma, New Balance, Under Armour, Reebok, Peak, HOKA, Brooks, ASICS, Saucony, On, Mizuno, Altra, New Balance, etc>",
+  "sport": "<'basketball' or 'running'>",
   "summary": "<2-4 sentence condensed summary of the reviewer's experience>",
   "verdict": "<short label: Elite, Solid, Great, Mixed, Disappointing, Not Recommended, etc>",
-  "playstyle": "<short tag if mentioned (Quick Guard, All-Around, Big Man, Wing, etc), or null>",
-  "courtType": "<short tag if mentioned (Indoor, Outdoor, Indoor / Outdoor), or null>",
+  "playstyle": "<for basketball: Quick Guard, All-Around, Big Man, Wing, etc. For running: Daily Trainer, Tempo/Workout, Long Run, Race Day, etc. Or null if not mentioned>",
+  "courtType": "<for basketball: Indoor, Outdoor, Indoor / Outdoor. For running: Road, Trail, Track, Treadmill. Or null if not mentioned>",
   "sizingNote": "<short tag if mentioned (True to size, Size 0.5 down, Size up, etc), or null>",
   "fullText": "<the substantive review text, lightly cleaned. Keep ratings/observations. Strip background, intro fluff, off-topic comments. Aim for the parts a future reader would care about.>",
   "ratings": {
@@ -23,7 +24,7 @@ Given a Reddit post and its top comments, produce a JSON object with EXACTLY the
     "support": <0-10 number>,
     "fit": <0-10 number>,
     "breathability": <0-10 number>,
-    "courtFeel": <0-10 number>,
+    "groundFeel": <0-10 number>,
     "durability": <0-10 number>,
     "value": <0-10 number>
   },
@@ -33,7 +34,7 @@ Given a Reddit post and its top comments, produce a JSON object with EXACTLY the
     "support":    "high" | "medium" | "low",
     "fit":        "high" | "medium" | "low",
     "breathability": "high" | "medium" | "low",
-    "courtFeel":  "high" | "medium" | "low",
+    "groundFeel": "high" | "medium" | "low",
     "durability": "high" | "medium" | "low",
     "value":      "high" | "medium" | "low"
   }
@@ -41,17 +42,18 @@ Given a Reddit post and its top comments, produce a JSON object with EXACTLY the
 
 Rules:
 - All ratings are 0-10, one decimal place is fine.
+- groundFeel means court feel for basketball shoes, road/ground feel for running shoes.
 - ALWAYS emit all 8 ratings AND all 8 confidences. Confidence reflects how much the source text actually supports the rating:
     * "high"   — the reviewer directly assessed this trait with specific observations (e.g. "traction was sticky on dust, no slipping outdoors"). Multiple corroborating signals also count.
     * "medium" — the reviewer touched on the trait indirectly, or sentiment around adjacent traits implies it (e.g. they raved about "ride" — that implies cushioning but doesn't directly assess it).
     * "low"    — the reviewer didn't meaningfully discuss this trait. Pick a reasonable best-guess number (often near 7) but mark it "low" so the UI can fade it. Do NOT fabricate confident ratings to fill blanks.
 - A short / surface-level review will legitimately be "low" or "medium" on most traits. That's expected and honest.
-- Brand must be canonical from common basketball shoe brands.
-- shoe name must be canonical with brand prefix when conventional (e.g. "Nike LeBron 21", "Adidas Harden 9", "Air Jordan 40", "Li-Ning Way of Wade 12").
+- Brand must be canonical. Determine sport from context: if reviewing a basketball shoe (hoop, court, BBallShoes subreddit) set sport="basketball"; if reviewing a running shoe (miles, road, trail, run) set sport="running".
+- shoe name must be canonical with brand prefix when conventional (e.g. "Nike LeBron 21", "Adidas Harden 9", "HOKA Mach 6", "Brooks Ghost 17").
 - Output ONLY valid JSON. No prose, no markdown fences, no commentary.
 - If the post is NOT actually a performance review (e.g. it's a question, "what should I buy", an unboxing, a deal post, a sizing-only question), return: {"skip": true, "reason": "<short reason>"}.`;
 
-export async function condensePost({ post, comments }) {
+export async function condensePost({ post, comments, sport = 'basketball', subreddit = 'BBallShoes' }) {
   const userText = [
     `# Reddit post`,
     `Title: ${post.title}`,
@@ -86,7 +88,7 @@ export async function condensePost({ post, comments }) {
   let parsed;
   try {
     parsed = JSON.parse(cleaned);
-  } catch (e) {
+  } catch {
     throw new Error(`condense: invalid JSON from model:\n${cleaned}`);
   }
 
@@ -97,6 +99,8 @@ export async function condensePost({ post, comments }) {
   return {
     shoe: parsed.shoe,
     brand: parsed.brand,
+    sport: parsed.sport ?? sport,
+    subreddit: `r/${subreddit}`,
     redditUrl: `https://www.reddit.com${post.permalink}`,
     redditId: post.id,
     author: `u/${post.author}`,

@@ -1,0 +1,3 @@
+/* Canonical global styles live in src/index.css — re-exported here so the
+   app/ directory has a conventional globals.css entry without duplicating tokens. */
+@import '../src/index.css';
