@@ -83,7 +83,14 @@ Hand it the just-merged entries (shoe | author | date | postID [commentID]). It 
    - **Gotcha — Windows file lock:** if it ends with `UNKNOWN: open reviews.js`, just re-run it (a watcher briefly locked the file).
    - **Gotcha — HEIF/AVIF source:** some CDNs serve HEIF that `sharp` can't decode (`Bitstream not supported`). Swap that shoe's `shoeImages` URL for a JPG/PNG (running retailer `cdn/shop/files`, `m.media-amazon.com` left-view, or `images.novelship.com/...?...bg=FFFFFF`) and re-run. If no clean source exists, **remove the entry → it falls back to the SVG placeholder** (don't leave a broken/404 URL). Currently on placeholder: HOKA Mach X 2, Qiaodan Sharp Fang 2 Pro SE.
    - Re-enforce orientation without re-downloading: `npm run normalize:directions` (`--dry` to report only).
-   - **Toe direction is NOT reliable from the heuristic.** All cards must face **toe-left**, but the deterministic heel-height detector (and a collar-position variant) misfire on modern rocker / high-stack running shoes — they leave some facing toe-right and report "0 to flip". ASICS racers are a repeat offender. **Verify visually:** read each `public/shoes/*.png` at full resolution (a montage thumbnail is too small to judge rockered runners) and flip any that point toe-right with `sharp().flop()` in place (a flip preserves baseline/centering). Reference: `hoka-mach-6.png` / `hoka-bondi-9.png` are correct toe-left (their HOKA logo reads mirrored *because* they were flipped). For a large set, delegate the visual pass to a sub-agent that reads each image individually and returns the toe-right list. (Batch-5 fix: 11 files were toe-right despite the detector saying 0.)
+   - **Toe direction is NOT reliable from code — there is a mandatory GATE.** All cards must face **toe-left**, but the heel-height heuristic (and collar-position / mass variants) *systematically invert* modern rocker / high-stack runners (forefoot stack reads as the "heel"). They have silently shipped toe-right shoes AND mis-flipped correct ones; a sub-agent visual pass also produced false positives. So **never trust the auto-orient, a signal, or a single agent** — confirm by eye via the gate:
+     ```bash
+     npm run verify:images        # builds .image-audit/ contact sheets (running first = high risk); exits 1
+     # open .image-audit/*.png, confirm EVERY shoe faces toe-left
+     npm run flip:image <slug>    # flip any offender, e.g. asics-superblast-2  (horizontal flop, preserves baseline)
+     npm run verify:images -- --ack   # pass the gate once all face toe-left
+     ```
+     Reference correct: `hoka-mach-6` / `hoka-bondi-9` (HOKA logo reads mirrored *because* they were flipped left). When reading montage thumbnails, rocker runners are borderline — read those `public/shoes/*.png` individually at full resolution. (History: a batch had 11 toe-right despite the detector saying "0"; a later agent pass false-flagged + broke the two ASICS Superblasts.)
 
 ### Step 6 — Verify
 ```bash

@@ -11,7 +11,9 @@
     "scrape:backfill": "node scripts/backfill.js",
     "scrape:daily": "node scripts/daily-update.js",
     "normalize:images": "node scripts/normalize-images.mjs",
-    "normalize:directions": "node scripts/standardize-directions.mjs"
+    "normalize:directions": "node scripts/standardize-directions.mjs",
+    "verify:images": "node scripts/verify-directions.mjs",
+    "flip:image": "node scripts/flip-image.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.41.0",

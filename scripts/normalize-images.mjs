@@ -141,6 +141,8 @@ async function main() {
   const fails = Object.entries(results).filter(([n, v]) => !v.startsWith('/shoes/'));
   console.log(`\nDone. ${Object.keys(results).length - fails.length} normalized, ${fails.length} kept remote.`);
   if (fails.length) console.log('Remote (download failed):', fails.map(([n]) => n).join(', '));
+  console.log('\n⚠ Auto-orient (toe-left) is UNRELIABLE on rocker/high-stack runners.');
+  console.log('   GATE: run `npm run verify:images` and eyeball the sheets before committing.');
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });

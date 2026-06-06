@@ -86,15 +86,17 @@ The trim step removes a **white/near-white** border, so source quality is everyt
 - Prefer **shadow-free** (or faint-shadow) shots: a heavy drop-shadow under the shoe can
   survive the trim and seat the shoe slightly high. Between two clean options, pick the
   one with the least ground shadow.
-- **Direction**: all cards face the same way (canonical **toe-left**). You don't manage
-  this by hand — `normalize-images.mjs` auto-detects each shoe's toe direction (a
-  deterministic heel-height heuristic, `detectToe` in `scripts/standardize-directions.mjs`)
-  and flips it during normalization. To re-enforce across all existing local images, run
-  `npm run normalize:directions` (or `--dry` to just report). After adding a shoe, `Read`
-  its output PNG to confirm it points left; if the heuristic got it wrong, flip that one
-  file (`sharp().flop()`) or re-source. ⚠️ Do NOT judge direction from a montage contact
-  sheet — it downscales too much and high-tops read wrong; trust the detector or read PNGs
-  individually at full size.
+- **Direction**: all cards face the same way (canonical **toe-left**). `normalize-images.mjs`
+  auto-orients via a heel-height heuristic, **but DO NOT TRUST IT** — that heuristic
+  *systematically inverts* modern rocker / high-stack runners (their forefoot stack reads as
+  the "heel"), and has both silently shipped toe-right shoes and mis-flipped correct ones.
+  A single visual agent pass has also produced false positives. **Orientation is decided by
+  eye, gated:** after normalize, the main thread runs `npm run verify:images` (builds
+  `.image-audit/` contact sheets, running shoes first), visually confirms every shoe faces
+  toe-left, flips offenders with `npm run flip:image <slug>`, then `npm run verify:images -- --ack`.
+  When you (this agent) inspect, **read each PNG individually at full size** — montage
+  thumbnails downscale too much for rocker runners, and no heuristic/signal is authoritative.
+  Reference correct: `hoka-mach-6` / `hoka-bondi-9` (HOKA logo reads mirrored because flipped left).
 
 If a card still looks wrong after normalizing, it's almost always the SOURCE (a colored
 bg that didn't trim, wrong angle, or marketing art) — swap the source URL and re-run the
@@ -108,10 +110,12 @@ must run to produce the `/shoes/<slug>.png`:
   `public/shoes/`, and rewrites that entry's value to `/shoes/<slug>.png`. Entries already
   pointing at `/shoes/` are skipped; to re-process one, reset its value to a remote URL.
 - This agent does not run shell commands — after editing `shoeImages`, **state clearly in
-  your final report that `npm run normalize:images` must be run** (by the main thread or
-  user) to materialize the images. You CAN, after it has run, **`Read` the generated
-  `public/shoes/<slug>.png`** to visually confirm the trim/baseline (the Read tool renders
-  images) — this is the best visual check available.
+  your final report that `npm run normalize:images` must be run, THEN the orientation gate
+  `npm run verify:images` (eyeball `.image-audit/`, `npm run flip:image <slug>` any toe-right,
+  then `npm run verify:images -- --ack`)** — direction is not safe to leave to the auto-orient.
+  You CAN, after normalize has run, **`Read` the generated `public/shoes/<slug>.png`** at full
+  size to visually confirm the trim/baseline AND that it faces toe-left — this is the only
+  trustworthy check.
 
 ## Where the data lives
 
