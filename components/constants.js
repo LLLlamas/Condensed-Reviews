@@ -36,6 +36,16 @@ export function ratingColor(value) {
   return value >= 8.5 ? 'var(--color-elite)' : value >= 7.0 ? 'var(--color-solid)' : 'var(--color-mediocre)';
 }
 
+export function formatPrice(price, priceApprox) {
+  if (!price && price !== 0) return null;
+  const prefix = priceApprox ? '~' : '';
+  if (typeof price === 'string' && price.includes('-')) {
+    const [min, max] = price.split('-');
+    return `${prefix}$${min}–$${max}`;
+  }
+  return `${prefix}$${price}`;
+}
+
 export function avgScore(shoe) {
   const vals = Object.values(shoe.avgRatings).filter(Boolean);
   return vals.length ? vals.reduce((a, b) => a + b, 0) / vals.length : 0;

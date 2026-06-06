@@ -91,6 +91,8 @@ export default function BrowsePage() {
   const [showScoringInfo, setShowScoringInfo] = useState(false);
   const [page, setPage] = useState(1);
   const [reviewSearch, setReviewSearch] = useState('');
+  const [reviewsOpen, setReviewsOpen] = useState(false);
+  const [pageDir, setPageDir] = useState(1);
   const PER_PAGE = 12;
 
   // Reset dependent filters when the sport changes — done during render (not in an
@@ -106,7 +108,7 @@ export default function BrowsePage() {
   // Reset to page 1 whenever the filtered set changes (any filter/sort/sport tweak).
   const filterSig = `${sportFilter}|${brandFilter}|${searchQuery}|${sortBy}|${maxPrice}`;
   const [prevSig, setPrevSig] = useState(filterSig);
-  if (filterSig !== prevSig) { setPrevSig(filterSig); setPage(1); }
+  if (filterSig !== prevSig) { setPrevSig(filterSig); setPage(1); setPageDir(0); }
 
   const filteredShoes = useMemo(() => {
     let result = shoes.filter(s => {
@@ -158,9 +160,15 @@ export default function BrowsePage() {
   const pagedShoes = filteredShoes.slice(pageOffset, pageOffset + PER_PAGE);
 
   function goToPage(p) {
-    setPage(Math.min(Math.max(1, p), pageCount));
-    if (typeof document !== 'undefined') {
-      document.getElementById('shoes')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const clamped = Math.min(Math.max(1, p), pageCount);
+    setPageDir(clamped > safePage ? 1 : -1);
+    setPage(clamped);
+    if (typeof window !== 'undefined') {
+      const el = document.getElementById('shoes');
+      if (el) {
+        const top = el.getBoundingClientRect().top + window.scrollY - 88;
+        window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+      }
     }
   }
 
@@ -287,13 +295,38 @@ export default function BrowsePage() {
             </section>
 
             <section className="shoe-layout-section" id="shoes">
+              <div className="shoe-section-header">
+                <span className="shoe-section-header__count">
+                  {filteredShoes.length} shoe{filteredShoes.length !== 1 ? 's' : ''}
+                </span>
+                {layout !== 'swipe' && pageCount > 1 && (
+                  <div className="pagination--mini">
+                    <motion.button
+                      className="pagination__nav"
+                      onClick={() => goToPage(safePage - 1)}
+                      disabled={safePage <= 1}
+                      whileTap={{ scale: 0.88 }}
+                      aria-label="Previous page"
+                    >‹</motion.button>
+                    <span className="pagination--mini__label">pg {safePage} / {pageCount}</span>
+                    <motion.button
+                      className="pagination__nav"
+                      onClick={() => goToPage(safePage + 1)}
+                      disabled={safePage >= pageCount}
+                      whileTap={{ scale: 0.88 }}
+                      aria-label="Next page"
+                    >›</motion.button>
+                  </div>
+                )}
+              </div>
+
               {layout === 'list' && (
                 <motion.div
                   key={`list-p${safePage}`}
                   className="list-view"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.2 }}
+                  initial={{ opacity: 0, y: pageDir * 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.22, ease: 'easeOut' }}
                 >
                   <div className="list-header">
                     <span>#</span><span>Shoe</span><span>Score</span><span>Price</span><span>Reviews</span><span></span>
@@ -308,16 +341,16 @@ export default function BrowsePage() {
                 <motion.div
                   key={`grid-p${safePage}`}
                   className="shoe-grid"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.2 }}
+                  initial={{ opacity: 0, y: pageDir * 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.22, ease: 'easeOut' }}
                 >
                   {pagedShoes.map((shoe, index) => (
                     <motion.div
                       key={shoe.name}
-                      initial={{ opacity: 0, y: 12 }}
+                      initial={{ opacity: 0, y: 16 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.18, delay: index * 0.03 }}
+                      transition={{ duration: 0.2, delay: index * 0.035, ease: 'easeOut' }}
                     >
                       <ShoeCard
                         shoe={shoe}
@@ -341,49 +374,73 @@ export default function BrowsePage() {
             </section>
 
             <section className="reviews-section">
-              <div className="reviews-section__header">
-                <div className="reviews-section__header-top">
-                  <h2 className="section-title">
+              <button
+                className="reviews-section__toggle"
+                onClick={() => setReviewsOpen(v => !v)}
+                aria-expanded={reviewsOpen}
+              >
+                <span className="reviews-section__toggle-left">
+                  <span className="section-title">
                     {CATEGORY_LABELS[sortBy] ? `Top by ${CATEGORY_LABELS[sortBy]}` : 'All Reviews'}
-                  </h2>
-                  <p className="section-desc">
+                  </span>
+                  <span className="section-desc">
                     {filteredReviews.length} review{filteredReviews.length !== 1 ? 's' : ''}
                     {brandFilter !== 'All' ? ` · ${brandFilter}` : ''}
                     {CATEGORY_LABELS[sortBy] ? ` · sorted by ${CATEGORY_LABELS[sortBy]}` : ''}
                     {reviewSearch ? ` · matching "${reviewSearch}"` : ''}
-                  </p>
-                </div>
-                <div className="reviews-section__search">
-                  <input
-                    type="text"
-                    placeholder="Search reviews by shoe, author, or keyword…"
-                    value={reviewSearch}
-                    onChange={e => setReviewSearch(e.target.value)}
-                    className="reviews-section__search-input"
-                    aria-label="Search reviews"
-                  />
-                  {reviewSearch && (
-                    <button
-                      className="reviews-section__search-clear"
-                      onClick={() => setReviewSearch('')}
-                      aria-label="Clear search"
-                    >✕</button>
-                  )}
-                </div>
-              </div>
-              <div className="reviews-grid">
-                {filteredReviews.map((review) => (
-                  <ReviewCard
-                    key={`${review.shoe}-${review.author}-${review.redditUrl || review.date}`}
-                    review={review}
-                    sortBy={sortBy}
-                    showShoeHeader={true}
-                  />
-                ))}
-                {filteredReviews.length === 0 && (
-                  <p className="empty-state" style={{ gridColumn: '1 / -1' }}>No reviews match your search.</p>
+                  </span>
+                </span>
+                <motion.span
+                  className="reviews-section__toggle-chevron"
+                  animate={{ rotate: reviewsOpen ? 180 : 0 }}
+                  transition={{ duration: 0.22, ease: 'easeInOut' }}
+                  aria-hidden="true"
+                >▾</motion.span>
+              </button>
+              <AnimatePresence>
+                {reviewsOpen && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
+                    style={{ overflow: 'hidden' }}
+                  >
+                    <div className="reviews-section__inner">
+                      <div className="reviews-section__search">
+                        <input
+                          type="text"
+                          placeholder="Search reviews by shoe, author, or keyword…"
+                          value={reviewSearch}
+                          onChange={e => setReviewSearch(e.target.value)}
+                          className="reviews-section__search-input"
+                          aria-label="Search reviews"
+                        />
+                        {reviewSearch && (
+                          <button
+                            className="reviews-section__search-clear"
+                            onClick={e => { e.stopPropagation(); setReviewSearch(''); }}
+                            aria-label="Clear search"
+                          >✕</button>
+                        )}
+                      </div>
+                      <div className="reviews-grid">
+                        {filteredReviews.map((review) => (
+                          <ReviewCard
+                            key={`${review.shoe}-${review.author}-${review.redditUrl || review.date}`}
+                            review={review}
+                            sortBy={sortBy}
+                            showShoeHeader={true}
+                          />
+                        ))}
+                        {filteredReviews.length === 0 && (
+                          <p className="empty-state" style={{ gridColumn: '1 / -1' }}>No reviews match your search.</p>
+                        )}
+                      </div>
+                    </div>
+                  </motion.div>
                 )}
-              </div>
+              </AnimatePresence>
             </section>
           </>
         ) : (

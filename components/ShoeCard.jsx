@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { getAmazonUrl, isAmazonLink } from '../src/data/reviews';
-import { CATEGORY_LABELS, avgScore, ratingColor } from './constants';
+import { CATEGORY_LABELS, avgScore, ratingColor, formatPrice } from './constants';
 
 export default function ShoeCard({ shoe, onOpen, onCompare, sortBy, rank }) {
   const score = CATEGORY_LABELS[sortBy] ? (shoe.avgRatings[sortBy] || 0) : avgScore(shoe);
@@ -52,7 +52,7 @@ export default function ShoeCard({ shoe, onOpen, onCompare, sortBy, rank }) {
       <div className="shoe-card__footer">
         <span className="shoe-card__review-count">
           {shoe.reviews.length} review{shoe.reviews.length !== 1 ? 's' : ''}
-          {shoe.price ? ` · ${shoe.priceApprox ? '~' : ''}$${shoe.price}` : ''}
+          {shoe.price ? ` · ${formatPrice(shoe.price, shoe.priceApprox)}` : ''}
         </span>
         <div className="shoe-card__footer-actions">
           <a

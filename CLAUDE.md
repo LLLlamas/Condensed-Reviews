@@ -38,7 +38,8 @@ Scripts: `npm run dev` · `build` · `preview` (= `next start`) · `lint` · `sc
 | `scripts/standardize-directions.mjs` | Deterministic toe-direction detector + flipper; enforces toe-left on `public/shoes/*.png` (`npm run normalize:directions`; `--dry` to report only) |
 | `public/shoes/` | Normalized, self-hosted shoe images (output of `normalize:images`) |
 | `.claude/agents/shoe-image-fixer.md` | Subagent: sources + fixes clean, aligned shoe images in the `shoeImages` map |
-| `.claude/agents/review-collector.md` | Subagent: collects new Reddit reviews via WebSearch + PullPush (reddit.com is blocked in-env), returns schema-correct `reviews[]` + `shoePrices`/`amazonLinks` entries to merge |
+| `.claude/agents/review-collector.md` | Subagent: collects new Reddit reviews via WebSearch + PullPush (reddit.com is blocked in-env), returns schema-correct `reviews[]` + `shoePrices`/`amazonLinks` entries to merge. Also does the price/affiliate-link research (no separate price agent) |
+| `.claude/agents/review-auditor.md` | Subagent: READ-ONLY accuracy check — re-fetches each new review's source via PullPush and verifies shoe/author/date/content fidelity; returns corrections (never edits) |
 
 ## Conventions (must not break)
 
@@ -54,12 +55,18 @@ Scripts: `npm run dev` · `build` · `preview` (= `next start`) · `lint` · `sc
 
 ## Growing the dataset (live workflow)
 
-The `scripts/` node pipeline (`scrape:backfill`/`scrape:daily`) needs Reddit API creds in `.env` (not configured). For ad-hoc growth **without** creds, use the **`review-collector`** agent: `reddit.com`'s JSON API and direct `WebFetch` are **blocked in this environment**, so it reads posts via the **PullPush archive API** (`api.pullpush.io`, not blocked) + `WebSearch` to scout threads, and returns paste-ready `reviews[]` / `shoePrices` / `amazonLinks` blocks. Then:
-1. Pass the agent the current shoe list **and** used `redditUrl` post-IDs as exclusion lists (dedup is manual — the join key is the `shoe` name; never split one shoe across two names, e.g. "Giannis Freak 5" must merge into the canonical "Nike Zoom Freak 5").
-2. Merge the blocks into `src/data/reviews.js`, then run `shoe-image-fixer` for any net-new shoes, then `npm run normalize:images`.
-3. Sanity-check it parses + counts: `node -e "import('./src/data/reviews.js').then(m=>console.log(m.getShoes().length, m.reviews.length))"`.
+`reddit.com`'s JSON API and direct `WebFetch` are **blocked in this environment**, and the `scripts/` node pipeline (`scrape:backfill`/`scrape:daily`) needs Reddit API creds in `.env` (not configured). So growth happens through a **three-agent pipeline** that reads posts via the **PullPush archive API** (`api.pullpush.io`, not blocked) + `WebSearch`:
 
-Per sweep yields ~25-30 quality reviews before diminishing returns; richest remaining seams are multi-shoe **rotation posts** (one post → many entries) and non-English brands (Li-Ning/ANTA/361/Xtep). Untapped subs: `AskRunningShoeGeeks`, `XXRunning`, `Marathon_Training`. Aggregate slowly over multiple sessions.
+1. **Build exclusion lists** from the current data (so nothing repeats):
+   - shoes: `node -e "import('./src/data/reviews.js').then(m=>console.log([...new Set(m.reviews.map(r=>r.shoe))].sort().join(' | ')))"`
+   - used post-IDs: `node -e "import('./src/data/reviews.js').then(m=>console.log([...new Set(m.reviews.map(r=>(r.redditUrl.match(/comments\/([a-z0-9]+)/)||[])[1]).filter(Boolean))].sort().join(', ')))"`
+2. **`review-collector`** (one or several in parallel) — pass it both exclusion lists. For a big sweep, run **partitioned** collectors so they don't overlap each other: e.g. (a) basketball mainstream US brands, (b) running across all run subs, (c) non-English brands (Li-Ning/ANTA/361/Xtep/Peak) + multi-shoe **rotation** posts. Each returns paste-ready `reviews[]` / `shoePrices` / `amazonLinks` blocks (it does NOT edit files), so parallel is safe.
+3. **Merge + dedup** into `src/data/reviews.js`. Dedup key is **`shoe` name + post-ID**, never `redditUrl` alone (rotation posts legitimately reuse one URL across shoes). Never split one shoe across two names (e.g. "Giannis Freak 5" → canonical "Nike Zoom Freak 5"; keep Jordan-line under brand "Jordan"). Verify: `node -e "import('./src/data/reviews.js').then(m=>{const rv=m.reviews;const p=new Set(),d=[];for(const r of rv){const k=r.shoe+'|'+r.redditUrl;p.has(k)?d.push(k):p.add(k)}console.log(m.getShoes().length,'shoes',rv.length,'reviews; dup(shoe+url):',d.length)})"`
+4. **`review-auditor`** (READ-ONLY) — re-fetches each new entry's source via PullPush, verifies shoe/author/date/content fidelity, returns corrections. Apply them.
+5. **`shoe-image-fixer`** for net-new shoes → then `npm run normalize:images` (downloads, trims, baseline-aligns, orients toe-left, repoints `shoeImages` to `/shoes/*.png`). If the write fails with a Windows file-lock (`UNKNOWN: open reviews.js`), just re-run it.
+6. **Lint + commit**: `npm run lint`, then commit. The site reads `src/data/reviews.js` directly.
+
+Per collector yields ~25-30 quality reviews before diminishing returns; richest seams are multi-shoe **rotation posts** (one post → many entries) and non-English brands. Aggregate over multiple sessions — quality drops and shoe-overlap rises if you push one sweep too hard. The collector files (`.claude/agents/`) carry the full method, schema, and target lists.
 
 ## UI features (BrowsePage)
 

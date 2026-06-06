@@ -6,7 +6,7 @@ import RatingBar from './RatingBar';
 import ReviewCard from './ReviewCard';
 import ScoreBadge from './ScoreBadge';
 import { getAmazonUrl, isAmazonLink } from '../src/data/reviews';
-import { CATEGORY_LABELS, avgScore, buildHighlights, ratingColor } from './constants';
+import { CATEGORY_LABELS, avgScore, buildHighlights, ratingColor, formatPrice } from './constants';
 
 export default function ShoeModal({ shoe, sortBy, onClose }) {
   const score = avgScore(shoe);
@@ -39,10 +39,10 @@ export default function ShoeModal({ shoe, sortBy, onClose }) {
         <motion.div
           className="modal"
           onClick={e => e.stopPropagation()}
-          initial={{ opacity: 0, scale: 0.96, y: 12 }}
+          initial={{ opacity: 0, scale: 0.92, y: 36 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.96, y: 12 }}
-          transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+          exit={{ opacity: 0, scale: 0.95, y: 20 }}
+          transition={{ type: 'spring', stiffness: 440, damping: 30, mass: 0.85 }}
         >
           <div className="modal__header">
             <div className="modal__title-area">
@@ -51,7 +51,7 @@ export default function ShoeModal({ shoe, sortBy, onClose }) {
               <div className="modal__score-row">
                 <span className="modal__score" style={{ color: ratingColor(score) }}>{score.toFixed(1)}</span>
                 <ScoreBadge score={score} />
-                {shoe.price && <span className="modal__price">{shoe.priceApprox ? '~' : ''}${shoe.price}</span>}
+                {shoe.price && <span className="modal__price">{formatPrice(shoe.price, shoe.priceApprox)}</span>}
               </div>
             </div>
             <div className="modal__header-actions">

@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import RatingBar from './RatingBar';
 import ScoreBadge from './ScoreBadge';
-import { CATEGORY_LABELS, avgScore, buildHighlights, ratingColor } from './constants';
+import { CATEGORY_LABELS, avgScore, buildHighlights, ratingColor, formatPrice } from './constants';
 
 export default function SwipeView({ shoes, onOpen, onCompare }) {
   const [idx, setIdx] = useState(0);
@@ -53,7 +53,7 @@ export default function SwipeView({ shoes, onOpen, onCompare }) {
           <div className="swipe-card__score-row">
             <span className="swipe-card__score" style={{ color: ratingColor(score) }}>{score.toFixed(1)}</span>
             <ScoreBadge score={score} />
-            {shoe.price && <span className="swipe-card__price">{shoe.priceApprox ? '~' : ''}${shoe.price}</span>}
+            {shoe.price && <span className="swipe-card__price">{formatPrice(shoe.price, shoe.priceApprox)}</span>}
           </div>
           <div className="swipe-card__bars">
             {Object.entries(shoe.avgRatings).map(([key, val]) => {

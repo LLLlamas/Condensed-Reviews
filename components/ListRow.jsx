@@ -1,7 +1,7 @@
 'use client';
 
 import ScoreBadge from './ScoreBadge';
-import { CATEGORY_LABELS, avgScore, ratingColor } from './constants';
+import { CATEGORY_LABELS, avgScore, ratingColor, formatPrice } from './constants';
 
 export default function ListRow({ shoe, rank, onOpen, onCompare, sortBy }) {
   const score = CATEGORY_LABELS[sortBy] ? (shoe.avgRatings[sortBy] || 0) : avgScore(shoe);
@@ -16,7 +16,7 @@ export default function ListRow({ shoe, rank, onOpen, onCompare, sortBy }) {
         <span className="list-row__score" style={{ color: ratingColor(score) }}>{score.toFixed(1)}</span>
         <ScoreBadge score={score} />
       </div>
-      {shoe.price ? <span className="list-row__price">{shoe.priceApprox ? '~' : ''}${shoe.price}</span> : <span className="list-row__price">—</span>}
+      {shoe.price ? <span className="list-row__price">{formatPrice(shoe.price, shoe.priceApprox)}</span> : <span className="list-row__price">—</span>}
       <span className="list-row__reviews">{shoe.reviews.length}r</span>
       <button className="list-row__vs" onClick={e => { e.stopPropagation(); onCompare(shoe.name); }}>vs ↔</button>
     </div>

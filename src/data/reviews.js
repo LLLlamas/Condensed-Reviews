@@ -64,6 +64,24 @@ export const amazonLinks = {
   "Li-Ning Speed XI":        "https://www.li-ning.com",
   "Li-Ning Liren 4 v2":      "https://www.li-ning.com",
 
+  // === Basketball — batch 4 ===
+  "Jordan Tatum 3":          "https://www.amazon.com/s?k=Jordan+Tatum+3+basketball+shoe&tag=llamas02-20",
+  "UA Curry 12":             "https://www.amazon.com/s?k=Under+Armour+Curry+12+basketball+shoe&tag=llamas02-20",
+  "Puma MB.03":              "https://www.amazon.com/s?k=Puma+MB.03+basketball+shoe&tag=llamas02-20",
+  "Nike Giannis Immortality 3": "https://www.amazon.com/s?k=Nike+Giannis+Immortality+3+basketball+shoe&tag=llamas02-20",
+  "Puma Scoot Zero 1":       "https://www.amazon.com/s?k=Puma+Scoot+Zero+1+basketball+shoe&tag=llamas02-20",
+  "Nike LeBron NXXT Gen AMPD": "https://www.amazon.com/s?k=Nike+LeBron+NXXT+Gen+AMPD+basketball+shoe&tag=llamas02-20",
+  "Jordan Luka .77":         "https://www.amazon.com/s?k=Jordan+Luka+.77+basketball+shoe&tag=llamas02-20",
+  "Reebok Engine A":         "https://www.amazon.com/s?k=Reebok+Engine+A+basketball+shoe&tag=llamas02-20",
+  "Adidas Kobe Crazy 8":     "https://www.amazon.com/s?k=Adidas+Crazy+8+basketball+shoe&tag=llamas02-20",
+  // Not on Amazon US — official store / retailer (renders "See Price")
+  // (Li-Ning Wade 808 5 Ultra already in amazonLinks above via amzn.to/4vwIWE6)
+  "ANTA Kai 2":              "https://anta.com",
+  "Rigorer AR1":             "https://rigorer.com/products/rigorer-ar1",
+  "Rigorer AR2":             "https://rigorer.com/products/rigorer-ar2",
+  "Qiaodan Sharp Fang 2 Pro SE": "https://www.wowsole.com/search?q=qiaodan+sharp+fang+2+pro",
+  "Li-Ning Sonic 11":        "https://www.wowsole.com/search?q=li-ning+sonic+11",
+
   // === Running ===
   "HOKA Mach 6":             "https://www.amazon.com/dp/B0D1949J9T?tag=llamas02-20",
   "Brooks Ghost 17":         "https://www.amazon.com/dp/B0DDHL8RY2?tag=llamas02-20",
@@ -93,6 +111,16 @@ export const amazonLinks = {
   "Adidas Adizero Evo SL":   "https://www.amazon.com/s?k=Adidas+Adizero+Evo+SL+running+shoe&tag=llamas02-20",
   // Not on Amazon US — retailer (renders "See Price")
   "Li-Ning Challenger 5":    "https://www.aliexpress.com/w/wholesale-li-ning-challenger-5.html",
+  // Running — batch 4
+  "New Balance Rebel v4":    "https://www.amazon.com/New-Balance-Fuelcell-Rebel-Running/dp/B0CT4DGDCJ?tag=llamas02-20",
+  "Saucony Triumph 22":      "https://www.amazon.com/Saucony-Men-Triumph-22/dp/B0GDGCZ8TD?tag=llamas02-20",
+  "Nike Vaporfly 3":         "https://www.amazon.com/s?k=Nike+Vaporfly+3+running+shoe&tag=llamas02-20",
+  "ASICS Superblast 1":      "https://www.amazon.com/s?k=ASICS+Superblast+1+running+shoe&tag=llamas02-20",
+  "ASICS Metaspeed Sky Paris": "https://www.amazon.com/s?k=ASICS+Metaspeed+Sky+Paris+running+shoe&tag=llamas02-20",
+  "Puma Deviate Nitro 3":    "https://www.amazon.com/s?k=Puma+Deviate+Nitro+3+running+shoe&tag=llamas02-20",
+  "Puma Deviate Nitro Elite 3": "https://www.amazon.com/s?k=Puma+Deviate+Nitro+Elite+3+running+shoe&tag=llamas02-20",
+  "Nike Pegasus Plus":       "https://www.amazon.com/s?k=Nike+Pegasus+Plus+running+shoe&tag=llamas02-20",
+  "HOKA Mach X 2":           "https://www.amazon.com/s?k=HOKA+Mach+X+2+running+shoe&tag=llamas02-20",
 };
 
 export function getAmazonUrl(shoeName, sport = 'basketball') {
@@ -895,6 +923,190 @@ export const reviews = [
   },
 
   // =====================================================
+  // === BASKETBALL — NEW SHOES (batch 4) ===
+  // =====================================================
+
+  // --- Jordan Tatum 3 ---
+  {
+    shoe: "Jordan Tatum 3", brand: "Jordan", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1k9o80k/jordan_tatum_3_review/",
+    author: "u/hunternath", date: "2025-04-28",
+    summary: "One of the lightest shoes the reviewer has worn in a while, with great lockdown holding up over multiple two-hour pickup sessions. Cushion is the weak point and the shoe runs a little long, but the low weight and containment make it a joy to play in.",
+    playstyle: null, courtType: "Indoor", sizingNote: "Runs slightly long", verdict: "Solid", wordCount: 55,
+    fullText: "Lightest shoe I've had in a while. Cushion isn't great, not too much squeak. I've played multiple two hour pick up sessions and not many other complaints. Runs a little long, but the lockdown and weight is so nice.",
+    ratings: { cushioning: 5.5, traction: 7.5, support: 7.5, fit: 7.5, breathability: 7.0, groundFeel: 7.5, durability: 7.0, value: 7.5 },
+    confidences: { cushioning: "high", traction: "medium", support: "medium", fit: "high", breathability: "low", groundFeel: "medium", durability: "low", value: "medium" }
+  },
+
+  // --- UA Curry 12 ---
+  {
+    shoe: "UA Curry 12", brand: "Under Armour", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1j4q4gc/curry_12_what_the_bay/",
+    author: "u/CookiesInTheGym", date: "2025-03-06",
+    summary: "Calls these the best-feeling shoes he's ever balled in. Grip is great straight out of the box (almost too much at the very tip), with strong heel support and great cushion. Only knock is a toe box that needs breaking in.",
+    playstyle: null, courtType: "Indoor", sizingNote: null, verdict: "Elite", wordCount: 52,
+    fullText: "Best feeling shoes I've ever balled in.. plus they look money as hell on the court! Great grip on the court right out the box (although the very tip may even be too much), amazing support around the heel and great cushion. Only knock, gotta break in the toe box.",
+    ratings: { cushioning: 8.5, traction: 9.0, support: 8.5, fit: 7.5, breathability: 7.0, groundFeel: 7.5, durability: 7.0, value: 7.5 },
+    confidences: { cushioning: "high", traction: "high", support: "high", fit: "medium", breathability: "low", groundFeel: "low", durability: "low", value: "low" }
+  },
+
+  // --- Puma MB.03 ---
+  {
+    shoe: "Puma MB.03", brand: "Puma", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1i5d65j/mb_03/",
+    author: "u/Blazing_x", date: "2025-01-19",
+    summary: "One of the reviewer's favorite shoes, nearly on par with the PG6. The much-maligned traction was actually great for them, even on dusty courts (translucent outsoles grip better than the rubber versions). The heel tab dug into the ankle at first but broke in. A great purchase, especially on sale for ~€85.",
+    playstyle: null, courtType: "Indoor", sizingNote: null, verdict: "Solid", wordCount: 130,
+    fullText: "Recently got the MB.03. Easily one of my favourite shoes. Imo, almost on par with the PG6. After breaking them in I've had no problems. When I first wore them, the heel tab was uncomfortable and kind of digging into my ankle, but that slowly went away. The traction, for me, has been great. The MB.03 have been said to have iffy traction, so buying these felt like a risk, but once I wore them and practiced in them they were great. The colourways with rubber outsoles have worse traction than the ones with translucent outsoles. But even on dusty courts my MBs held up very well. Nonetheless it was definitely a good purchase especially since they were on sale for €85.",
+    ratings: { cushioning: 8.0, traction: 7.5, support: 7.5, fit: 7.5, breathability: 7.0, groundFeel: 7.0, durability: 7.0, value: 8.5 },
+    confidences: { cushioning: "medium", traction: "high", support: "medium", fit: "medium", breathability: "low", groundFeel: "low", durability: "low", value: "high" }
+  },
+
+  // --- Nike Giannis Immortality 3 ---
+  {
+    shoe: "Nike Giannis Immortality 3", brand: "Nike", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1kfft1l/giannis_immortality_3_ep_outdoors/",
+    author: "u/Nether54653", date: "2025-05-05",
+    summary: "A 5'9\" guard's year-long verdict on this budget Giannis: lockdown is the standout and traction and breathability hold up well outdoors, though the toe has worn. Renew cushion has compressed but is still acceptable, bounce is minimal, and support is shaky with some ankle rolls. Overall a good budget shoe that gets the job done.",
+    playstyle: "Guard", courtType: "Outdoor", sizingNote: null, verdict: "Solid", wordCount: 150,
+    fullText: "I have had these Giannis Immortality for around a year, and here's what a 5'9 60.8kg sg has to say. Cushion - 7/10, the Renew foam has compressed a bit but it's still acceptable. Traction - 8/10 despite some wear on the toe area and occasional slipping. Breathability - 8/10, no visible damage to the upper. Support - 6/10, I've had some ankle rolls from the instability. Bounce - 4/10, it's minimal despite the shank plate. Lockdown - 9/10, the best part, though I wish the lace holes were reinforced. Overall a nice good budget shoe that gets the job done, 7.5/10.",
+    ratings: { cushioning: 7.0, traction: 8.0, support: 6.0, fit: 9.0, breathability: 8.0, groundFeel: 7.0, durability: 6.5, value: 8.0 },
+    confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "high", groundFeel: "low", durability: "medium", value: "high" }
+  },
+
+  // --- Puma Scoot Zero 1 ---
+  {
+    shoe: "Puma Scoot Zero 1", brand: "Puma", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1kj3vr2/scoot_zero_1s_for_35_1950_php/",
+    author: "u/Helpful_Principle987", date: "2025-05-10",
+    summary: "An off-the-box take comparing the Scoot Zero to Puma's answer to the Giannis Immortality. Responsive cushion where you feel the ground and your forefoot landing; surprisingly good initial traction with no squeak; TTS fit is the best attribute. Materials feel cheap at SRP but fine at the $35 price paid. Great for $35, bad for $100.",
+    playstyle: null, courtType: "Indoor", sizingNote: "True to size", verdict: "Mixed", wordCount: 175,
+    fullText: "This is an initial review off the box. For scoot zeros, i havent found much reviews here on reddit. The reviews I found lean more on the negative side; the ones on tiktok and youtube are mixed. TLDR: the scoot zero is the puma 'giannis immortality' (for lack of a better comparison). CUSHIONING: 7.5/10 - Responsive. You definitely feel the ground. You will feel your forefoot landing. TRACTION: 8.5/10 - some say they have bad traction esp. on dust, but on initial impressions, they grip good. No squeak. FIT: TTS - im a medium to narrow footer. MATERIALS - mixture of textile, mesh and cheap suede; cheap feeling if you paid SRP, okay feeling if you paid $35. COMFORT - Padding is adequate, no lace pinching. Summary: These are great for a $35 shoe, bad for a $100 shoe. The fit is the best attribute, next is padding tied with traction, the rest are subpar.",
+    ratings: { cushioning: 7.5, traction: 8.5, support: 6.5, fit: 8.0, breathability: 7.0, groundFeel: 8.0, durability: 6.0, value: 8.0 },
+    confidences: { cushioning: "high", traction: "medium", support: "low", fit: "high", breathability: "low", groundFeel: "high", durability: "low", value: "high" }
+  },
+
+  // --- Nike LeBron NXXT Gen AMPD ---
+  {
+    shoe: "Nike LeBron NXXT Gen AMPD", brand: "Nike", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1jzjuwc/after_6_months_lebron_nxxt_gen_ampd_rereview/",
+    author: "u/Official_Ryan_May", date: "2025-04-15",
+    summary: "A six-month re-review across indoor and outdoor play. Traction bites real good, the outsole is very durable and balds slowly (a mean outdoor shoe), the leather upper is comfortable, and cushion is good if not class-leading. Downsides: poor breathability (runs hot), court feel sacrificed to the tall stack, meh containment, and a stiff toe box that causes repeated toe stubs. Needs about an hour to break in.",
+    playstyle: null, courtType: "Indoor / Outdoor", sizingNote: null, verdict: "Solid", wordCount: 215,
+    fullText: "It's been 6 months I've been using my Lebron's and there are plenty of things I'd like to highlight, combined with plays from outdoor and indoor conditions. Pros: Comfortable pure leather exterior. The cushioning is good, although not the best out of everything, it works for most people. Durable outsole, can be used outdoors and indoors. VERY SLOW BALDING. It's a mean outdoor shoe that will last pretty darn long. Lockdown/containment is pretty meh, it's there but not as tight as my JA2's. Good fit for high arches. That traction bites REAL good. Cons: Less breathability, due to material and design these shoes get hotter than usual. Court feel is sacrificed for the cushioning of the NXXT Gen AMPD's; the shoes are also pretty tall so that's a factor. Despite traction being really good, it actually took an entire hour to fully break them in. STIFF TOEBOX. I literally stubbed my toe all the time with the toebox being so stiff, it starts hurting every now and then.",
+    ratings: { cushioning: 7.5, traction: 8.5, support: 6.5, fit: 7.0, breathability: 5.0, groundFeel: 5.5, durability: 9.0, value: 7.5 },
+    confidences: { cushioning: "high", traction: "high", support: "medium", fit: "medium", breathability: "high", groundFeel: "high", durability: "high", value: "medium" }
+  },
+
+  // --- Jordan Luka .77 ---
+  {
+    shoe: "Jordan Luka .77", brand: "Jordan", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1k0rd2f/luka_77_in_hand_slightly_disappointed/mngpc27/",
+    author: "u/TheGunslingerRechena", date: "2025-04-16",
+    summary: "A counterpoint to the OP's disappointment: the reviewer has played in the Luka .77 since release and finds the cushion awesome, with great midsole cushioning that isn't excessive, a perfect heel, great lockdown and great traction. Fits true to size. Prefers them outdoors over their NB Two WXY v4/v5 and rates them well ahead of the Dame 9.",
+    playstyle: null, courtType: "Indoor / Outdoor", sizingNote: "True to size", verdict: "Solid", wordCount: 70,
+    fullText: "It has awesome cushioning. At least for me. Been playing in them since they released and they have been very, very good. They fit true to size, midsole cushioning is great without being too much, heel is perfect, lockdown is great, traction too. Like them better for outdoors than my NB Two WXY v4 and v5 and a lot better for anything than my dame 9 (which is a shoe that reviewers got me to buy and is horrendous).",
+    ratings: { cushioning: 8.0, traction: 8.0, support: 8.0, fit: 8.0, breathability: 7.0, groundFeel: 7.0, durability: 7.0, value: 8.0 },
+    confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "low", groundFeel: "low", durability: "low", value: "medium" }
+  },
+
+  // --- Reebok Engine A ---
+  {
+    shoe: "Reebok Engine A", brand: "Reebok", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1itnnnv/reebok_engine_a/",
+    author: "u/HighLevelReviews", date: "2025-02-19",
+    summary: "Quick thoughts after a single light training/shooting session. Cushion is impressive but leans responsive, and the shoe sits higher than expected so court feel isn't fantastic. Traction was excellent, fit was a 1-to-1 TTS, comfortable and very secure. A fun shoe to play in, though it came up short of their Big 3 Futures.",
+    playstyle: null, courtType: "Indoor", sizingNote: "True to size", verdict: "Solid", wordCount: 70,
+    fullText: "Figured I'd give my quick thoughts after a single light training/shooting session in them. Cushion is impressive but shades more in the responsive category. They also sit higher than I anticipated so the court feel isn't fantastic. Traction was excellent. Fit was literally 1 to 1 and I went TTS. Pretty comfortable and felt very secure. So far it's a very fun shoe to play in but came short of my Big 3 Futures.",
+    ratings: { cushioning: 7.5, traction: 8.5, support: 7.5, fit: 8.0, breathability: 7.0, groundFeel: 5.5, durability: 7.0, value: 7.0 },
+    confidences: { cushioning: "medium", traction: "high", support: "medium", fit: "high", breathability: "low", groundFeel: "high", durability: "low", value: "low" }
+  },
+
+  // --- Adidas Kobe Crazy 8 ---
+  {
+    shoe: "Adidas Kobe Crazy 8", brand: "Adidas", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1ju6l7n/hopped_in_adidas_kobe_crazy_8/",
+    author: "u/Frecklzzz", date: "2025-04-07",
+    summary: "A wide-footed big man's take on the retro Crazy 8. Traction is solid and improves as it breaks in, with zero squeak. Cushion is sparse for all the bulk and the shoe is heavy, so they swapped in a Move Gameday Pro insole. Containment/fit is roomy with no heel slip — go half a size down. A fun, different, good-looking shoe but not an everyday hooper.",
+    playstyle: null, courtType: "Indoor", sizingNote: "Go half size down", verdict: "Mixed", wordCount: 250,
+    fullText: "Traction - 8/10 really solid overall, court was a little dusty but not too bad. Did pick up some dust but didn't affect it much. The traction seemed to get better the more I played in it, needs some breaking in. It's a really quiet shoe, no squeak at all. Cushion - 6/10 I may be a little harsh here but there isn't much cushion in this shoe. Only reason it felt nice on my feet is because I replaced the insole with a Move Gameday Pro. But for all the bulk that the shoe contains, not much of it is cushioning. This is where the age of the tech starts to show. Containment/fit - 7/10 as a wide footer it's rare for me to say but go a half size down. Very roomy and comfortable, with the extra lacing hole there wasn't noticeable heel slippage, especially considering it's a high top. Weight - 5/10 now I usually prefer heavier shoes as a big guy, but with these providing minimal cushioning it's the worst part of the shoe. I can feel the extra weight running around. I normally hoop in AE mids, lows or dames but these are noticeably heavier. Overall it's a fun shoe and cool looking, definitely something different but not one I would hoop in regularly.",
+    ratings: { cushioning: 6.0, traction: 8.0, support: 7.0, fit: 7.0, breathability: 7.0, groundFeel: 7.5, durability: 7.0, value: 6.5 },
+    confidences: { cushioning: "high", traction: "high", support: "medium", fit: "high", breathability: "low", groundFeel: "medium", durability: "low", value: "medium" }
+  },
+
+  // --- Li-Ning Wade 808 5 Ultra ---
+  {
+    shoe: "Li-Ning Wade 808 5 Ultra", brand: "Li-Ning", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1kbsgjz/unclesoles_808_5_ultra_quick_review/",
+    author: "u/TakoOne", date: "2025-04-30",
+    summary: "Detailed quick review from a frequent reviewer. SuperBOOM is 'firm bouncy' — quicker rebound than 361's CQTE3 but less impact protection (shock felt up to the shoulder on a heel landing). Traction is amazing on a clean court, but medial heel traction is too low and caused two slip-outs. Runs half a size big.",
+    playstyle: null, courtType: "Indoor", sizingNote: "Runs half size big — narrow/normal feet go 0.5 down", verdict: "Solid", wordCount: 360,
+    fullText: "Got these recently, played one session in them. I see a lot of weird info going around so I want people to know what they're getting into before getting the 808 5U. 1) These are half size big. I'm TTS 9.5 Nike, 9.5 LiNing, these are size 9 for me and fit perfectly, not even snug. Narrow/normal feet I strongly recommend half size down; wide footers may still go TTS. The heel counter is sufficient BUT with a size mismatch you'll get heel slips. 2) SuperBOOM is a weird cushion. A lot of comparison has been made to 361's CQTExtreme3 — both extremely lightweight and bouncy, but different. CQTE3 is 'plush bouncy'; SuperBOOM is 'firm bouncy' — compression not nearly as deep as CQTE3 but far more than regular BOOM, and rebound is much quicker, which lessened the jarring feeling on change-of-pace footwork. Impact protection is adequate but not amazing; I felt shock up to my shoulder on a straight heel landing. 3) The heel design is a BIG improvement from the 4 but still not great — at least usable now. Ball rocker is pretty good. Medial transition is silky smooth; lateral heel transition to a jump is still stiff. 4) Medial heel traction is not high enough for shifty foot drags — I slipped out twice, a rare miscalculation from LiNing. 5) Traction itself is amazing so far on a cleanish court. 6) Material feels good. 7) Aside from SuperBOOM, the Player Assist Tech in this shoe is not noticeable.",
+    ratings: { cushioning: 7.5, traction: 7.5, support: 7.0, fit: 7.5, breathability: 7.0, groundFeel: 7.5, durability: 7.0, value: 8.0 },
+    confidences: { cushioning: "high", traction: "high", support: "medium", fit: "high", breathability: "low", groundFeel: "medium", durability: "low", value: "medium" }
+  },
+
+  // --- ANTA Kai 2 ---
+  {
+    shoe: "ANTA Kai 2", brand: "ANTA", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1jr23if/anta_kai_2_performance_first_impressions/",
+    author: "u/SirGiannino", date: "2025-04-04",
+    summary: "Performance-focused first impressions of Kyrie Irving's second ANTA signature. A balanced, mellow guard all-arounder: better-than-average traction that attracts dust, firm low-to-ground cushion with good court feel, and an excellent elastic flywire lacing system. A lateral TPU support piece under the forefoot rubber slightly disrupts heel-to-toe transition.",
+    playstyle: "Guard", courtType: "Indoor", sizingNote: "TTS but leans big — can size down", verdict: "Solid", wordCount: 330,
+    fullText: "Got these for my birthday and tried them on court for first impressions; performance only. Fit: TTS but lean towards big. I'm between US 8 and 8.5, went 8 and they feel standard. Heel lockdown is not rock solid but no noticeable heel slip. Midfoot is standard width but a bit restricting due to a sneaky lateral TPU piece under the rubber. Forefoot is pretty generous with decent toe space. Traction: better than average. Bites well on clean courts but the tacky rubber attracts dust — just walking around the gym coated the outsole and performance dipped a bit, fairly easy to wipe. Cushion: firmer than most new releases from Chinese brands, pretty low to the ground with good court feel. I prefer this to the bouncy foams like Li-Ning's BOOM and SuperBOOM. Adequate cushion for a Kyrie shoe. Upper: comfortable but not very breathable due to ample padding; soft material but I had some crease pinching initially that went away after the first hour. The lacing system is excellent — laces have some elasticity and every other eyelet has flywires inside; you really feel the upper closing without excessive pressure. General performance: a good all-arounder offering a balanced guard-oriented experience. Good court feel, enough cushion, very nimble, stable and secure enough. Not much arch support.",
+    ratings: { cushioning: 7.0, traction: 7.0, support: 6.5, fit: 7.5, breathability: 6.0, groundFeel: 8.0, durability: 7.0, value: 7.5 },
+    confidences: { cushioning: "high", traction: "high", support: "medium", fit: "high", breathability: "medium", groundFeel: "high", durability: "low", value: "low" }
+  },
+
+  // --- Rigorer AR1 ---
+  {
+    shoe: "Rigorer AR1", brand: "Rigorer", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1jcqsch/current_hoop_shoe_rotation_performance_review/",
+    author: "u/notBB05", date: "2025-03-16",
+    summary: "From a 6'1 SG's rotation review. The AR1 'Valentines Day' is praised as having the best grip the reviewer has ever felt on a shoe — 10/10 even on dusty courts. Huge lateral outrigger and long shank give a very stable wide base; main downsides are heel slippage and a tight, narrow midfoot. Outstanding value at ~£70.",
+    playstyle: "Guard", courtType: "Indoor / Outdoor", sizingNote: "Runs narrow — half size down, not for wide feet", verdict: "Solid", wordCount: 60,
+    fullText: "6'1 180lbs SG. Rigorer AR1 'Valentines Day': Traction 10/10 best grip on a shoe ever, even on dusty courts. Break in ~2/3 weeks (this pair is new but I completely wore through a pair last year). Support 8/10 super long shank and a massive outrigger on lateral side, very wide base. Lockdown 6/10 heel slippage. Fit half down, not for wide footers, very tight midfoot (I went TTS). Cushion 7/10 bouncy, good court feel not super plush. Price £70 amazing value.",
+    ratings: { cushioning: 7.0, traction: 9.5, support: 8.0, fit: 6.5, breathability: 7.0, groundFeel: 8.0, durability: 7.5, value: 9.0 },
+    confidences: { cushioning: "medium", traction: "high", support: "high", fit: "high", breathability: "low", groundFeel: "medium", durability: "medium", value: "high" }
+  },
+
+  // --- Rigorer AR2 ---
+  {
+    shoe: "Rigorer AR2", brand: "Rigorer", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1jte78i/ar2_monarch_wow/",
+    author: "u/yeenyeen4", date: "2025-04-07",
+    summary: "AR2 'Monarch' impressions plus the reviewer's follow-up comments. Called a better performer than many signature shoes at $100. Standout traction with no sliding even on a dusty/dirty court (squeaks while biting), strong court feel without sacrificing impact protection — legs felt great after two hours. Breathable upper; other owners report TTS, wide-foot-friendly fit with no heel slip.",
+    playstyle: null, courtType: "Indoor / Outdoor", sizingNote: "True to size, wide-foot friendly", verdict: "Solid", wordCount: 90,
+    fullText: "I wasn't exactly sure what I was expecting, but for $100 I'm not sure there's a shoe priced at retail that's more bang for your buck — a better performer than a lot of signature shoes out there, at a fraction of the cost. My favorite things are the traction and the court feel without sacrificing impact protection; my legs felt great after playing 2 hours. They felt super breathable to me. The court we play on is super dirty/dusty — not only did I not have any issues, they were squeaking on top of biting the court, no sliding at all. (Another owner: they fit true to size and are wide-foot friendly; cushion is good, no pinching or heel slippage.)",
+    ratings: { cushioning: 8.0, traction: 9.0, support: 7.5, fit: 8.0, breathability: 8.0, groundFeel: 8.5, durability: 7.0, value: 9.0 },
+    confidences: { cushioning: "medium", traction: "high", support: "medium", fit: "medium", breathability: "high", groundFeel: "high", durability: "low", value: "high" }
+  },
+
+  // --- Qiaodan Sharp Fang 2 Pro SE ---
+  {
+    shoe: "Qiaodan Sharp Fang 2 Pro SE", brand: "Qiaodan", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1dra26t/qiaodan_sports_sharp_fang_2_pro_se_brand_that/",
+    author: "u/Affectionate-Fan-536", date: "2024-06-29",
+    summary: "A 6'0 165lb spot-up player's review (snagged for $50 SGD). Great indoor traction (stops on a dime, doesn't collect dust) but slips badly on hard stops outdoors, and the outsole rubber flattened after ~15 hours. The 'Q Kungfu Pro' drop-in midsole is genuinely good — bouncy heel, low responsive forefoot — preferred over Nike React drop-ins. Wide, slightly long fit; materials feel cheap in hand. Best for smaller, lighter players.",
+    playstyle: "Guard", courtType: "Outdoor", sizingNote: "Fits wide and slightly long — narrow feet 0.5 down", verdict: "Mixed", wordCount: 270,
+    fullText: "Review mainly done outdoors. Bought since I snagged it for $50 SGD. 6 feet, 165 pound, Joe Harris playstyle. Traction 6.5/10 outdoors, 9/10 indoors: the one time I tried it indoors it stopped on a dime and didn't really collect any dust. Outdoors it stops pretty well too, until you try a hard stop — then it's basically guaranteed to slip out. Durability also ain't great, the rubber flattened on the edges after only about 15 hours. Cushion 7/10: uses Q Kungfu Pro, actually a really nice setup. A drop-in midsole that's nice and bouncy in the heel while being low to the ground and responsive in the forefoot. Despite the plastic shank plate I didn't feel much springboard effect, but torsion was still adequate. Honestly prefer it over Nike's React drop-ins. Adequate for me but could be an issue for heavier, more explosive players. Fit 8/10: fits wide and slightly long; narrow footers can go down half a size. Went TTS (US 10.5). Material 7/10: feels alright on foot but cheap in hand; containment is alright. Overall would recommend for smaller lighter players due to cushion and torsion support.",
+    ratings: { cushioning: 7.0, traction: 6.5, support: 6.5, fit: 8.0, breathability: 7.0, groundFeel: 7.5, durability: 5.5, value: 8.0 },
+    confidences: { cushioning: "high", traction: "high", support: "medium", fit: "high", breathability: "low", groundFeel: "medium", durability: "high", value: "medium" }
+  },
+
+  // --- Li-Ning Sonic 11 ---
+  {
+    shoe: "Li-Ning Sonic 11", brand: "Li-Ning", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1foml5k/underrated_hoop_shoe/",
+    author: "u/600hz", date: "2024-09-24",
+    summary: "Nominated as the most underrated hoop shoe. Great cushioning, stable platform, good traction, and uppers that conform well to the foot — let down only by durability, which is surprising given Li-Ning's usual track record.",
+    playstyle: null, courtType: "Indoor", sizingNote: null, verdict: "Solid", wordCount: 45,
+    fullText: "What is currently the most underrated hoop shoe? In my opinion it's the Li-Ning Sonic 11 — great cushioning, stable, good traction, materials conform to your feet well, but not the most durable, which is surprising given Li-Ning's track record.",
+    ratings: { cushioning: 8.0, traction: 7.5, support: 7.5, fit: 7.5, breathability: 7.0, groundFeel: 7.0, durability: 6.0, value: 7.5 },
+    confidences: { cushioning: "medium", traction: "medium", support: "medium", fit: "medium", breathability: "low", groundFeel: "low", durability: "medium", value: "low" }
+  },
+
+  // =====================================================
   // === RUNNING — r/running_shoes ===
   // =====================================================
 
@@ -1326,6 +1538,130 @@ export const reviews = [
     ratings: { cushioning: 8.5, traction: 7.5, support: 7.0, fit: 8.5, breathability: 8.5, groundFeel: 7.5, durability: 8.0, value: 9.5 },
     confidences: { cushioning: "high", traction: "medium", support: "medium", fit: "high", breathability: "high", groundFeel: "medium", durability: "medium", value: "high" }
   },
+
+  // =====================================================
+  // === RUNNING — NEW SHOES (batch 4) ===
+  // =====================================================
+
+  // --- New Balance Rebel v4 ---
+  {
+    shoe: "New Balance Rebel v4", brand: "New Balance", sport: "running", subreddit: "r/RunningShoeGeeks",
+    redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1h2nf9v/nb_rebel_v4_review_at_906km/",
+    author: "u/2_S_F_Hell", date: "2024-11-29",
+    summary: "Versatile, very lightweight daily trainer at 906km but lacks bounce and propulsion next to the Mach 6, and the low stack means a lot of ground feel. Comfortable across easy, tempo and long runs, but not recommended for heavier runners due to thin cushioning. Runs small — size up half.",
+    playstyle: "Daily Trainer", courtType: "Road", sizingNote: "Runs small, size up half", verdict: "Solid", wordCount: 268,
+    fullText: "Personal info: 33M, 5'6, 155lbs. Fit - Not TTS. I had to go half a size up. I normally wear size 9 but took 9.5 for those shoes. I did all kind of runs with the Rebel v4. Daily easy runs, tempo and long runs. It is known to be a versatile shoe but to be honest I stopped doing my intervals and tempo sessions with it. It's a really lightweight shoe but it lacks bounciness and propulsion compared to my Mach 6. Many reviewers compared Rebel v4 to Mach 6 and as someone who have tried both I can confidently say that the Mach 6 is much better for speedy stuff. The longest distance I ran is 22km and it went pretty well but I could tell it's not super cushioned. The stack height is pretty low so you feel more of the ground when you are running and it can get tiring on your long runs, even more if you are heavy. Would I recommend this shoe? Absolutely! I loved all my mileage ran in this shoe and I also love the aesthetic and the colors of the NB Rebel v4 BUT I wouldn't recommend it to heavier runners since it's a lightweight shoe with not a lot of cushion imo.",
+    ratings: { cushioning: 5.5, traction: 7.0, support: 6.0, fit: 7.0, breathability: 7.5, groundFeel: 8.5, durability: 8.0, value: 7.5 },
+    confidences: { cushioning: "high", traction: "low", support: "medium", fit: "high", breathability: "low", groundFeel: "high", durability: "high", value: "medium" }
+  },
+
+  // --- Nike Vaporfly 3 ---
+  {
+    shoe: "Nike Vaporfly 3", brand: "Nike", sport: "running", subreddit: "r/RunningShoeGeeks",
+    redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1kdlujh/nike_vaporfly_234_reviews_comparisons/",
+    author: "u/thelazyshrimp", date: "2025-05-03",
+    summary: "A let-down in a 3-generation comparison. More cushioned than the VF2 but the foam feels dull and unresponsive — no real impact softening, no bounce, no supershoe feeling. Poor heel lockdown with persistent slippage, and the ridged outsole plus foam break down after ~80 miles. Wouldn't buy even discounted.",
+    playstyle: "Race Day", courtType: "Road", sizingNote: "True to size", verdict: "Disappointing", wordCount: 232,
+    fullText: "I hoped the VF3 would maintain the aggressive, energetic ride of the VF2 but be a bit more accommodating and slightly more cushioned for longer distances. I was really impressed by the breathability and how lightweight the shoes were, but unfortunately besides that, I was disappointed in the VF3. Firstly, I found the fit really off. The shoe was my proper size, but even with a runner's knot, double knotting, etc, I could never get a proper lockdown and got a lot of heel slippage. Secondly, while the VF3 is noticeably more cushioned than the V2, it lacked the benefits you'd typically expect from added foam. It didn't soften ground impact in a meaningful way, nor did it provide any bounce or energy return. Instead, the foam just made the shoe feel dull and unresponsive — like it absorbed the energy instead of giving it back. It did feel more comfortable than the V2 as I didn't have any calf/feet tightness after wearing it, but it didn't give me any supershoe feeling. Lastly, the durability is lacking. Instead of being a continuous bottom like V2, it has ridges on the bottom which started to wear down quickly. The foam started to fall apart after about 80-ish miles and it lost what little bounce/energy return it had around then too, which isn't what I'd want from a $250 supershoe. I still wouldn't buy them even at a discounted price.",
+    ratings: { cushioning: 5.0, traction: 5.0, support: 4.0, fit: 4.0, breathability: 8.5, groundFeel: 5.0, durability: 3.0, value: 2.5 },
+    confidences: { cushioning: "high", traction: "medium", support: "high", fit: "high", breathability: "high", groundFeel: "medium", durability: "high", value: "high" }
+  },
+
+  // --- ASICS Superblast 1 ---
+  {
+    shoe: "ASICS Superblast 1", brand: "ASICS", sport: "running", subreddit: "r/RunningShoeGeeks",
+    redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1kd9lj3/asics_superblast_1_after_550_miles/",
+    author: "u/Cuber_Chris", date: "2025-05-02",
+    summary: "At 550+ miles the ride hasn't changed at all — otherworldly durability that makes the lofty price a high-value pick. Lightweight, stable, and wildly versatile across long runs, marathons, threshold and track. Knocks: mediocre outsole rubber, collects rocks, and uninspiring lockdown.",
+    playstyle: "Long Run", courtType: "Road", sizingNote: "True to size", verdict: "Elite", wordCount: 210,
+    fullText: "Profile: 35M 165lb, Forefoot striker. Runs w/Superblast: mostly 16mi+ long runs including 2x marathons, occasional threshold work at HM+, occasional track sessions at ~3k race pace, occasional recovery runs. TL;DR The Superblast is a highly versatile shoe with a stable ride and other worldly durability, making it land in the HIGH value tier despite the lofty price tag. Strengths: wildly durable, lightweight, stable, highly versatile. Weaknesses: mediocre outsole rubber, collects rocks, uninspiring lockdown. Full thoughts on durability: I often begin to notice a decline in a shoe's ride characteristics around 300 miles. By 350-400 miles, I'm retiring most shoes. So, to have a shoe at 550+ miles with ZERO noticeable change in ride is astonishing. The only period I didn't truly care for the ride was the early miles (first ~30). From that point on, the ride, bounce, energy return, feel and leg protection abilities have remained constant. Frankly, it seems like these could go 300-500 MORE miles. If you're still waiting to try the SB1 or SB2 due to price, let this be your sign that they're really TWO $100 versatile trainers packed into one.",
+    ratings: { cushioning: 8.5, traction: 6.0, support: 8.0, fit: 6.5, breathability: 7.0, groundFeel: 7.5, durability: 10.0, value: 9.5 },
+    confidences: { cushioning: "medium", traction: "high", support: "high", fit: "medium", breathability: "low", groundFeel: "medium", durability: "high", value: "high" }
+  },
+
+  // --- ASICS Metaspeed Sky Paris ---
+  {
+    shoe: "ASICS Metaspeed Sky Paris", brand: "ASICS", sport: "running", subreddit: "r/RunningShoeGeeks",
+    redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1kdy1a4/asics_metaspeed_sky_paris_after_100km/",
+    author: "u/Leith_Walker", date: "2025-05-03",
+    summary: "A brilliant race shoe that is 'fast without feeling fast' — the stiff midsole and plate don't feel soft or overtly propulsive, yet marathon-pace and faster come effortlessly. Excellent breathable narrow upper, the best laces the reviewer has used, and great grip. Caused an early forefoot blister before the foam softened.",
+    playstyle: "Race Day", courtType: "Road", sizingNote: "True to size", verdict: "Solid", wordCount: 296,
+    fullText: "I picked up a pair of ASICS Metaspeed Sky Paris on sale. 39yo male training for a marathon, aiming 3:10-3:20, ~70km/week. I own the Superblast 2 and was really impressed, so wanted to try the Metaspeed Sky Paris. Upper and fit - the upper is really well designed and breathable. It's a very narrow shoe, that suits me, but I could see it being an issue for others. Even though it is narrow, there is quite a lot of room in the toe box, and they fit true to size for me. The laces are excellent — they lock really tight with no slippage, the best laces on a running shoe I've come across. Midsole and plate - the midsole and plate do not feel super soft like a lot of current super race shoes. They actually felt stiff compared to the Adidas Pro 4. You can also feel the stiffness of the plate, and after my first run I started to get a blister on my right foot pad. After some initial runs, the foam softened a bit and the shoes became really comfortable. I don't feel like this feels like a fast shoe when you have it on, but when you look at your times it definitely is. I can effortlessly run at marathon pace and faster. It's a fast shoe, without feeling fast. Brilliant for 5-15km tempo runs and longer intervals — the plate gives a lot of return. Outsole - the foam doesn't feel like it'll last for a long time, but it's not designed for daily use. The grip is great and I feel super secure on all road terrain; after 100km the foam feels just as good as at 50km. Super light. After a poor first impression I've been really impressed. A brilliant race shoe.",
+    ratings: { cushioning: 7.0, traction: 8.0, support: 6.5, fit: 7.5, breathability: 9.0, groundFeel: 7.0, durability: 6.0, value: 7.5 },
+    confidences: { cushioning: "medium", traction: "high", support: "medium", fit: "high", breathability: "high", groundFeel: "medium", durability: "medium", value: "medium" }
+  },
+
+  // --- Puma Deviate Nitro 3 ---
+  {
+    shoe: "Puma Deviate Nitro 3", brand: "Puma", sport: "running", subreddit: "r/RunningShoeGeeks",
+    redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1k30kop/puma_deviate_nitro_3_after_500km/",
+    author: "u/RecycledPlatypus", date: "2025-04-19",
+    summary: "At 500km it's still very comfortable and lively, encouraging higher cadence at faster paces — a quick trainer that handles up to half-marathon distance. Doesn't feel obviously bouncy/responsive from the plate but performs well (PR'd a 5k in them). PUMA grip is outstanding through winter and wet; forefoot runs narrow. Excellent durability.",
+    playstyle: "Daily Trainer", courtType: "Road", sizingNote: "True to size, narrow forefoot", verdict: "Solid", wordCount: 300,
+    fullText: "User profile: M, 180cm, 70kg, 28.5cm in all brands, 60-80km/week, neutral fore/mid-foot striker. Used for daily runs, long runs and tempo. Size and fit: my feet are 28.5cm which is PUMA EU44. The forefoot tapers a bit but wasn't a problem since it is still roomy even after my feet swell after 16km+. I find PUMAs narrow, so take note if you're sensitive to that. Ride: after 500km it is still very comfortable and encourages higher cadence at faster paces. I hate shoes that feel flat like the Adizero SL v1; these feel like those on first try but transform into lively quick trainers that can last up to half-marathon distances. Performance: one of my confusions is that I never felt the obvious responsiveness or bounciness some claim these have from the plate. But these shoes are fast and perform well — they consistently disappeared from my feet during long runs. I tested them in a 5km self-race in the rain (chose them over my Magic Speeds for grip) and got a 20:34 PR. The PUMA grip is real — they carried me through winter reliably and I only slipped once on hard ice. Durability: the upper is still pristine. The forefoot has flattened a bit after many long runs but only visually; it's still reliable. The midsole/plate has tons of dents from rocks but I didn't feel degradation. The rubber grips look only slightly used with no wear yet. I truly believe people's claim that I can take these up to 1000km. It's like I found my favourite shoes of all time that checks all my needs: longevity, grip, comfort and fore/midfoot-friendly.",
+    ratings: { cushioning: 7.0, traction: 9.5, support: 7.0, fit: 6.5, breathability: 6.5, groundFeel: 7.0, durability: 9.0, value: 8.0 },
+    confidences: { cushioning: "medium", traction: "high", support: "medium", fit: "high", breathability: "medium", groundFeel: "low", durability: "high", value: "medium" }
+  },
+
+  // --- Puma Deviate Nitro Elite 3 ---
+  {
+    shoe: "Puma Deviate Nitro Elite 3", brand: "Puma", sport: "running", subreddit: "r/RunningShoeGeeks",
+    redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1kpoy06/puma_deviate_nitro_elite_3_after_135_miles/",
+    author: "u/sacrunner916", date: "2025-05-18",
+    summary: "Bought to spare an Alphafly 3 but became the go-to for hard workouts after setting 5k/10k/marathon PBs — made the marathon feel effortless. Responsive Lightstrike-Pro-like midsole, secure lockdown, stable on sharp turns, great wet grip. Downsides: stains socks purple and stresses the calves more than other plated shoes. At $230 it feels like a bargain.",
+    playstyle: "Race Day", courtType: "Road", sizingNote: "True to size", verdict: "Elite", wordCount: 247,
+    fullText: "Total distance ran: 135 miles (217 km). Type of runs: I've used these for just about everything — progression runs, strides, paced a half marathon, workouts ranging from 12-21 miles with 5k/10k/HM/MP efforts, and a marathon. Mostly roads with a small amount of dirt trail. Dry and rainy conditions. Profile: 6'0, 160lbs, 70 miles/week, 1:23 HM and 2:55 FM, shuffle-y higher cadence midfoot striker. Overview: I initially bought these to preserve my Alphafly 3's racing lifespan, but after setting my 5k, 10k and marathon PBs in the DNE3, they have become my go-to shoe for harder workouts. And for the marathon I used them in earlier this month, they made the run feel effortless, almost like cruise control. Out of the box the outsole was very tacky and great on a longer wet run. After 135 miles the midfoot outsole is starting to wear and lose some grip, but the midsole still has plenty of life. Positives: fits true to size, easy to get a secure lockdown, comfortable upper, responsive midsole similar to the Lightstrike Pro foam in the Adios Pro 3, stable platform even on sharp turns, good wet weather grip. Negatives: they have stained multiple pairs of socks with purple blotches, and they put more stress on my calves compared to other plated shoes. Worth buying? Yes. As far as race shoes go, for $230, these feel like a bargain.",
+    ratings: { cushioning: 8.0, traction: 8.5, support: 8.0, fit: 8.5, breathability: 7.5, groundFeel: 7.0, durability: 7.0, value: 8.5 },
+    confidences: { cushioning: "medium", traction: "high", support: "high", fit: "high", breathability: "low", groundFeel: "low", durability: "medium", value: "high" }
+  },
+
+  // --- Puma Fast-R Nitro Elite 3 (extra perspective — Project3 tester) ---
+  {
+    shoe: "Puma Fast-R Nitro Elite 3", brand: "Puma", sport: "running", subreddit: "r/RunningShoeGeeks",
+    redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1k1d9dn/puma_fastr_nitro_elite_3_review_pics/",
+    author: "u/eatrunswag", date: "2025-04-17",
+    summary: "The reviewer's favorite supershoe ever after 4 weeks of workouts — a hybrid of the Metaspeed's bouncy-soft ride and the Next%'s forward propulsion, with no sore calves after. Less squishy than the VF3 (a plus). Locks in from 5k to marathon pace; not their pick for an all-out road 5-10k, and the upper is snug with a non-gusseted tongue.",
+    playstyle: "Race Day", courtType: "Road", sizingNote: "True to size, snug", verdict: "Elite", wordCount: 286,
+    fullText: "Background: I applied to the Puma Project3 program. Workouts: did my first workout March 13th, a 20x1'/1' session. My Jan-Feb workouts had been done mostly in Asics Metaspeed Sky+ and Vaporfly 3s. Then used them for all workouts over 4 weeks (one fartlek/interval session, one long run per week). From 5k to marathon pace, I was able to lock in and cruise without sore calf muscles after. Performance: these are my favorite supershoes EVER. I've always been a fan of the flyknit 4% and the Next% as my all-timers, but these move into number one. They are not as overly squishy as the VF3, which is my one complaint about that shoe. This feels like a hybrid of the Metaspeed (bouncy but a soft ride) plus a similar propulsion to the Next%, that feeling that you are actually bouncing forward instead of up. I did one easy run in them at 7:00/mi pace and they felt totally comfortable, though I wouldn't use them as trainers. Cons: I'm not sure these would be my go-to for a road 5-10k; if I was going for something really fast I'd want something more aggressive. I usually wear thin racing socks to keep them from being too tight. They don't waste any space; I'd put the upper fit on par with the VF3. Also the tongue is not attached to the lacing (non-gusseted); I haven't had issues with it moving but I know this matters to some.",
+    ratings: { cushioning: 8.5, traction: 7.5, support: 7.5, fit: 7.0, breathability: 7.0, groundFeel: 7.5, durability: 7.0, value: 7.5 },
+    confidences: { cushioning: "high", traction: "low", support: "medium", fit: "high", breathability: "low", groundFeel: "medium", durability: "low", value: "medium" }
+  },
+
+  // --- Nike Pegasus Plus ---
+  {
+    shoe: "Nike Pegasus Plus", brand: "Nike", sport: "running", subreddit: "r/RunningShoeGeeks",
+    redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1i90yek/nike_pegasus_plus_follow_up_review_after_500km/",
+    author: "u/highdon", date: "2025-01-24",
+    summary: "At 500km, still the best up-tempo daily trainer since the Speed 2 — but with a deliberately traditional, no-nonsense feel: no aggressive rocker, bounce, or stability features. Great for easy runs and shorter speed work, less ideal for long tempo/threshold. ZoomX held up brilliantly, only going flat in the last 50km. Pricey at RRP but worth it around £120.",
+    playstyle: "Tempo / Workout", courtType: "Road", sizingNote: "True to size", verdict: "Solid", wordCount: 299,
+    fullText: "I have now covered over 300 miles (500km) in my Pegasus Plus. Profile: 32m, 184cm, 79kg, forefoot striker, in marathon training doing 40-50mpw. Used for easy to recovery mid-week runs up to 10km, and mid-week club track workouts (400s, 800s, 1k, 1 mile, paces 3:30-4:30/km). In my initial review I said this was the best up-tempo trainer since the Speed 2. I still stand by that, although I found gaps. The Peg Plus has a very traditional feeling — not a pro or con, but a characteristic. They don't have an aggressive rocker, bouncy platform, or stability features. They are therefore a bit too basic for a run where you'd like to see the roll/bounce, eg longer tempo/threshold segments; for those I reached for the Superblast 2 or Evo SL. One thing I didn't mention before: when I first got these I was nursing mild plantar fasciitis, and running in the Peg Plus benefited my recovery — the flexibility and geometry made my feet work a bit harder, a rare thing among heavily rockered max-stack plated trainers. The midsole, outsole and upper all performed brilliantly from day one; it was only in the last 50km that they went a bit flat and bottomed out. Durability held up brilliantly — outsole and upper like new, midsole shows typical ZoomX creasing (only visual). The most controversial thing is the price, but at £120 they are well worth it. Great choice if: a) you're not running longer than 8-10 miles and want a versatile neutral trainer; b) you run long distances but have a dedicated shoe for those; c) you don't like stiff midsoles and prefer a traditional feeling shoe.",
+    ratings: { cushioning: 7.5, traction: 7.5, support: 6.0, fit: 7.5, breathability: 7.5, groundFeel: 7.5, durability: 8.0, value: 7.0 },
+    confidences: { cushioning: "medium", traction: "low", support: "medium", fit: "medium", breathability: "low", groundFeel: "medium", durability: "high", value: "high" }
+  },
+
+  // --- HOKA Mach X 2 ---
+  {
+    shoe: "HOKA Mach X 2", brand: "HOKA", sport: "running", subreddit: "r/RunningShoeGeeks",
+    redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1guc7gz/hoka_mach_x_2_review_after_30km_wow/",
+    author: "u/DuBB1T", date: "2024-11-18",
+    summary: "By far the best ride the reviewer has ever had — incredibly smooth heel-to-toe transition and powerful toe-off, bouncy race foam over a firmer training-foam heel for control. So propulsive it's hard to run easy (sub-5:15/km feels like fighting the shoe). Snug Hoka fit; the big flaw is a flimsy heel counter with collar pads that dig into the achilles.",
+    playstyle: "Tempo / Workout", courtType: "Road", sizingNote: "True to size, snug", verdict: "Great", wordCount: 285,
+    fullText: "Profile: 6', 175lbs, heel-to-midfoot striker, 3:44 MP & 1:40 HMP, 40-50km/week. Recent shoes: Novablast 4, Endorphin Pro 3, retired Boston 12 — I was specifically looking for a replacement for the Boston 12. TL;DR: Wow, this is by far the best ride I have ever had in a shoe. I plan to use it for tempo/threshold runs and some long runs with speed. Ride: amazing. The transition from heel to toe is incredibly smooth and the toe-off is powerful. The shoe feels bouncy and fast due to the top layer of race foam, but the firmer training foam at the heel gives a good sense of control. The plate is mostly for stability and I can feel the foam is restricted to a certain area thanks to it, giving good (albeit not great) stability, but it snaps back and propels you forward well. The only thing I'd say is the toe-off is almost too powerful — running at a 6min split was difficult, I felt I was fighting the shoe; anything slower than ~5:15 felt like a fight. It's really meant to go at a good pace. Fit: this is where it struggles. It's a Hoka so it fits snug, which I like. Upper feels light and breathable but not cheap. The heel counter sucks — it's very flimsy with little support, and Hoka put 2 pads in the collar to squeeze around your achilles to avoid heel lift. It works, but your heel still wants to slip, and when it does you feel those pads dig in. Go try this in a store first; the heel fit may be a deal breaker. But if it isn't, you're in for an incredible ride — my favorite shoe.",
+    ratings: { cushioning: 8.0, traction: 7.5, support: 6.5, fit: 5.5, breathability: 7.5, groundFeel: 7.0, durability: 7.0, value: 7.5 },
+    confidences: { cushioning: "medium", traction: "low", support: "medium", fit: "high", breathability: "medium", groundFeel: "low", durability: "low", value: "low" }
+  },
+
+  // --- Saucony Triumph 22 ---
+  {
+    shoe: "Saucony Triumph 22", brand: "Saucony", sport: "running", subreddit: "r/RunningShoeGeeks",
+    redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1j4mh8i/saucony_triumph_22_510_mile_review/",
+    author: "u/sirmediocre", date: "2025-03-06",
+    summary: "At 510 miles, the most durable shoe the reviewer has ever worn — only minor sole wear and still springy, good for another 200+ miles. Comfortable straight out of the box for wide, flat feet (better without insoles), and versatile from 17+ mile long runs to responsive faster training. Gets a bit soggy at race pace, so not a racer. More cushioned than the 21.",
+    playstyle: "Daily Trainer", courtType: "Road", sizingNote: "Runs slightly large", verdict: "Solid", wordCount: 296,
+    fullText: "Shoe Model & Size: Saucony Triumph 22, 11.5 US Men's. Fit/Comfort: I have fairly flat feet and have worn arch supports. These fit me perfectly out of the box, and were more comfortable without insoles than with. My feet are also pretty wide and I've struggled with other brands (Nike in particular) to get appropriate width. These are great for my feet and I occasionally wear them to work because they're so comfortable. Use Case: daily trainer (not race shoe). Distance: 510 miles. Profile: 5'9, 153, Heel/Mid Striker, ~35 MPW around 7:40 min/mile. Pros: these are by far the most durable shoes I've ever worn. 500 miles in and there is only some minor wear on the soles. They're still plenty springy and comfortable and feel pretty close to how they did when purchased. They've withstood rain and snow with no trouble. I suspect they're good for at least another 200 miles. They are versatile — I've run long distances (17+ mi) and found the extra cushioning very useful, but when training for races they still feel responsive enough to make fast paces feel comfortable. Cons: can feel a bit soggy at race pace; I'd never wear them for an actual race. Comparisons: Hoka Clifton — the durability difference isn't even close, the Hoka soles were completely worn after 230 miles. Endorphin Pro 3 — I train in the Triumphs and race in the Endorphins. Triumph 21 — much too stiff; there's a noticeable increase in cushion in the 22, especially the heel. TL;DR: Barring changes, I'll probably never buy another training shoe. These rock and have given me the most bang for my buck of any shoe.",
+    ratings: { cushioning: 8.5, traction: 8.0, support: 7.0, fit: 8.0, breathability: 7.0, groundFeel: 6.0, durability: 10.0, value: 9.5 },
+    confidences: { cushioning: "high", traction: "medium", support: "medium", fit: "high", breathability: "low", groundFeel: "medium", durability: "high", value: "high" }
+  },
 ];
 
 // Aggregate shoes for the shoe listing
@@ -1343,40 +1679,51 @@ function bucketAggregateConfidence(totalWeight) {
 }
 
 export const shoePrices = {
-  "Nike LeBron 21": 200, "Nike LeBron 20": 200, "Nike KD 14": 150,
-  "Nike Sabrina 2": 110, "Nike AE 1": 120, "Nike Shai 001": 110,
-  "Nike GT Cut 3": 150, "Nike GT Cut 4": 160, "Nike Ja 3": 120,
-  "Nike Kobe 6 Protro": 180, "Nike Kobe AD NXT FF": 160, "Air Jordan 40": 185,
-  "361 Joker 1 GT": 110, "361 Joker 2": 120, "361 Joker 2 GT": 130,
-  "361 Joker 2 Low": 110, "Li-Ning JB3": 150, "Li-Ning Way of Wade 12": 160,
-  "Li-Ning Gamma 1": 130, "Li-Ning Gamma 2": 140, "Li-Ning Liren 6v2": 120,
-  "Li-Ning Wade 808 3 Ultra v2": 170, "ANTA Kai 3": 130,
-  "Adidas Don Issue 7": 110, "Adidas Harden 9": 140, "Adidas Crazy Energy": 100,
-  "SPO Game 1 High": 85, "Li-Ning All City 14": 130,
-  "HOKA Mach 6": 145, "Brooks Ghost 17": 140, "ASICS Superblast 2": 200,
-  "Saucony Endorphin Speed 5": 185, "Nike Pegasus 41": 140,
+  // === Basketball ===
+  "Nike LeBron 21": 200, "Nike LeBron 20": "150-200", "Nike KD 14": "100-150",
+  "Nike Sabrina 2": 130, "Nike AE 1": "110-120", "Nike Shai 001": "130-170",
+  "Nike GT Cut 3": "190-210", "Nike GT Cut 4": "200-220", "Nike Ja 3": "125-135",
+  "Nike Kobe 6 Protro": "175-200", "Nike Kobe AD NXT FF": 180, "Air Jordan 40": 200,
+  "361 Joker 1 GT": 139, "361 Joker 2": 129, "361 Joker 2 GT": 189,
+  "361 Joker 2 Low": 129, "Li-Ning JB3": "320-600", "Li-Ning Way of Wade 12": "270-570",
+  "Li-Ning Gamma 1": "290-1250", "Li-Ning Gamma 2": "400-1267", "Li-Ning Liren 6v2": 180,
+  "Li-Ning Wade 808 3 Ultra v2": 130, "ANTA Kai 3": "135-150",
+  "Adidas Don Issue 7": 120, "Adidas Harden 9": 160, "Adidas Crazy Energy": 150,
+  "SPO Game 1 High": 180, "Li-Ning All City 14": 130,
   // New basketball
-  "Nike Ja 1": 115, "Nike Ja 2": 120, "Nike Kobe 8 Protro": 190,
-  "Nike KD 17": 150, "Nike GT Jump 2": 180, "Nike Zoom Freak 5": 140,
-  "ANTA KT8": 130, "New Balance TWO WXY V5": 100,
-  // New running
-  "HOKA Clifton 10": 145, "HOKA Bondi 9": 165, "HOKA Bondi 8": 165,
-  "On Cloudmonster 2": 180, "Nike Vomero 18": 150,
-  "Saucony Guide 17": 140, "Brooks Glycerin 21": 160, "Brooks Glycerin 22": 165,
-  "ASICS Gel-Nimbus 26": 160,
+  "Nike Ja 1": "110-120", "Nike Ja 2": 125, "Nike Kobe 8 Protro": "180-200",
+  "Nike KD 17": 150, "Nike GT Jump 2": 180, "Nike Zoom Freak 5": 130,
+  "ANTA KT8": "70-180", "New Balance TWO WXY V5": 120,
   // New basketball (batch 3)
-  "Puma All-Pro Nitro Elite": 250, "ANTA KT7": 130, "ANTA KT9": 130,
-  "Adidas Harden Vol 8": 140, "SPO Easy 1": 169, "Nike GT Cut 1": 170,
-  "Jordan Luka 4": 120, "Nike Zion 3 SE": 100, "Adidas Trae Young 2": 130,
-  "Adidas Trae Unlimited 2 Low": 75, "Nike Book 1": 150, "Li-Ning Speed XI": 90,
-  "ANTA Swagger 1.0": 90, "New Balance Fresh Foam BB v2": 140, "Air Jordan 38 Low": 180,
-  "Puma MB.01 Low": 125, "Li-Ning Liren 4 v2": 130,
+  "Puma All-Pro Nitro Elite": 250, "ANTA KT7": 149, "ANTA KT9": 130,
+  "Adidas Harden Vol 8": 160, "SPO Easy 1": "118-180", "Nike GT Cut 1": "150-200",
+  "Jordan Luka 4": "130-145", "Nike Zion 3 SE": 140, "Adidas Trae Young 2": 140,
+  "Adidas Trae Unlimited 2 Low": 75, "Nike Book 1": 150, "Li-Ning Speed XI": "100-190",
+  "ANTA Swagger 1.0": "115-125", "New Balance Fresh Foam BB v2": 100, "Air Jordan 38 Low": "175-200",
+  "Puma MB.01 Low": "120-140", "Li-Ning Liren 4 v2": 200,
+  // New basketball (batch 4)
+  "Jordan Tatum 3": 120, "UA Curry 12": 150, "Puma MB.03": 125,
+  "Nike Giannis Immortality 3": 75, "Puma Scoot Zero 1": 100, "Nike LeBron NXXT Gen AMPD": 140,
+  "Jordan Luka .77": 110, "Reebok Engine A": 120, "Adidas Kobe Crazy 8": 140,
+  "Li-Ning Wade 808 5 Ultra": 150, "ANTA Kai 2": 110, "Rigorer AR1": 90,
+  "Rigorer AR2": 100, "Qiaodan Sharp Fang 2 Pro SE": 75, "Li-Ning Sonic 11": 110,
+  // === Running ===
+  "HOKA Mach 6": 140, "Brooks Ghost 17": 150, "ASICS Superblast 2": 200,
+  "Saucony Endorphin Speed 5": 175, "Nike Pegasus 41": "130-140",
+  "HOKA Clifton 10": 150, "HOKA Bondi 9": 170, "HOKA Bondi 8": "100-165",
+  "On Cloudmonster 2": 180, "Nike Vomero 18": 150,
+  "Saucony Guide 17": 140, "Brooks Glycerin 21": "110-160", "Brooks Glycerin 22": 165,
+  "ASICS Gel-Nimbus 26": 160,
   // New running (batch 3)
-  "ASICS Novablast 5": 145, "ASICS Novablast 4": 140, "Nike Vaporfly 4": 260,
-  "Puma Fast-R Nitro Elite 3": 280, "Salomon Aero Glide 3": 150,
-  "Adidas Adizero Boston 13": 160, "Adidas Adizero SL2": 150,
-  "Mizuno Neo Vista 2": 180, "Mizuno Neo Zen": 170, "Adidas Adizero Evo SL": 150,
-  "Li-Ning Challenger 5": 80,
+  "ASICS Novablast 5": 140, "ASICS Novablast 4": "100-130", "Nike Vaporfly 4": 260,
+  "Puma Fast-R Nitro Elite 3": 300, "Salomon Aero Glide 3": 160,
+  "Adidas Adizero Boston 13": 160, "Adidas Adizero SL2": 130,
+  "Mizuno Neo Vista 2": 200, "Mizuno Neo Zen": 150, "Adidas Adizero Evo SL": 150,
+  "Li-Ning Challenger 5": 130,
+  // New running (batch 4)
+  "New Balance Rebel v4": 140, "Nike Vaporfly 3": 260, "ASICS Superblast 1": 200,
+  "ASICS Metaspeed Sky Paris": 250, "Puma Deviate Nitro 3": 160, "Puma Deviate Nitro Elite 3": 230,
+  "Nike Pegasus Plus": 180, "HOKA Mach X 2": 190, "Saucony Triumph 22": 160,
 };
 
 // Direct product-image CDN URLs (brand assets or official-store CDNs), verified to load.
@@ -1408,6 +1755,20 @@ export const shoeImages = {
   "Li-Ning Wade 808 3 Ultra v2":   "/shoes/li-ning-wade-808-3-ultra-v2.png",
   "Li-Ning All City 14":           "/shoes/li-ning-all-city-14.png",
   "ANTA Kai 3":                    "/shoes/anta-kai-3.png",
+  "Jordan Tatum 3":                "/shoes/jordan-tatum-3.png",
+  "UA Curry 12":                   "/shoes/ua-curry-12.png",
+  "Puma MB.03":                    "/shoes/puma-mb-03.png",
+  "Nike Giannis Immortality 3":    "/shoes/nike-giannis-immortality-3.png",
+  "Puma Scoot Zero 1":             "/shoes/puma-scoot-zero-1.png",
+  "Nike LeBron NXXT Gen AMPD":     "/shoes/nike-lebron-nxxt-gen-ampd.png",
+  "Jordan Luka .77":               "/shoes/jordan-luka-77.png",
+  "Reebok Engine A":               "/shoes/reebok-engine-a.png",
+  "Adidas Kobe Crazy 8":           "/shoes/adidas-kobe-crazy-8.png",
+  "Li-Ning Wade 808 5 Ultra":      "/shoes/li-ning-wade-808-5-ultra.png",
+  "ANTA Kai 2":                    "/shoes/anta-kai-2.png",
+  "Rigorer AR1":                   "/shoes/rigorer-ar1.png",
+  "Rigorer AR2":                   "/shoes/rigorer-ar2.png",
+  "Li-Ning Sonic 11":              "/shoes/li-ning-sonic-11.png",
   "Adidas Don Issue 7":            "/shoes/adidas-don-issue-7.png",
   "Adidas Harden 9":               "/shoes/adidas-harden-9.png",
   "Adidas Crazy Energy":           "/shoes/adidas-crazy-energy.png",
@@ -1464,6 +1825,14 @@ export const shoeImages = {
   "Mizuno Neo Zen":                "/shoes/mizuno-neo-zen.png",
   "Adidas Adizero Evo SL":         "/shoes/adidas-adizero-evo-sl.png",
   "Li-Ning Challenger 5":          "/shoes/li-ning-challenger-5.png",
+  "New Balance Rebel v4":          "/shoes/new-balance-rebel-v4.png",
+  "Nike Vaporfly 3":               "/shoes/nike-vaporfly-3.png",
+  "ASICS Superblast 1":            "/shoes/asics-superblast-1.png",
+  "ASICS Metaspeed Sky Paris":     "/shoes/asics-metaspeed-sky-paris.png",
+  "Puma Deviate Nitro 3":          "/shoes/puma-deviate-nitro-3.png",
+  "Puma Deviate Nitro Elite 3":    "/shoes/puma-deviate-nitro-elite-3.png",
+  "Nike Pegasus Plus":             "/shoes/nike-pegasus-plus.png",
+  "Saucony Triumph 22":            "/shoes/saucony-triumph-22.png",
 };
 
 // Original (un-normalized) source photo per shoe — shown full-size in the modal lightbox.
@@ -1495,6 +1864,20 @@ export const shoeImagesOriginal = {
   "Li-Ning Wade 808 3 Ultra v2":   "https://wowsole.com/wp-content/uploads/2024/01/LiNing-Way-of-Wade-808-3-Ultra-V2-Tour-High-Boom-White-1024x1024.jpg",
   "Li-Ning All City 14":           "https://wowsole.com/wp-content/uploads/2025/12/Way-of-Wade-All-City-14-Caution.jpg",
   "ANTA Kai 3":                    "https://www.basketballemotion.com/imagesarticulos/338651/750/zapatillas-anta-kai-3-432-hz-purple-red-0.webp",
+  "Jordan Tatum 3":                "https://www.kicksown.com/cdn/shop/files/079204c899792b7f094aa45a381f1b65_1_5dfc9c0b-c135-4a8e-b435-4992be6489aa.jpg?v=1761116343&width=960",
+  "UA Curry 12":                   "https://www.basketballemotion.com/imagesarticulos/236924/750/zapatillas-under-armour-curry-12-shooting-star-white-0.webp",
+  "Puma MB.03":                    "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/310519/03/sv01/fnd/PNA/fmt/png/MB.03-Lo-Team-Men%27s-Basketball-Shoes",
+  "Nike Giannis Immortality 3":    "https://www.basketballemotion.com/imagesarticulos/226927/750/zapatilla-nike-giannis-immortality-3-white-lt-photo-blue-lt-laser-orange-0.webp",
+  "Puma Scoot Zero 1":             "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/310415/05/sv01/fnd/PNA/fmt/png/Scoot-Zeros-Men%27s-Basketball-Shoes",
+  "Nike LeBron NXXT Gen AMPD":     "https://www.basketballemotion.com/imagesarticulos/226932/750/zapatilla-nike-zoom-lebron-nxxt-gen-ampd-white-black-university-red-0.webp",
+  "Jordan Luka .77":               "https://www.kicksown.com/cdn/shop/files/079204c899792b7f094aa45a381f1b65_46a5b88f-2702-4453-afbf-2e01ce354114.jpg",
+  "Reebok Engine A":               "https://cdn.media.amplience.net/i/scheelspoc/19880674482?w=1200&h=1200&fmt=auto&v=1",
+  "Adidas Kobe Crazy 8":           "https://www.topsandbottomsusa.com/cdn/shop/files/adidas-kobe-bryants-crazy-8-black-white-shoes-if2448_2.webp?v=1723497052&width=1500",
+  "Li-Ning Wade 808 5 Ultra":      "https://wowsole.com/wp-content/uploads/2025/03/Wade-808-5-Ultra-Dynasty-White-Gold-10-700x700.jpg",
+  "ANTA Kai 2":                    "https://www.basketballemotion.com/imagesarticulos/271229/750/zapatillas-anta-kai-2-moon-gris-0.webp",
+  "Rigorer AR1":                   "https://www.basketballemotion.com/imagesarticulos/235859/750/zapatillas-rigorer-ar1-coocon-white-silver-0.webp",
+  "Rigorer AR2":                   "https://www.basketballemotion.com/imagesarticulos/262491/750/zapatillas-rigorer-ar2-snowman-azul-0.webp",
+  "Li-Ning Sonic 11":              "https://wowsole.com/wp-content/uploads/2023/02/LiNing-Sonic-11-Professional-Basketball-Shoes-white-blue-ride-waves.jpg",
   "Adidas Don Issue 7":            "https://www.kicksown.com/cdn/shop/files/079204c899792b7f094aa45a381f1b65_1_d7a2a5b4-1921-49e0-9d5d-eaae3b971b08.jpg?v=1761126309&width=960",
   "Adidas Harden 9":               "https://www.stripe3.com/cdn/shop/files/JR2504_1_FOOTWEAR_Photography_SideLateralCenterView_transparent_3a7b0590-ae97-4a2e-81f8-ebb5272cfda8.png",
   "Adidas Crazy Energy":           "https://www.solestop.com/cdn/shop/files/0004_KI3197.jpg?v=1778879577",
@@ -1551,6 +1934,14 @@ export const shoeImagesOriginal = {
   "Mizuno Neo Zen":                "https://www.nashvillerunning.com/cdn/shop/files/NEOZENGREY_grande.jpg?v=1759941978",
   "Adidas Adizero Evo SL":         "https://www.solestop.com/cdn/shop/files/adidas-men-adizero-evo-sl-black-white-core-jp7149-590.jpg?v=1773867141",
   "Li-Ning Challenger 5":          "https://wowsole.com/wp-content/uploads/2024/12/LiNing-Challenger-5-white-red.jpg",
+  "New Balance Rebel v4":          "https://m.media-amazon.com/images/I/61XOwGoWqBL._AC_SR920,736_.jpg",
+  "Nike Vaporfly 3":               "https://images.novelship.com/product/nike_zoomx_vaporfly_next__3__white_particle_grey___0_98756.jpeg?fit=fill&bg=FFFFFF&trim=color&auto=format,compress&q=75",
+  "ASICS Superblast 1":            "https://images.novelship.com/product/asics_superblast__white_sunrise_red__1013a143_100_0_80043.png?fit=fill&bg=FFFFFF",
+  "ASICS Metaspeed Sky Paris":     "https://m.media-amazon.com/images/I/71X2F7Wj13L._AC_SR920,736_.jpg",
+  "Puma Deviate Nitro 3":          "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/309707/01/sv01/fnd/PNA/fmt/png/Deviate-NITRO%E2%84%A2-3-Men%27s-Road-Running-Shoes",
+  "Puma Deviate Nitro Elite 3":    "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/310554/01/sv01/fnd/PNA/fmt/png/Deviate-NITRO%E2%84%A2-Elite-3-Men%27s-Running-Shoes",
+  "Nike Pegasus Plus":             "https://cdn.media.amplience.net/i/scheelspoc/19759707157?w=1200&h=1200&fmt=auto&v=1",
+  "Saucony Triumph 22":            "https://m.media-amazon.com/images/I/718jo4njU7L._AC_SR920,736_.jpg",
 };
 
 export function getShoes(sportFilter = 'all') {
@@ -1559,8 +1950,7 @@ export function getShoes(sportFilter = 'all') {
     if (sportFilter !== 'all' && review.sport !== sportFilter) continue;
     const key = review.shoe;
     if (!shoeMap[key]) {
-      const _url = amazonLinks[review.shoe] || '';
-      shoeMap[key] = { name: review.shoe, brand: review.brand, sport: review.sport, price: shoePrices[review.shoe] || null, priceApprox: _url.includes('/s?k='), imageUrl: shoeImages[review.shoe] || null, imageOriginalUrl: shoeImagesOriginal[review.shoe] || null, reviews: [], avgRatings: {}, avgConfidences: {} };
+      shoeMap[key] = { name: review.shoe, brand: review.brand, sport: review.sport, price: shoePrices[review.shoe] || null, priceApprox: getAmazonUrl(review.shoe, review.sport).includes('/s?k='), imageUrl: shoeImages[review.shoe] || null, imageOriginalUrl: shoeImagesOriginal[review.shoe] || null, reviews: [], avgRatings: {}, avgConfidences: {} };
     }
     shoeMap[key].reviews.push(review);
   }
