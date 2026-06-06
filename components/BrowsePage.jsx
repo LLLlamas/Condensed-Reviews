@@ -287,65 +287,53 @@ export default function BrowsePage() {
             </section>
 
             <section className="shoe-layout-section" id="shoes">
-              <AnimatePresence mode="wait" initial={false}>
-                {layout === 'list' && (
-                  <motion.div
-                    key={`list-p${safePage}`}
-                    className="list-view"
-                    initial={{ opacity: 0, y: 8 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -8 }}
-                    transition={{ duration: 0.16, ease: [0.4, 0, 0.2, 1] }}
-                  >
-                    <div className="list-header">
-                      <span>#</span><span>Shoe</span><span>Score</span><span>Price</span><span>Reviews</span><span></span>
-                    </div>
-                    {pagedShoes.map((shoe, i) => (
-                      <ListRow key={shoe.name} shoe={shoe} rank={pageOffset + i + 1} onOpen={shoeName => setModalShoeName(shoeName)} onCompare={handleCompare} sortBy={sortBy} />
-                    ))}
-                    {filteredShoes.length === 0 && <p className="empty-state">No shoes match your filters.</p>}
-                  </motion.div>
-                )}
-                {layout === 'grid' && (
-                  <motion.div
-                    key={`grid-p${safePage}`}
-                    className="shoe-grid"
-                    initial={{ opacity: 0, y: 8 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -8 }}
-                    transition={{ duration: 0.16, ease: [0.4, 0, 0.2, 1] }}
-                  >
-                    {pagedShoes.map((shoe, index) => (
-                      <motion.div
-                        key={shoe.name}
-                        initial={{ opacity: 0, y: 14 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.18, delay: index * 0.025 }}
-                      >
-                        <ShoeCard
-                          shoe={shoe}
-                          onOpen={() => setModalShoeName(shoe.name)}
-                          onCompare={handleCompare}
-                          sortBy={sortBy}
-                          rank={CATEGORY_LABELS[sortBy] ? pageOffset + index + 1 : null}
-                        />
-                      </motion.div>
-                    ))}
-                    {filteredShoes.length === 0 && <p className="empty-state">No shoes match your filters.</p>}
-                  </motion.div>
-                )}
-                {layout === 'swipe' && (
-                  <motion.div
-                    key="swipe"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.16 }}
-                  >
-                    <SwipeView shoes={filteredShoes} onOpen={shoeName => setModalShoeName(shoeName)} onCompare={handleCompare} />
-                  </motion.div>
-                )}
-              </AnimatePresence>
+              {layout === 'list' && (
+                <motion.div
+                  key={`list-p${safePage}`}
+                  className="list-view"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <div className="list-header">
+                    <span>#</span><span>Shoe</span><span>Score</span><span>Price</span><span>Reviews</span><span></span>
+                  </div>
+                  {pagedShoes.map((shoe, i) => (
+                    <ListRow key={shoe.name} shoe={shoe} rank={pageOffset + i + 1} onOpen={shoeName => setModalShoeName(shoeName)} onCompare={handleCompare} sortBy={sortBy} />
+                  ))}
+                  {filteredShoes.length === 0 && <p className="empty-state">No shoes match your filters.</p>}
+                </motion.div>
+              )}
+              {layout === 'grid' && (
+                <motion.div
+                  key={`grid-p${safePage}`}
+                  className="shoe-grid"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  {pagedShoes.map((shoe, index) => (
+                    <motion.div
+                      key={shoe.name}
+                      initial={{ opacity: 0, y: 12 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.18, delay: index * 0.03 }}
+                    >
+                      <ShoeCard
+                        shoe={shoe}
+                        onOpen={() => setModalShoeName(shoe.name)}
+                        onCompare={handleCompare}
+                        sortBy={sortBy}
+                        rank={CATEGORY_LABELS[sortBy] ? pageOffset + index + 1 : null}
+                      />
+                    </motion.div>
+                  ))}
+                  {filteredShoes.length === 0 && <p className="empty-state">No shoes match your filters.</p>}
+                </motion.div>
+              )}
+              {layout === 'swipe' && (
+                <SwipeView shoes={filteredShoes} onOpen={shoeName => setModalShoeName(shoeName)} onCompare={handleCompare} />
+              )}
 
               {layout !== 'swipe' && pageCount > 1 && (
                 <PaginationBar safePage={safePage} pageCount={pageCount} goToPage={goToPage} total={filteredShoes.length} />
@@ -384,24 +372,14 @@ export default function BrowsePage() {
                 </div>
               </div>
               <div className="reviews-grid">
-                <AnimatePresence mode="popLayout">
-                  {filteredReviews.map((review, i) => (
-                    <motion.div
-                      key={`${review.author}-${review.shoe}-${i}`}
-                      layout
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, scale: 0.97 }}
-                      transition={{ duration: 0.15, delay: Math.min(i, 6) * 0.03 }}
-                    >
-                      <ReviewCard
-                        review={review}
-                        sortBy={sortBy}
-                        showShoeHeader={true}
-                      />
-                    </motion.div>
-                  ))}
-                </AnimatePresence>
+                {filteredReviews.map((review) => (
+                  <ReviewCard
+                    key={`${review.shoe}-${review.author}-${review.redditUrl || review.date}`}
+                    review={review}
+                    sortBy={sortBy}
+                    showShoeHeader={true}
+                  />
+                ))}
                 {filteredReviews.length === 0 && (
                   <p className="empty-state" style={{ gridColumn: '1 / -1' }}>No reviews match your search.</p>
                 )}

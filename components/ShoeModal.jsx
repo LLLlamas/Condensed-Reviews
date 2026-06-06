@@ -99,8 +99,8 @@ export default function ShoeModal({ shoe, sortBy, onClose }) {
               <span className="modal__section-label">All Reviews ({shoe.reviews.length})</span>
               <span className="modal__reviews-chevron" aria-hidden="true">{showReviews ? '▾' : '▸'}</span>
             </button>
-            {showReviews && shoe.reviews.map((review, i) => (
-              <ReviewCard key={i} review={review} sortBy={sortBy} showShoeHeader={false} />
+            {showReviews && shoe.reviews.map((review) => (
+              <ReviewCard key={`${review.shoe}-${review.author}-${review.redditUrl || review.date}`} review={review} sortBy={sortBy} showShoeHeader={false} />
             ))}
           </div>
         </motion.div>

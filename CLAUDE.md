@@ -43,6 +43,7 @@ Scripts: `npm run dev` · `build` · `preview` (= `next start`) · `lint` · `sc
 ## Conventions (must not break)
 
 - **Affiliate tag `llamas02-20`** — all shoe links must route through `getAmazonUrl(name, sport)` so attribution survives. Don't hardcode Amazon URLs. Amazon entries carry the tag; shoes not sold on Amazon US (many Li-Ning / ANTA / 361 / SPO / boutique models) use the brand's official-store / retailer product URL instead. `isAmazonLink(url)` decides the CTA: Amazon links render a cart "Amazon"/"Find on Amazon" button; everything else renders **"See Price"** (cart icon swapped for an external-link icon) in `ShoeCard`/`ShoeModal`/`ShoeDetail`.
+- **`priceApprox` flag** — `getShoes()` sets `shoe.priceApprox = true` when the shoe's `amazonLinks` entry is a search URL (`/s?k=`), meaning the price is an estimate. All four price-displaying components (`ShoeCard`, `ListRow`, `ShoeModal`, `SwipeView`) prefix the price with `~` when `priceApprox` is true (e.g. `~$150`). Direct `dp/` Amazon links and non-Amazon retailer URLs get an exact `$X` display.
 - **Ratings are 0–10**, one decimal, across all 8 categories: `cushioning, traction, support, fit, breathability, groundFeel, durability, value`. Use `groundFeel` (not `courtFeel`).
 - **Per-trait `confidences`** (`high`/`medium`/`low`) weight the aggregate. Color/verdict thresholds (`ratingColor`, `ScoreBadge`): ELITE ≥8.5, SOLID ≥7.0, else MEDIOCRE.
 - **`wordCount >= 200` = DETAILED badge** — keep accurate when adding reviews.
@@ -59,6 +60,11 @@ The `scripts/` node pipeline (`scrape:backfill`/`scrape:daily`) needs Reddit API
 3. Sanity-check it parses + counts: `node -e "import('./src/data/reviews.js').then(m=>console.log(m.getShoes().length, m.reviews.length))"`.
 
 Per sweep yields ~25-30 quality reviews before diminishing returns; richest remaining seams are multi-shoe **rotation posts** (one post → many entries) and non-English brands (Li-Ning/ANTA/361/Xtep). Untapped subs: `AskRunningShoeGeeks`, `XXRunning`, `Marathon_Training`. Aggregate slowly over multiple sessions.
+
+## UI features (BrowsePage)
+
+- **Shoe grid/list pagination** — 12 per page, numbered `PaginationBar` (‹ 1 2 … 7 ›). Page transitions are `motion.div` with `key=\`${layout}-p${safePage}\`` — no `AnimatePresence mode="wait"` (causes stale-DOM freeze with shared `pagedShoes` state; plain key-based remount + opacity fade is used instead). Clicking a page number calls `goToPage(p)` → `setPage(p)`; `safePage = Math.min(page, pageCount)` guards the clamp. **Do not re-add `mode="wait"`.**
+- **Review search** — `reviewSearch` state + `.reviews-section__search-input` below the "All Reviews" heading. Filters `filteredReviews` across `shoe`, `author`, `summary`, `playstyle`, `courtType`, `verdict` fields. ReviewCard keys use `` `${shoe}-${author}-${redditUrl || date}` `` — **the `shoe` must be in the key**: rotation posts (one `redditUrl` → many shoes, ~9 of them) reuse a single URL across entries, so keying by `redditUrl` alone collides in the all-reviews list. X button clears the search.
 
 ## Docs
 
