@@ -8,6 +8,7 @@ const hanken = Hanken_Grotesk({ subsets: ['latin'], weight: ['400', '500', '600'
 export const metadata = {
   title: 'Court Report — Basketball & Running Shoe Reviews',
   description: 'Real user reviews from Reddit, condensed and rated across 8 performance traits.',
+  icons: { icon: '/favicon.svg' },
 };
 
 export default function RootLayout({ children }) {
