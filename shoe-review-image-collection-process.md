@@ -160,7 +160,7 @@ Rules:
 ---
 
 ## 6. Current state & where the remaining seams are
-Run the Step-6 command for live counts (last session: **101 shoes / 134 reviews / 20 brands**). Diminishing returns are real and rising — aggregate in periodic batches rather than one massive pull.
+Run the Step-6 command for live counts (last session: **118 shoes / 207 reviews / 20 brands**). Diminishing returns are real and rising — aggregate in periodic batches rather than one massive pull.
 
 Richest remaining seams:
 - **Multi-shoe rotation posts** (one post → many entries) — best yield per effort.
