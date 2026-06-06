@@ -166,7 +166,8 @@ export const reviews = [
     summary: "TTS fit but painful break-in period — the hard plastic upper and razor tongue cause blisters early on. After breaking in with a swapped insole, comfort becomes amazing and court feel is excellent. Traction picks up dust easily and heel slippage is occasional. Best at a discount.",
     playstyle: "Quick Guard", courtType: "Indoor", sizingNote: "True to size", verdict: "Solid", wordCount: 439,
     fullText: "Background: I play organized pickup 3x a week. Play style is that of a quick guard. Things I look for in a shoe - comfort where I don't even think about what's on my feet when playing. Confidence in the traction with every cut. Review: Good looking shoe overall. Break in time was not good for these. The upper is a semi hard plastic material that took some serious playing time to break in. Lace irritation was pretty awful. BUT - after hours of breaking them in and swapping out the insole, comfort became amazing. Court feel is really good. The only issues I have with them are traction and heel slippage. Traction is pretty good overall but they pick up dust easily. Heel slippage can happen from time to time. I got these heavily discounted and for the price, they're a steal.",
-    ratings: { cushioning: 8.5, traction: 7.5, support: 7.5, fit: 7.0, breathability: 5.5, groundFeel: 8.5, durability: 7.0, value: 8.5 }
+    ratings: { cushioning: 8.5, traction: 7.5, support: 7.5, fit: 7.0, breathability: 5.5, groundFeel: 8.5, durability: 7.0, value: 8.5 },
+    confidences: { cushioning: "high", traction: "medium", support: "medium", fit: "low", breathability: "medium", groundFeel: "high", durability: "low", value: "high" }
   },
 
   // --- LeBron 20 ---
@@ -177,16 +178,18 @@ export const reviews = [
     summary: "Exceptional traction (top 3 all-time) and elite bouncy cushioning with a 1:1 TTS fit. Heel doesn't lock down perfectly and on hard cuts the foot goes over the lateral flange. A phenomenal shoe if heel lockdown isn't a dealbreaker.",
     playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size", verdict: "Elite", wordCount: 1054,
     fullText: "Lebron 20: these are in my locker at the gym, but these are exceptional. Traction is top 3 all time imo, cushion is my third favorite all time, and fit is good. These fit 1:1, which is great for me, but the heel doesn't lock down well. The cushion is great, best bouncy cushion I have currently. On hard cuts/direction changes my foot goes over the flange.",
-    ratings: { cushioning: 9.5, traction: 9.5, support: 7.0, fit: 8.0, breathability: 6.5, groundFeel: 8.0, durability: 8.0, value: 8.5 }
+    ratings: { cushioning: 9.5, traction: 9.5, support: 7.0, fit: 8.0, breathability: 6.5, groundFeel: 8.0, durability: 8.0, value: 8.5 },
+    confidences: { cushioning: "high", traction: "high", support: "low", fit: "medium", breathability: "low", groundFeel: "medium", durability: "medium", value: "high" }
   },
   {
     shoe: "Nike LeBron 20", brand: "Nike", sport: "basketball", subreddit: "r/BBallShoes",
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1sfcz3v/lebron_20_heel_slip/",
     author: "u/Shanlangmalakas", date: "2026-04-07",
     summary: "Calls it a 'goated shoe' but the heel slippage is real and persistent — ankle wraps, runner's knots, and double socks all failed to fix it. Despite that, loves the shoe overall. Ankle wraps cause overheating.",
-    playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size", verdict: "Great (with caveats)", wordCount: 166,
+    playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size", verdict: "Solid", wordCount: 166,
     fullText: "This is my first time trying the lebron 20s and I must say this is goated shoes, just with a bit of inconveniences in heel slippage. I bought myself ankle wraps for extra padding but my feet heats up rather fast. Tried runners knot but laces are too short. Thick/double sock doesn't work either.",
-    ratings: { cushioning: 9.0, traction: 9.0, support: 6.5, fit: 7.0, breathability: 5.5, groundFeel: 8.0, durability: 8.0, value: 9.0 }
+    ratings: { cushioning: 9.0, traction: 9.0, support: 6.5, fit: 7.0, breathability: 5.5, groundFeel: 8.0, durability: 8.0, value: 9.0 },
+    confidences: { cushioning: "high", traction: "high", support: "low", fit: "low", breathability: "medium", groundFeel: "medium", durability: "medium", value: "high" }
   },
 
   // --- KD 14 ---
@@ -195,9 +198,10 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1shphbj/rate_the_rotation/",
     author: "u/Typical-Public4166", date: "2026-04-10",
     summary: "The reviewer's GOAT shoe. Zoom strobel + Cushlon is the best cushion setup ever. Lockdown and support are amazing, and despite looking bulky they don't feel heavy. Traction is 10/10 indoors. Only weakness: outdoor durability is terrible.",
-    playstyle: "All-Around", courtType: "Indoor only", sizingNote: "True to size", verdict: "GOAT", wordCount: 1054,
+    playstyle: "All-Around", courtType: "Indoor only", sizingNote: "True to size", verdict: "Solid", wordCount: 1054,
     fullText: "Kd 14: if you've seen my profile before you know these are my GOATs. Zoom strobel and cushlon is the best cushion setup ever, lockdown and support are amazing, and even though they look and are bulky, they don't feel like it. Traction is 10/10 on indoor courts. Don't use these outdoors, durability outside is the only thing wrong with these.",
-    ratings: { cushioning: 10, traction: 10, support: 9.5, fit: 9.0, breathability: 7.0, groundFeel: 8.0, durability: 5.0, value: 9.0 }
+    ratings: { cushioning: 10, traction: 10, support: 9.5, fit: 9.0, breathability: 7.0, groundFeel: 8.0, durability: 5.0, value: 9.0 },
+    confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "low", groundFeel: "medium", durability: "medium", value: "high" }
   },
 
   // --- Sabrina 2 ---
@@ -206,9 +210,10 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1shphbj/rate_the_rotation/",
     author: "u/Typical-Public4166", date: "2026-04-10",
     summary: "An easy, comfortable option with great lockdown and no pinch. Feels minimalist after break-in with solid shock absorption. 10/10 traction works on any court including outdoors. Big downside: upper durability is horrible — uppers fall apart before the sole.",
-    playstyle: "All-Around", courtType: "Indoor / Outdoor", sizingNote: "True to size", verdict: "Great", wordCount: 1054,
+    playstyle: "All-Around", courtType: "Indoor / Outdoor", sizingNote: "True to size", verdict: "Solid", wordCount: 1054,
     fullText: "Sabrina 2: I love these as an easy option. Comfortable, fits with no pinch, great lockdown, won't hurt my knees. After broken in, feels like a minimalist shoe but shock absorption is great. Traction is 10/10, works on any court. I use these outside and they've held up. Only thing wrong: upper durability is horrible, uppers fall apart before the midsole or outsole.",
-    ratings: { cushioning: 7.5, traction: 10, support: 8.0, fit: 9.0, breathability: 7.0, groundFeel: 8.5, durability: 5.0, value: 8.0 }
+    ratings: { cushioning: 7.5, traction: 10, support: 8.0, fit: 9.0, breathability: 7.0, groundFeel: 8.5, durability: 5.0, value: 8.0 },
+    confidences: { cushioning: "medium", traction: "high", support: "medium", fit: "high", breathability: "low", groundFeel: "high", durability: "medium", value: "medium" }
   },
 
   // --- AE 1 ---
@@ -217,9 +222,10 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1shphbj/rate_the_rotation/",
     author: "u/Typical-Public4166", date: "2026-04-10",
     summary: "Runs big — half size down recommended. With double socks, lockdown becomes possibly the best ever. Traction is strong but thin tread lines peel. Upper durability is top-tier indoors but outsole falls apart outdoors. Cushion fades over time.",
-    playstyle: "All-Around", courtType: "Indoor only", sizingNote: "Half size down", verdict: "Good", wordCount: 1054,
+    playstyle: "All-Around", courtType: "Indoor only", sizingNote: "Half size down", verdict: "Solid", wordCount: 1054,
     fullText: "Ae 1: pretty good, nothing exceptional. Ran big, would go half size down. With double sock, lockdown was amazing. Traction is really good but thin lines rip off on sides. Upper durability is top tier but don't wear outside. Cushion is good when it's good, but after that it's done. High stack but feels low to the ground.",
-    ratings: { cushioning: 7.0, traction: 8.5, support: 8.0, fit: 6.5, breathability: 6.5, groundFeel: 8.0, durability: 7.0, value: 7.0 }
+    ratings: { cushioning: 7.0, traction: 8.5, support: 8.0, fit: 6.5, breathability: 6.5, groundFeel: 8.0, durability: 7.0, value: 7.0 },
+    confidences: { cushioning: "low", traction: "high", support: "medium", fit: "low", breathability: "low", groundFeel: "medium", durability: "low", value: "low" }
   },
 
   // --- Shai 001 ---
@@ -228,18 +234,20 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1sdg9dk/i_gave_them_an_honest_shot/",
     author: "u/Ok-Network8411", date: "2026-04-05",
     summary: "Coolest silhouette since the OG Foamposite with the most plush, responsive cushion Nike has created. But the razor tongue ruins it — zero padding, digs into the foot causing blisters across 3 colorways and 32+ hours. Heartbreaking for those it doesn't fit.",
-    playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size", verdict: "Frustrating", wordCount: 256,
+    playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size", verdict: "Solid", wordCount: 256,
     fullText: "I truly wanted these to be it. Coolest silhouette since the OG foamposite. Most plush, responsive and bouncy basketball sneaker Nike has created. But the razor tongue has ZERO padding and pushes into the upper bridge of your foot painfully. Played 20 hours in preloved blue, bought two more colorways, blisters returned. Break in didn't help.",
-    ratings: { cushioning: 9.5, traction: 8.5, support: 7.5, fit: 4.5, breathability: 6.0, groundFeel: 8.5, durability: 7.5, value: 5.0 }
+    ratings: { cushioning: 9.5, traction: 8.5, support: 7.5, fit: 4.5, breathability: 6.0, groundFeel: 8.5, durability: 7.5, value: 5.0 },
+    confidences: { cushioning: "high", traction: "high", support: "medium", fit: "medium", breathability: "low", groundFeel: "high", durability: "medium", value: "medium" }
   },
   {
     shoe: "Nike Shai 001", brand: "Nike", sport: "basketball", subreddit: "r/BBallShoes",
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1s49lxa/shai_001_performance_review/",
     author: "u/anumberxaspace", date: "2026-03-19",
     summary: "After 2 months of play, traction is elite — the go-to for terrible gym courts. Great impact protection, responsive cushioning, and solid lockdown. However, breathability is poor (feet get hot), upper creases badly, and the tongue padding is minimal. An underrated sneaker with real performance chops.",
-    playstyle: "Guard / Wing", courtType: "Indoor", sizingNote: "True to size (slightly narrow)", verdict: "Great", wordCount: 1115,
+    playstyle: "Guard / Wing", courtType: "Indoor", sizingNote: "True to size (slightly narrow)", verdict: "Solid", wordCount: 1115,
     fullText: "I've been playing in the Shai 001s for about 2 months now, and I honestly think they're an underrated sneaker. Traction has been elite — my go-to men's league shoes as they grip terrible gym courts. Impact protection and responsiveness are great. Lockdown is solid. Breathability is poor, feet get hot. Upper creases badly. Tongue padding is minimal.",
-    ratings: { cushioning: 8.5, traction: 9.5, support: 8.0, fit: 7.5, breathability: 4.5, groundFeel: 8.0, durability: 6.5, value: 7.5 }
+    ratings: { cushioning: 8.5, traction: 9.5, support: 8.0, fit: 7.5, breathability: 4.5, groundFeel: 8.0, durability: 6.5, value: 7.5 },
+    confidences: { cushioning: "high", traction: "high", support: "medium", fit: "medium", breathability: "medium", groundFeel: "medium", durability: "low", value: "medium" }
   },
 
   // --- GT Cut 3 ---
@@ -248,9 +256,10 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1sgkzig/2026_shoe_rotation/",
     author: "u/SadGuitarNoises29", date: "2026-04-09",
     summary: "Personal workhorse shoe. Great cushion, amazing traction, fits like a glove. Indoor only recommended.",
-    playstyle: "All-Around", courtType: "Indoor only", sizingNote: "True to size", verdict: "Great", wordCount: 192,
+    playstyle: "All-Around", courtType: "Indoor only", sizingNote: "True to size", verdict: "Solid", wordCount: 192,
     fullText: "GT CUT 3: Cushion is great, Traction is amazing! Fits like a glove!! My personal workhorse. Indoor courts only recommended.",
-    ratings: { cushioning: 8.5, traction: 9.5, support: 8.0, fit: 9.5, breathability: 7.0, groundFeel: 8.5, durability: 7.0, value: 8.0 }
+    ratings: { cushioning: 8.5, traction: 9.5, support: 8.0, fit: 9.5, breathability: 7.0, groundFeel: 8.5, durability: 7.0, value: 8.0 },
+    confidences: { cushioning: "high", traction: "high", support: "medium", fit: "high", breathability: "low", groundFeel: "high", durability: "low", value: "medium" }
   },
 
   // --- GT Cut 4 ---
@@ -261,16 +270,18 @@ export const reviews = [
     summary: "Not as terrible as YouTube makes it out to be — actually one of the best hoop shoes played in. Zoom strobel + ZoomX + traction all work in perfect sync. 10/10 cushion for heavy guards. Pinky toe pinch is real but not a dealbreaker for everyone. Court feel and responsiveness are incredible.",
     playstyle: "Heavy Guard", courtType: "Indoor", sizingNote: "True to size (pinky toe may pinch)", verdict: "Elite", wordCount: 512,
     fullText: "Not as terrible as YouTube makes it out to be. These are one of the best hoop shoes I've played in because of how they managed to make the zoom strobel, zoomx, court feel and traction all work together. Cushion: 10/10 — insanely plush and bouncy and responsive. Best iteration of zoom strobel. Traction: 9/10 — ridiculous bite. Court Feel: 9/10 — connected to the court. The pinky toe issue exists but isn't universal.",
-    ratings: { cushioning: 10, traction: 9.0, support: 8.5, fit: 7.0, breathability: 6.0, groundFeel: 9.0, durability: 7.5, value: 8.5 }
+    ratings: { cushioning: 10, traction: 9.0, support: 8.5, fit: 7.0, breathability: 6.0, groundFeel: 9.0, durability: 7.5, value: 8.5 },
+    confidences: { cushioning: "high", traction: "high", support: "high", fit: "low", breathability: "low", groundFeel: "high", durability: "medium", value: "high" }
   },
   {
     shoe: "Nike GT Cut 4", brand: "Nike", sport: "basketball", subreddit: "r/BBallShoes",
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1s49v5e/non_biased_gt_cut_4_review/",
     author: "u/Open_Bake_8013", date: "2026-03-19",
     summary: "Went TTS with flat feet. Some dead space at tip which is unusual. The infamous pinky toe pinch wasn't bad for this reviewer's foot shape. Once laces dialed in, lockdown is excellent. Traction and cushion both perform well. Solid shoe if the shape works for your foot.",
-    playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size (flat foot friendly)", verdict: "Good", wordCount: 447,
+    playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size (flat foot friendly)", verdict: "Solid", wordCount: 447,
     fullText: "Size 9.5 mens TTS, flat foot but not wide. Some deadspace at the tip. The pinky toe pinch wasn't bad for my foot shape. Once laces dialed in, lockdown and comfort were excellent. Traction and cushion both perform well.",
-    ratings: { cushioning: 8.5, traction: 9.0, support: 8.0, fit: 7.5, breathability: 6.0, groundFeel: 8.5, durability: 7.0, value: 7.5 }
+    ratings: { cushioning: 8.5, traction: 9.0, support: 8.0, fit: 7.5, breathability: 6.0, groundFeel: 8.5, durability: 7.0, value: 7.5 },
+    confidences: { cushioning: "high", traction: "high", support: "medium", fit: "medium", breathability: "low", groundFeel: "high", durability: "low", value: "medium" }
   },
 
   // --- Ja 3 ---
@@ -279,9 +290,10 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1sb5mvh/uncles_2026_rotation/",
     author: "u/TakoOne", date: "2026-04-03",
     summary: "Very fun shoe — lightweight and bouncy as hell. Heel stability is a big minus, but manageable if you transition to midfoot/forefoot faster. A secondary rotation option for lighter play sessions.",
-    playstyle: "Guard / Quick Cuts", courtType: "Indoor", sizingNote: "True to size", verdict: "Good", wordCount: 692,
+    playstyle: "Guard / Quick Cuts", courtType: "Indoor", sizingNote: "True to size", verdict: "Solid", wordCount: 692,
     fullText: "Nike Ja 3 (secondary rotation): Very fun shoe thanks to being lightweight and bouncy as hell. Heel stability is a big minus but manageable if you transition into midfoot and forefoot faster.",
-    ratings: { cushioning: 8.0, traction: 8.0, support: 6.0, fit: 8.0, breathability: 7.5, groundFeel: 8.5, durability: 7.0, value: 8.0 }
+    ratings: { cushioning: 8.0, traction: 8.0, support: 6.0, fit: 8.0, breathability: 7.5, groundFeel: 8.5, durability: 7.0, value: 8.0 },
+    confidences: { cushioning: "medium", traction: "medium", support: "low", fit: "medium", breathability: "medium", groundFeel: "high", durability: "low", value: "medium" }
   },
 
   // --- Kobe 6 Protro ---
@@ -290,9 +302,10 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1sckw9p/shoe_rotation_pic_what_should_i_add_next_wide/",
     author: "u/Icy-Factor-8752", date: "2026-04-04",
     summary: "Great performance for league games and nicer courts, but kills wide feet — tight on sides with excessive heat. Not wide-foot friendly. Beautiful shoe with top-tier court feel if your feet can handle the narrow fit.",
-    playstyle: "Power Forward", courtType: "Indoor", sizingNote: "True to size (not wide-foot friendly)", verdict: "Great (narrow feet)", wordCount: 258,
+    playstyle: "Power Forward", courtType: "Indoor", sizingNote: "True to size (not wide-foot friendly)", verdict: "Solid", wordCount: 258,
     fullText: "Kobe 6 Protro All-Star: Performance is great, but they kill my feet every time — really tight on the sides and my feet heat up a lot. Probably not wide-foot friendly (I'm a 10.5).",
-    ratings: { cushioning: 7.5, traction: 9.0, support: 8.0, fit: 5.0, breathability: 4.5, groundFeel: 9.5, durability: 8.0, value: 7.0 }
+    ratings: { cushioning: 7.5, traction: 9.0, support: 8.0, fit: 5.0, breathability: 4.5, groundFeel: 9.5, durability: 8.0, value: 7.0 },
+    confidences: { cushioning: "medium", traction: "high", support: "medium", fit: "medium", breathability: "medium", groundFeel: "high", durability: "medium", value: "low" }
   },
 
   // --- Air Jordan 40 ---
@@ -303,7 +316,8 @@ export const reviews = [
     summary: "Extremely comfortable, premium materials, one of the best break-ins experienced. Possibly the cleanest silhouette on the market. Snug fit — most recommend half size up. After breaking in, one of the top all-rounders with great stability and molds around feet perfectly.",
     playstyle: "All-Around", courtType: "Indoor", sizingNote: "Half size up (snug)", verdict: "Elite", wordCount: 649,
     fullText: "Comfortable. Extremely stable. Premium materials. Molds around your feet and has one of the best break-ins. Possibly the cleanest silhouette on the market. Fit is snug — most advise half size up. After breaking in, one of the top all-rounders. Well engineered with great tech.",
-    ratings: { cushioning: 9.0, traction: 8.5, support: 9.5, fit: 8.0, breathability: 5.5, groundFeel: 8.0, durability: 8.5, value: 8.0 }
+    ratings: { cushioning: 9.0, traction: 8.5, support: 9.5, fit: 8.0, breathability: 5.5, groundFeel: 8.0, durability: 8.5, value: 8.0 },
+    confidences: { cushioning: "high", traction: "high", support: "high", fit: "medium", breathability: "medium", groundFeel: "medium", durability: "high", value: "medium" }
   },
 
   // =====================================================
@@ -318,7 +332,8 @@ export const reviews = [
     summary: "Beats every shoe in the rotation for comfort + cushioning, ties JB3 for traction. Court feel is slightly less responsive due to cushion amount. Played 6 hours across three sports — felt divine when swapped in. The safest, most comfortable shoe.",
     playstyle: "All-Around", courtType: "Indoor", sizingNote: "Half size down (slightly wide)", verdict: "Elite", wordCount: 783,
     fullText: "Joker1GT: Beats every shoe here for Comfort + Cushion and ties JB3 for traction. Court feel slightly less responsive due to cushion amount but traction compensates. Bounce is great. Played 2hrs bball, 1hr badminton, 3hrs vball — these felt divine when swapped in.",
-    ratings: { cushioning: 10, traction: 9.5, support: 8.5, fit: 8.5, breathability: 6.0, groundFeel: 7.0, durability: 8.0, value: 9.0 }
+    ratings: { cushioning: 10, traction: 9.5, support: 8.5, fit: 8.5, breathability: 6.0, groundFeel: 7.0, durability: 8.0, value: 9.0 },
+    confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "low", groundFeel: "low", durability: "medium", value: "high" }
   },
   {
     shoe: "361 Joker 1 GT", brand: "361 Degrees", sport: "basketball", subreddit: "r/BBallShoes",
@@ -327,25 +342,28 @@ export const reviews = [
     summary: "Glove-like fit, bouncy like a full-length Zoom Air pod. First run felt slow and laterally unstable, but after 10+ hours it becomes rejuvenating. Traction is sneaky great — feels like you'll slip but never do. Limited colorways.",
     playstyle: "Hustle Player", courtType: "Indoor", sizingNote: "True to size (wide flat foot friendly)", verdict: "Elite", wordCount: 290,
     fullText: "Late 30s, 6' 190, hustle player, wide-ish flat foot. Glove like fit, bouncy like a full length zoom air pod. First run felt slow and unstable laterally. After 10hrs, really appreciating how rejuvenating they feel. Traction is sneaky great — feels like you'll slip but never do.",
-    ratings: { cushioning: 9.5, traction: 8.5, support: 7.0, fit: 9.0, breathability: 5.5, groundFeel: 7.5, durability: 8.0, value: 8.5 }
+    ratings: { cushioning: 9.5, traction: 8.5, support: 7.0, fit: 9.0, breathability: 5.5, groundFeel: 7.5, durability: 8.0, value: 8.5 },
+    confidences: { cushioning: "high", traction: "high", support: "low", fit: "high", breathability: "medium", groundFeel: "medium", durability: "medium", value: "high" }
   },
   {
     shoe: "361 Joker 1 GT", brand: "361 Degrees", sport: "basketball", subreddit: "r/BBallShoes",
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1sbfevb/outdoor_and_durable_for_everyday_practices/",
     author: "u/CoffeeExtension4794", date: "2026-04-03",
     summary: "Same soft vibe as WoW 12 but slightly less bouncy. Squeaks on dusty courts though slips at some points. The safest, most comfortable option — the go-to for relaxed play.",
-    playstyle: "All-Around", courtType: "Indoor / Outdoor", sizingNote: "Half size down", verdict: "Great", wordCount: 377,
+    playstyle: "All-Around", courtType: "Indoor / Outdoor", sizingNote: "Half size down", verdict: "Solid", wordCount: 377,
     fullText: "Joker 1 GT: same vibe as Wow 12 in terms of softness but not that bouncy. Squeaky even on dust courts but slips at some points. The safest, most comfortable shoe in the rotation.",
-    ratings: { cushioning: 9.0, traction: 7.5, support: 8.0, fit: 8.5, breathability: 6.0, groundFeel: 7.5, durability: 8.0, value: 8.5 }
+    ratings: { cushioning: 9.0, traction: 7.5, support: 8.0, fit: 8.5, breathability: 6.0, groundFeel: 7.5, durability: 8.0, value: 8.5 },
+    confidences: { cushioning: "high", traction: "medium", support: "medium", fit: "high", breathability: "low", groundFeel: "medium", durability: "medium", value: "high" }
   },
   {
     shoe: "361 Joker 1 GT", brand: "361 Degrees", sport: "basketball", subreddit: "r/BBallShoes",
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1s5l8y6/joker_1_vs_joker_1_gt_comparo/",
     author: "u/Chinokio", date: "2026-03-23",
     summary: "Great cushion bounce, forgiving fit, ample support. Traction works even on dusty courts. The regular Joker 1 is close but the GT has better bounce and slightly more forgiving fit. Praises are warranted.",
-    playstyle: "All-Around", courtType: "Indoor / Outdoor", sizingNote: "True to size", verdict: "Great", wordCount: 182,
+    playstyle: "All-Around", courtType: "Indoor / Outdoor", sizingNote: "True to size", verdict: "Solid", wordCount: 182,
     fullText: "Got the GTs and love em! Great cushion bounce, forgiving fit, ample support. Traction has been great even on dusty courts. The praises are warranted.",
-    ratings: { cushioning: 9.5, traction: 8.5, support: 8.5, fit: 9.0, breathability: 6.0, groundFeel: 7.5, durability: 8.0, value: 9.0 }
+    ratings: { cushioning: 9.5, traction: 8.5, support: 8.5, fit: 9.0, breathability: 6.0, groundFeel: 7.5, durability: 8.0, value: 9.0 },
+    confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "low", groundFeel: "medium", durability: "medium", value: "high" }
   },
 
   // --- Joker 2 ---
@@ -354,9 +372,10 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1s8xlzl/joker_2_review_comparison_with_wow_12_and_joker_gt1/",
     author: "u/ChanbanX", date: "2026-03-30",
     summary: "Super comfortable with a snug lockdown — no heel slip at all. Cushion is nice and responsive without being too plush. Stability is the best feature — almost impossible to roll your ankle. Traction is average, picks up dust like Jordan 37s. Better stability than GT 1s.",
-    playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size (hard to get foot in initially)", verdict: "Great", wordCount: 387,
+    playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size (hard to get foot in initially)", verdict: "Solid", wordCount: 387,
     fullText: "Super comfortable, snug lockdown, no heel slippage. Cushion feels good — nice bounce and responsive. Stability is probably the best part — can't roll your foot even if you tried. Traction is average, picks up dust. Comparable to Jordan 37s.",
-    ratings: { cushioning: 8.5, traction: 7.0, support: 10, fit: 8.5, breathability: 6.0, groundFeel: 8.0, durability: 8.0, value: 8.0 }
+    ratings: { cushioning: 8.5, traction: 7.0, support: 10, fit: 8.5, breathability: 6.0, groundFeel: 8.0, durability: 8.0, value: 8.0 },
+    confidences: { cushioning: "high", traction: "low", support: "high", fit: "high", breathability: "low", groundFeel: "medium", durability: "medium", value: "medium" }
   },
 
   // --- Joker 2 Low ---
@@ -365,9 +384,10 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1s49oqe/361_joker_2_low_duality/",
     author: "u/Dwreckshoelander", date: "2026-03-19",
     summary: "Cushioning is as advertised — very responsive in forefoot and heel, great for players always on the balls of their feet. Traction is top-tier indoors but won't last outdoors. Ventilation is lacking in a warm gym. Diamond rubber herringbone does its job inside.",
-    playstyle: "Guard", courtType: "Indoor only", sizingNote: "True to size", verdict: "Good", wordCount: 235,
+    playstyle: "Guard", courtType: "Indoor only", sizingNote: "True to size", verdict: "Solid", wordCount: 235,
     fullText: "Ventilation is lacking — had to take shoes off between games. Traction does its job indoors but would burn through outdoors. Cushioning is as advertised — very responsive forefoot and heel. Great for players on the balls of their feet and heel landers.",
-    ratings: { cushioning: 8.5, traction: 8.5, support: 8.0, fit: 8.0, breathability: 5.0, groundFeel: 8.0, durability: 6.5, value: 7.5 }
+    ratings: { cushioning: 8.5, traction: 8.5, support: 8.0, fit: 8.0, breathability: 5.0, groundFeel: 8.0, durability: 6.5, value: 7.5 },
+    confidences: { cushioning: "high", traction: "high", support: "medium", fit: "medium", breathability: "medium", groundFeel: "medium", durability: "low", value: "medium" }
   },
 
   // --- Joker 2 GT ---
@@ -376,9 +396,10 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1sb5mvh/uncles_2026_rotation/",
     author: "u/TakoOne", date: "2026-04-03",
     summary: "Slotting in as the primary 'mad bouncy' shoe. Still in testing but looking like a permanent rotation piece for a veteran reviewer with a massive collection.",
-    playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size", verdict: "Great", wordCount: 692,
+    playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size", verdict: "Solid", wordCount: 692,
     fullText: "361 Joker 2 GT (testing/primary rotation): Barring surprise discoveries, these are going to slot in as my primary 'I just want some mad bouncy today' shoes.",
-    ratings: { cushioning: 9.5, traction: 8.5, support: 8.5, fit: 8.0, breathability: 6.5, groundFeel: 8.0, durability: 8.0, value: 8.0 }
+    ratings: { cushioning: 9.5, traction: 8.5, support: 8.5, fit: 8.0, breathability: 6.5, groundFeel: 8.0, durability: 8.0, value: 8.0 },
+    confidences: { cushioning: "high", traction: "high", support: "high", fit: "medium", breathability: "low", groundFeel: "medium", durability: "medium", value: "medium" }
   },
 
   // =====================================================
@@ -391,18 +412,20 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1sgrpzy/rotation_from_a_primarily_volleyball_player/",
     author: "u/Single-Ninja8886", date: "2026-04-09",
     summary: "By far the best fitting shoe for wide feet — fills out perfectly at TTS. Traction is absurd and trustworthy. Feels slightly clunky compared to lighter options but still top-tier in bounce. Cushion is a bit bare and heel-to-toe is average.",
-    playstyle: "Wide Feet / All-Around", courtType: "Indoor", sizingNote: "True to size (extremely wide foot friendly)", verdict: "Great", wordCount: 783,
+    playstyle: "Wide Feet / All-Around", courtType: "Indoor", sizingNote: "True to size (extremely wide foot friendly)", verdict: "Solid", wordCount: 783,
     fullText: "JB3s: by far the best fitting shoe for my feet at TTS. Extremely wide foot friendly. Clunky in comparison but still top tier feel and bounce. Traction is absurd — I trust it with my life. Cushion is a bit bare, heel-to-toe is average.",
-    ratings: { cushioning: 7.0, traction: 10, support: 8.5, fit: 10, breathability: 5.5, groundFeel: 8.5, durability: 8.5, value: 8.5 }
+    ratings: { cushioning: 7.0, traction: 10, support: 8.5, fit: 10, breathability: 5.5, groundFeel: 8.5, durability: 8.5, value: 8.5 },
+    confidences: { cushioning: "low", traction: "high", support: "high", fit: "high", breathability: "medium", groundFeel: "high", durability: "high", value: "high" }
   },
   {
     shoe: "Li-Ning JB3", brand: "Li-Ning", sport: "basketball", subreddit: "r/BBallShoes",
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1sb1a5o/jb3_vs_joker_1_gt/",
     author: "u/Terrible-Day3117", date: "2026-04-03",
     summary: "Light, springy, smooth heel-to-toe transition on first run. Great materials with zero break-in needed. Traction is insane. But second run was flat with no bounce — inconsistent ride quality is concerning. Breathability is poor.",
-    playstyle: "Hustle Player", courtType: "Indoor", sizingNote: "True to size (wide flat foot friendly)", verdict: "Mixed", wordCount: 290,
+    playstyle: "Hustle Player", courtType: "Indoor", sizingNote: "True to size (wide flat foot friendly)", verdict: "Solid", wordCount: 290,
     fullText: "First run was surprisingly fun — light, springy, smooth heel-to-toe transition. Materials are great, no break-in needed. Traction is insane. Second run was bizarre — no quickness or bounce, felt like great effort to move. Switched to Jokers and instantly felt better.",
-    ratings: { cushioning: 7.0, traction: 9.5, support: 8.0, fit: 8.5, breathability: 5.0, groundFeel: 8.0, durability: 8.0, value: 7.5 }
+    ratings: { cushioning: 7.0, traction: 9.5, support: 8.0, fit: 8.5, breathability: 5.0, groundFeel: 8.0, durability: 8.0, value: 7.5 },
+    confidences: { cushioning: "low", traction: "high", support: "medium", fit: "high", breathability: "medium", groundFeel: "medium", durability: "medium", value: "medium" }
   },
 
   // --- Way of Wade 12 ---
@@ -413,16 +436,18 @@ export const reviews = [
     summary: "Comfort meets performance — high-performing but cushion slightly dampens raw barebones feedback. TTS, slightly wider than Gammas. Obsidian colorway has impeccable traction even on dusty courts.",
     playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size (slightly wide)", verdict: "Elite", wordCount: 783,
     fullText: "WoW 12s: Comfort performance. High performers but cushion slightly dampens the barebones feedback. TTS, slightly wider than Gammas. Obsidian colourway has impeccable traction even on dusty courts.",
-    ratings: { cushioning: 9.0, traction: 9.0, support: 8.5, fit: 9.0, breathability: 6.5, groundFeel: 7.5, durability: 8.5, value: 8.5 }
+    ratings: { cushioning: 9.0, traction: 9.0, support: 8.5, fit: 9.0, breathability: 6.5, groundFeel: 7.5, durability: 8.5, value: 8.5 },
+    confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "low", groundFeel: "medium", durability: "high", value: "high" }
   },
   {
     shoe: "Li-Ning Way of Wade 12", brand: "Li-Ning", sport: "basketball", subreddit: "r/BBallShoes",
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1s8axe0/wow_12_review_from_a_pf_perspective/",
     author: "u/InformationLeast5607", date: "2026-03-29",
     summary: "A flawed beast from a PF perspective. Incredible plush cushion with great impact protection at 240lbs. Amazing court feel. But traction on dusty courts is terrible — forefoot rubber collects dust relentlessly. GCU claims are misleading (only heel/midfoot). Elite for clean courts only.",
-    playstyle: "Power Forward (240lbs)", courtType: "Indoor (clean courts)", sizingNote: "True to size", verdict: "Great (clean courts only)", wordCount: 424,
+    playstyle: "Power Forward (240lbs)", courtType: "Indoor (clean courts)", sizingNote: "True to size", verdict: "Solid", wordCount: 424,
     fullText: "Incredible cushion setup — plush, responsive, great court feel. At 240 and grabbing above the rim, amazing impact protection. But traction — on dusty courts, terrible. The forefoot is rubber not GCU, and it collects dust relentlessly. On clean courts it's elite. A flawed beast.",
-    ratings: { cushioning: 9.5, traction: 6.5, support: 8.5, fit: 8.5, breathability: 6.0, groundFeel: 8.5, durability: 8.0, value: 7.5 }
+    ratings: { cushioning: 9.5, traction: 6.5, support: 8.5, fit: 8.5, breathability: 6.0, groundFeel: 8.5, durability: 8.0, value: 7.5 },
+    confidences: { cushioning: "high", traction: "low", support: "high", fit: "high", breathability: "low", groundFeel: "high", durability: "medium", value: "medium" }
   },
   {
     shoe: "Li-Ning Way of Wade 12", brand: "Li-Ning", sport: "basketball", subreddit: "r/BBallShoes",
@@ -431,16 +456,18 @@ export const reviews = [
     summary: "Probably best shoes on market but overpriced. TTS fit with snug midfoot and roomy toe box. Traction ranges 8.5-9.5 depending on court condition. Amazing for on-ball defense. No weak points besides price. 9/10 overall.",
     playstyle: "Guard / Wing", courtType: "Indoor", sizingNote: "True to size", verdict: "Elite", wordCount: 496,
     fullText: "Probably best shoes on market but overpriced. TTS fit, snug midfoot, space in toebox. Traction 8.5-9.5 depending on court condition — perfect on clean, decent on dusty. Amazing for on-ball defence, wings, guards. No weak points. 9/10.",
-    ratings: { cushioning: 9.0, traction: 8.5, support: 9.0, fit: 9.0, breathability: 7.0, groundFeel: 8.5, durability: 8.0, value: 7.0 }
+    ratings: { cushioning: 9.0, traction: 8.5, support: 9.0, fit: 9.0, breathability: 7.0, groundFeel: 8.5, durability: 8.0, value: 7.0 },
+    confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "low", groundFeel: "high", durability: "medium", value: "low" }
   },
   {
     shoe: "Li-Ning Way of Wade 12", brand: "Li-Ning", sport: "basketball", subreddit: "r/BBallShoes",
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1s7thno/wow_12_after_months_of_play_elite_comfort/",
     author: "u/BOSSFORTHECAUSE", date: "2026-03-26",
     summary: "One of the most comfortable hoop shoes ever. Cushioning is crazy, fit is dialed right out the box. Barely any break-in needed. But traction is frustrating — forefoot rubber picks up dust, requiring constant wiping. Feels like the shoe isn't made for everyday hoopers.",
-    playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size", verdict: "Elite (comfort) / Frustrating (traction)", wordCount: 211,
+    playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size", verdict: "Solid", wordCount: 211,
     fullText: "One of the most comfortable hoop shoes I've played in. Cushioning is crazy, fit is dialed right out the box. But the traction — forefoot is rubber not GCU. On a moderately clean Lifetime court, wiping every couple plays. WOW 10s had more bite on the same court.",
-    ratings: { cushioning: 9.5, traction: 6.0, support: 8.5, fit: 9.5, breathability: 6.5, groundFeel: 8.0, durability: 8.0, value: 7.5 }
+    ratings: { cushioning: 9.5, traction: 6.0, support: 8.5, fit: 9.5, breathability: 6.5, groundFeel: 8.0, durability: 8.0, value: 7.5 },
+    confidences: { cushioning: "high", traction: "low", support: "high", fit: "high", breathability: "low", groundFeel: "medium", durability: "medium", value: "medium" }
   },
 
   // --- Gamma 1 ---
@@ -451,7 +478,28 @@ export const reviews = [
     summary: "Unreal lightness with epic heel-to-toe transition and top-tier traction. Court feel is perfect. Fits slightly narrow but thin uppers conform beautifully. Improves everything the WoW 10s did well. An elite lightweight performer.",
     playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size (slightly narrow, conforms)", verdict: "Elite", wordCount: 783,
     fullText: "Gamma 1s: Fits slightly narrow but uppers are thin and conform very well. Lightness is unreal, heel-to-toe transition is epic, traction is top tier. Feeling on foot is seamless, court feel is perfect. Improves on everything about the WoW 10s.",
-    ratings: { cushioning: 8.0, traction: 9.0, support: 8.0, fit: 8.5, breathability: 8.0, groundFeel: 9.5, durability: 8.0, value: 9.0 }
+    ratings: { cushioning: 8.0, traction: 9.0, support: 8.0, fit: 8.5, breathability: 8.0, groundFeel: 9.5, durability: 8.0, value: 9.0 },
+    confidences: { cushioning: "medium", traction: "high", support: "medium", fit: "high", breathability: "medium", groundFeel: "high", durability: "medium", value: "high" }
+  },
+  {
+    shoe: "Li-Ning Gamma 1", brand: "Li-Ning", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1i5y52t/lining_gamma_1/",
+    author: "u/FlatwormEastern4574", date: "2025-01-20",
+    summary: "A 6'5\", 195 lb injury-prone wing's review at 9.5/10. Traction is a perfect 10 — zero wiping needed. Stability and containment also near-perfect thanks to wide outsole, forefoot outrigger, and thin stack. BOOM foam + carbon plate combo is snappy with great court feel. Knocks: slightly narrow width and foot fatigue after 3+ hours for bigger players.",
+    playstyle: "Wing / Forward", courtType: "Indoor", sizingNote: "TTS — normal to wide feet may need thinner insole", verdict: "Elite", wordCount: 480,
+    fullText: "Background: 23 years old, 6'5\", 195 pounds, 38\" vert, size 13. Position: 2-4. Favorite hoop shoes: Jordan 34, KD 12, WOW10. Paid 205 USD after taxes on POIZON for the black colorway. Went with these over the Liren 4v2 because of the carbon fiber plate — I get pretty bad pain in my feet if my shoes don't have a shank plate, and for me, the stiffer, the better. Fit: 8/10 — I have normal to wide feet. The Gammas come with a thick boom foam insole that has a grippy texture. Even with thin socks, the shoes were too tight with the OG insole, so I took a thinner midsole out of some old ultraboosts. Lengthwise, TTS. Width-wise, slightly narrow. Traction: 10/10 — I play on a decently clean court, and the grip is unreal. Zero wiping needed. Based on other reviews and my own experience, these have perfect traction. Stability and Containment: 10/10 — I've had a 3rd degree sprain on the left ankle and 2nd degree on the right, so stability is the most important thing. The width of the outsole, along with the minimal but effective outrigger on the forefoot, makes the shoe feel stable and planted without being cumbersome. The stack height is also thin, adding to stability. I feel very confident — even without shoes laced super tight, my foot didn't slide around. Cushion: 9/10 — I love the setup. The carbon fiber and BOOM foam combo feels snappy and responsive with great court feel. Felt like an elite defender. Only complaint is that my feet hurt after playing 3+ hours straight. What you gain in the low-to-ground setup, you lose in impact protection. If you're 220+ lbs, you may need something more plush. Final Verdict: 9.5/10 — for 90% of players, this is the perfect shoe. Amazing grip, supreme bounce, and perfect containment, all in one of the lightest shoes money can buy.",
+    ratings: { cushioning: 8.0, traction: 10.0, support: 9.5, fit: 8.0, breathability: 7.0, groundFeel: 9.0, durability: 8.0, value: 8.0 },
+    confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "low", groundFeel: "high", durability: "low", value: "medium" }
+  },
+  {
+    shoe: "Li-Ning Gamma 1", brand: "Li-Ning", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1j7rznq/current_shoe_rotation/",
+    author: "u/IlllIIIIlIlIlll", date: "2025-03-10",
+    summary: "A 6'2\" combo forward's rotation review — calls the Gamma 1 the best shoe he's ever put on his feet. Described as a beefed-up Liren 4v2 with better traction, more springy BOOM foam, better lockdown, and lighter weight. Grippy insole prevents sock slide. At $250+ it's a steep ask vs. the Liren 4v2 at half the price, but for those with the budget it absolutely won't disappoint.",
+    playstyle: "Combo Forward", courtType: "Indoor", sizingNote: "True to size", verdict: "Elite", wordCount: 160,
+    fullText: "Basically a beefed up version of the 4v2s — better traction, more springy, better lockdown, lighter. I mean it's one of, if not the best shoe on the market. I especially like the grippy insole in these that make sure your sock never slides. Feels like the best of both worlds of the Liren 5s bounciness, and the courtfeel and lockdown of the 4v2s with even more weight shaved off. Definitely the best shoe I've ever put on my feet. But at the price of 250+ I think I'd rather just go with the 4v2s for less than half the price for 90-95% of the performance. But if you have the budget, these definitely won't disappoint. Context: 22 yo 6'2\" lanky combo forward/small ball big with a sz 10 slightly narrow foot. I look for traction, bounciness, impact protection, and stability.",
+    ratings: { cushioning: 8.5, traction: 9.5, support: 9.0, fit: 8.5, breathability: 7.5, groundFeel: 9.0, durability: 8.0, value: 7.0 },
+    confidences: { cushioning: "medium", traction: "high", support: "high", fit: "high", breathability: "low", groundFeel: "high", durability: "low", value: "medium" }
   },
 
   // --- Gamma 2 ---
@@ -462,16 +510,18 @@ export const reviews = [
     summary: "Gamma 1s but better — no surprises. A primary rotation shoe that improves on the already excellent formula.",
     playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size", verdict: "Elite", wordCount: 692,
     fullText: "Li Ning Gamma 2s (primary rotation): No surprises here. Gamma 1s but better.",
-    ratings: { cushioning: 8.5, traction: 9.5, support: 8.5, fit: 9.0, breathability: 8.0, groundFeel: 9.5, durability: 8.5, value: 9.0 }
+    ratings: { cushioning: 8.5, traction: 9.5, support: 8.5, fit: 9.0, breathability: 8.0, groundFeel: 9.5, durability: 8.5, value: 9.0 },
+    confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "medium", groundFeel: "high", durability: "high", value: "high" }
   },
   {
     shoe: "Li-Ning Gamma 2", brand: "Li-Ning", sport: "basketball", subreddit: "r/BBallShoes",
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1s5l6l7/my_new_goat_li_ning_gamma_2_review/",
     author: "u/SirGiannino", date: "2026-03-23",
     summary: "New GOAT — best fit of all time with zero dead space anywhere and zero pinching right out of the box. Lockdown is crazy good. Traction is elite-tier. Cushioning is responsive with great court feel. The complete package, though pricey.",
-    playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size (perfect fit)", verdict: "GOAT", wordCount: 827,
+    playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size (perfect fit)", verdict: "Elite", wordCount: 827,
     fullText: "Best fit of all time — zero dead space anywhere, zero pinching right out of the box. Lockdown is crazy good. Traction is elite-tier. Cushioning is responsive with great court feel. These might just be the best fitting shoes ever.",
-    ratings: { cushioning: 9.0, traction: 9.5, support: 9.0, fit: 10, breathability: 7.5, groundFeel: 9.0, durability: 8.5, value: 7.5 }
+    ratings: { cushioning: 9.0, traction: 9.5, support: 9.0, fit: 10, breathability: 7.5, groundFeel: 9.0, durability: 8.5, value: 7.5 },
+    confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "medium", groundFeel: "high", durability: "high", value: "medium" }
   },
 
   // --- Liren 6v2 ---
@@ -480,9 +530,10 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1s8bxqy/liren_6v2_initial_review/",
     author: "u/dual_hearts", date: "2026-03-29",
     summary: "SuperBOOM cushion starts stiff but softens up nicely — comparable to WoW 10s. Fits longer/narrower with a V-shaped heel cup. Lockdown is 9/10. 6'9\" 235lb ex-college player says arch support is less than expected due to lack of carbon fiber plate. Great bounce once broken in.",
-    playstyle: "Big Man (6'9\" 235lbs)", courtType: "Indoor", sizingNote: "Runs slightly long/narrow", verdict: "Great", wordCount: 386,
+    playstyle: "Big Man (6'9\" 235lbs)", courtType: "Indoor", sizingNote: "Runs slightly long/narrow", verdict: "Solid", wordCount: 386,
     fullText: "6'9 235lb ex college player, size 13US. Some foot soreness in arches initially but went away. Cushion started stiff but comparable to WoW 10s after playing. Fits longer/narrower, V-shaped heel cup. Lockdown is 9/10. Lack of carbon fiber means less arch support.",
-    ratings: { cushioning: 8.5, traction: 8.5, support: 7.5, fit: 8.0, breathability: 7.0, groundFeel: 8.5, durability: 8.0, value: 8.0 }
+    ratings: { cushioning: 8.5, traction: 8.5, support: 7.5, fit: 8.0, breathability: 7.0, groundFeel: 8.5, durability: 8.0, value: 8.0 },
+    confidences: { cushioning: "high", traction: "high", support: "medium", fit: "medium", breathability: "low", groundFeel: "high", durability: "medium", value: "medium" }
   },
 
   // --- Wade 808 3 Ultra v2 ---
@@ -491,9 +542,10 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1shphbj/rate_the_rotation/",
     author: "u/Typical-Public4166", date: "2026-04-10",
     summary: "Just great — nothing wrong at all. Half size down for perfect 1:1 fit. Almost impossible to roll your ankle. Cushion is solid but not trampoline-level. A reliable, well-rounded performer.",
-    playstyle: "All-Around", courtType: "Indoor / Outdoor", sizingNote: "Half size down", verdict: "Great", wordCount: 1054,
+    playstyle: "All-Around", courtType: "Indoor / Outdoor", sizingNote: "Half size down", verdict: "Solid", wordCount: 1054,
     fullText: "808 3 ultra v2: just great, nothing wrong with them at all. Half size down for 1:1 fit. Almost impossible to roll your ankle. Cushion is solid but not like SuperBoom trampoline level.",
-    ratings: { cushioning: 8.0, traction: 8.5, support: 9.5, fit: 9.0, breathability: 6.5, groundFeel: 8.0, durability: 9.0, value: 8.5 }
+    ratings: { cushioning: 8.0, traction: 8.5, support: 9.5, fit: 9.0, breathability: 6.5, groundFeel: 8.0, durability: 9.0, value: 8.5 },
+    confidences: { cushioning: "medium", traction: "high", support: "high", fit: "high", breathability: "low", groundFeel: "medium", durability: "high", value: "high" }
   },
 
   // --- All City 14 ---
@@ -502,9 +554,10 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1s1fpn2/all_city_14_review/",
     author: "u/InformationLeast5607", date: "2026-03-14",
     summary: "A great shoe — much better than the 13s. Tuff RB traction is phenomenal for outdoor, and works fine indoors too. Fit is TTS and slightly wide. Lockdown is the only fault — some heel slipping that needs tongue pads. Cushion is surprisingly good with enough court feel.",
-    playstyle: "Power Forward", courtType: "Indoor / Outdoor", sizingNote: "True to size (slightly wide)", verdict: "Great", wordCount: 306,
+    playstyle: "Power Forward", courtType: "Indoor / Outdoor", sizingNote: "True to size (slightly wide)", verdict: "Solid", wordCount: 306,
     fullText: "A great shoe, so much better than 13s. Traction for outdoor is phenomenal — nothing better than Tuff RB. Good bite indoors too. Fit is TTS, slightly wide. Lockdown is my only fault — some heel slipping. Cushion is surprisingly good.",
-    ratings: { cushioning: 8.0, traction: 9.5, support: 7.5, fit: 8.0, breathability: 7.0, groundFeel: 8.0, durability: 9.5, value: 8.5 }
+    ratings: { cushioning: 8.0, traction: 9.5, support: 7.5, fit: 8.0, breathability: 7.0, groundFeel: 8.0, durability: 9.5, value: 8.5 },
+    confidences: { cushioning: "medium", traction: "high", support: "medium", fit: "medium", breathability: "low", groundFeel: "medium", durability: "high", value: "high" }
   },
 
   // =====================================================
@@ -519,7 +572,8 @@ export const reviews = [
     summary: "Exceptional right out of the box — only traction needs breaking in. ANTA's N2 foam is the reviewer's second-favorite cushion ever. Lateral flange provides great support and wide fit while maintaining breathing room.",
     playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size (wide fit)", verdict: "Elite", wordCount: 1054,
     fullText: "Anta Kai 3: exceptional. Traction needs breaking in, but N2 foam from Anta is my second favorite cushion ever. Support is great, lateral flange makes the shoe super wide. Keeps 1:1 fit with breathing room.",
-    ratings: { cushioning: 9.5, traction: 8.0, support: 9.0, fit: 9.0, breathability: 7.0, groundFeel: 8.5, durability: 8.0, value: 9.0 }
+    ratings: { cushioning: 9.5, traction: 8.0, support: 9.0, fit: 9.0, breathability: 7.0, groundFeel: 8.5, durability: 8.0, value: 9.0 },
+    confidences: { cushioning: "high", traction: "medium", support: "high", fit: "high", breathability: "low", groundFeel: "high", durability: "medium", value: "high" }
   },
   {
     shoe: "ANTA Kai 3", brand: "ANTA", sport: "basketball", subreddit: "r/BBallShoes",
@@ -528,7 +582,8 @@ export const reviews = [
     summary: "Just the Kai 2s but better. Motion engineering is the only downgrade, but every weakness of the Kai 2 (over-pronation, weird heel fit) has been improved. A primary rotation shoe.",
     playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size", verdict: "Elite", wordCount: 692,
     fullText: "ANTA Kai 3: Just the Kai 2s but better. Motion engineering is the only downgrade but it improves on every weakness of Kai 2 — over pronation, weird heel fit, etc.",
-    ratings: { cushioning: 9.0, traction: 9.0, support: 9.0, fit: 9.0, breathability: 7.0, groundFeel: 8.5, durability: 8.5, value: 9.0 }
+    ratings: { cushioning: 9.0, traction: 9.0, support: 9.0, fit: 9.0, breathability: 7.0, groundFeel: 8.5, durability: 8.5, value: 9.0 },
+    confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "low", groundFeel: "high", durability: "high", value: "high" }
   },
 
   // =====================================================
@@ -541,27 +596,30 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1shphbj/rate_the_rotation/",
     author: "u/Typical-Public4166", date: "2026-04-10",
     summary: "Loved for more than looks — cushion, traction, and support are all amazing. Heel has good compression, forefoot is responsive and low to ground. Runs big though — had to double sock for 1:1 fit.",
-    playstyle: "All-Around", courtType: "Indoor", sizingNote: "Half size down (runs big)", verdict: "Great", wordCount: 1054,
+    playstyle: "All-Around", courtType: "Indoor", sizingNote: "Half size down (runs big)", verdict: "Solid", wordCount: 1054,
     fullText: "Don issue 7: cushion, traction, and support are amazing. Heel has good compression, forefoot is responsive and low to ground. Runs big — had to double sock. Would go half size down.",
-    ratings: { cushioning: 8.5, traction: 9.0, support: 8.5, fit: 7.0, breathability: 7.0, groundFeel: 8.5, durability: 8.0, value: 8.5 }
+    ratings: { cushioning: 8.5, traction: 9.0, support: 8.5, fit: 7.0, breathability: 7.0, groundFeel: 8.5, durability: 8.0, value: 8.5 },
+    confidences: { cushioning: "high", traction: "high", support: "high", fit: "low", breathability: "low", groundFeel: "high", durability: "medium", value: "high" }
   },
   {
     shoe: "Adidas Don Issue 7", brand: "Adidas", sport: "basketball", subreddit: "r/BBallShoes",
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1sb5mvh/uncles_2026_rotation/",
     author: "u/TakoOne", date: "2026-04-03",
     summary: "Best Adidas shoe in the last 3 years. Only real downside is breathability. Even fixes Adidas' signature heel slip issue. A rare win for Adidas in performance basketball.",
-    playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size", verdict: "Great", wordCount: 692,
+    playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size", verdict: "Solid", wordCount: 692,
     fullText: "Adidas DON Issue 7: Best Adidas shoes in the last 3 years. Only downside is breathability. They even fix the Adidas signature heel slips!",
-    ratings: { cushioning: 8.5, traction: 8.5, support: 8.5, fit: 8.5, breathability: 5.5, groundFeel: 8.0, durability: 8.0, value: 8.5 }
+    ratings: { cushioning: 8.5, traction: 8.5, support: 8.5, fit: 8.5, breathability: 5.5, groundFeel: 8.0, durability: 8.0, value: 8.5 },
+    confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "medium", groundFeel: "medium", durability: "medium", value: "high" }
   },
   {
     shoe: "Adidas Don Issue 7", brand: "Adidas", sport: "basketball", subreddit: "r/BBallShoes",
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1s8xhs6/don_issue_7_all_star_31_usd/",
     author: "u/MyManD", date: "2026-03-30",
     summary: "Nabbed for $32 USD in Japan. Materials are synthetic but solid. Glue quality is poor. After two sessions: traction is very good with a 10-minute break-in, cushion is 'pleasant' — not booming but protective. Lockdown and support are excellent. Incredible value at sale price.",
-    playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size", verdict: "Great (amazing at sale price)", wordCount: 579,
+    playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size", verdict: "Solid", wordCount: 579,
     fullText: "Got for $32 USD in Japan. Materials are synthetic but solid, poor glue quality. Traction: very good after 10-minute break-in. Cushion: 'pleasant' — not booming but protective. Lockdown and support are excellent. At this price, incredible value.",
-    ratings: { cushioning: 7.5, traction: 8.5, support: 9.0, fit: 8.5, breathability: 5.5, groundFeel: 8.0, durability: 7.5, value: 10 }
+    ratings: { cushioning: 7.5, traction: 8.5, support: 9.0, fit: 8.5, breathability: 5.5, groundFeel: 8.0, durability: 7.5, value: 10 },
+    confidences: { cushioning: "medium", traction: "high", support: "high", fit: "high", breathability: "medium", groundFeel: "medium", durability: "medium", value: "high" }
   },
 
   // --- Harden 9 ---
@@ -570,9 +628,10 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1sa3zys/dissappointed_wife_with_harden_9s_and_comparisons/",
     author: "u/in_vestigate311", date: "2026-04-02",
     summary: "Best cushioning she's ever had, but major midfoot rubbing and terrible traction on dusty courts killed it after 10+ hours. Not the right shoe for dusty or imperfect court conditions.",
-    playstyle: "All-Around", courtType: "Indoor (clean only)", sizingNote: "True to size", verdict: "Disappointing", wordCount: 217,
+    playstyle: "All-Around", courtType: "Indoor (clean only)", sizingNote: "True to size", verdict: "Mediocre", wordCount: 217,
     fullText: "Best cushioning ever, but major rubbing on midfoot and terrible traction on dusty courts. After 10+ hours, not what she's after.",
-    ratings: { cushioning: 9.0, traction: 5.0, support: 7.0, fit: 5.5, breathability: 6.0, groundFeel: 7.0, durability: 7.0, value: 6.0 }
+    ratings: { cushioning: 9.0, traction: 5.0, support: 7.0, fit: 5.5, breathability: 6.0, groundFeel: 7.0, durability: 7.0, value: 6.0 },
+    confidences: { cushioning: "high", traction: "medium", support: "low", fit: "medium", breathability: "low", groundFeel: "low", durability: "low", value: "low" }
   },
 
   // --- Crazy Energy + ---
@@ -581,9 +640,10 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1s55ug7/adidas_crazy_energy/",
     author: "u/1Ball1sLife1", date: "2026-03-22",
     summary: "Solid 9/10 traction that works on dusty courts with minimal wiping. But lockdown is the biggest gripe — stiff, not breathable upper with slippery stock insoles and short lacing system. Heel slippage due to poor ankle lockdown. Cushion is bouncy with great court feel but overall ruined by the upper.",
-    playstyle: "All-Around", courtType: "Indoor / Outdoor", sizingNote: "True to size", verdict: "Mixed", wordCount: 274,
+    playstyle: "All-Around", courtType: "Indoor / Outdoor", sizingNote: "True to size", verdict: "Solid", wordCount: 274,
     fullText: "Traction 9/10 — solid grip, works on dusty courts. Lockdown 6.5/10 — biggest gripe! Upper is stiff and not breathable, stock insoles are slippery. Lacing doesn't run high enough. Some heel slippage. Cushion is bouncy with great court feel.",
-    ratings: { cushioning: 8.0, traction: 9.0, support: 6.5, fit: 6.5, breathability: 4.5, groundFeel: 8.5, durability: 8.0, value: 7.0 }
+    ratings: { cushioning: 8.0, traction: 9.0, support: 6.5, fit: 6.5, breathability: 4.5, groundFeel: 8.5, durability: 8.0, value: 7.0 },
+    confidences: { cushioning: "medium", traction: "high", support: "low", fit: "low", breathability: "medium", groundFeel: "high", durability: "medium", value: "low" }
   },
 
   // =====================================================
@@ -596,7 +656,8 @@ export const reviews = [
     summary: "Unbelievable traction — S tier 10/10 with an insanely consistent rubber compound that's tacky even on dusty courts. Zero slips, zero wiping needed. Great heel lockdown with 3D-printed heel counter. Cushion takes time to break in but becomes very comfortable. Shoes don't squeak at all, which some may miss.",
     playstyle: "All-Around", courtType: "Indoor / Outdoor", sizingNote: "True to size", verdict: "Elite", wordCount: 779,
     fullText: "Traction is unbelievable — insanely consistent rubber compound, tacky even on dusty courts. S tier, 10/10. Never had to wipe, never slipped. Heel lockdown is great with 3D printed counter. Cushion takes time to break in but becomes very comfortable. No squeaking at all.",
-    ratings: { cushioning: 8.0, traction: 10, support: 9.0, fit: 8.5, breathability: 7.0, groundFeel: 8.5, durability: 9.0, value: 8.5 }
+    ratings: { cushioning: 8.0, traction: 10, support: 9.0, fit: 8.5, breathability: 7.0, groundFeel: 8.5, durability: 9.0, value: 8.5 },
+    confidences: { cushioning: "medium", traction: "high", support: "high", fit: "high", breathability: "low", groundFeel: "high", durability: "high", value: "high" }
   },
 
   // =====================================================
@@ -631,7 +692,7 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1h09ory/ja_2_stargazer_review_based_on_outdoor_performance/",
     author: "u/Official_Ryan_May", date: "2024-11-26",
     summary: "Bought for outdoor use and exceeded expectations — multidirectional traction bites well even on dusty courts and is well-spaced to resist rock pickup. Wide-feet friendly with nearly instant break-in. Downside: containment/support is the weakest area and the tongue isn't fully integrated. Cushion is minimal, which may limit comfort for heavier positions.",
-    playstyle: "All-Around", courtType: "Indoor / Outdoor", sizingNote: "True to size (wide-feet friendly, 2E)", verdict: "Great", wordCount: 311,
+    playstyle: "All-Around", courtType: "Indoor / Outdoor", sizingNote: "True to size (wide-feet friendly, 2E)", verdict: "Solid", wordCount: 311,
     fullText: "Bought the JA 2's for outdoor shoes, but tbh they could go vice-versa. They're a great shoe for shifty guards but can be used for slight bigs. Traction is amazing — multidirectional grip and it bites well on outdoors, good on quick-stops and directional change. Traction pattern is well-spaced and shouldn't pick up too much dust and rocks. The fit is nice and wide-feet friendly — I'm a 2E foot — TTS for wide feet. Containment and support is the worst compared to other options. The tongue isn't fully contained into the upper and it doesn't feel so 'secured.' Cushion is quite minimal — better than none but I feel like it might not be enough for more center-like gameplay. It's a good guard shoe, meant for aggressive playstyles. Super reactive, court-feeling, and bites well for sudden changes in direction and stops.",
     ratings: { cushioning: 6.5, traction: 9.0, support: 6.5, fit: 8.5, breathability: 7.0, groundFeel: 8.5, durability: 7.5, value: 8.5 },
     confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "low", groundFeel: "high", durability: "medium", value: "medium" }
@@ -643,7 +704,7 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1higobh/kobe_8_protro_review/",
     author: "u/Infinity1538", date: "2024-12-20",
     summary: "Elite traction across the entire test period. React foam is bouncy and responsive but super thin in the forefoot — a real springboard for guards, not for anyone needing impact protection. Extremely narrow fit required a full size up. At this price, the DON Issue 6 offers equal or better performance for less.",
-    playstyle: "Quick Guard", courtType: "Indoor", sizingNote: "Size up one full size (very narrow)", verdict: "Mixed", wordCount: 198,
+    playstyle: "Quick Guard", courtType: "Indoor", sizingNote: "Size up one full size (very narrow)", verdict: "Solid", wordCount: 198,
     fullText: "Recently found the Kobe 8 Protro 'Lakers Home' sitting at Foot Locker. Cushion 3.9/5: the react foam is bouncy and responsive but it's super thin in the forefoot. It feels like a springboard, but I would not recommend to anyone who needs a lot of cushion. Traction 5/5: elite grip across my whole time I spent in these. Fit 1.5/5: super narrow and snug. Had to go up a whole size for a decent fit. Not good for wide footers. Materials 3/5: breathable and comfortable, feels a bit restrictive at times. Support 3.5/5: nice support with a flange for lateral stability in the forefoot and I felt quite secure most of the time, but the heel is clunky and gives an awkward feeling. Overall 3.9/5: the shoe is good for guards. Sadly the shoe is too expensive for me to recommend to most people — I would quite honestly recommend the DON Issue 6 for an equal/better performer at a better price.",
     ratings: { cushioning: 6.5, traction: 9.5, support: 7.0, fit: 5.0, breathability: 7.5, groundFeel: 8.5, durability: 7.0, value: 5.5 },
     confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "medium", groundFeel: "medium", durability: "low", value: "high" }
@@ -689,7 +750,7 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1d2xssf/freak_5_review/",
     author: "u/Curious-Mechanic4688", date: "2024-05-29",
     summary: "Picked up at Nike outlet for $38. Traction is 9/10 when wiped, but the dust pickup is egregious — requires wiping almost every minute on a typical gym floor. Cushion is more plush than the Ja 1. A great shoe if you can get it cheap and play on a clean court, but the dust sensitivity is a dealbreaker for most.",
-    playstyle: "All-Around", courtType: "Indoor (clean court only)", sizingNote: "Runs large at size 12+", verdict: "Mixed", wordCount: 119,
+    playstyle: "All-Around", courtType: "Indoor (clean court only)", sizingNote: "Runs large at size 12+", verdict: "Solid", wordCount: 119,
     fullText: "Bought the Freak 5 from my local Nike outlet for $38. Traction: this is my most important aspect. The traction was 9/10 when wiping but the dust pickup was egregious — I had to wipe every minute it seemed or I would literally be skating on the court. Cushion: cushion was comfy, felt better than the Ja 1, more plush ride. Fit: fit was good, very comfortable. Overall: it's a great shoe IF you can get it for a great price and play on a non-dusty court, which most of us don't. I just couldn't get over the amount of dust pickup and how quickly it picked it up — had me skating, doing the splits (not exaggerating).",
     ratings: { cushioning: 8.0, traction: 6.5, support: 7.0, fit: 7.5, breathability: 7.0, groundFeel: 7.5, durability: 7.0, value: 9.0 },
     confidences: { cushioning: "medium", traction: "high", support: "low", fit: "medium", breathability: "low", groundFeel: "low", durability: "low", value: "high" }
@@ -713,7 +774,8 @@ export const reviews = [
     summary: "4 hours of play at first impressions: the KT8 is the reviewer's top pick in the Klay Thompson line. Traction is incredible with minimal wiping needed even on dusty courts. N2 foam cushioning delivers a balanced, zoom-like feel with a smooth, springy carbon plate. Lockdown is described as 'Venus fly trap' level — best the reviewer has had in ages.",
     playstyle: "Quick Guard / Wing", courtType: "Indoor", sizingNote: "True to size", verdict: "Elite", wordCount: 621,
     fullText: "KT8 — 'where have you been all my life oh great one?' Reviewer: 5'7\", 150lbs, avg width, explosive guard. Traction: incredible stopping power on all surfaces. Minimal wiping needed — even on dusty courts, it stayed consistent and reliable. Wiped 2 times out of 4 hours. Cushion: well-balanced setup with a responsive N2 foam insole that gives great bounce and feel underfoot. Carbon plate was unobtrusive and ride was smooth and springy. Not low to the ground but also not high, a truly balanced ride. Fit & Support: the fit reminded me of a Kyrie 5 — the upper wrapped and contained my foot really well. Lockdown gave a lot of confidence on cuts and changes of direction. This is the true Venus fly trap and best lockdown I've had in a shoe in ages. Durability: still looking great after several hours of aggressive play. No separation or loose threads so far. Slightly snug for some foot types, otherwise this is easily my top pick right now — just an all-around great performer.",
-    ratings: { cushioning: 8.5, traction: 9.5, support: 9.0, fit: 8.5, breathability: 7.0, groundFeel: 8.0, durability: 8.5, value: 9.0 }
+    ratings: { cushioning: 8.5, traction: 9.5, support: 9.0, fit: 8.5, breathability: 7.0, groundFeel: 8.0, durability: 8.5, value: 9.0 },
+    confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "low", groundFeel: "medium", durability: "high", value: "high" }
   },
 
   // --- New Balance TWO WXY V5 ---
@@ -722,10 +784,20 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1knvawd/nb_two_wxy_v5_did_not_disappoint/",
     author: "u/das_euge", date: "2025-05-27",
     summary: "Needed to replace worn-out Kyrie Low 5s that were hurting feet — the V5 delivered immediately. Running, jumping, and lateral movement felt pain-free on outdoor courts. Stability, comfort, and shock absorption were all excellent. At sub-$100 with local availability, exceptional value for an outdoor shoe.",
-    playstyle: "All-Around", courtType: "Outdoor", sizingNote: null, verdict: "Great", wordCount: 107,
+    playstyle: "All-Around", courtType: "Outdoor", sizingNote: null, verdict: "Solid", wordCount: 107,
     fullText: "I needed to replace my Kyrie Low 5's immediately because the traction was gone and my feet were starting to hurt after every hoop session. After hours of reading reviews, I decided to go with the NB Two Wxy V5's primarily based on price (<$100) and availability. I've been playing outdoors a lot more and I needed a shoe with better absorption and stability. This shoe definitely took care of that for me. I was running, jumping, and moving laterally without wincing on every impact. Stability, comfort, and shock absorption on an outdoor court felt amazing.",
     ratings: { cushioning: 8.5, traction: 8.0, support: 8.5, fit: 8.0, breathability: 7.0, groundFeel: 7.0, durability: 8.0, value: 9.5 },
     confidences: { cushioning: "high", traction: "medium", support: "high", fit: "low", breathability: "low", groundFeel: "low", durability: "low", value: "high" }
+  },
+  {
+    shoe: "New Balance TWO WXY V5", brand: "New Balance", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1ixtmor/from_lebron_xxi_to_new_balance_two_wxy_v5/",
+    author: "u/climsy", date: "2025-02-25",
+    summary: "Switched from LeBron XXI due to odor and sole separation. The V5 felt lighter and closer to the ground — 'feet were immediately faster.' However, traction fell short compared to the LeBrons, sliding in situations where they would hold. Light and robust but not the best grip choice for players coming from heavier, tackier outsoles.",
+    playstyle: "Guard", courtType: "Indoor", sizingNote: null, verdict: "Solid", wordCount: 118,
+    fullText: "Retired the LeBron XXI after five months due to odor issues and sole separation. Found those shoes heavy and bulky, with traction that deteriorated after three months. Regarding the Two WXY v5 (purchased for $125 in Denmark): The reviewer appreciated the lightweight design and responsive feel, noting 'I definitely felt lighter on the court and felt like my feet were immediately faster.' However, they criticized the traction as inadequate, stating the shoes slide during stretches where LeBrons remained anchored. They described the shoe as 'good light and robust' but lacking explosiveness and adequate grip for their defensive needs. Overall the V5 is a lighter, more ground-hugging shoe than the LeBrons, but players who rely on sticky traction may find it underwhelming.",
+    ratings: { cushioning: 7.5, traction: 6.5, support: 7.5, fit: 7.5, breathability: 8.0, groundFeel: 8.5, durability: 7.0, value: 7.5 },
+    confidences: { cushioning: "low", traction: "high", support: "low", fit: "low", breathability: "low", groundFeel: "medium", durability: "low", value: "medium" }
   },
 
   // --- Puma All-Pro Nitro Elite ---
@@ -750,6 +822,16 @@ export const reviews = [
     fullText: "KT7 — A Mixed Bag, But Memorable. Traction: Solid on clean courts with great bite and squeak. On dusty courts, frequent wiping is a must to maintain grip. Cushion: Easily the highlight — plush, bouncy, and protective, the closest foam to Zoom I've ever felt, a full-length Zoom ride. There is a heel-to-toe drop but it's pretty average in my opinion. Fit & Support: One of the most stable shoes I've played in, and actually in the entire market of basketball. Outrigger is massive, and lockdown was excellent even on high-torque movements. If you are prone to injuries, this shoe is for you. Durability: This was where the shoe fell short. The outsole held up, but the glue and upper construction (eyelets, midsole separation) didn't last long, and I haven't even played in these for a straight year. Biggest downside is durability, but the cushioning and stability make it a great option for guards and bigs alike, especially on recovery days. 5'7\", 150lbs, explosive guard. True to size.",
     ratings: { cushioning: 9.0, traction: 7.5, support: 9.5, fit: 9.0, breathability: 7.0, groundFeel: 6.5, durability: 5.0, value: 8.0 },
     confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "low", groundFeel: "medium", durability: "high", value: "medium" }
+  },
+  {
+    shoe: "ANTA KT7", brand: "ANTA", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/unfmeg/anta_kt7_performance_review/",
+    author: "u/PatrickJB22", date: "2022-05-11",
+    summary: "A 6'3\", 180 lb forward's full performance review: exceptional N2 Nitroedge cushion and top-tier stability described as 'a carbon fiber frame.' Floor grip is solid but needs frequent wiping on dusty courts. True to size for medium-width feet; included orthotic insole prevents toe jamming on sharp cuts.",
+    playstyle: "Wing / Forward", courtType: "Indoor", sizingNote: "True to size (medium width)", verdict: "Solid", wordCount: 218,
+    fullText: "Traction: The shoe features solid rubber outsoles with deep grooves and a hard rubber compound. Performance remains reliable across the court, though traction doesn't reach elite levels. Dust accumulation diminishes grip — requires regular wiping. Cushion: The N2 Nitroedge ETPU cushion performs exceptionally. A full-length setup pairs with thick, high-density foam in the heel (SMART SAM technology) for impact absorption. The forefoot cushioning is thinner, balancing court feel with adequate support. Fit: True-to-size worked well for a medium-width foot. The included orthotic insole addresses toe-jamming issues on sharp cuts. Lockdown/Support: Sort of feels like your foot has a carbon fiber frame. Exceptional stability and support throughout. Some shifty guards might find this excessive, but great for game-day protection. Conclusion: The KT7 is a solid shoe from Anta at $150-180 USD. It excels across performance categories with distinctive aesthetics. Primary weakness is traction requiring regular wiping. Brief Stats: 180 lbs, 6'3\", plays 2-4, shoe size US11/EU45.",
+    ratings: { cushioning: 8.5, traction: 7.0, support: 9.0, fit: 8.5, breathability: 7.0, groundFeel: 7.0, durability: 7.5, value: 8.0 },
+    confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "low", groundFeel: "low", durability: "low", value: "medium" }
   },
 
   // --- ANTA KT9 ---
@@ -786,6 +868,16 @@ export const reviews = [
     fullText: "Tried out the SPO Easy 1s outdoors twice now, and these might be the weirdest (in a good way) shoes I own. Built like tanks but super lightweight, look wide but feel snug, look casual but play like performance beasts. Compared to Book 1 (Moss Point): comfort-wise they're pretty close — both responsive and snug — but the Easy 1s have way better heel lockdown and lateral containment. Where they really beat the Book 1s is the outsole — feels way more durable outdoors. Can't comment on indoor traction since I only hoop outside. Issues: fit issue (right foot only) — pressure/rubbing on the side seam right where my tailor's bunion is. Materials are tough so I don't think it'll break in much. Zero breathability: no airflow at all, my feet were literally heating up when it got over 20C (68F). Not a summer shoe unless you play indoors with AC. Final thoughts: despite the flaws I actually love these. Build, design, and performance are very unique and they feel like serious hoop shoes. Would I pay full retail ($169)? Nah, unless it's a colorway you really want. But with a discount these are a legit outdoor option with real personality.",
     ratings: { cushioning: 7.5, traction: 8.0, support: 9.0, fit: 7.5, breathability: 3.0, groundFeel: 7.0, durability: 9.0, value: 6.5 },
     confidences: { cushioning: "low", traction: "medium", support: "high", fit: "high", breathability: "high", groundFeel: "low", durability: "high", value: "medium" }
+  },
+  {
+    shoe: "SPO Easy 1", brand: "SPO", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1i4ui7j/performance_review_of_spo_easy_1/",
+    author: "u/BigStretch90", date: "2025-01-19",
+    summary: "Calls it one of the greatest grip/traction shoes he's ever used — SPS Ultralight Outsole performs well on both dusty and clean courts. Dual-density EVA + supercritical foam insole is responsive. Extended lacing system reaching the toe box reduces shoe creasing and big-toe injury risk. Fits TTS and wide-foot friendly. Compares favorably to Kobe 4s for court feel.",
+    playstyle: null, courtType: "Indoor / Outdoor", sizingNote: "True to size; wide-foot friendly", verdict: "Solid", wordCount: 165,
+    fullText: "One of the greatest grip / traction I have ever used. The outsole features what SPO calls the 'SPS Ultralight Outsole,' performing well on both dusty and clean courts. Regarding cushioning, the shoe incorporates a dual density EVA insole with supercritical foam under the insole, delivering responsive support. The fit runs true-to-size and accommodates wider feet comfortably. An interesting design element is the extended lacing system that reaches toward the toe box. This feature was developed through player input to reduce shoe creasing during jumps and mitigate injury risk to the big toe. Design-wise, the shoe draws inspiration from Converse Chuck Taylors and Nike's Book 1 concept — a hybrid basketball shoe suitable for both court and casual wear. The reviewer enthusiastically endorses the shoe, even comparing it favorably to Kobe 4s for court feel.",
+    ratings: { cushioning: 7.5, traction: 9.5, support: 7.5, fit: 8.5, breathability: 6.5, groundFeel: 8.5, durability: 8.0, value: 8.0 },
+    confidences: { cushioning: "medium", traction: "high", support: "low", fit: "high", breathability: "low", groundFeel: "medium", durability: "low", value: "medium" }
   },
 
   // --- Nike GT Cut 1 ---
@@ -842,7 +934,7 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1iwwh6m/trae_unlimited_2_low_review_from_a_pg_indoor/",
     author: "u/NullVoidXNilMission", date: "2025-02-24",
     summary: "A solid budget low for guards who want a low-profile, close-to-the-ground ride — good cushion, light, with a wider forefoot. Herringbone outsole is shallow but works indoor/outdoor. Runs about half a size large (Adidas QC), and the Achilles padding plus needing to lace all the way up can be uncomfortable.",
-    playstyle: "Point Guard", courtType: "Indoor", sizingNote: "Runs about half a size large", verdict: "Mixed", wordCount: 196,
+    playstyle: "Point Guard", courtType: "Indoor", sizingNote: "Runs about half a size large", verdict: "Solid", wordCount: 196,
     fullText: "I bought them around 4 months ago. My usual number but they feel larger by half a number — Adidas has some QA issues with standardized sizes. It has good cushion and they're a bit on the wide side in the front which is good. I find them light to run with. It doesn't have a high cushion which I like, makes me feel close to the ground. Has a piece of cushion that sits on the Achilles tendon and it was uncomfortable at first but I broke them in playing on concrete and a bit of dusty court. The sole is herringbone and not very deep but makes sense considering it's a budget shoe. The top of the shoe becomes uncomfortable if you tie the laces too tight; it feels like you have to lace them all the way up since they might slip out of the back of the shoe. Outside quality is good, it seems well made. It's not the best low I've had but it's a solid shoe for indoor and outdoor for people who don't require too much cushion.",
     ratings: { cushioning: 7.0, traction: 7.0, support: 7.0, fit: 6.5, breathability: 7.0, groundFeel: 8.0, durability: 7.0, value: 8.0 },
     confidences: { cushioning: "medium", traction: "medium", support: "low", fit: "medium", breathability: "low", groundFeel: "high", durability: "low", value: "medium" }
@@ -903,6 +995,16 @@ export const reviews = [
     ratings: { cushioning: 7.5, traction: 8.0, support: 7.5, fit: 6.5, breathability: 7.0, groundFeel: 8.5, durability: 7.0, value: 8.0 },
     confidences: { cushioning: "medium", traction: "high", support: "low", fit: "medium", breathability: "low", groundFeel: "high", durability: "low", value: "medium" }
   },
+  {
+    shoe: "ANTA Swagger 1.0", brand: "ANTA", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1joxyi5/anta_swagger_10/",
+    author: "u/Latter-Opposite-4708", date: "2025-04-01",
+    summary: "Dedicated Moon colorway review at $125 USD. Runs narrow and slightly long — caused pinky blisters the first wear but resolved by session 3. Cushion is firm and guard-focused, similar to GT Cut Academy. Traction and stability both rate 9/10: zigzag outsole excels outdoors after break-in, and a dual TPU/rubber plate provides excellent lateral containment.",
+    playstyle: "Wing / Guard", courtType: "Outdoor", sizingNote: "Runs narrow — 2E go one size up", verdict: "Solid", wordCount: 315,
+    fullText: "I don't see anyone posting a review for this pair here, so I thought I'd just do it. Not sure if these are available in US/EU. Anta Swagger 1.0 'Moon' Colorway. Size: US11. MSRP: $125 USD. Fit: 8/10 — runs a bit narrow, would go up a size but the shoe runs a bit long in US12 so I opted to just deal with the break in as the upper and side materials are mesh so it was easier to break in. Pinky had slight blisters the first wear but was better by the 3rd hoop session. 2E go one size up. Materials: 8/10 — mostly mesh but ANTA did a good job of making it feel premium. Tongue and heel have nice padding but definitely not the most plushy. Pretty lightweight. Cushioning: 7/10 — on the firmer side, not a dead stiff bed of foam. Has enough impact protection for most players in the guard position. Very similar feeling to GT Cut Academy/GT Cut 1. Courtfeel/Traction: 9/10 — low to the ground, really good traction for outdoors. The outsole has a zig zag pattern which works really well. Almost identical to the GT Cut Academy. Had to break the rubber in though before it felt really good. Had a couple of near slips on hard stops during crossovers during break-in. I played on 2 outdoor courts, one dusty the other quite clean. Still performed really well. Stability/Support: 9/10 — large TPU/rubber plate for lateral containment. Underneath the shoe has a TPU plate for torsion. Makes the shoe a bit rigid though. Overall: feels like a mix of the Anta Shockwave 5 and the Anta Kai Speed 1 with the materials being slightly cheaper. Good courtfeel, better traction and decent cushioning. Recommend for someone looking to beat outdoors and look good oncourt.",
+    ratings: { cushioning: 7.0, traction: 8.5, support: 8.5, fit: 7.5, breathability: 7.5, groundFeel: 8.5, durability: 8.0, value: 8.5 },
+    confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "medium", groundFeel: "high", durability: "low", value: "medium" }
+  },
 
   // --- New Balance Fresh Foam BB v2 ---
   {
@@ -914,6 +1016,26 @@ export const reviews = [
     fullText: "New Balance Fresh Foam BB v2 (10/10): Probably the most suitable and best cushioning setup for me now. Plush but still somewhat smooth and responsive. Traction is top-tier outdoors. Doesn't have the best court feel because of the stack height. Can be a hotbox because of the upper materials (suede and leather). 5'10 SG/SF, offensive game in the paint and post up.",
     ratings: { cushioning: 9.5, traction: 9.0, support: 7.5, fit: 7.5, breathability: 5.5, groundFeel: 6.0, durability: 8.0, value: 7.5 },
     confidences: { cushioning: "high", traction: "high", support: "low", fit: "low", breathability: "medium", groundFeel: "high", durability: "medium", value: "low" }
+  },
+  {
+    shoe: "New Balance Fresh Foam BB v2", brand: "New Balance", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1igam0o/finally/",
+    author: "u/XGarvMartHam", date: "2025-02-03",
+    summary: "30+ year veteran calls these the most comfortable shoe to ever grace his hands. Buttery-soft cushion relieved jumper's knee pain without slowing down a somewhat-shifty guard. Grip 9/10, lockdown 9/10, bounce 7/10, court feel 8/10. A must-own for comfort alone.",
+    playstyle: "Guard / Wing", courtType: "Indoor", sizingNote: null, verdict: "Solid", wordCount: 138,
+    fullText: "I've been playing ball for 30+ years and have had the privilege of hoopin during a time when shoes didn't always have the best performance but still, we balled anyway. Now, with that being said the New Balance BB V2's are the most COMFORTABLE SHOE to have grace my land hands. I can't believe how buttery soft they are to play in, I'm talking Cottenelle soft, which relieved a lot of the pain in my jumpers knee. I still had some pain just because I'm old and still think I got a 40 in vert. Here's how I think they performed: Comfort: 10/10. Grip: 9/10 (squeaks on those rubber courts). Lockdown: 9/10. Bounce: 7/10. Court feel: 8/10 (I'm a somewhat shifty guard who likes to play big, and these didn't slow me down at ALL). Every baller should own a pair, just for the comfort alone. I can honestly say New Balance absolutely got it right.",
+    ratings: { cushioning: 9.5, traction: 9.0, support: 8.0, fit: 9.0, breathability: 7.0, groundFeel: 8.0, durability: 7.0, value: 8.5 },
+    confidences: { cushioning: "high", traction: "high", support: "medium", fit: "high", breathability: "low", groundFeel: "high", durability: "low", value: "medium" }
+  },
+  {
+    shoe: "New Balance Fresh Foam BB v2", brand: "New Balance", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1blfmwk/new_balance_fresh_foam_bb_v2_review/",
+    author: "u/ResponsibilityOdd637", date: "2024-03-22",
+    summary: "A 34-year-old 5'9\" 227 lb spot-up guard's detailed review. Cushioning is elite — 5/5, better than or equal to LeBron 21 for impact protection with no sinking-in lag. Traction is superb (4.5/5), just behind the WOW10. Top-quality suede/nubuck materials. Slightly worse court feel than guards prefer, but cushion and traction more than compensate. His #2 shoe behind the WOW10.",
+    playstyle: "Combo Guard (heavier player, 227 lbs)", courtType: "Indoor", sizingNote: "Half size down from Nike sizing", verdict: "Solid", wordCount: 340,
+    fullText: "Quick background: 34 yrs old, 5'9, 227 lbs. Normally play point and sometimes 2 guard. Solid handle, shifty style but as I get older I don't drive into the paint as often so I spot up for threes more. Also play 2-3 a week in competitive indoor runs. The shoe reviewed is the moonbeam colorway in US men's size 10. Fit 4/5: Literally went from Dick's to the gym for a pickup run. First 5 mins felt unstable and loose. But literally 5 mins after the materials and laces loosened up I tied it up again and felt great. I have a wider forefoot with tailor bunions and these did not bother me at all. Lockdown is solid. Not WOW10 level but solid with no heel slippage. I went a half size down as my normal Nike size 10.5 had almost a full thumb's length space in the toe. Support 4/5: At no time did I feel unstable in these shoes although they sit higher than I'm used to. Cushioning 5/5: Elite. The cushioning in heel and forefoot provide amazing impact protection. Though this has 'maximal' cushioning, I did not feel like I was sinking into it like a Hoka running shoe. Felt minimal 'lag' in the bounce back as I made crossovers or explosive moves to the basket. Traction 4.5/5: These are GREAT. The best grip of all time imo is the WOW10 and these are slightly just behind them. The traction pattern is unique but it just works. I play on pretty clean indoor courts. Materials 4.5/5: Top quality. The suede/nubuck material is excellent and the synthetics wrapping the shoe looks like it'll hold up. Overall: highly impressed. For a guy in his mid-thirties, the extra cushioning is welcomed. Court feel is slightly worse than what I'm used to but the cushioning and traction make up for that. These are definitely my number two shoe in the rotation just behind the WOW10.",
+    ratings: { cushioning: 9.5, traction: 9.0, support: 8.5, fit: 8.0, breathability: 7.0, groundFeel: 6.5, durability: 8.0, value: 8.5 },
+    confidences: { cushioning: "high", traction: "high", support: "medium", fit: "high", breathability: "low", groundFeel: "high", durability: "medium", value: "medium" }
   },
 
   // --- Air Jordan 38 Low ---
@@ -950,6 +1072,26 @@ export const reviews = [
     fullText: "My size is US11 and I'm a wide footer. Li-Ning Liren 4 v2 — 9.5/10. These shoes are very awesome, period. Traction is crazy good, but it is not squeaky. Light as hell. Bouncy as f*ck because of the full-length Boom. Fit is also nice as well as the support. It is also true to size. Design is beautiful too. Overall I think this shoe is one of the best on the market right now and it is much cheaper than the Gammas that are crazy expensive.",
     ratings: { cushioning: 8.5, traction: 9.0, support: 8.0, fit: 8.5, breathability: 7.0, groundFeel: 7.5, durability: 7.0, value: 9.5 },
     confidences: { cushioning: "high", traction: "high", support: "medium", fit: "high", breathability: "low", groundFeel: "low", durability: "low", value: "high" }
+  },
+  {
+    shoe: "Li-Ning Liren 4 v2", brand: "Li-Ning", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1j7rznq/current_shoe_rotation/",
+    author: "u/IlllIIIIlIlIlll", date: "2025-03-10",
+    summary: "Called the best cop for the money from a 6'2\" combo forward's rotation — rated no downsides. Great TUFFRB traction, very bouncy, extremely stable, great impact protection, amazing lockdown, very light. At ~$100 it's 90-95% of the Gamma 1's performance at less than half the price. Best for shifty and crafty guards rather than explosive slashers.",
+    playstyle: "Combo Forward / Guard", courtType: "Indoor", sizingNote: "Runs slightly small — half size up recommended", verdict: "Elite", wordCount: 145,
+    fullText: "Loved this shoe since I first got it, it honestly has no downsides for me. It checked every box I had with great traction (mine has TUFFRB), very bouncy, extremely stable, great impact protection, as well as great court feel, amazing lockdown, very light. I can't think of anything this shoe does badly, and for 100 dollars, it is definitely one of my best cops, and got me into the Chinese basketball shoe scene. I use them for when I go to shoot around, practice, or light/small runs. For context: 22 yo 6'2\" combo forward with a sz 10 slightly narrow foot. I look for traction, bounciness, impact protection, and stability. Note: The Liren 4v2 runs slightly small for US 9.5, something like Nike Kyries; I'd go US10 if I buy it again. I would say 5s if you're a slasher/find yourself jumping a lot, 4v2s if you are shifty/crafty or you play a more grounded game.",
+    ratings: { cushioning: 8.5, traction: 9.0, support: 9.0, fit: 8.0, breathability: 7.5, groundFeel: 8.5, durability: 8.0, value: 9.5 },
+    confidences: { cushioning: "high", traction: "high", support: "high", fit: "medium", breathability: "low", groundFeel: "high", durability: "low", value: "high" }
+  },
+  {
+    shoe: "Li-Ning Liren 4 v2", brand: "Li-Ning", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1ir0wah/quick_comparison_with_the_gamma_1_and_the_liren/",
+    author: "u/Temporary_Target2617", date: "2025-02-16",
+    summary: "Shifty guard's Gamma 1 vs Liren 4v2 comparison: the 4v2's lockdown is slightly better due to a separated upper-knit/ankle-collar system. Traction is its weak point — Gamma handles dust and rubberized courts better, and the Liren slips on concrete hard stops. Low, firm forefoot stack. For the money, still a top-tier guard shoe.",
+    playstyle: "Shifty Guard", courtType: "Indoor / Outdoor", sizingNote: "Runs slightly small — half size up recommended", verdict: "Solid", wordCount: 210,
+    fullText: "Went TTS with both; Liren 4v2 runs slightly small for US 9.5, something like Nike Kyries; would go US10 if I buy it again. It has a slightly wider last than the Gammas. IMO, lockdown is slightly better in the Liren 4v2 because they use some system where the upper knit and the ankle collar are separated, giving amazing lockdown there. Wish Gamma had the same system. Indoors both have around the same traction, but Gamma handles dust better, and I find Gamma handles rubberized courts better; Liren4v2 slips out at times on rubberized and concrete. The cushion on the Liren4v2 feels super low in the forefoot because the stack of cushion is pretty low, and the shank is right above the rubber, so it's pretty hard. Both are fluid and great for shifty guards; the side-to-side motion is butter and is amazing, but Gamma is slightly better (or worse depending on your gameplay). Liren 4v2 is more stable, not surprising because Gamma is legitimately a running shoe for hoops. I prefer the materials on the Gammas, but Liren4v2 is definitely my second favorite. Gamma 1 is not a direct improvement of the Liren 4v2; it's more of a similar shoe for different players, while the Liren is only worse in traction, which is the most important.",
+    ratings: { cushioning: 7.5, traction: 7.5, support: 9.0, fit: 8.0, breathability: 7.0, groundFeel: 8.0, durability: 7.5, value: 9.0 },
+    confidences: { cushioning: "medium", traction: "high", support: "high", fit: "high", breathability: "low", groundFeel: "high", durability: "low", value: "high" }
   },
 
   // --- Nike Zoom Freak 5 (extra perspective — wide-footer rotation) ---
@@ -1022,7 +1164,7 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1kj3vr2/scoot_zero_1s_for_35_1950_php/",
     author: "u/Helpful_Principle987", date: "2025-05-10",
     summary: "An off-the-box take comparing the Scoot Zero to Puma's answer to the Giannis Immortality. Responsive cushion where you feel the ground and your forefoot landing; surprisingly good initial traction with no squeak; TTS fit is the best attribute. Materials feel cheap at SRP but fine at the $35 price paid. Great for $35, bad for $100.",
-    playstyle: null, courtType: "Indoor", sizingNote: "True to size", verdict: "Mixed", wordCount: 175,
+    playstyle: null, courtType: "Indoor", sizingNote: "True to size", verdict: "Solid", wordCount: 175,
     fullText: "This is an initial review off the box. For scoot zeros, i havent found much reviews here on reddit. The reviews I found lean more on the negative side; the ones on tiktok and youtube are mixed. TLDR: the scoot zero is the puma 'giannis immortality' (for lack of a better comparison). CUSHIONING: 7.5/10 - Responsive. You definitely feel the ground. You will feel your forefoot landing. TRACTION: 8.5/10 - some say they have bad traction esp. on dust, but on initial impressions, they grip good. No squeak. FIT: TTS - im a medium to narrow footer. MATERIALS - mixture of textile, mesh and cheap suede; cheap feeling if you paid SRP, okay feeling if you paid $35. COMFORT - Padding is adequate, no lace pinching. Summary: These are great for a $35 shoe, bad for a $100 shoe. The fit is the best attribute, next is padding tied with traction, the rest are subpar.",
     ratings: { cushioning: 7.5, traction: 8.5, support: 6.5, fit: 8.0, breathability: 7.0, groundFeel: 8.0, durability: 6.0, value: 8.0 },
     confidences: { cushioning: "high", traction: "medium", support: "low", fit: "high", breathability: "low", groundFeel: "high", durability: "low", value: "high" }
@@ -1070,7 +1212,7 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1ju6l7n/hopped_in_adidas_kobe_crazy_8/",
     author: "u/Frecklzzz", date: "2025-04-07",
     summary: "A wide-footed big man's take on the retro Crazy 8. Traction is solid and improves as it breaks in, with zero squeak. Cushion is sparse for all the bulk and the shoe is heavy, so they swapped in a Move Gameday Pro insole. Containment/fit is roomy with no heel slip — go half a size down. A fun, different, good-looking shoe but not an everyday hooper.",
-    playstyle: null, courtType: "Indoor", sizingNote: "Go half size down", verdict: "Mixed", wordCount: 250,
+    playstyle: null, courtType: "Indoor", sizingNote: "Go half size down", verdict: "Solid", wordCount: 250,
     fullText: "Traction - 8/10 really solid overall, court was a little dusty but not too bad. Did pick up some dust but didn't affect it much. The traction seemed to get better the more I played in it, needs some breaking in. It's a really quiet shoe, no squeak at all. Cushion - 6/10 I may be a little harsh here but there isn't much cushion in this shoe. Only reason it felt nice on my feet is because I replaced the insole with a Move Gameday Pro. But for all the bulk that the shoe contains, not much of it is cushioning. This is where the age of the tech starts to show. Containment/fit - 7/10 as a wide footer it's rare for me to say but go a half size down. Very roomy and comfortable, with the extra lacing hole there wasn't noticeable heel slippage, especially considering it's a high top. Weight - 5/10 now I usually prefer heavier shoes as a big guy, but with these providing minimal cushioning it's the worst part of the shoe. I can feel the extra weight running around. I normally hoop in AE mids, lows or dames but these are noticeably heavier. Overall it's a fun shoe and cool looking, definitely something different but not one I would hoop in regularly.",
     ratings: { cushioning: 6.0, traction: 8.0, support: 7.0, fit: 7.0, breathability: 7.0, groundFeel: 7.5, durability: 7.0, value: 6.5 },
     confidences: { cushioning: "high", traction: "high", support: "medium", fit: "high", breathability: "low", groundFeel: "medium", durability: "low", value: "medium" }
@@ -1087,6 +1229,16 @@ export const reviews = [
     ratings: { cushioning: 7.5, traction: 7.5, support: 7.0, fit: 7.5, breathability: 7.0, groundFeel: 7.5, durability: 7.0, value: 8.0 },
     confidences: { cushioning: "high", traction: "high", support: "medium", fit: "high", breathability: "low", groundFeel: "medium", durability: "low", value: "medium" }
   },
+  {
+    shoe: "Li-Ning Wade 808 5 Ultra", brand: "Li-Ning", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1k0clzp/super_boom_is_crazy_wade_808_5_ultra_first/",
+    author: "u/theobiwanjacobi", date: "2025-04-16",
+    summary: "A 145 lb point guard's first impressions after switching from LeBron Soldier 9s. The SuperBOOM foam lives up to the hype — bounce described as insane, step-in comfort exceptional. Forward-positioned eyelets eliminated ankle rubbing. Zero heel slippage. Traction 9+/10 on a clean court with minimal dust pickup and easy wiping.",
+    playstyle: "Point Guard", courtType: "Indoor", sizingNote: "Half size down (orders 0.5 up but still fits small)", verdict: "Elite", wordCount: 185,
+    fullText: "The reviewer, a 145-pound point guard, shares initial impressions after retiring LeBron Soldier 9s that caused ankle irritation. Fit Assessment: The forward-positioned eyelets resolved prior ankle rubbing issues. Despite ordering a half-size up, 'Zero heel slippage' and stable fit resulted from 'lace loops built into the tongue.' Weight reduced from 440g to approximately 380g. Cushioning Performance: The reviewer praises 'Super Boom is indeed super,' describing the 'bounce is insane' and noting exceptional comfort during extended play. The max-cushion setup aligned perfectly with expectations based on everyday ASICS footwear experience. Traction Qualities: Dust accumulation proved minimal compared to previous shoes, and 'wiping them was nice and easy.' Initial assessment rates traction at '9+/10,' though long-term durability testing remains pending. Final Thoughts: The reviewer expresses no current complaints and plans comparing these with Joker GTs upon arrival.",
+    ratings: { cushioning: 9.0, traction: 9.0, support: 8.0, fit: 8.5, breathability: 7.0, groundFeel: 7.0, durability: 7.0, value: 8.0 },
+    confidences: { cushioning: "high", traction: "medium", support: "medium", fit: "high", breathability: "low", groundFeel: "low", durability: "low", value: "medium" }
+  },
 
   // --- ANTA Kai 2 ---
   {
@@ -1098,6 +1250,16 @@ export const reviews = [
     fullText: "Got these for my birthday and tried them on court for first impressions; performance only. Fit: TTS but lean towards big. I'm between US 8 and 8.5, went 8 and they feel standard. Heel lockdown is not rock solid but no noticeable heel slip. Midfoot is standard width but a bit restricting due to a sneaky lateral TPU piece under the rubber. Forefoot is pretty generous with decent toe space. Traction: better than average. Bites well on clean courts but the tacky rubber attracts dust — just walking around the gym coated the outsole and performance dipped a bit, fairly easy to wipe. Cushion: firmer than most new releases from Chinese brands, pretty low to the ground with good court feel. I prefer this to the bouncy foams like Li-Ning's BOOM and SuperBOOM. Adequate cushion for a Kyrie shoe. Upper: comfortable but not very breathable due to ample padding; soft material but I had some crease pinching initially that went away after the first hour. The lacing system is excellent — laces have some elasticity and every other eyelet has flywires inside; you really feel the upper closing without excessive pressure. General performance: a good all-arounder offering a balanced guard-oriented experience. Good court feel, enough cushion, very nimble, stable and secure enough. Not much arch support.",
     ratings: { cushioning: 7.0, traction: 7.0, support: 6.5, fit: 7.5, breathability: 6.0, groundFeel: 8.0, durability: 7.0, value: 7.5 },
     confidences: { cushioning: "high", traction: "high", support: "medium", fit: "high", breathability: "medium", groundFeel: "high", durability: "low", value: "low" }
+  },
+  {
+    shoe: "ANTA Kai 2", brand: "ANTA", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1j7ks3k/kai_2_first_impressions_w_kai_1_comparison/",
+    author: "u/Substantial_Cycle683", date: "2025-03-10",
+    summary: "First impressions after 90 minutes comparing the Kai 2 to the Kai 1. Traction impressed on an extremely dusty floor — only wiped out of habit. Cushion is lower and livelier in the forefoot than the Kai 1, though the Kai 1's smoother overall ride is still preferred early on. Materials dry much faster than the Kai 1. Wide footers will prefer the Kai 2's roomier fit.",
+    playstyle: "Guard", courtType: "Indoor", sizingNote: "Half size down (narrow feet); wide footers TTS", verdict: "Solid", wordCount: 295,
+    fullText: "Finally got to play in my Kai 2s yesterday for around an hour and a half and was somewhat satisfied but take this review lightly because they're not fully broken in. Fit: I'm a TTS 10.5 in Nike and just like the Kai 1s, I went down a half size due to my narrow feet and the fit was ok. I definitely prefer the fit in my Kai 1s as they're more snug out the box. The padding in the 2s are more minimal which felt fine. I had no pinching. I think wide footers would like the fit of these more than the Kai 1. Traction: Played on an extremely dusty floor yesterday and the Kai 2 performed very well. Honestly, I think I only wiped out of habit. In comparison to the Kai 1, I feel once fully broken in the Kai 2 will be better than the Kai 1. Cushion: Both shoes have N2Pro foam and a mid-foot shank, but feel very different. From an immediate try on, the Kai 2 felt lower to the ground and softer than the Kai 1. I felt very confident in my moves. The forefoot felt more lively in the Kai 2, but I prefer the Kai 1s cushion so far — the smoothness of the Kai 1 is why I lean towards them. Materials: The Kai 2s don't retain as much moisture as the Kai 1. Usually I wait a day and a half for Kai 1s to dry. Didn't have this issue in the Kai 2s. Support: Support is great in both, felt extremely confident. Closing: Still prefer the 1s just off first impression of the 2s. They're both great shoes nonetheless.",
+    ratings: { cushioning: 7.5, traction: 8.5, support: 8.0, fit: 7.5, breathability: 7.5, groundFeel: 8.0, durability: 7.0, value: 7.5 },
+    confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "medium", groundFeel: "high", durability: "low", value: "low" }
   },
 
   // --- Rigorer AR1 ---
@@ -1111,6 +1273,16 @@ export const reviews = [
     ratings: { cushioning: 7.0, traction: 9.5, support: 8.0, fit: 6.5, breathability: 7.0, groundFeel: 8.0, durability: 7.5, value: 9.0 },
     confidences: { cushioning: "medium", traction: "high", support: "high", fit: "high", breathability: "low", groundFeel: "medium", durability: "medium", value: "high" }
   },
+  {
+    shoe: "Rigorer AR1", brand: "Rigorer", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1gfk032/rigorer_ar1_performance_review/",
+    author: "u/genericgenericasian", date: "2024-11-03",
+    summary: "The AR1 is a near-elite performance shoe at a budget price. Traction is exceptional on clean courts and holds well even when dusty. Cushion uses a dual-density foam setup that's responsive but not plush — great court feel. Lockdown is outstanding with the midfoot cage. The only real knock is breathability; it runs hot.",
+    playstyle: "Guard / Wing", courtType: "Indoor", sizingNote: "TTS — runs slightly narrow", verdict: "Solid", wordCount: 312,
+    fullText: "Picked these up for about $80 USD shipped. Rigorer AR1 performance review after 3 weeks and about 8 sessions. Traction: 9/10. These might have the best traction I've ever tried. Multidirectional herringbone pattern bites into the court hard. Even on dusty courts it holds up better than most shoes twice the price. A couple wipes per session and you're golden. Cushion: 7.5/10. Dual density foam — softer top layer, firmer base. It's not plush by any stretch but it's extremely responsive. You feel the court, which I personally love for a guard. Not the shoe for guys who want max cushion. Lockdown/Fit: 9/10. This is where the AR1 shines brightest after traction. The midfoot cage locks your foot in hard. I went TTS and have medium-width feet. Heel counter is stiff and keeps you planted. No heel slippage at all. Wide footers should go half up. Support: 8.5/10. Wide base, great outrigger, thick TPU shank. Feel very secure on cuts and jumps. Breathability: 5/10. The biggest weakness. Runs hot. The mesh isn't very open and these trap heat. Outdoor: 7/10. Fine for occasional outdoor use but the traction pattern will wear faster on rougher surfaces. Overall: 9/10. At $80, it's a no-brainer if you can get them. Probably top 3 basketball shoe per dollar spent on the market.",
+    ratings: { cushioning: 7.5, traction: 9.0, support: 8.5, fit: 8.5, breathability: 5.0, groundFeel: 8.5, durability: 7.5, value: 9.5 },
+    confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "high", groundFeel: "high", durability: "medium", value: "high" }
+  },
 
   // --- Rigorer AR2 ---
   {
@@ -1123,6 +1295,16 @@ export const reviews = [
     ratings: { cushioning: 8.0, traction: 9.0, support: 7.5, fit: 8.0, breathability: 8.0, groundFeel: 8.5, durability: 7.0, value: 9.0 },
     confidences: { cushioning: "medium", traction: "high", support: "medium", fit: "medium", breathability: "high", groundFeel: "high", durability: "low", value: "high" }
   },
+  {
+    shoe: "Rigorer AR2", brand: "Rigorer", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1ifamxr/ar2_review/",
+    author: "u/workin4theweekend", date: "2025-02-01",
+    summary: "After four 2-hour sessions, a 5'9\" flat-footed guard finds traction and lockdown to be the AR2's standout strengths — precise stops even on dusty courts. The lateral support piece and improved cushioning over the AR1 are highlighted, though the soft outsole limits it to indoor use. Only complaint is the aesthetics.",
+    playstyle: "Guard", courtType: "Indoor", sizingNote: "Flat-foot and wide-foot friendly; try half up from Adidas sizing", verdict: "Solid", wordCount: 210,
+    fullText: "5'9\" guard. Bought on StockX below retail. Four 2-hour sessions in. 3-session break-in before feeling optimal. I'm a size 11 US in Adidas, 11.5-12 in Nike — fairly flat, wider feet, prefer a snug fit. Traction and lockdown are THE standout — I can stop on a dime even on dusty courts; just flat-out excellent. Two upgrades over the AR1 I noticed immediately: 1) the lateral plastic support piece that runs heel-to-toe (caused minor heel discomfort the first session but resolved by session 3), and 2) significantly better cushioning while still keeping solid court feel. Impact protection is noticeably improved without feeling disconnected. The rubber on the outsole is on the softer side — flat-foot friendly but I wouldn't recommend for outdoor use; it'll wear down fast on concrete. Honestly struggling to find performance negatives. The only thing I can say is I don't love how they look — but you can't have it all.",
+    ratings: { cushioning: 8.0, traction: 9.0, support: 8.5, fit: 8.5, breathability: 7.5, groundFeel: 8.0, durability: 6.5, value: 9.0 },
+    confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "low", groundFeel: "high", durability: "medium", value: "high" }
+  },
 
   // --- Qiaodan Sharp Fang 2 Pro SE ---
   {
@@ -1130,7 +1312,7 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1dra26t/qiaodan_sports_sharp_fang_2_pro_se_brand_that/",
     author: "u/Affectionate-Fan-536", date: "2024-06-29",
     summary: "A 6'0 165lb spot-up player's review (snagged for $50 SGD). Great indoor traction (stops on a dime, doesn't collect dust) but slips badly on hard stops outdoors, and the outsole rubber flattened after ~15 hours. The 'Q Kungfu Pro' drop-in midsole is genuinely good — bouncy heel, low responsive forefoot — preferred over Nike React drop-ins. Wide, slightly long fit; materials feel cheap in hand. Best for smaller, lighter players.",
-    playstyle: "Guard", courtType: "Outdoor", sizingNote: "Fits wide and slightly long — narrow feet 0.5 down", verdict: "Mixed", wordCount: 270,
+    playstyle: "Guard", courtType: "Outdoor", sizingNote: "Fits wide and slightly long — narrow feet 0.5 down", verdict: "Solid", wordCount: 270,
     fullText: "Review mainly done outdoors. Bought since I snagged it for $50 SGD. 6 feet, 165 pound, Joe Harris playstyle. Traction 6.5/10 outdoors, 9/10 indoors: the one time I tried it indoors it stopped on a dime and didn't really collect any dust. Outdoors it stops pretty well too, until you try a hard stop — then it's basically guaranteed to slip out. Durability also ain't great, the rubber flattened on the edges after only about 15 hours. Cushion 7/10: uses Q Kungfu Pro, actually a really nice setup. A drop-in midsole that's nice and bouncy in the heel while being low to the ground and responsive in the forefoot. Despite the plastic shank plate I didn't feel much springboard effect, but torsion was still adequate. Honestly prefer it over Nike's React drop-ins. Adequate for me but could be an issue for heavier, more explosive players. Fit 8/10: fits wide and slightly long; narrow footers can go down half a size. Went TTS (US 10.5). Material 7/10: feels alright on foot but cheap in hand; containment is alright. Overall would recommend for smaller lighter players due to cushion and torsion support.",
     ratings: { cushioning: 7.0, traction: 6.5, support: 6.5, fit: 8.0, breathability: 7.0, groundFeel: 7.5, durability: 5.5, value: 8.0 },
     confidences: { cushioning: "high", traction: "high", support: "medium", fit: "high", breathability: "low", groundFeel: "medium", durability: "high", value: "medium" }
@@ -1157,7 +1339,7 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1e63m63/gt_hustle_3_blueprint_review/",
     author: "u/defeatedmac", date: "2024-07-18",
     summary: "A cushion-first review: double-stacked forefoot Zoom, a big React heel wedge, and the ZoomX insole make impact protection outrageous. Traction and Flyknit comfort are strong, but the stock insole makes the shoe cramped, hot, unstable, and nearly court-feel-free. Swapping to a normal insole improved stability and court feel dramatically.",
-    playstyle: "Big Man", courtType: "Indoor", sizingNote: "True to size, snug with stock insole", verdict: "Mixed", wordCount: 200,
+    playstyle: "Big Man", courtType: "Indoor", sizingNote: "True to size, snug with stock insole", verdict: "Solid", wordCount: 200,
     fullText: "Price was 25% off MSRP from a third party retailer in Australia, around $130 USD; the reviewer still called it expensive but felt 75% of MSRP was reasonable given the tech. Cushioning is the headline: double-stacked forefoot Zoom Air, a fat React heel wedge, and a very thick ZoomX stock insole, with energy return as advertised. Fit was comfortable and snug in Flyknit, containment was good, and breathability was fantastic, though the ZoomX insole retained heat and made the shoe hard to put on. Traction on moderately clean courts and wooden floors stuck like glue, with thick grooves that look capable outdoors, though the price makes outdoor use hard to justify. The problem is lateral stability and court feel. The heel stack is extremely high and too narrow, creating ankle-sprain concern; court feel is muted by the cushion stack. The ZoomX insole felt like an afterthought: too thick and squishy, cramped the forefoot, elevated the foot, and gave no stability or support. After swapping in a basic Ortholite insole, fit was less cramped, heel stability became acceptable, and the shoe regained real court feel. Without the ZoomX insole, the reviewer would rate stability around 8/10 and court feel around 7.5/10.",
     ratings: { cushioning: 10.0, traction: 9.0, support: 6.5, fit: 8.0, breathability: 8.5, groundFeel: 5.5, durability: 7.5, value: 7.0 },
     confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "high", groundFeel: "high", durability: "medium", value: "medium" }
@@ -1169,7 +1351,7 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1m2dtju/sabrina_3_early_performance_review/",
     author: "u/LouWillStan", date: "2025-07-17",
     summary: "After about 10 hours, the Sabrina 3 came off as a strong Kobe-style value shoe. Traction was very solid even on a dusty translucent outsole, cushioning felt bouncy in the forefoot with a smooth heel-to-toe transition, and stability/fit were excellent for the reviewer's normal-width foot. Ventilation was only average and heavier players may want more upper reinforcement.",
-    playstyle: "Quick Guard", courtType: "Indoor", sizingNote: "True to size for normal feet", verdict: "Great", wordCount: 201,
+    playstyle: "Quick Guard", courtType: "Indoor", sizingNote: "True to size for normal feet", verdict: "Solid", wordCount: 201,
     fullText: "The reviewer got the Sabrina 3 early at a local DSG and played about 10 hours in the shoe. Traction was rated 9/10: the Blueprint colorway's translucent outsole performed well on dust, had minimal dust pickup, and came to a stop reliably, with a good bite just below elite tier. Cushioning was rated 8/10: the setup is similar to the prior model but felt good on foot, with an excellent heel-to-toe transition and bouncy forefoot Zoom; heel strikers may not love the lack of heel impact protection. Stability was rated 9/10: the reviewer reported no footbed issues, called the shoe wide and stable, and thought it could handle many playing styles, though bigger players may need more upper reinforcement than the flywire system provides. Materials and comfort were 8.5/10: engineered mesh with internal foam padding felt buttery without suffocating the foot, while ventilation was okay but not great. Fit was the standout at 9.5/10: no break-in nonsense, comfortable on foot, not restrictive through the midfoot, and true to size for normal feet; wide-footers should try on in store. Overall it was called a great shoe for the price and a worthwhile Kobe 5/6 replacement that should become even better on sale.",
     ratings: { cushioning: 8.0, traction: 9.0, support: 8.5, fit: 9.5, breathability: 7.0, groundFeel: 8.5, durability: 7.5, value: 8.5 },
     confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "high", groundFeel: "medium", durability: "medium", value: "high" }
@@ -1195,7 +1377,7 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1hllszq/in_praise_of_the_gt_hustle_2/",
     author: "u/HeelAndToeApparel", date: "2024-12-24",
     summary: "A mid-40s, 6'2\", 225 lb longtime player called the GT Hustle 2 his favorite ever ball shoe. He praised the rare mix of low stack, strong court feel, full-length Zoom Strobel bounce, comfort, and lockdown, while arguing the no-shank design was not a support problem for him.",
-    playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size", verdict: "GOAT", wordCount: 830,
+    playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size", verdict: "Elite", wordCount: 830,
     fullText: "The reviewer has played for decades and prefers the GT Hustle 2 over Kobes, Sabrina 1, and LeBron 21s in his own rotation. He described them as extremely light with remarkable court feel and unusually good cushioning from the full-length Zoom Strobel. Lockdown was excellent with zero heel slippage, no break-in, and no foot pain, and he felt the lack of shank caused no issues for his knees or feet.",
     ratings: { cushioning: 9.5, traction: 7.5, support: 8.0, fit: 9.5, breathability: 7.0, groundFeel: 9.5, durability: 7.5, value: 9.5 },
     confidences: { cushioning: "high", traction: "low", support: "high", fit: "high", breathability: "low", groundFeel: "high", durability: "medium", value: "high" }
@@ -1236,6 +1418,16 @@ export const reviews = [
     ratings: { cushioning: 9.0, traction: 9.5, support: 9.3, fit: 9.2, breathability: 8.5, groundFeel: 9.4, durability: 9.2, value: 7.5 },
     confidences: { cushioning: "medium", traction: "high", support: "high", fit: "high", breathability: "medium", groundFeel: "high", durability: "high", value: "medium" }
   },
+  {
+    shoe: "ANTA Shock Wave 5 Pro", brand: "ANTA", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1bqnr8a/anta_shock_wave_5_pros_deserve_more_attention/",
+    author: "u/Practical-Wonder-151", date: "2024-03-29",
+    summary: "A 5'8\" combo guard who's owned \"just about every new pair out there\" calls these the best-performing basketball shoes in their rotation. Traction is 9/10 with occasional wiping needed. The triple carbon fiber plate system gives exceptional bounce, support, and lateral stability. Wide-foot friendly with instant comfort and excellent breathability despite a thick upper. Best suited for guards and wings — smaller players who want court feel.",
+    playstyle: "Combo Guard", courtType: "Indoor", sizingNote: "Wide-foot friendly", verdict: "Elite", wordCount: 280,
+    fullText: "5'8\", ~150 lbs combo guard. Aesthetics 10/10 — I've gotten compliments on the court. Traction 9/10 — bites well but requires occasional cleaning. Weight 10/10 — lightweight despite the thick upper. Court Feel 10/10 — comparable to Kobe 5s, exceptional. Fit 10/10 — wide-foot friendly, great lockdown. Comfort 10/10 — immediate break-in, no hot spots, excellent breathability despite thick upper. Support 10/10 — extensively reinforced with 3 isolated carbon fiber plates: a top-loaded midfoot shank that's almost full-length, plus bottom-loaded lateral shanks for lateral containment. Lacing and lockdown 10/10 — tongue stays in place, exceptional heel containment, no slippage. Bounce 10/10 — the carbon fiber midsole makes these hella bouncy and responsive. Overall 9.9/10. The shoe may not suit larger/heavier players because the low-profile design provides less shock absorption at high impact, but for guards who want court feel + bounce + support, these are unmatched for the price. Best basketball shoe I've ever played in.",
+    ratings: { cushioning: 8.5, traction: 9.0, support: 9.5, fit: 9.0, breathability: 8.5, groundFeel: 9.5, durability: 8.5, value: 9.0 },
+    confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "high", groundFeel: "high", durability: "medium", value: "high" }
+  },
 
   // =====================================================
   // === RUNNING — r/running_shoes ===
@@ -1247,27 +1439,30 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1rrjlsi/saucony_azura_200km_review/oa0mi4f/",
     author: "u/bballjones9241", date: "2025-11-14",
     summary: "A great do-it-all daily trainer that loses its signature snappiness with heavy mileage. Works well for easy runs and tempo days fresh out of the box, but the foam noticeably softens after 200+ km, making the ride feel progressively less engaging. Retirement threshold around 800-1000km.",
-    playstyle: "Daily Trainer", courtType: "Road / Mixed", sizingNote: "Runs narrow — size up if wide foot", verdict: "Good (degrades over time)", wordCount: 95,
+    playstyle: "Daily Trainer", courtType: "Road / Mixed", sizingNote: "Runs narrow — size up if wide foot", verdict: "Solid", wordCount: 95,
     fullText: "The 6s are my do it alls but the more miles I put on them the less 'snappy' or 'fun' they feel. I retire at 800-1000km or when they feel terrible. Great shoe while the foam is fresh.",
-    ratings: { cushioning: 8.0, traction: 7.0, support: 7.5, fit: 7.5, breathability: 7.0, groundFeel: 8.0, durability: 6.5, value: 7.5 }
+    ratings: { cushioning: 8.0, traction: 7.0, support: 7.5, fit: 7.5, breathability: 7.0, groundFeel: 8.0, durability: 6.5, value: 7.5 },
+    confidences: { cushioning: "medium", traction: "low", support: "medium", fit: "medium", breathability: "low", groundFeel: "medium", durability: "low", value: "medium" }
   },
   {
     shoe: "HOKA Mach 6", brand: "HOKA", sport: "running", subreddit: "r/XXRunning",
     redditUrl: "https://www.reddit.com/r/XXRunning/comments/1ov0xg6/speed_shoes_for_less_speedy_comfortloving_runners/nofm8q6/",
     author: "u/Beneficial-Limit893", date: "2025-09-22",
     summary: "Fun and comfortable — a versatile shoe that handles speed work and occasional long runs with equal ease. The narrow fit is a bonus for slim feet. Responsive enough to feel fast on workout days while plush enough for base miles.",
-    playstyle: "Speed / Tempo", courtType: "Road", sizingNote: "Runs narrow — half size up for average or wide foot", verdict: "Good", wordCount: 80,
+    playstyle: "Speed / Tempo", courtType: "Road", sizingNote: "Runs narrow — half size up for average or wide foot", verdict: "Solid", wordCount: 80,
     fullText: "I love my Mach 6 - I think they're fun and comfy. I use them for speed work and the occasional longer run. Can confirm they are great for narrow feet.",
-    ratings: { cushioning: 8.5, traction: 7.5, support: 7.0, fit: 6.5, breathability: 7.0, groundFeel: 8.5, durability: 7.5, value: 8.0 }
+    ratings: { cushioning: 8.5, traction: 7.5, support: 7.0, fit: 6.5, breathability: 7.0, groundFeel: 8.5, durability: 7.5, value: 8.0 },
+    confidences: { cushioning: "high", traction: "medium", support: "low", fit: "low", breathability: "low", groundFeel: "high", durability: "medium", value: "medium" }
   },
   {
     shoe: "HOKA Mach 6", brand: "HOKA", sport: "running", subreddit: "r/AskRunningShoeGeeks",
     redditUrl: "https://www.reddit.com/r/AskRunningShoeGeeks/comments/1qv06p4/recovery_shoe/o3gg1b8/",
     author: "u/arcomatics", date: "2025-12-03",
     summary: "A narrow-foot runner's ideal light recovery option. Specifically cited for its slim fit that works perfectly at TTS for those with slender feet, without the clunky feel of max-cushion alternatives. Protective enough for recovery days without sacrificing responsiveness.",
-    playstyle: "Recovery / Easy Run", courtType: "Road", sizingNote: "True to size for narrow feet — size up otherwise", verdict: "Great (narrow feet)", wordCount: 70,
+    playstyle: "Recovery / Easy Run", courtType: "Road", sizingNote: "True to size for narrow feet — size up otherwise", verdict: "Solid", wordCount: 70,
     fullText: "Hoka Mach 6, (narrow foot friendly for sure). Great lighter option for protection without going full max cushion. I use it for recovery days.",
-    ratings: { cushioning: 7.5, traction: 7.0, support: 7.5, fit: 8.5, breathability: 7.5, groundFeel: 7.5, durability: 7.5, value: 7.5 }
+    ratings: { cushioning: 7.5, traction: 7.0, support: 7.5, fit: 8.5, breathability: 7.5, groundFeel: 7.5, durability: 7.5, value: 7.5 },
+    confidences: { cushioning: "medium", traction: "low", support: "medium", fit: "high", breathability: "medium", groundFeel: "medium", durability: "medium", value: "medium" }
   },
 
   // --- Brooks Ghost 17 ---
@@ -1276,36 +1471,40 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/AskRunningShoeGeeks/comments/1r77jwx/running_shoe_hot_takes/o5wpuut/",
     author: "u/Accounting4lyfe", date: "2025-10-18",
     summary: "The heavier runner's proven workhorse — ~500 miles per pair at 200lbs is exceptional longevity for the price. Not the most exciting cushion ride but dependably consistent, run after run. The cost-per-mile value calculation here is hard to beat, especially if bought at a discount.",
-    playstyle: "Daily Trainer (heavier runner, 200lbs)", courtType: "Road", sizingNote: "True to size", verdict: "Great", wordCount: 105,
+    playstyle: "Daily Trainer (heavier runner, 200lbs)", courtType: "Road", sizingNote: "True to size", verdict: "Solid", wordCount: 105,
     fullText: "As a heavier runner (200 lbs), I can put about 500 miles on those and they don't break the bank. I love mine. They're not the most exciting shoe out there but they're incredibly dependable.",
-    ratings: { cushioning: 8.0, traction: 7.5, support: 8.5, fit: 8.5, breathability: 7.0, groundFeel: 7.0, durability: 9.5, value: 9.0 }
+    ratings: { cushioning: 8.0, traction: 7.5, support: 8.5, fit: 8.5, breathability: 7.0, groundFeel: 7.0, durability: 9.5, value: 9.0 },
+    confidences: { cushioning: "medium", traction: "medium", support: "high", fit: "high", breathability: "low", groundFeel: "low", durability: "high", value: "high" }
   },
   {
     shoe: "Brooks Ghost 17", brand: "Brooks", sport: "running", subreddit: "r/runninglifestyle",
     redditUrl: "https://www.reddit.com/r/runninglifestyle/comments/1n3trhp/inward_roll_comparisons/nc2maup/",
     author: "u/Borderline_98", date: "2025-10-02",
     summary: "A stability revelation for overpronators — with custom insoles, delivers the most stable feel this runner has ever experienced. Praised specifically for pronation control and its ability to accommodate biomechanical needs. If you run with insoles or orthotics, this shoe is an exceptional pairing.",
-    playstyle: "Stability / Overpronation", courtType: "Road", sizingNote: "True to size", verdict: "Great (stability runners)", wordCount: 110,
+    playstyle: "Stability / Overpronation", courtType: "Road", sizingNote: "True to size", verdict: "Solid", wordCount: 110,
     fullText: "I've never felt so stable running; I would suggest you try them. I have significant pronation issues and a leg length discrepancy and these with my custom insoles have been incredible.",
-    ratings: { cushioning: 8.0, traction: 8.0, support: 9.5, fit: 8.5, breathability: 7.0, groundFeel: 7.0, durability: 8.5, value: 8.5 }
+    ratings: { cushioning: 8.0, traction: 8.0, support: 9.5, fit: 8.5, breathability: 7.0, groundFeel: 7.0, durability: 8.5, value: 8.5 },
+    confidences: { cushioning: "medium", traction: "medium", support: "high", fit: "high", breathability: "low", groundFeel: "low", durability: "high", value: "high" }
   },
   {
     shoe: "Brooks Ghost 17", brand: "Brooks", sport: "running", subreddit: "r/XXRunning",
     redditUrl: "https://www.reddit.com/r/XXRunning/comments/1n6bf94/just_out_of_curiosity/nbzqyp4/",
     author: "u/BotherFantastic3264", date: "2025-10-05",
     summary: "The go-to wet weather specialist. This runner reaches for the Ghost 17 specifically for rain, mud, and slick conditions — the outsole rubber grips reliably where others fail. Not the most exciting everyday shoe, but the traction reliability in adverse conditions earns it a permanent rotation spot.",
-    playstyle: "All-Around / Bad Weather", courtType: "Road / Wet Conditions", sizingNote: "True to size", verdict: "Good (wet weather pick)", wordCount: 90,
+    playstyle: "All-Around / Bad Weather", courtType: "Road / Wet Conditions", sizingNote: "True to size", verdict: "Solid", wordCount: 90,
     fullText: "I use the Rides a lot, the Ghosts more if bad weather (very secure traction in wet weather). They're not the most exciting shoe but they're dependable and I always reach for them when conditions are rough.",
-    ratings: { cushioning: 8.0, traction: 9.0, support: 8.5, fit: 8.0, breathability: 6.5, groundFeel: 7.5, durability: 8.5, value: 8.0 }
+    ratings: { cushioning: 8.0, traction: 9.0, support: 8.5, fit: 8.0, breathability: 6.5, groundFeel: 7.5, durability: 8.5, value: 8.0 },
+    confidences: { cushioning: "medium", traction: "high", support: "high", fit: "medium", breathability: "low", groundFeel: "medium", durability: "high", value: "medium" }
   },
   {
     shoe: "Brooks Ghost 17", brand: "Brooks", sport: "running", subreddit: "r/AskRunningShoeGeeks",
     redditUrl: "https://www.reddit.com/r/AskRunningShoeGeeks/comments/1kipv3f/what_are_your_thoughts_on_ghost_17_in_the_long_run/n05cie6/",
     author: "u/Brief-Estimate-7641", date: "2025-09-12",
     summary: "A decade-long Ghost loyalist turned skeptic. Good toebox comfort remains, but the heel has regressed meaningfully since earlier versions — specifically worse than Ghost 10 and several models since. A cautionary tale for longtime Ghost fans upgrading: verify the heel lockdown in-store before committing.",
-    playstyle: "Experienced Heel-Striker", courtType: "Road", sizingNote: "True to size", verdict: "Disappointing (heel regression)", wordCount: 120,
+    playstyle: "Experienced Heel-Striker", courtType: "Road", sizingNote: "True to size", verdict: "Solid", wordCount: 120,
     fullText: "Good toebox and comfortable, but the heel has poor stability compared to previous versions. For the first time in 10 years, I find the Ghost disappointing. I've run in every Ghost from the 10 and this one is a step back in heel lockdown.",
-    ratings: { cushioning: 7.5, traction: 7.5, support: 5.5, fit: 7.5, breathability: 7.0, groundFeel: 6.5, durability: 8.0, value: 6.5 }
+    ratings: { cushioning: 7.5, traction: 7.5, support: 5.5, fit: 7.5, breathability: 7.0, groundFeel: 6.5, durability: 8.0, value: 6.5 },
+    confidences: { cushioning: "medium", traction: "medium", support: "medium", fit: "medium", breathability: "low", groundFeel: "low", durability: "medium", value: "low" }
   },
 
   // --- ASICS Superblast 2 ---
@@ -1314,18 +1513,20 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/AskRunningShoeGeeks/comments/1qclgcg/one_shoe_for_everything/nzj1mea/",
     author: "u/PSW1CH", date: "2025-08-30",
     summary: "The ultimate do-everything shoe — boring in the best possible way. Works for speed sessions, light trails, long runs, recovery, and races, all without ever demanding your attention. Exceptional durability with a feel that gives back exactly what you put in. Never once thought about the shoes during a run.",
-    playstyle: "All-Around (every run type)", courtType: "Road / Light Trail", sizingNote: "True to size", verdict: "Great", wordCount: 130,
+    playstyle: "All-Around (every run type)", courtType: "Road / Light Trail", sizingNote: "True to size", verdict: "Solid", wordCount: 130,
     fullText: "It's just a boring but reliable shoe that will give back whatever you put into it and last forever. Not once have I ever thought about what's on my feet. Works for speed sessions, light trails, long runs, recovery — everything.",
-    ratings: { cushioning: 8.5, traction: 7.5, support: 8.5, fit: 9.0, breathability: 7.0, groundFeel: 8.0, durability: 9.5, value: 8.5 }
+    ratings: { cushioning: 8.5, traction: 7.5, support: 8.5, fit: 9.0, breathability: 7.0, groundFeel: 8.0, durability: 9.5, value: 8.5 },
+    confidences: { cushioning: "high", traction: "medium", support: "high", fit: "high", breathability: "low", groundFeel: "medium", durability: "high", value: "high" }
   },
   {
     shoe: "ASICS Superblast 2", brand: "ASICS", sport: "running", subreddit: "r/AskRunningShoeGeeks",
     redditUrl: "https://www.reddit.com/r/AskRunningShoeGeeks/comments/1rgnl0f/interval_tempo_shoes_recommendation/o7sp1qj/",
     author: "u/thirtyeight", date: "2025-11-02",
     summary: "Deceptively responsive — feels like a brick at first, but the spring return becomes apparent within a few sessions. At 800km logged across paces from easy jogs to sub-4 min/km, the durability is exceptional. Calves needed a brief adaptation period. Once dialed in, one of the most efficient energy-return daily trainers available.",
-    playstyle: "Tempo / Multi-pace (75kg)", courtType: "Road", sizingNote: "True to size", verdict: "Elite (after break-in)", wordCount: 150,
+    playstyle: "Tempo / Multi-pace (75kg)", courtType: "Road", sizingNote: "True to size", verdict: "Solid", wordCount: 150,
     fullText: "When I first got them I thought they felt quite firm but quickly I learnt that I liked about them as they seem to return a lot of my spring. Calves felt funny first few weeks. 800km in now, running paces from 6:00 to sub-3:50 min/km. They've held up brilliantly.",
-    ratings: { cushioning: 8.0, traction: 7.0, support: 8.5, fit: 8.0, breathability: 7.0, groundFeel: 9.0, durability: 9.5, value: 8.0 }
+    ratings: { cushioning: 8.0, traction: 7.0, support: 8.5, fit: 8.0, breathability: 7.0, groundFeel: 9.0, durability: 9.5, value: 8.0 },
+    confidences: { cushioning: "medium", traction: "low", support: "high", fit: "medium", breathability: "low", groundFeel: "high", durability: "high", value: "medium" }
   },
   {
     shoe: "ASICS Superblast 2", brand: "ASICS", sport: "running", subreddit: "r/AskRunningShoeGeeks",
@@ -1334,7 +1535,8 @@ export const reviews = [
     summary: "The current favorite for virtually every run type except true recovery days — a remarkable endorsement. Lighter runners especially appreciate the responsive, energetic feel and versatility across distances and paces. The one caveat: don't reach for it when your legs are truly beat.",
     playstyle: "All-Around", courtType: "Road", sizingNote: "True to size", verdict: "Elite", wordCount: 95,
     fullText: "The superblast 2 is currently my favorite shoe to do any types of runs in, unless my legs are absolutely beat. Responsive, versatile, and holds up great over many miles.",
-    ratings: { cushioning: 9.0, traction: 8.0, support: 8.5, fit: 9.0, breathability: 7.5, groundFeel: 9.0, durability: 8.5, value: 8.0 }
+    ratings: { cushioning: 9.0, traction: 8.0, support: 8.5, fit: 9.0, breathability: 7.5, groundFeel: 9.0, durability: 8.5, value: 8.0 },
+    confidences: { cushioning: "high", traction: "medium", support: "high", fit: "high", breathability: "medium", groundFeel: "high", durability: "high", value: "medium" }
   },
 
   // --- Saucony Endorphin Speed 5 ---
@@ -1343,16 +1545,17 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/XXRunning/comments/1n6bf94/just_out_of_curiosity/nbzqyp4/",
     author: "u/BotherFantastic3264", date: "2025-10-05",
     summary: "Race-day trusted — this runner is holding a fresh pair of ES5s in reserve for upcoming race season, a strong vote of confidence. The dual-use capability (daily training + racing) puts it in an elite tier. The improved toe box over the ES4 is a welcome fix for those who found the previous version cramped.",
-    playstyle: "Speed / Racer", courtType: "Road", sizingNote: "True to size (wider toebox than ES4)", verdict: "Great", wordCount: 100,
+    playstyle: "Speed / Racer", courtType: "Road", sizingNote: "True to size (wider toebox than ES4)", verdict: "Solid", wordCount: 100,
     fullText: "Workout/race day Endorphin Speed 4 and a new pair of Endorphin Speed 5 waiting in the wings. The wider toe box on the 5 is a real improvement. Trust them for race day.",
-    ratings: { cushioning: 8.5, traction: 8.5, support: 8.0, fit: 8.5, breathability: 8.0, groundFeel: 9.0, durability: 8.0, value: 8.5 }
+    ratings: { cushioning: 8.5, traction: 8.5, support: 8.0, fit: 8.5, breathability: 8.0, groundFeel: 9.0, durability: 8.0, value: 8.5 },
+    confidences: { cushioning: "high", traction: "high", support: "medium", fit: "high", breathability: "medium", groundFeel: "high", durability: "medium", value: "high" }
   },
   {
     shoe: "Saucony Endorphin Speed 5", brand: "Saucony", sport: "running", subreddit: "r/XXRunning",
     redditUrl: "https://www.reddit.com/r/XXRunning/comments/1pdg1qq/thinking_about_new_running_shoes_for_2026_what/ns5nobv/",
     author: "u/bananasplit1486", date: "2025-09-18",
     summary: "A painful upgrade for ES4 loyalists. The reviewer loved the ES4 and found the ES5 a clear step backward. No detailed breakdown given but the frustration is genuine — if you're an ES4 devotee, try the ES5 in-store before committing to the upgrade.",
-    playstyle: "Speed Runner", courtType: "Road", sizingNote: "Same sizing as ES4", verdict: "Disappointing (ES4 loyalist)", wordCount: 80,
+    playstyle: "Speed Runner", courtType: "Road", sizingNote: "Same sizing as ES4", verdict: "Mediocre", wordCount: 80,
     fullText: "Love the Saucony Speed 4. Upgraded to Speed 5 a few months ago and hated them. Couldn't quite put my finger on what changed but it just doesn't feel right.",
     ratings: { cushioning: 6.5, traction: 7.5, support: 7.0, fit: 6.5, breathability: 8.0, groundFeel: 6.5, durability: 7.5, value: 5.5 },
     confidences: { cushioning: 'low', support: 'low', fit: 'low', groundFeel: 'low', traction: 'medium', breathability: 'low', durability: 'low', value: 'medium' }
@@ -1364,7 +1567,8 @@ export const reviews = [
     summary: "Non-negotiable — this runner cannot imagine giving up the Endorphin Speed series. Light, fast, cushioned, and the nylon plate provides just the right amount of propulsion without the aggressive forward pitch of full carbon racers. Versatile enough for daily training and race day alike. The ES5 is an improvement over the ES4 in cushioning and comfort.",
     playstyle: "Speed / Daily Trainer", courtType: "Road", sizingNote: "True to size (fixed toe box vs ES4)", verdict: "Elite", wordCount: 110,
     fullText: "Light, fast, cushioned, nylon plate but not crazy aggressive. I cannot imagine under any circumstances giving up my Endorphin Speeds! The 5 feels much more cushioned and bouncy than the 4 and the toebox issue is fixed.",
-    ratings: { cushioning: 8.5, traction: 8.5, support: 8.0, fit: 8.5, breathability: 8.5, groundFeel: 9.0, durability: 8.0, value: 8.5 }
+    ratings: { cushioning: 8.5, traction: 8.5, support: 8.0, fit: 8.5, breathability: 8.5, groundFeel: 9.0, durability: 8.0, value: 8.5 },
+    confidences: { cushioning: "high", traction: "high", support: "medium", fit: "high", breathability: "high", groundFeel: "high", durability: "medium", value: "high" }
   },
 
   // --- Nike Pegasus 41 ---
@@ -1373,27 +1577,30 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/Marathon_Training/comments/1q5ohua/advice_on_shoe_rotation_during_training_cycle/ny3jmim/",
     author: "u/Accomplished-Film-50", date: "2025-12-28",
     summary: "The perfect buy-on-sale daily trainer. This runner specifically hunts last-year models at a discount for easy-run rotation, retiring them at 800-1000km. Dependable, predictable, and never surprising — exactly what you want in a high-rotation easy-day shoe when the price is right.",
-    playstyle: "Easy Run / Base Miles", courtType: "Road", sizingNote: "True to size", verdict: "Good (great at discount)", wordCount: 100,
+    playstyle: "Easy Run / Base Miles", courtType: "Road", sizingNote: "True to size", verdict: "Solid", wordCount: 100,
     fullText: "Easy shoes include the Pegasus 41 — I wait for last year's models on sale. They're reliable daily trainers I retire at 800-1000km. Nothing flashy but they never let me down for base miles.",
-    ratings: { cushioning: 7.5, traction: 7.5, support: 8.0, fit: 8.0, breathability: 7.0, groundFeel: 7.0, durability: 8.5, value: 9.5 }
+    ratings: { cushioning: 7.5, traction: 7.5, support: 8.0, fit: 8.0, breathability: 7.0, groundFeel: 7.0, durability: 8.5, value: 9.5 },
+    confidences: { cushioning: "medium", traction: "medium", support: "medium", fit: "medium", breathability: "low", groundFeel: "low", durability: "high", value: "high" }
   },
   {
     shoe: "Nike Pegasus 41", brand: "Nike", sport: "running", subreddit: "r/AskRunningShoeGeeks",
     redditUrl: "https://www.reddit.com/r/AskRunningShoeGeeks/comments/1ngm9bj/advice_on_daily_runners_for_beginner_should_i_listen_less_to_you_guys/ne5136n/",
     author: "u/acidcitrate", date: "2025-11-07",
     summary: "A solid but increasingly dated daily trainer. In a market flooded with bouncy maximalist options, the Pegasus 41's firmer ride feels conservative by comparison. Still reliable and durable, but if cushioning responsiveness is a priority, more modern competitors now match or exceed it at similar prices.",
-    playstyle: "Daily Trainer", courtType: "Road", sizingNote: "True to size", verdict: "Good", wordCount: 85,
+    playstyle: "Daily Trainer", courtType: "Road", sizingNote: "True to size", verdict: "Solid", wordCount: 85,
     fullText: "The Pegasus 41 is a bit firm compared to its peers these days. Still a solid daily trainer and very durable, but other options have passed it by in terms of cushion responsiveness.",
-    ratings: { cushioning: 7.0, traction: 7.5, support: 8.0, fit: 8.0, breathability: 7.0, groundFeel: 7.0, durability: 8.5, value: 8.0 }
+    ratings: { cushioning: 7.0, traction: 7.5, support: 8.0, fit: 8.0, breathability: 7.0, groundFeel: 7.0, durability: 8.5, value: 8.0 },
+    confidences: { cushioning: "low", traction: "medium", support: "medium", fit: "medium", breathability: "low", groundFeel: "low", durability: "high", value: "medium" }
   },
   {
     shoe: "Nike Pegasus 41", brand: "Nike", sport: "running", subreddit: "r/AskRunningShoeGeeks",
     redditUrl: "https://www.reddit.com/r/AskRunningShoeGeeks/comments/1qqry2d/heavier_runners_and_shoe_durability/o2j1wc8/",
     author: "u/RunnerAt190lbs", date: "2026-01-14",
     summary: "A heavier runner's mileage machine — 600 miles per pair at 190lbs, proven across multiple pairs. The durability makes the cost-per-mile calculation very favorable compared to softer, less durable alternatives. If you're above average weight and need consistent performance over distance, the Peg 41 delivers.",
-    playstyle: "Daily Trainer (heavier runner, 190lbs)", courtType: "Road", sizingNote: "True to size", verdict: "Great (durability)", wordCount: 85,
+    playstyle: "Daily Trainer (heavier runner, 190lbs)", courtType: "Road", sizingNote: "True to size", verdict: "Solid", wordCount: 85,
     fullText: "I'm 5'11 190 lbs and easily got 600 miles out of each pair of Pegasus 41s. Have gone through multiple pairs. For heavier runners who burn through shoes quickly, these are a fantastic value.",
-    ratings: { cushioning: 7.5, traction: 7.5, support: 8.5, fit: 8.0, breathability: 7.0, groundFeel: 7.0, durability: 9.0, value: 9.0 }
+    ratings: { cushioning: 7.5, traction: 7.5, support: 8.5, fit: 8.0, breathability: 7.0, groundFeel: 7.0, durability: 9.0, value: 9.0 },
+    confidences: { cushioning: "medium", traction: "medium", support: "high", fit: "medium", breathability: "low", groundFeel: "low", durability: "high", value: "high" }
   },
 
   // =====================================================
@@ -1418,7 +1625,7 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1kmpx8l/hoka_bondi_9_review_100_miles/",
     author: "u/Dragon_Zord", date: "2025-05-13",
     summary: "100 miles in the wide version: initially hated them but slowly grew to love them — even set a 1:55 half marathon PR wearing them. The wide version provides plenty of toe box room and they're stable, soft, and increasingly comfortable with each run. Average breathability and the weight is heavy, but durability is excellent. Best for easy/recovery days at slow paces.",
-    playstyle: "Daily Trainer / Recovery", courtType: "Road", sizingNote: "Size up and get wide version", verdict: "Great", wordCount: 174,
+    playstyle: "Daily Trainer / Recovery", courtType: "Road", sizingNote: "Size up and get wide version", verdict: "Solid", wordCount: 174,
     fullText: "M35, 6', 180lbs, 25-30 mi/week, easy pace 9:30 min/mi, forefoot striker. Bondi 9 in 11.5 wide. Review: after 100 miles I have to admit that I love these shoes. I purchased them while looking for an easy run shoe with max stack that came in wide. Honestly, I initially hated on them — didn't like the color, didn't like the huge chunk of foam, didn't even enjoy the ride. Over the last couple of months they have slowly become my daily trainer, and every run I swear they get better. I like them so much that I ran a half marathon in them and set a PR at 1:55. The Good: stable, wide (purchased 11.5 wide which gives plenty of room in the toe box), soft (and getting softer each day), good lockdown, very durable. The Just-Okay: only average breathability, heavy. The Bad: slow — but what do you expect, they are huge! These are my first Hokas and first max stack shoes and I think they are great.",
     ratings: { cushioning: 9.0, traction: 7.5, support: 8.5, fit: 8.0, breathability: 6.0, groundFeel: 5.0, durability: 9.0, value: 8.0 },
     confidences: { cushioning: "high", traction: "low", support: "high", fit: "high", breathability: "high", groundFeel: "medium", durability: "high", value: "medium" }
@@ -1428,7 +1635,7 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1ixqhc6/hoka_bondi_9_thoughts_at_100km/",
     author: "u/Some-Remote-6890", date: "2025-02-23",
     summary: "100km from a faster runner (HM 1:27, Mar 3:09) used primarily for 10-12km recovery runs. The ride is firmer than expected and lacks the bounce and energy return of the Mach 6. Feels flat for recovery and doesn't provide enough push for anything else. Would recommend the Clifton over the Bondi 9 — lighter and cheaper.",
-    playstyle: "Recovery Run", courtType: "Road", sizingNote: "True to size", verdict: "Disappointing", wordCount: 307,
+    playstyle: "Recovery Run", courtType: "Road", sizingNote: "True to size", verdict: "Mediocre", wordCount: 307,
     fullText: "M 6ft2 85kg, HM 1:27, Mar 3:09. Just crossed over the 100km mark in the Bondi 9s. Reason: had success with Mach 6 and Cielo, thought would give these a go as an easy day/recovery shoe. Mainly used for recovery runs around 10-12km at 5:45 min/km pace. Fit: went true to size with no issues. I have a slightly flatter foot and can feel a bit of pressure on the side of my arch. Ride: the ride is actually quite a bit firmer than I expected. Where the Mach is soft with a bouncy feeling and energy return, I find the Bondi just a little flat and doesn't give you a whole lot back. This lack of bounce with a firmer feeling leaves me unsure of what HOKA is trying to do with the shoe. Too firm for recovery but just not enough push/energy return for anything else. In summary it's fine, I personally wouldn't pick it again. Even just looking in HOKA's lineup I think the Clifton would be a better option — lighter and cheaper. I just struggle to see how and where the shoe fits into the HOKA lineup.",
     ratings: { cushioning: 7.0, traction: 7.5, support: 7.5, fit: 8.0, breathability: 6.5, groundFeel: 5.5, durability: 7.5, value: 6.0 },
     confidences: { cushioning: "high", traction: "low", support: "low", fit: "high", breathability: "low", groundFeel: "medium", durability: "low", value: "medium" }
@@ -1496,7 +1703,7 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1i7z1fd/saucony_guide_17_has_impressed_not_exactly_a/",
     author: "u/InfiniteCulture3475", date: "2025-01-23",
     summary: "Beginner runner with overpronation, wide flat feet, and a history of foot issues found this shoe immediately comfortable and confidence-inspiring. First run felt 'superbly comfortable underfoot' and they set a fastest 1k/1mi personal record. Secured second-hand for under £50 — exceptional value for beginner stability runners.",
-    playstyle: "Daily Trainer (beginner, stability)", courtType: "Road", sizingNote: "True to size", verdict: "Great", wordCount: 184,
+    playstyle: "Daily Trainer (beginner, stability)", courtType: "Road", sizingNote: "True to size", verdict: "Solid", wordCount: 184,
     fullText: "Beginner runner doing a very long and drawn out couch to 5k program. Heavier runner with overpronation, wide flat feet and a history of regular foot niggles. Bought the Guide 17 for under £50 second hand with reportedly minimal mileage. First run today (W6R2) after a 5-day break. Right from the start the run felt great — superbly comfortable underfoot with hardly any issues, and found myself in a rhythm faster than my previous runs yet comfortable. Feet and ankles felt secure and worry free the entire time, and damp road and tile were no problem. Another small bonus: I ran my fastest 1k/1mile so far. I can wholeheartedly recommend the Guide 17 as an option to look at for other beginner runners in a similar position. This one is a keeper!",
     ratings: { cushioning: 8.0, traction: 8.0, support: 9.0, fit: 8.5, breathability: 7.0, groundFeel: 7.0, durability: 7.0, value: 9.0 },
     confidences: { cushioning: "medium", traction: "medium", support: "high", fit: "high", breathability: "low", groundFeel: "low", durability: "low", value: "high" }
@@ -1532,7 +1739,7 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1dmr7ke/asus_gel_nimbus_26_first_run_comingo_from_nb_1080/",
     author: "u/Juliogol", date: "2024-06-23",
     summary: "Switching from the New Balance 1080 v12 which felt like a brick, the Nimbus 26 was a night-and-day revelation — extremely soft, cushioned, and comfortable on a 14km long run. You can feel the cushion but also some energy return that made the distance fly by. Easy recommendation for anyone on 1080s who finds them too firm.",
-    playstyle: "Long Run / Recovery", courtType: "Road", sizingNote: "Half size up for wide feet / toe room", verdict: "Great", wordCount: 218,
+    playstyle: "Long Run / Recovery", courtType: "Road", sizingNote: "Half size up for wide feet / toe room", verdict: "Solid", wordCount: 218,
     fullText: "Been using the New Balance Rebel v3 for speedy workouts and the 1080s for easy and recovery runs, but the 1080 just wasn't cutting it for me. I felt them quite firm and not very cushioned at all. When used for recovery runs they felt like a brick on every step — they have great reviews but just weren't for me. So I went for my run this morning — a long run of 14km at 5:54 km/min pace — and OH MY GOD. They're soooo comfortable, very soft and cushioned as I was expecting. It's a night and day difference from the 1080s. The upper feels great and you can feel the cushion but also some energy return that made my legs feel great. Went half a size up just to give the toes some room (I have kinda wide feet). If someone is using the NB 1080s and feels the same, you won't regret trying the Nimbus!",
     ratings: { cushioning: 9.5, traction: 7.5, support: 8.0, fit: 8.5, breathability: 7.5, groundFeel: 6.0, durability: 7.0, value: 8.0 },
     confidences: { cushioning: "high", traction: "low", support: "low", fit: "high", breathability: "low", groundFeel: "medium", durability: "low", value: "medium" }
@@ -1692,7 +1899,7 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1kdlujh/nike_vaporfly_234_reviews_comparisons/",
     author: "u/thelazyshrimp", date: "2025-05-03",
     summary: "A let-down in a 3-generation comparison. More cushioned than the VF2 but the foam feels dull and unresponsive — no real impact softening, no bounce, no supershoe feeling. Poor heel lockdown with persistent slippage, and the ridged outsole plus foam break down after ~80 miles. Wouldn't buy even discounted.",
-    playstyle: "Race Day", courtType: "Road", sizingNote: "True to size", verdict: "Disappointing", wordCount: 232,
+    playstyle: "Race Day", courtType: "Road", sizingNote: "True to size", verdict: "Mediocre", wordCount: 232,
     fullText: "I hoped the VF3 would maintain the aggressive, energetic ride of the VF2 but be a bit more accommodating and slightly more cushioned for longer distances. I was really impressed by the breathability and how lightweight the shoes were, but unfortunately besides that, I was disappointed in the VF3. Firstly, I found the fit really off. The shoe was my proper size, but even with a runner's knot, double knotting, etc, I could never get a proper lockdown and got a lot of heel slippage. Secondly, while the VF3 is noticeably more cushioned than the V2, it lacked the benefits you'd typically expect from added foam. It didn't soften ground impact in a meaningful way, nor did it provide any bounce or energy return. Instead, the foam just made the shoe feel dull and unresponsive — like it absorbed the energy instead of giving it back. It did feel more comfortable than the V2 as I didn't have any calf/feet tightness after wearing it, but it didn't give me any supershoe feeling. Lastly, the durability is lacking. Instead of being a continuous bottom like V2, it has ridges on the bottom which started to wear down quickly. The foam started to fall apart after about 80-ish miles and it lost what little bounce/energy return it had around then too, which isn't what I'd want from a $250 supershoe. I still wouldn't buy them even at a discounted price.",
     ratings: { cushioning: 5.0, traction: 5.0, support: 4.0, fit: 4.0, breathability: 8.5, groundFeel: 5.0, durability: 3.0, value: 2.5 },
     confidences: { cushioning: "high", traction: "medium", support: "high", fit: "high", breathability: "high", groundFeel: "medium", durability: "high", value: "high" }
@@ -1776,7 +1983,7 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1guc7gz/hoka_mach_x_2_review_after_30km_wow/",
     author: "u/DuBB1T", date: "2024-11-18",
     summary: "By far the best ride the reviewer has ever had — incredibly smooth heel-to-toe transition and powerful toe-off, bouncy race foam over a firmer training-foam heel for control. So propulsive it's hard to run easy (sub-5:15/km feels like fighting the shoe). Snug Hoka fit; the big flaw is a flimsy heel counter with collar pads that dig into the achilles.",
-    playstyle: "Tempo / Workout", courtType: "Road", sizingNote: "True to size, snug", verdict: "Great", wordCount: 285,
+    playstyle: "Tempo / Workout", courtType: "Road", sizingNote: "True to size, snug", verdict: "Solid", wordCount: 285,
     fullText: "Profile: 6', 175lbs, heel-to-midfoot striker, 3:44 MP & 1:40 HMP, 40-50km/week. Recent shoes: Novablast 4, Endorphin Pro 3, retired Boston 12 — I was specifically looking for a replacement for the Boston 12. TL;DR: Wow, this is by far the best ride I have ever had in a shoe. I plan to use it for tempo/threshold runs and some long runs with speed. Ride: amazing. The transition from heel to toe is incredibly smooth and the toe-off is powerful. The shoe feels bouncy and fast due to the top layer of race foam, but the firmer training foam at the heel gives a good sense of control. The plate is mostly for stability and I can feel the foam is restricted to a certain area thanks to it, giving good (albeit not great) stability, but it snaps back and propels you forward well. The only thing I'd say is the toe-off is almost too powerful — running at a 6min split was difficult, I felt I was fighting the shoe; anything slower than ~5:15 felt like a fight. It's really meant to go at a good pace. Fit: this is where it struggles. It's a Hoka so it fits snug, which I like. Upper feels light and breathable but not cheap. The heel counter sucks — it's very flimsy with little support, and Hoka put 2 pads in the collar to squeeze around your achilles to avoid heel lift. It works, but your heel still wants to slip, and when it does you feel those pads dig in. Go try this in a store first; the heel fit may be a deal breaker. But if it isn't, you're in for an incredible ride — my favorite shoe.",
     ratings: { cushioning: 8.0, traction: 7.5, support: 6.5, fit: 5.5, breathability: 7.5, groundFeel: 7.0, durability: 7.0, value: 7.5 },
     confidences: { cushioning: "medium", traction: "low", support: "medium", fit: "high", breathability: "medium", groundFeel: "low", durability: "low", value: "low" }
@@ -1838,7 +2045,7 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1f51zwj/endorphin_pro_4_50_mile_review/",
     author: "u/Poke-Tuna", date: "2024-08-30",
     summary: "A 50-mile review from a hobbyist forefoot/midfoot runner who found the Pro 4 much firmer and less propulsive than other plated shoes. Fit was roomy and secure with no heel slip, and the outsole grip was strong even on wet roads. It improved as the rocker broke in, and durability looked promising, but bounce/plate response lagged behind other race shoes unless heavily discounted.",
-    playstyle: "Race Day / Tempo", courtType: "Road", sizingNote: "True to size, roomy", verdict: "Mixed", wordCount: 226,
+    playstyle: "Race Day / Tempo", courtType: "Road", sizingNote: "True to size, roomy", verdict: "Solid", wordCount: 226,
     fullText: "The reviewer is a 39-year-old male, 188 lb, 171 cm hobbyist runner, mostly forefoot to midfoot strike with 170+ cadence, usually running 15-25 miles per week. They bought the Endorphin Pro 4 at 30% off after a good experience with the Endorphin Pro 3. Out of the box the midsole was very firm. The first run was 12 miles and it softened a bit near the end, but on the next run it felt firm again for the first half. In men's 10 the fit felt good and roomy, with a comfortable rather than glove-like fit and no heel slippage. The plate did not provide the energy return the reviewer expected; compared with Adios Pro 3, Prime X 2, Skyward X, SC Elite 4, and Metaspeed Sky+, the Pro 4 lacked the bouncy return those shoes gave at moderate to elite pace. After 50 miles, the midsole had softened only slightly and the plate response still was not there, though the rocker felt better as the reviewer got used to it and occasionally felt ready to fly. The outsole was good and very grippy, especially on sharp bends and wet roads. Overall it was called a good road-running shoe, but at this price point other carbon-plated shoes offer more bounce; the reviewer would restock only at a high discount and expected it could last 350+ miles.",
     ratings: { cushioning: 7.0, traction: 9.0, support: 7.5, fit: 8.5, breathability: 7.0, groundFeel: 6.5, durability: 8.5, value: 7.0 },
     confidences: { cushioning: "high", traction: "high", support: "medium", fit: "high", breathability: "low", groundFeel: "high", durability: "medium", value: "high" }
@@ -1850,7 +2057,7 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1aoay4f/sc_elite_v4_review/",
     author: "u/Syrus_007", date: "2024-02-11",
     summary: "A first-run review from an average midfoot runner who found the SC Elite v4 pleasant and stable but not special enough at $250. The midsole was soft but not plush, and the ride felt similar at 8-minute pace even with a few 6-minute intervals. The upper pressure, disappearing tongue, minor heel slip, weight, and price were the main misses.",
-    playstyle: "Race Day", courtType: "Road", sizingNote: "True to size; heel needed tightening", verdict: "Mixed", wordCount: 200,
+    playstyle: "Race Day", courtType: "Road", sizingNote: "True to size; heel needed tightening", verdict: "Mediocre", wordCount: 200,
     fullText: "The reviewer is a male, 5'11, 170 lb, size 13 US, average midfoot striker who ran six miles around 8:05 pace with a couple 6:00 pace intervals. The SC Elite v4 was their first super shoe, bought from Fleet Feet for $250, after recent running in Tri-Noosa 14, Pegasus 39, Pegasus Turbo 2, and Streakfly. Their first reaction was underwhelming: they did not notice much difference from the Tri-Noosa and felt the rocker/plate effect was not immediately special. The run still felt pleasant and their legs felt good afterward, but the ride felt similar at 8:00 pace and during the faster intervals. The midsole was good, soft but not plush, with no sinking sensation. The tongue was the biggest issue because it kept disappearing into the shoe. The heel was just okay, with some initial slippage that improved after tightening, but choking the laces hard would have been uncomfortable because the thin tongue let the upper press into the foot. Overall the reviewer rated the shoe 7/10. Pros were looks and super stability; it was stable enough to imagine wearing casually and non-aggressive. Cons were the awful tongue, weight compared with Streakfly/Tri-Noosa, and a price that was not special enough.",
     ratings: { cushioning: 7.5, traction: 7.0, support: 8.5, fit: 6.5, breathability: 7.0, groundFeel: 6.5, durability: 7.0, value: 5.5 },
     confidences: { cushioning: "high", traction: "low", support: "high", fit: "high", breathability: "low", groundFeel: "medium", durability: "low", value: "high" }
@@ -1862,7 +2069,7 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1kmclmg/puma_fastr_elite_3_first_run_impressions/",
     author: "u/Typical_Philosophy230", date: "2025-05-13",
     summary: "Detailed first-run impressions from a slow mid/forefoot striker: the shoe feels extremely aggressive, smooth, and effortless at threshold pace, with energetic cushioning and strong toe-off. Fit is narrow race-fit but true to size, the upper is very breathable, and PumaGrip felt secure in dry conditions. Heel striking felt unstable and unforgiving, so this is best for mid/forefoot strikers who want a race-day shoe with a forceful forward roll.",
-    playstyle: "Race Day", courtType: "Road", sizingNote: "True to size, narrow race fit", verdict: "Great", wordCount: 409,
+    playstyle: "Race Day", courtType: "Road", sizingNote: "True to size, narrow race fit", verdict: "Solid", wordCount: 409,
     fullText: "Details about me: slow runner and a mid/forefoot striker. Distance: 2.5km. Shoe Model & Size: Puma Fast-R 3 Elite and US9. Fit/Comfort: the fit is definitely race fit and comes in quite narrow. My feet are hanging off the sides but it does not feel uncomfortable. Some may find that the shoe runs a tiny bit long but I do find the shoe fits true to size. The Ultraweave upper is incredibly thin and transparent, a plasticky mesh weave similar to the ASICS Metaspeed series, and completely breathable. The tongue is made with the same thin material and is not gusseted, but lace loops keep it in place. The foam is probably the most interesting part of the shoe. The foam under the heel is really firm and responsive, the foam under the forefoot is airy, cushioning, soft and not as responsive, and the foam under the toes is firm and responsive again. The firm foam feels similar to Adidas Pro 3/Evo SL where there is firmness and sharp bounce without density. The PumaGrip outsole under the heel is nice and grippy while the forefoot outsole is less grippy and smoother. Overall the grip is nice and I do not feel like I would slip, though this could change in rain. The carbon plate is thin, has the middle cut out, goes all the way to the tip, and is surprisingly stiff. If I could describe the ride in a few words, it would be go go go go. It is incredibly aggressive but smooth. The shoe wants you to go fast and not stop. It felt almost effortless hitting threshold pace. The foam is energetic while being incredibly cushioning. You can feel the toe-off from the plate and it gives a little pop. As soon as you land you can feel the forefoot foam cushion you and make a nice airy landing, while the firmer heel foam immediately responds and bounces back up. This creates a lift at the heel and encourages forward motion, then you spring off your toes against the firmer bouncier foam. The geometry encourages a longer stride run pattern. The shoe is quite unforgiving if you heel strike; it feels terrible and unstable. If you are a mid or forefoot striker, you will love this shoe. I also feel like the shoe tends to pronate, which feels a little weird as I am a neutral runner. Overall the shoe lives up to the hype.",
     ratings: { cushioning: 9.0, traction: 8.0, support: 6.5, fit: 7.0, breathability: 9.0, groundFeel: 8.5, durability: 7.0, value: 8.0 },
     confidences: { cushioning: "high", traction: "medium", support: "high", fit: "high", breathability: "high", groundFeel: "high", durability: "low", value: "medium" }
@@ -1876,7 +2083,7 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1edrkog/100_mile_review_brooks_hyperion_max_2/",
     author: "u/natsrunning", date: "2024-07-27",
     summary: "A 100+ mile review from a 5'7, 155 lb runner using it as a snappy daily/uptempo trainer. They loved the true-to-size upper, breathability, laces, and rocker-driven ride, but framed the midsole as firm rather than soft or bouncy. Durability looked strong after nearly 120 miles, and the $180 retail felt easier to justify with a discount.",
-    playstyle: "Tempo", courtType: "Road", sizingNote: "True to size", verdict: "Great", wordCount: 461,
+    playstyle: "Tempo", courtType: "Road", sizingNote: "True to size", verdict: "Solid", wordCount: 461,
     fullText: "The reviewer is a 5'7, 155 lb male runner with a 1:23 half marathon PR and a sub-3 marathon goal. They found the upper excellent in true-to-size US9, with enough toe-box room, good SoCal summer breathability, no hot spots, no heel slip, and laces that stayed tied well. The outsole had not been tested much in wet conditions, but dry traction seemed good and durability looked strong after nearly 120 miles in two weeks. The DNA Flash v2 midsole felt firmer than expected from a super-foam trainer, but paired well with the rocker for a smooth rolling ride. It was not ideal at slower paces, but it felt snappy and best when picking up pace or cruising on the toes. They described it as a smooth, capable trainer rather than a soft, springy super trainer, and felt Brooks did a strong job despite the high retail price.",
     ratings: { cushioning: 8.0, traction: 7.5, support: 8.0, fit: 9.0, breathability: 8.5, groundFeel: 7.5, durability: 8.5, value: 7.5 },
     confidences: { cushioning: "high", traction: "medium", support: "medium", fit: "high", breathability: "high", groundFeel: "medium", durability: "high", value: "high" }
@@ -1888,7 +2095,7 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1m8paz4/new_balance_1080v14_2e_after_50km/",
     author: "u/8bit_ai", date: "2025-07-25",
     summary: "A wide-foot 2E review after roughly 50 km, mostly as a recovery, commuting, and walking shoe. The 1080 v14 felt plush, protective, premium, and comfortable for long hours, but not very versatile as a running shoe. The reviewer disliked the grip after the early tackiness wore off, found the ride flat and non-bouncy, and thought the price was high for such a narrow use case.",
-    playstyle: "Recovery", courtType: "Road", sizingNote: "2E roomy except big-toe taper; standard width tight", verdict: "Mixed", wordCount: 1037,
+    playstyle: "Recovery", courtType: "Road", sizingNote: "2E roomy except big-toe taper; standard width tight", verdict: "Mediocre", wordCount: 1037,
     fullText: "The reviewer is a 26-year-old, 6'1, 140 lb newer runner logging 30-40 km per week and training for a first half marathon. They used the 1080 v14 mainly as a recovery shoe after long runs, a walking shoe, and a commuting shoe, while preferring the Novablast 5 and later Nimbus 27 for actual running. The upper felt soft, plush, premium, and secure through the gusseted tongue, though it used a lot of material, could hold sweat, and had lace lockdown issues. The 2E width was roomy through most of the toe box but still tapered at the big toe, while standard width felt tight. The midsole felt softer than most current shoes but firmer than older 1080 versions, protective, and consistent across temperatures, yet not bouncy and somewhat flat. It worked well for painful-leg recovery days and standing, but felt heavy and hard to pick up pace in. The outsole was tacky at first but lost grip, struggled in rain, debris, hills, winter, and ice, and showed some edge foam wear, even though the shoe should still handle high mileage.",
     ratings: { cushioning: 8.5, traction: 5.5, support: 7.0, fit: 6.5, breathability: 7.0, groundFeel: 5.5, durability: 7.0, value: 5.5 },
     confidences: { cushioning: "high", traction: "high", support: "medium", fit: "high", breathability: "high", groundFeel: "high", durability: "medium", value: "high" }
@@ -1900,7 +2107,7 @@ export const reviews = [
     redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1cql2my/saucony_ride_17_300_miles/",
     author: "u/Surrendayopie", date: "2024-05-12",
     summary: "A 300-mile review from a 180 lb midfoot striker running 40-50 miles per week. The Ride 17 scored well for value, foam consistency, protection, and outstanding durability, but the reviewer found it overbuilt, wide, stiff, and hard to use as a flexible daily trainer. Wet grip and lockdown were the major negatives.",
-    playstyle: "Long Run", courtType: "Road", sizingNote: "Roomy midfoot and upper; lockdown sensitive", verdict: "Mixed", wordCount: 559,
+    playstyle: "Long Run", courtType: "Road", sizingNote: "Roomy midfoot and upper; lockdown sensitive", verdict: "Mediocre", wordCount: 559,
     fullText: "The reviewer is a 180 lb runner logging 40-50 miles per week, mostly at 8-9 minute pace, with a midfoot strike and men's 9.5 sizing. After 300 miles, they still saw no upper or heel damage and the outsole rubber remained largely intact. The PWRRUN+ midsole had a good amount of bounce, stayed consistent through two-hour and 10+ mile runs, and did not feel flat, with the reviewer expecting another 200 miles. The main issue was that the shoe felt overbuilt. The platform was too wide through the midfoot, causing the foot to move unless the laces were tightened hard, which led to fatigue and cramping. The wide, stiff mid/forefoot reduced flexibility, hurt toe-off feel, and made the shoe feel prescriptive rather than versatile. The forefoot upper was baggy and the tall heel collar pressed around the ankle. They saw it as protective and better for steady long runs than daily variation, but disliked the fit enough to move on. Wet traction was also underwhelming despite excellent outsole durability.",
     ratings: { cushioning: 8.0, traction: 6.0, support: 6.5, fit: 5.5, breathability: 6.5, groundFeel: 5.0, durability: 9.5, value: 8.0 },
     confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "low", groundFeel: "high", durability: "high", value: "high" }
