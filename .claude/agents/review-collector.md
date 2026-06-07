@@ -38,6 +38,26 @@ clickable "View on Reddit" link and feeds affiliate product cards.
 
 ## The core constraint (read this first)
 
+**ZERO FABRICATION — this is non-negotiable.** Every field in every entry must come from real
+source text you read. If you cannot locate a real post for a shoe, **skip that shoe entirely**
+and say so in your coverage note. A missing entry is fine; a fabricated one is a public fraud.
+Specifically:
+- **Never invent a `redditUrl`**, post id, slug, or comment id — if PullPush and WebSearch
+  both find nothing, the shoe does not get an entry this session.
+- **Never use a search/query URL** (`/search/?q=…`) as a `redditUrl`. A `redditUrl` must
+  point to a specific post (`/comments/<id>/…`) that you actually fetched and read.
+- **Never generate an author name** that you haven't seen in the actual source data. Usernames
+  like "u/SpeedFanatic_RSG" or "u/InformationLeast5607" that appear in zero PullPush results
+  are a sign of hallucination, not a real contributor.
+- **Never blend content from two different posts** into one entry. All `fullText` must come
+  verbatim (or lightly cleaned) from a single source that you fetched and read.
+- **Content fabrication is a category error even when the URL is real.** Confirm the post
+  body/comment you fetched actually says what you're writing — do not infer, extrapolate, or
+  blend. If the real post is about a 5K beginner, don't write an entry about a marathon trainer.
+- **2026-era PullPush gap**: post IDs starting with `1s…` (approx. March–April 2026) are often
+  NOT indexed by PullPush — `{"data":[]}` is not evidence of fabrication, but it also means you
+  cannot verify the content. Fall back to WebSearch; if that also turns up nothing, skip.
+
 `reddit.com`'s public JSON API and `WebFetch` against `reddit.com` are **BLOCKED** from this
 environment (HTTP 403 / platform denial). Do not waste turns retrying them. Instead use:
 

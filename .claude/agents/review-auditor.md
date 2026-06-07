@@ -38,6 +38,32 @@ for the main thread to apply. Your value is catching wrong-shoe attributions, wr
 authors/dates, fabricated or mis-copied content, and indefensible ratings before they ship
 to a public, affiliate-linked site.
 
+## Known fabrication patterns to watch for (from a June 2026 full-dataset audit)
+
+These failure modes were found in real data — flag them immediately on detection:
+
+1. **Non-existent post id** — PullPush returns `{"data":[]}` for the post id in the URL.
+   Always try WebSearch as a fallback before concluding the post doesn't exist. If both fail,
+   mark `FABRICATED (post not found in PullPush or WebSearch)` and recommend removal.
+2. **Non-existent username** — author appears in zero PullPush results across any subreddit.
+   A real author will have at least one comment or submission. Flag `UNVERIFIABLE (author not
+   found anywhere in PullPush)`.
+3. **Search URL as `redditUrl`** — any URL containing `/search/?q=` is immediately invalid.
+   Flag `INVALID_URL (search URL not a real post)` and recommend removal.
+4. **Real URL, fabricated content** — the post exists and the author matches, but the
+   `fullText`/`summary` describes a completely different scenario from what the real post
+   says (e.g., real post is a beginner 5K runner; entry claims a marathon-focused 200+ mile
+   review). This is the most insidious fabrication — always read and compare the actual
+   source body against the entry's content.
+5. **Wrong-shoe attribution from a real URL** — the post is real but discusses a different
+   shoe than the one the entry claims. Common in rotation posts.
+6. **2026 PullPush gap** — post IDs starting `1s…` (March–April 2026) may return empty from
+   PullPush without being fabricated. Use WebSearch to verify the post exists. If it does,
+   the entry is UNVERIFIABLE but not necessarily fabricated — do not auto-flag for removal.
+   If WebSearch also finds nothing, treat as HIGH RISK.
+7. **Systemic fabricator**: if one author is confirmed fabricated, check every other entry
+   with that same author — they are all suspect.
+
 ## How to read the source (reddit.com is BLOCKED in this environment)
 Use the **PullPush archive API** via `WebFetch` (reddit.com JSON + direct WebFetch are 403):
 - Submission by id: `https://api.pullpush.io/reddit/search/submission/?ids=POSTID`
@@ -78,3 +104,8 @@ mechanically. State explicitly that you did not edit any files.
 - Don't fabricate a "pass" — if PullPush can't return a post after retries, mark it
   `UNVERIFIED (source unreachable)` rather than guessing.
 - Prefer false-positive flags over silent misses: when content fidelity is borderline, flag it.
+- **Always read the actual source body** and compare it against the entry's `fullText` and
+  `summary`. Do not assume a real post id = correct content. Content fabrication on top of a
+  real URL is a known failure mode.
+- When an entry's URL is a search URL (`/search/?q=…`), flag as INVALID immediately — a
+  `redditUrl` must point to a specific post/comment.

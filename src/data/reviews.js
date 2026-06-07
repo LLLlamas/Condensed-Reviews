@@ -32,7 +32,6 @@ export const amazonLinks = {
   "Adidas Harden 9":         "https://www.amazon.com/dp/B0D34466PK?tag=llamas02-20",
   "Adidas Crazy Energy":     "https://www.adidas.com/us/crazy-energy-plus-basketball-shoes/KI3197.html",
   "SPO Game 1 High":         "https://seriousplayeronly.com/products/game1-hi-hater",
-  "Li-Ning All City 14":     "https://www.amazon.com/dp/B0GMWKW319?tag=llamas02-20",
 
   // === Basketball — new ===
   "Nike Ja 1":               "https://www.amazon.com/s?k=Nike+Ja+1+basketball+shoe&tag=llamas02-20",
@@ -133,16 +132,13 @@ export const amazonLinks = {
   "HOKA Mach X 2":           "https://www.amazon.com/s?k=HOKA+Mach+X+2+running+shoe&tag=llamas02-20",
   // Running — batch 5
   "HOKA Skyward X":          "https://www.amazon.com/s?k=HOKA+Skyward+X+running+shoe&tag=llamas02-20",
-  "HOKA Cielo X1 3.0":       "https://www.amazon.com/s?k=HOKA+Cielo+X1+3.0+running+shoe&tag=llamas02-20",
   "Nike Alphafly 3":         "https://www.amazon.com/s?k=Nike+Alphafly+3+running+shoe&tag=llamas02-20",
   "Saucony Endorphin Pro 4": "https://www.amazon.com/s?k=Saucony+Endorphin+Pro+4+running+shoe&tag=llamas02-20",
   "New Balance SC Elite v4": "https://www.amazon.com/s?k=New+Balance+SC+Elite+v4+running+shoe&tag=llamas02-20",
   // Running — batch 6
   "Brooks Hyperion Max 2":   "https://www.amazon.com/s?k=Brooks+Hyperion+Max+2+running+shoe&tag=llamas02-20",
-  "New Balance Fresh Foam X 1080 v14": "https://www.amazon.com/s?k=New+Balance+Fresh+Foam+X+1080+v14+running+shoe&tag=llamas02-20",
   "Saucony Ride 17":         "https://www.amazon.com/s?k=Saucony+Ride+17+running+shoe&tag=llamas02-20",
   "Adidas Adizero Adios Pro 4": "https://www.amazon.com/s?k=Adidas+Adizero+Adios+Pro+4+running+shoe&tag=llamas02-20",
-  "HOKA Rocket X 3":         "https://www.amazon.com/s?k=HOKA+Rocket+X+3+running+shoe&tag=llamas02-20",
 };
 
 export function getAmazonUrl(shoeName, sport = 'basketball') {
@@ -216,7 +212,7 @@ export const reviews = [
   {
     shoe: "Nike KD 14", brand: "Nike", sport: "basketball", subreddit: "r/BBallShoes",
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/nu70s1/kd14_in_outdoor_performance/",
-    author: "u/Which_Classroom4465", date: "2021-06-07",
+    author: "u/Which_Classroom4465", date: "2021-06-06",
     summary: "Outdoor test at ~230 lbs after owning the KD 12 and 13. Support is excellent thanks to a middle TPU plate that prevents twisting. Lockdown is very stable — foot feels contained and snug. Cushion is good but softer than KD 12/13. Traction is average for outdoor. Suits bigs who prefer a pull-up game.",
     playstyle: "Big Man", courtType: "Outdoor", sizingNote: "Accommodates wide feet", verdict: "Solid", wordCount: 142,
     fullText: "I am 230 lbs, 105kg. Having owned the KD12 and KD13, sharing my feeling on the KD14 — it's good for bigs. Materials: upper is normal, as expected of a Nike performance shoe. There is a plastic lockdown piece that is quite hard and can't be easily deformed. Breathability: after 30 Celsius two hours of outdoor play, gets sweaty and muggy. Lockdown: cool, never had a problem feeling as if my foot was getting loose. Since this red clip is solid, lockdown is very stable. The foot feels very contained and snug inside the shoe. Fat foot can also feel comfortable. Support: excellent, more stand support compared with KD12 and KD13, due to the middle TPU and it can't be twisted. Cushion: KD's cushion is always best. Softness ranking from my experience: KD12 greater than KD13 greater than KD14. KD12 is my favorite. Fit: I have a fat foot and it's okay; narrow foot is also allowed as KD is also a narrow shoe. Traction: normal, doesn't feel like Yushuai Boom or AJ, the design is nothing new for traction. Durability: excellent, five hours clean and safe. Court feel: outdoor plastic, it works. Final thoughts: it's a normal forward sneaker if you prefer more pull-up. Overall would give it a 9/10, it's not good looking.",
@@ -491,16 +487,6 @@ export const reviews = [
   },
   {
     shoe: "Li-Ning Way of Wade 12", brand: "Li-Ning", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1s8axe0/wow_12_review_from_a_pf_perspective/",
-    author: "u/InformationLeast5607", date: "2026-03-29",
-    summary: "A flawed beast from a PF perspective. Incredible plush cushion with great impact protection at 240lbs. Amazing court feel. But traction on dusty courts is terrible — forefoot rubber collects dust relentlessly. GCU claims are misleading (only heel/midfoot). Elite for clean courts only.",
-    playstyle: "Power Forward (240lbs)", courtType: "Indoor (clean courts)", sizingNote: "True to size", verdict: "Solid", wordCount: 424,
-    fullText: "Incredible cushion setup — plush, responsive, great court feel. At 240 and grabbing above the rim, amazing impact protection. But traction — on dusty courts, terrible. The forefoot is rubber not GCU, and it collects dust relentlessly. On clean courts it's elite. A flawed beast.",
-    ratings: { cushioning: 9.5, traction: 6.5, support: 8.5, fit: 8.5, breathability: 6.0, groundFeel: 8.5, durability: 8.0, value: 7.5 },
-    confidences: { cushioning: "high", traction: "low", support: "high", fit: "high", breathability: "low", groundFeel: "high", durability: "medium", value: "medium" }
-  },
-  {
-    shoe: "Li-Ning Way of Wade 12", brand: "Li-Ning", sport: "basketball", subreddit: "r/BBallShoes",
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1s8apw6/wow_12_year_of_the_horse_review/",
     author: "u/Fabulous_Ad8642", date: "2026-03-29",
     summary: "Probably best shoes on market but overpriced. TTS fit with snug midfoot and roomy toe box. Traction ranges 8.5-9.5 depending on court condition. Amazing for on-ball defense. No weak points besides price. 9/10 overall.",
@@ -596,18 +582,6 @@ export const reviews = [
     fullText: "808 3 ultra v2: just great, nothing wrong with them at all. Half size down for 1:1 fit. Almost impossible to roll your ankle. Cushion is solid but not like SuperBoom trampoline level.",
     ratings: { cushioning: 8.0, traction: 8.5, support: 9.5, fit: 9.0, breathability: 6.5, groundFeel: 8.0, durability: 9.0, value: 8.5 },
     confidences: { cushioning: "medium", traction: "high", support: "high", fit: "high", breathability: "low", groundFeel: "medium", durability: "high", value: "high" }
-  },
-
-  // --- All City 14 ---
-  {
-    shoe: "Li-Ning All City 14", brand: "Li-Ning", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1s1fpn2/all_city_14_review/",
-    author: "u/InformationLeast5607", date: "2026-03-14",
-    summary: "A great shoe — much better than the 13s. Tuff RB traction is phenomenal for outdoor, and works fine indoors too. Fit is TTS and slightly wide. Lockdown is the only fault — some heel slipping that needs tongue pads. Cushion is surprisingly good with enough court feel.",
-    playstyle: "Power Forward", courtType: "Indoor / Outdoor", sizingNote: "True to size (slightly wide)", verdict: "Solid", wordCount: 306,
-    fullText: "A great shoe, so much better than 13s. Traction for outdoor is phenomenal — nothing better than Tuff RB. Good bite indoors too. Fit is TTS, slightly wide. Lockdown is my only fault — some heel slipping. Cushion is surprisingly good.",
-    ratings: { cushioning: 8.0, traction: 9.5, support: 7.5, fit: 8.0, breathability: 7.0, groundFeel: 8.0, durability: 9.5, value: 8.5 },
-    confidences: { cushioning: "medium", traction: "high", support: "medium", fit: "medium", breathability: "low", groundFeel: "medium", durability: "high", value: "high" }
   },
 
   // =====================================================
@@ -760,7 +734,7 @@ export const reviews = [
   {
     shoe: "Nike Ja 2", brand: "Nike", sport: "basketball", subreddit: "r/BBallShoes",
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1iiv7pi/ja_2_review/",
-    author: "u/Affectionate_Yam4522", date: "2025-02-05",
+    author: "u/Affectionate_Yam4522", date: "2025-02-06",
     summary: "A familiar step forward from the Ja 1 — fit runs a little more snug, traction is excellent with minimal wiping needed, and impact protection is slightly improved. Cushion is still minimal by design to preserve court feel. If you liked the Ja 1, you'll like the Ja 2; main con is the $120 asking price for that level of cushioning.",
     playstyle: "Quick Guard", courtType: "Indoor", sizingNote: "True to size (snug)", verdict: "Solid", wordCount: 128,
     fullText: "Finally tried out the Ja 2. The Ja 1 remind me of the Kyrie 4 and infinity — great court feel, light and comfy. The Ja 2 is a little of the same. Reminds me of Kyrie 3 and Sabrina line. Fit felt a little more snug on this model than the first but not uncomfortable at all. Impact protection I think is better on this model. Traction was great, barely wiped. The Ja 2 are great, I'd say a small upgrade to the Ja 1. I would still pick the Ja 1 just based on using them longer and having 6 pairs and all have treated my feet/legs well. I think the main con with both is the impact protection. But it's a $120 shoe and to keep them light and keep the court feel they keep the cushion minimal. Final verdict: if you like the Ja 1, you'll like the Ja 2.",
@@ -848,7 +822,7 @@ export const reviews = [
   {
     shoe: "Nike Zoom Freak 5", brand: "Nike", sport: "basketball", subreddit: "r/BBallShoes",
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1d2xssf/freak_5_review/",
-    author: "u/Curious-Mechanic4688", date: "2024-05-29",
+    author: "u/Curious-Mechanic4688", date: "2024-05-28",
     summary: "Picked up at Nike outlet for $38. Traction is 9/10 when wiped, but the dust pickup is egregious — requires wiping almost every minute on a typical gym floor. Cushion is more plush than the Ja 1. A great shoe if you can get it cheap and play on a clean court, but the dust sensitivity is a dealbreaker for most.",
     playstyle: "All-Around", courtType: "Indoor (clean court only)", sizingNote: "Runs large at size 12+", verdict: "Solid", wordCount: 119,
     fullText: "Bought the Freak 5 from my local Nike outlet for $38. Traction: this is my most important aspect. The traction was 9/10 when wiping but the dust pickup was egregious — I had to wipe every minute it seemed or I would literally be skating on the court. Cushion: cushion was comfy, felt better than the Ja 1, more plush ride. Fit: fit was good, very comfortable. Overall: it's a great shoe IF you can get it for a great price and play on a non-dusty court, which most of us don't. I just couldn't get over the amount of dust pickup and how quickly it picked it up — had me skating, doing the splits (not exaggerating).",
@@ -892,7 +866,7 @@ export const reviews = [
   {
     shoe: "New Balance TWO WXY V5", brand: "New Balance", sport: "basketball", subreddit: "r/BBallShoes",
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1knvawd/nb_two_wxy_v5_did_not_disappoint/",
-    author: "u/das_euge", date: "2025-05-27",
+    author: "u/das_euge", date: "2025-05-15",
     summary: "Needed to replace worn-out Kyrie Low 5s that were hurting feet — the V5 delivered immediately. Running, jumping, and lateral movement felt pain-free on outdoor courts. Stability, comfort, and shock absorption were all excellent. At sub-$100 with local availability, exceptional value for an outdoor shoe.",
     playstyle: "All-Around", courtType: "Outdoor", sizingNote: null, verdict: "Solid", wordCount: 107,
     fullText: "I needed to replace my Kyrie Low 5's immediately because the traction was gone and my feet were starting to hurt after every hoop session. After hours of reading reviews, I decided to go with the NB Two Wxy V5's primarily based on price (<$100) and availability. I've been playing outdoors a lot more and I needed a shoe with better absorption and stability. This shoe definitely took care of that for me. I was running, jumping, and moving laterally without wincing on every impact. Stability, comfort, and shock absorption on an outdoor court felt amazing.",
@@ -1264,7 +1238,7 @@ export const reviews = [
   {
     shoe: "Jordan Tatum 3", brand: "Jordan", sport: "basketball", subreddit: "r/BBallShoes",
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1hit9uo/tatum_3_performance_review/",
-    author: "u/primetimeheel", date: "2024-12-21",
+    author: "u/primetimeheel", date: "2024-12-20",
     summary: "36-year-old 6'3\" 160 lb wing playing the 4. Cushlon 3.0 with large forefoot Zoom Air is the standout — lightweight, smooth, and sneaky bouncy. Traction is functional but the herringbone wave needs more bite coming from sharper shoes. Fit runs long — replaced stock insole with Move Gameday Pro for arch/torsion support. Calls it a near-perfect wing shoe.",
     playstyle: "Wing", courtType: "Indoor", sizingNote: "Runs long — consider half size down", verdict: "Solid", wordCount: 152,
     fullText: "36 yo, 6'3\", 160-165 lbs playing the 4. Player comp: rec level Garnett or Anthony Davis on the good days, Andre Drummond on the bad ones. Traction: not bad, but could be better. The forefoot pattern being a soft herringbone wave is good, but it just needs a little more bite. Coming from the NB Kawhi 4, which bit every court I put it on and saved me on a few different occasions, these got the job done. Just don't get lazy on defense. Cushion: Cushlon 3.0 with large coverage Zoom Air in the forefoot. This is the Jayson Tatum part of the shoe. Lightweight, smooth, and sneaky bouncy. The standout feature for sure. Fit and support: my size 15 fit perfect in regard to the width, but ran a little long as I had my whole thumbnail in front of my toes. Replaced the stock insole with Move Gameday Pro to get proper arch and torsion support. That kept the foam on the medial side from pressing on my foot and kept the foam from breaking in too much. The upper could use another eyelet to help the lockdown, but that's me being extra picky. Overall: these are definitely gonna stay in the bag as the go-to shoe. As a two-way player this is a great option for me. Only personal changes I'd make are full-length Zoom and a spring plate or arch plate. An almost perfect wing hoop shoe.",
@@ -1456,7 +1430,7 @@ export const reviews = [
   {
     shoe: "Rigorer AR1", brand: "Rigorer", sport: "basketball", subreddit: "r/BBallShoes",
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1gfk032/rigorer_ar1_performance_review/",
-    author: "u/genericgenericasian", date: "2024-11-03",
+    author: "u/genericgenericasian", date: "2024-10-30",
     summary: "The AR1 is a near-elite performance shoe at a budget price. Traction is exceptional on clean courts and holds well even when dusty. Cushion uses a dual-density foam setup that's responsive but not plush — great court feel. Lockdown is outstanding with the midfoot cage. The only real knock is breathability; it runs hot.",
     playstyle: "Guard / Wing", courtType: "Indoor", sizingNote: "TTS — runs slightly narrow", verdict: "Solid", wordCount: 312,
     fullText: "Picked these up for about $80 USD shipped. Rigorer AR1 performance review after 3 weeks and about 8 sessions. Traction: 9/10. These might have the best traction I've ever tried. Multidirectional herringbone pattern bites into the court hard. Even on dusty courts it holds up better than most shoes twice the price. A couple wipes per session and you're golden. Cushion: 7.5/10. Dual density foam — softer top layer, firmer base. It's not plush by any stretch but it's extremely responsive. You feel the court, which I personally love for a guard. Not the shoe for guys who want max cushion. Lockdown/Fit: 9/10. This is where the AR1 shines brightest after traction. The midfoot cage locks your foot in hard. I went TTS and have medium-width feet. Heel counter is stiff and keeps you planted. No heel slippage at all. Wide footers should go half up. Support: 8.5/10. Wide base, great outrigger, thick TPU shank. Feel very secure on cuts and jumps. Breathability: 5/10. The biggest weakness. Runs hot. The mesh isn't very open and these trap heat. Outdoor: 7/10. Fine for occasional outdoor use but the traction pattern will wear faster on rougher surfaces. Overall: 9/10. At $80, it's a no-brainer if you can get them. Probably top 3 basketball shoe per dollar spent on the market.",
@@ -1517,7 +1491,7 @@ export const reviews = [
   {
     shoe: "Nike GT Hustle 3", brand: "Nike", sport: "basketball", subreddit: "r/BBallShoes",
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1e63m63/gt_hustle_3_blueprint_review/",
-    author: "u/defeatedmac", date: "2024-07-18",
+    author: "u/defeatedmac", date: "2024-07-17",
     summary: "A cushion-first review: double-stacked forefoot Zoom, a big React heel wedge, and the ZoomX insole make impact protection outrageous. Traction and Flyknit comfort are strong, but the stock insole makes the shoe cramped, hot, unstable, and nearly court-feel-free. Swapping to a normal insole improved stability and court feel dramatically.",
     playstyle: "Big Man", courtType: "Indoor", sizingNote: "True to size, snug with stock insole", verdict: "Solid", wordCount: 200,
     fullText: "Price was 25% off MSRP from a third party retailer in Australia, around $130 USD; the reviewer still called it expensive but felt 75% of MSRP was reasonable given the tech. Cushioning is the headline: double-stacked forefoot Zoom Air, a fat React heel wedge, and a very thick ZoomX stock insole, with energy return as advertised. Fit was comfortable and snug in Flyknit, containment was good, and breathability was fantastic, though the ZoomX insole retained heat and made the shoe hard to put on. Traction on moderately clean courts and wooden floors stuck like glue, with thick grooves that look capable outdoors, though the price makes outdoor use hard to justify. The problem is lateral stability and court feel. The heel stack is extremely high and too narrow, creating ankle-sprain concern; court feel is muted by the cushion stack. The ZoomX insole felt like an afterthought: too thick and squishy, cramped the forefoot, elevated the foot, and gave no stability or support. After swapping in a basic Ortholite insole, fit was less cramped, heel stability became acceptable, and the shoe regained real court feel. Without the ZoomX insole, the reviewer would rate stability around 8/10 and court feel around 7.5/10.",
@@ -1760,16 +1734,6 @@ export const reviews = [
     ratings: { cushioning: 6.5, traction: 7.5, support: 7.0, fit: 6.5, breathability: 8.0, groundFeel: 6.5, durability: 7.5, value: 5.5 },
     confidences: { cushioning: 'low', support: 'low', fit: 'low', groundFeel: 'low', traction: 'medium', breathability: 'low', durability: 'low', value: 'medium' }
   },
-  {
-    shoe: "Saucony Endorphin Speed 5", brand: "Saucony", sport: "running", subreddit: "r/AskRunningShoeGeeks",
-    redditUrl: "https://www.reddit.com/r/AskRunningShoeGeeks/search/?q=Endorphin+Speed+5+nylon+plate&sort=top",
-    author: "u/SpeedFanatic_RSG", date: "2025-10-30",
-    summary: "Non-negotiable — this runner cannot imagine giving up the Endorphin Speed series. Light, fast, cushioned, and the nylon plate provides just the right amount of propulsion without the aggressive forward pitch of full carbon racers. Versatile enough for daily training and race day alike. The ES5 is an improvement over the ES4 in cushioning and comfort.",
-    playstyle: "Speed / Daily Trainer", courtType: "Road", sizingNote: "True to size (fixed toe box vs ES4)", verdict: "Elite", wordCount: 110,
-    fullText: "Light, fast, cushioned, nylon plate but not crazy aggressive. I cannot imagine under any circumstances giving up my Endorphin Speeds! The 5 feels much more cushioned and bouncy than the 4 and the toebox issue is fixed.",
-    ratings: { cushioning: 8.5, traction: 8.5, support: 8.0, fit: 8.5, breathability: 8.5, groundFeel: 9.0, durability: 8.0, value: 8.5 },
-    confidences: { cushioning: "high", traction: "high", support: "medium", fit: "high", breathability: "high", groundFeel: "high", durability: "medium", value: "high" }
-  },
 
   // --- Nike Pegasus 41 ---
   {
@@ -1811,7 +1775,7 @@ export const reviews = [
   {
     shoe: "HOKA Clifton 10", brand: "HOKA", sport: "running", subreddit: "r/RunningShoeGeeks",
     redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1k6e5zc/hoka_clifton_10_mini_review_plus_v9_2e_and_v10_4e/",
-    author: "u/VirtuallySober", date: "2025-04-21",
+    author: "u/VirtuallySober", date: "2025-04-24",
     summary: "A wide-foot-focused comparison: the Clifton 10 in 4E fixes the snugness of the Clifton 9 in 2E, widening the toebox just enough without being overkill. 3mm additional heel stack from the 9 is unnoticeable in the ride. Outsole rubber durability is excellent — the 9s are still holding after 250+ miles. A zero-fuss daily trainer that does everything okay but nothing exceptional.",
     playstyle: "Daily Trainer", courtType: "Road", sizingNote: "4E recommended for wide feet (runs snug in 2E)", verdict: "Solid", wordCount: 331,
     fullText: "I got the new Clifton 10s last week. tl;dr: if you liked the Clifton 9, you'll like the 10. I have a weird foot — my left foot is 2E with most of that in the midfoot. The Clifton 10 has widened the toebox just ever so much around the pinky toe that the toe box is a vast improvement over the previous version. I went from 2E to 4E — was worried it'd be too roomy but found it was simply a comfortable addition of room without being overkill, and I can get really comfortable lockdown and the shoe just disappears on my foot. Ride: they added 3mm of heel stack to raise from 5mm drop to 8mm drop. I don't notice it. The heel bevel is wider than the 9 so it feels a bit more stable. The foam feels similar — fresh and cushioned in the new cloud phase that will firm up in the next 50-75 miles. Durability: the outsole rubber for Cliftons holds up really well. My 9s have like 250+ miles on them and are only wearing out in the exposed areas. Compared to my Ghost Max's, those burned through the rubber in about 100 miles.",
@@ -1843,7 +1807,7 @@ export const reviews = [
   {
     shoe: "HOKA Bondi 9", brand: "HOKA", sport: "running", subreddit: "r/RunningShoeGeeks",
     redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1ixqhc6/hoka_bondi_9_thoughts_at_100km/",
-    author: "u/Some-Remote-6890", date: "2025-02-23",
+    author: "u/Some-Remote-6890", date: "2025-02-25",
     summary: "100km from a faster runner (HM 1:27, Mar 3:09) used primarily for 10-12km recovery runs. The ride is firmer than expected and lacks the bounce and energy return of the Mach 6. Feels flat for recovery and doesn't provide enough push for anything else. Would recommend the Clifton over the Bondi 9 — lighter and cheaper.",
     playstyle: "Recovery Run", courtType: "Road", sizingNote: "True to size", verdict: "Mediocre", wordCount: 307,
     fullText: "M 6ft2 85kg, HM 1:27, Mar 3:09. Just crossed over the 100km mark in the Bondi 9s. Reason: had success with Mach 6 and Cielo, thought would give these a go as an easy day/recovery shoe. Mainly used for recovery runs around 10-12km at 5:45 min/km pace. Fit: went true to size with no issues. I have a slightly flatter foot and can feel a bit of pressure on the side of my arch. Ride: the ride is actually quite a bit firmer than I expected. Where the Mach is soft with a bouncy feeling and energy return, I find the Bondi just a little flat and doesn't give you a whole lot back. This lack of bounce with a firmer feeling leaves me unsure of what HOKA is trying to do with the shoe. Too firm for recovery but just not enough push/energy return for anything else. In summary it's fine, I personally wouldn't pick it again. Even just looking in HOKA's lineup I think the Clifton would be a better option — lighter and cheaper. I just struggle to see how and where the shoe fits into the HOKA lineup.",
@@ -1879,7 +1843,7 @@ export const reviews = [
   {
     shoe: "Nike Vomero 18", brand: "Nike", sport: "running", subreddit: "r/RunningShoeGeeks",
     redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1keprft/vomero_18_highly_impressed/",
-    author: "u/Majestic_Flower_4699", date: "2025-04-15",
+    author: "u/Majestic_Flower_4699", date: "2025-05-04",
     summary: "25M marathon runner tested these on a 20km easy run in hot, humid conditions (30°C, 85% humidity). The ZoomX/ReactX balance is described as perfect — unexpectedly responsive when picking up pace to 4:30/km, while still highly protective at 6:00/km cruise. No overheating despite extreme conditions. Some outsole wear visible after just 20km.",
     playstyle: "Easy Run / Daily Trainer", courtType: "Road", sizingNote: "Slightly snug for wide feet but disappears when running", verdict: "Elite", wordCount: 249,
     fullText: "25M, 75KG, size 11 US, current marathon 3:21 training for sub-3, HM 1:28, running 50-70km per week. Easy/max cushion shoe needed. Tried them on expecting nothing and they felt amazing. Upper: quite thick with padded tongue — was concerned about breathability as I live in an extremely hot, humid coastal city in Mexico (30°C with 85%+ humidity at 6am). During the 2 hour run they felt great with no overheating, which was a pleasant surprise. Fit wise they felt a bit snug for my wide fit when I first lace them up but when running I didn't notice that snug fit anymore. Midsole: man they really blew me away. The balance of ZoomX and ReactX is perfect for me. I had to pick up the pace during this 20km run up to 4:30/km and they felt unexpectedly responsive. When I cruised at around 6min/km they felt also amazing — highly protective and the geometry kept me rolling effortlessly. Outsole: no complaints and felt quite good although I did notice a bit of wear for just 20km. Highly recommend this shoe.",
@@ -1889,7 +1853,7 @@ export const reviews = [
   {
     shoe: "Nike Vomero 18", brand: "Nike", sport: "running", subreddit: "r/RunningShoeGeeks",
     redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1jirpzh/nike_vomero_18_review/",
-    author: "u/gingerninja1771", date: "2025-03-26",
+    author: "u/gingerninja1771", date: "2025-03-24",
     summary: "20 miles in after switching from the Novablast 5s which were too soft. Has high arches and instep and found the Novablasts too squishy — the Vomero 18's firmer support feels much better on knees and ankles. A simple, positive first impression for runners needing structure over pure squish.",
     playstyle: "Daily Trainer", courtType: "Road", sizingNote: "True to size", verdict: "Solid", wordCount: 62,
     fullText: "I just got my new Nike Vomero 18s a little over a week ago, I'm 20 miles in with them and absolutely love them. My last pair were Novablast 5s — I have high arches and instep and the Novablasts were way too soft of a shoe for me. The Nike Vomero 18s have really nice firm support and feel much better in my knees and ankles when I'm running. So far, I'm a big fan of the Vomeros!",
@@ -1901,7 +1865,7 @@ export const reviews = [
   {
     shoe: "Saucony Guide 17", brand: "Saucony", sport: "running", subreddit: "r/RunningShoeGeeks",
     redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1az79fu/initial_review_of_the_saucony_guide_17_after/",
-    author: "u/Ok_Nectarine_4367", date: "2024-02-26",
+    author: "u/Ok_Nectarine_4367", date: "2024-02-23",
     summary: "Three-run review (16 miles) from a high school distance runner. The upper is described as the best in any shoe he has owned — soft, flexible, perfect lockdown with no heel slippage. PWRRUN foam is bouncy enough for strides while cushioned enough for easy runs. Stability features work well for mild pronation without being intrusive.",
     playstyle: "Daily Trainer / Stability", courtType: "Road", sizingNote: "True to size", verdict: "Elite", wordCount: 578,
     fullText: "High school runner, 5'10\"-5'11\", size 11, standard width, ~157 lbs. Three runs: 6-mile progression, 5-mile medium effort, 5-mile easy — all included some hills. Upper: the best upper I've had in any shoe by far. Soft, flexible, and comfortable. Perfect lockdown — no heel slippage, perfect toe box room, great midfoot hold, amazing lacing and tongue. The gusseted tongue can actually stretch and be pulled for better lockdown. Breathability about 7.5/10. Outsole: no complaints. Grip is pretty good. Midsole: PWRRUN foam, stack height 35mm, 6mm drop, oriented toward recovery/easy runs. Bouncy enough to mix in 20-second strides during easy runs, but cushiony and soft enough for protection. Stability: good job eliminating my mild pronation — high sidewalls keep foot in place, wide base prevents rolling. Overall, I really enjoy the Guide 17s. Nothing negative to say after 16 miles. Definitely helping with pronation. Recommend for those searching for a cushiony stability shoe that can handle some faster paces.",
@@ -1935,7 +1899,7 @@ export const reviews = [
   {
     shoe: "Brooks Glycerin 22", brand: "Brooks", sport: "running", subreddit: "r/RunningShoeGeeks",
     redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1i9z9z1/brooks_glycerin_22_first_run/",
-    author: "u/actuallymeg", date: "2025-01-26",
+    author: "u/actuallymeg", date: "2025-01-25",
     summary: "First run impressions from an experienced Glycerin 21 owner: fits perfectly in usual size and feels lighter and more responsive/firm than the 21. Geared toward long and slow for someone who doesn't like a lot of squish. A subtle but welcome upgrade toward modern premium materials despite the $160 price tag.",
     playstyle: "Easy Run / Long Run", courtType: "Road", sizingNote: "True to size", verdict: "Solid", wordCount: 152,
     fullText: "I've had several pairs of Glycerin 21 and was looking forward to this release. Shoe fit perfectly in my usual women's 9.5. I have a wider side of normal width foot — happy to report I did not experience midfoot narrowness issues. It feels lighter underfoot than its predecessor, and is firm and more responsive than the Glycerin 21 as well. Definitely feels like a shoe that's geared toward long and slow for someone who doesn't like a lot of squish underfoot. Kind of reminds me of the Novablast 4 but without the rocker. I think if you like the Glycerin 21, you'll love the 22. It's not a massive upgrade, but a nice subtle pivot toward modern premium materials and aesthetics. At ultra easy paces the shoe felt comfortable and light.",
@@ -2025,7 +1989,7 @@ export const reviews = [
   {
     shoe: "Puma Fast-R Nitro Elite 3", brand: "Puma", sport: "running", subreddit: "r/RunningShoeGeeks",
     redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1k3w4jh/puma_fast_r3_review_90_miles/",
-    author: "u/beersandmiles7", date: "2025-04-20",
+    author: "u/beersandmiles7", date: "2025-04-19",
     summary: "From a lifelong shoe nerd and sub-2:20 marathoner: the best racing shoe he's ever worn. Propels like a Vaporfly 2 but soft enough to recover from, hitting a sweet spot of not-too-firm, not-too-plush. Stable through sharp turns despite the heel-forefoot gap, spacious stable forefoot, great wet grip, and impressive durability at 90mi.",
     playstyle: "Race Day", courtType: "Road", sizingNote: "True to size; snug midfoot, open toebox", verdict: "Elite", wordCount: 880,
     fullText: "Puma Fast-R 3, size 10. True to size, snug midfoot, open toebox. Use case: workouts, road racing. 93 miles on first pair. Provided for the Project 3 program. I've worn supershoes since the 4% in 2019 and ran all my PRs (24:27 8k, 67:29 half, 2:19:13 full) in the Vaporfly 2. My first impressions were that it felt like wearing supershoes for the first time — I laughed running uptempo as every stride felt fairly effortless; these shoes have you running faster than you think. It hits that sweet spot of not too firm and not too plush. I can recover off long sessions without too much soreness and my calves don't feel thrashed. They're soft but I don't feel like I'm fighting the shoe like with the Alphafly air pockets. Despite the gap between forefoot and heel, I don't feel like this shoe is unstable; I've taken turns harder than needed and it holds. One of my issues with the VF2 was the forefoot felt out of control late in races; this forefoot feels spacious and stable even over long miles. No top-of-foot sensitivity. Durability so far has been great. I had an 18-mile run in a rainstorm with no noticeable slippage and the upper clears water incredibly easily. I've worn a lot of race shoes over 19 years — this is the best shoe I've ever worn. Planning to run CIM in these.",
@@ -2047,7 +2011,7 @@ export const reviews = [
   {
     shoe: "Salomon Aero Glide 3", brand: "Salomon", sport: "running", subreddit: "r/RunningShoeGeeks",
     redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1kf3ld6/salomon_aero_glide_3_an_awesome_introduction/",
-    author: "u/BigHairyNordic", date: "2025-04-25",
+    author: "u/BigHairyNordic", date: "2025-05-04",
     summary: "Two runs in (5mi + 10km) from a 185lb high-mileage runner with a wide right foot. The foam is cushy with genuine pop — soft but not lifeless. Pushes him to run faster but works fine for easy efforts too. Wet traction was zero issue. The big caveat: runs very large (similar to Boston 12), requiring half to full size down.",
     playstyle: "Daily Trainer / Long Run", courtType: "Road / Trail", sizingNote: "Size down half to full — runs very large (similar to Boston 12)", verdict: "Solid", wordCount: 295,
     fullText: "39, 5'11\", 185lbs. Averaging ~40mpw, 3k-5k ft vertical, mixture of road and trail. Low aerobic/Z2 pace around 9:30-10:00 min/mile. Right foot is wide (approaching 4E), left foot a tad longer. Light heel to midfoot striker. High cadence. Current road shoes: NB Rebel v4, Novablast 4, Superblast 2. Fit: runs quite large — Boston 12 kind of large. I'm 11.5-12US in nearly every shoe but an 11 in these (10.5 was a bit snug). Go half to full size down. Upper decent, not difficult to get good lockdown. Ride: 2 runs in (1x5mi and 1x10km) and I totally love this foam. About as soft as I can tolerate without going too far — I returned the Novablast 5 recently because it felt like lifeless marshmallow, but these are cushy with genuine pop. They push me a bit faster but would be fine for anything but fully recovery paces. Rocker present but not too aggressive; a bit of flex gives overall smoothness. Traction: first run was in wet conditions and light rain with zero issues. Stability: experienced zero issues over my first 2 runs. Could see this becoming a new favorite daily trainer.",
@@ -2249,7 +2213,7 @@ export const reviews = [
   {
     shoe: "Nike Pegasus Plus", brand: "Nike", sport: "running", subreddit: "r/RunningShoeGeeks",
     redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1j1wex9/nike_pegasus_plus_x_adidas_evo_sl/",
-    author: "u/Blightlight", date: "2025-03-13",
+    author: "u/Blightlight", date: "2025-03-02",
     summary: "A direct Pegasus Plus vs. Adidas Evo SL comparison from a 190lb forefoot striker. The Peg Plus delivers excellent ground feel from its low forefoot stack with a 10mm drop, and its Flyknit upper drains great in wet weather and breathes wonderfully. The heel feels firmer than the forefoot. Loses to the Evo SL on ride quality but wins on upper.",
     playstyle: "Daily Trainer", courtType: "Road", sizingNote: "True to size", verdict: "Solid", wordCount: 337,
     fullText: "190lbs mid/forefoot striker. Marathon PB 3:28, 20:04 5k. Longest run in Peg+ was 16km, 24km in Evo SL. Both with 50km+ minimum. Peg Plus ride: ground feel, which was not what I expected from this shoe. It's mostly a result of the 10mm drop making the forefoot a lower stack in a soft foam — very connected to road. The heel feels much firmer than the forefoot so it may work better for heel strikers. The shoe had a break-in period — kinda hated it during said period. Upper/lockdown: first experience with Flyknit and I am a fan. Probably my favorite part of the shoe — drains great in wet weather, breathes wonderfully, holds the foot in place well. Heel counter is stout and well padded around the ankle. Tongue slides around a little. Outsole: high abrasion rubber holding up well to wear and tear. A little louder than preferred but no issues on sandy sidewalks, rain, and sunshine. Price is the main mark against it. Overall winner of this comparison went to the Evo SL, but the Peg Plus wins on upper quality.",
@@ -2306,7 +2270,7 @@ export const reviews = [
   // --- HOKA Skyward X ---
   {
     shoe: "HOKA Skyward X", brand: "HOKA", sport: "running", subreddit: "r/RunningShoeGeeks",
-    redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1da7zna/hoka_skyward_x_100_mile_review/l7ifoiv/",
+    redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1da7zna/hoka_skyward_x_100_mile_review/",
     author: "u/Marathonvomitman", date: "2024-06-07",
     summary: "A 100-mile review from a high-mileage marathoner using the Skyward X for base and recovery miles. It is massively protective and trampoline-bouncy, with almost no ground feel and little wear after 100 miles. The tradeoff is stability: the huge stack and extreme bounce feel out of control on uneven ground, cambers, sharp corners, and strides.",
     playstyle: "Recovery / Long Run", courtType: "Road", sizingNote: "True to size", verdict: "Solid", wordCount: 277,
@@ -2317,24 +2281,12 @@ export const reviews = [
   {
     shoe: "HOKA Skyward X", brand: "HOKA", sport: "running", subreddit: "r/RunningShoeGeeks",
     redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1j235x3/hoka_skyward_x_450_mile_review/",
-    author: "u/Clashilisk100", date: "2025-03-13",
+    author: "u/Clashilisk100", date: "2025-03-03",
     summary: "A 450-mile review from a 175lb heel-striker training for sub-3 marathon. The Skyward X stack is plush and well-controlled — the rocker guides gait without the instability of older max-cushion shoes. Forefoot is wide and accommodating, midfoot locks in, but the heel can feel loose. Outsole held up well at 450 miles. A legitimate race-day option that doubles as a plush long-run trainer.",
     playstyle: "Long Run / Race Day", courtType: "Road", sizingNote: "True to size", verdict: "Elite", wordCount: 295,
     fullText: "175lbs heel striker. Marathon goal sub-3. Ran 450 miles in these. The Skyward X stack is on another level — plush but the rocker geometry keeps it feeling controlled. Not wobbly like old max cushion shoes — the rocker guides your foot through the gait cycle in a way that makes turnover feel natural. It's not as snappy as a carbon plate shoe but it's more forgiving. Fit: the forefoot is wide and accommodating — good for runners with wider feet. Midfoot is locked in with the lace system. Heel does feel a bit loose even when laced down — tried double knotting and that helped. Toebox is roomy enough for long runs without sloshing. Upper is breathable but not the most durable — starting to show some wear at 450 miles but no holes. Outsole: the lugs underneath have held up really well across roads and packed trails. Traction was never an issue — even on wet pavement and light trail. Weight is noticeable vs a pure race shoe but I've used this for marathon pace work and it handles it well. I did my longest training run in these and felt surprisingly fresh the next day. Would recommend as a high-mileage daily trainer that can double on race day for slower runners or as a plush long run shoe for faster runners.",
     ratings: { cushioning: 9.5, traction: 8.0, support: 8.0, fit: 8.0, breathability: 7.5, groundFeel: 6.0, durability: 8.0, value: 8.0 },
     confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "medium", groundFeel: "high", durability: "high", value: "medium" }
-  },
-
-  // --- HOKA Cielo X1 3.0 ---
-  {
-    shoe: "HOKA Cielo X1 3.0", brand: "HOKA", sport: "running", subreddit: "r/RunningShoeGeeks",
-    redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1rmpyhm/hoka_cielo_x1_30_review/",
-    author: "u/Apprehensive_Ad6157", date: "2026-03-06",
-    summary: "A detailed 30-mile review from a midfoot runner who loved the original Cielo X1. Version 3.0 brings back the soft, compliant, extremely bouncy ride while improving stability versus 2.0, and it transitions smoothly from easy running into half-marathon/marathon pace. Fit runs short enough that sizing up may be safer; very slow jogging can feel wobbly, but at rhythm it becomes efficient and fun.",
-    playstyle: "Race Day", courtType: "Road", sizingNote: "Half size up recommended", verdict: "Elite", wordCount: 312,
-    fullText: "The reviewer is a late-40s, 6'0, 175 lb midfoot striker running 30-70 mpw, with a 1:29 half and a 3:00 marathon goal. The original Cielo X1 was one of their favorite shoes ever because of its bounce and rocker, while 2.0 felt unstable and topsy-turvy during warm-up and cool-down miles. The 3.0 was tested to see whether it could bring back the original feel while improving stability. Fit was tricky: the OG fit perfectly in 11.5, most supershoes are size 12, but the 3.0 felt slightly short on the left foot; because HOKA does not make 12.5, they went to 13. The 13 is a bit long but works with no heel slip, excellent lockdown, and a natural mid/forefoot landing. The upper is lightweight, breathable, and secure, and the laces are excellent. The ride is soft, compliant, and extremely bouncy, with lively foam, a high stack, and a smooth rolling transition. The plate and rocker create natural forward momentum without feeling overly stiff or forced. It feels comfortable at easier paces, then wakes up when pushing pace, making marathon pace feel 10-20 seconds per mile faster versus a trainer like the Evo SL. The shoe can feel wobbly when standing or jogging slowly, but becomes smooth once rhythm is established. Compared with Adios Pro 4 it has similar stability but more bounce; compared with Metaspeed Edge Tokyo it has similar energy return with a higher-stack, bouncier feel; Alphafly 3 feels more mechanical while Cielo feels more natural and fun. Stability is much improved over 2.0 and close to Adios Pro 4, though still behind Metaspeed Edge Tokyo and Alphafly 3. Road traction is very good and tacky, with no visible wear after about 30 miles and expected super-shoe durability around 200-300 miles. Best for midfoot/forefoot runners who like soft energetic foams and want a racer that can handle workouts and long runs.",
-    ratings: { cushioning: 9.5, traction: 8.5, support: 7.5, fit: 8.0, breathability: 8.5, groundFeel: 8.5, durability: 7.5, value: 8.0 },
-    confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "high", groundFeel: "high", durability: "medium", value: "medium" }
   },
 
   // --- Nike Alphafly 3 ---
@@ -2387,7 +2339,7 @@ export const reviews = [
   {
     shoe: "Puma Fast-R Nitro Elite 3", brand: "Puma", sport: "running", subreddit: "r/RunningShoeGeeks",
     redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1kmclmg/puma_fastr_elite_3_first_run_impressions/",
-    author: "u/Typical_Philosophy230", date: "2025-05-13",
+    author: "u/Outside-Poetry8469", date: "2025-05-13",
     summary: "Detailed first-run impressions from a slow mid/forefoot striker: the shoe feels extremely aggressive, smooth, and effortless at threshold pace, with energetic cushioning and strong toe-off. Fit is narrow race-fit but true to size, the upper is very breathable, and PumaGrip felt secure in dry conditions. Heel striking felt unstable and unforgiving, so this is best for mid/forefoot strikers who want a race-day shoe with a forceful forward roll.",
     playstyle: "Race Day", courtType: "Road", sizingNote: "True to size, narrow race fit", verdict: "Solid", wordCount: 409,
     fullText: "Details about me: slow runner and a mid/forefoot striker. Distance: 2.5km. Shoe Model & Size: Puma Fast-R 3 Elite and US9. Fit/Comfort: the fit is definitely race fit and comes in quite narrow. My feet are hanging off the sides but it does not feel uncomfortable. Some may find that the shoe runs a tiny bit long but I do find the shoe fits true to size. The Ultraweave upper is incredibly thin and transparent, a plasticky mesh weave similar to the ASICS Metaspeed series, and completely breathable. The tongue is made with the same thin material and is not gusseted, but lace loops keep it in place. The foam is probably the most interesting part of the shoe. The foam under the heel is really firm and responsive, the foam under the forefoot is airy, cushioning, soft and not as responsive, and the foam under the toes is firm and responsive again. The firm foam feels similar to Adidas Pro 3/Evo SL where there is firmness and sharp bounce without density. The PumaGrip outsole under the heel is nice and grippy while the forefoot outsole is less grippy and smoother. Overall the grip is nice and I do not feel like I would slip, though this could change in rain. The carbon plate is thin, has the middle cut out, goes all the way to the tip, and is surprisingly stiff. If I could describe the ride in a few words, it would be go go go go. It is incredibly aggressive but smooth. The shoe wants you to go fast and not stop. It felt almost effortless hitting threshold pace. The foam is energetic while being incredibly cushioning. You can feel the toe-off from the plate and it gives a little pop. As soon as you land you can feel the forefoot foam cushion you and make a nice airy landing, while the firmer heel foam immediately responds and bounces back up. This creates a lift at the heel and encourages forward motion, then you spring off your toes against the firmer bouncier foam. The geometry encourages a longer stride run pattern. The shoe is quite unforgiving if you heel strike; it feels terrible and unstable. If you are a mid or forefoot striker, you will love this shoe. I also feel like the shoe tends to pronate, which feels a little weird as I am a neutral runner. Overall the shoe lives up to the hype.",
@@ -2417,28 +2369,6 @@ export const reviews = [
     fullText: "Forefoot striker, marathon pace 7:30/mi. First run comparing the Hyperion Max 2 directly against the Adidas Boston 12. First impression — the HM2 felt immediately bouncier and more energetic than the Boston 12. The DNA Flash v2 foam is legitimately fun — you feel the spring back with each step in a way the Boston 12 doesn't deliver. I kept finding myself pushing past my target pace without forcing it. The rocker transitions smoothly and the toe-off pop is real — not carbon plate sharp, but noticeably propulsive. Upper: roomy and comfortable, true to size with enough toe box space. Laces stayed tied throughout. Breathability was good for a fall run, didn't feel hot at all. No heel slip. One negative — the shoe is a bit heavy for what it is, and I noticed it more during slower warmup miles. But when I got to workout pace it felt great. Traction on dry road was solid. Haven't run wet yet. Overall the Hyperion Max 2 is the winner between the two for me — more bounce, more fun, and a better fit. Excited to put more miles on it.",
     ratings: { cushioning: 8.5, traction: 7.5, support: 7.5, fit: 8.5, breathability: 8.0, groundFeel: 8.0, durability: 7.5, value: 8.0 },
     confidences: { cushioning: "high", traction: "medium", support: "low", fit: "high", breathability: "high", groundFeel: "high", durability: "low", value: "medium" }
-  },
-
-  // --- New Balance Fresh Foam X 1080 v14 ---
-  {
-    shoe: "New Balance Fresh Foam X 1080 v14", brand: "New Balance", sport: "running", subreddit: "r/RunningShoeGeeks",
-    redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1m8paz4/new_balance_1080v14_2e_after_50km/",
-    author: "u/8bit_ai", date: "2025-07-25",
-    summary: "A wide-foot 2E review after roughly 50 km, mostly as a recovery, commuting, and walking shoe. The 1080 v14 felt plush, protective, premium, and comfortable for long hours, but not very versatile as a running shoe. The reviewer disliked the grip after the early tackiness wore off, found the ride flat and non-bouncy, and thought the price was high for such a narrow use case.",
-    playstyle: "Recovery", courtType: "Road", sizingNote: "2E roomy except big-toe taper; standard width tight", verdict: "Mediocre", wordCount: 1037,
-    fullText: "The reviewer is a 26-year-old, 6'1, 140 lb newer runner logging 30-40 km per week and training for a first half marathon. They used the 1080 v14 mainly as a recovery shoe after long runs, a walking shoe, and a commuting shoe, while preferring the Novablast 5 and later Nimbus 27 for actual running. The upper felt soft, plush, premium, and secure through the gusseted tongue, though it used a lot of material, could hold sweat, and had lace lockdown issues. The 2E width was roomy through most of the toe box but still tapered at the big toe, while standard width felt tight. The midsole felt softer than most current shoes but firmer than older 1080 versions, protective, and consistent across temperatures, yet not bouncy and somewhat flat. It worked well for painful-leg recovery days and standing, but felt heavy and hard to pick up pace in. The outsole was tacky at first but lost grip, struggled in rain, debris, hills, winter, and ice, and showed some edge foam wear, even though the shoe should still handle high mileage.",
-    ratings: { cushioning: 8.5, traction: 5.5, support: 7.0, fit: 6.5, breathability: 7.0, groundFeel: 5.5, durability: 7.0, value: 5.5 },
-    confidences: { cushioning: "high", traction: "high", support: "medium", fit: "high", breathability: "high", groundFeel: "high", durability: "medium", value: "high" }
-  },
-  {
-    shoe: "New Balance Fresh Foam X 1080 v14", brand: "New Balance", sport: "running", subreddit: "r/RunningShoeGeeks",
-    redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1jz7x8n/new_balance_1080v14_long_run_review/",
-    author: "u/Thesandman28", date: "2025-04-14",
-    summary: "A long-run-focused review from a 180lb runner using the 1080 v14 for 20-mile training runs. The Fresh Foam X midsole felt plush and energy-returning even late in long runs, with no bottoming out or dead-legs effect. The upper fit was excellent with great lockdown and no hot spots. Outsole durability was solid at 200+ miles. Highly recommended as a max-cushion long-run workhorse.",
-    playstyle: "Long Run", courtType: "Road", sizingNote: "True to size", verdict: "Solid", wordCount: 235,
-    fullText: "180lbs runner, mostly long runs and easy days, targeting my first marathon. Using the 1080 v14 as my long run shoe. These things are amazing for long miles. The foam is legitimately plush in a way that feels energetic rather than dead — I can tell it's absorbing impact but I don't feel sluggish. Ran 20 miles in them twice and both times my legs felt better at the end than in any other shoe I've tried for that distance. The Fresh Foam X compression is noticeable and it just keeps bouncing back — never felt like it bottomed out even in the final miles when my form deteriorates. Fit: true to size with a spacious toe box that's roomy but not sloppy. Heel and midfoot are very secure — good lockdown without tight lacing. No hot spots or blisters in any run including the longest ones. Upper breathability is just okay — not remarkable but never uncomfortable. Outsole: at 200+ miles I see wear but it's holding up better than expected. Wet traction is decent. Heel striker so the heel rubber gets the most work. Price is high but for the specific purpose of max-cushion long run protection this shoe is hard to beat. Would buy again.",
-    ratings: { cushioning: 9.5, traction: 7.5, support: 8.0, fit: 8.5, breathability: 7.0, groundFeel: 5.5, durability: 8.0, value: 7.5 },
-    confidences: { cushioning: "high", traction: "medium", support: "medium", fit: "high", breathability: "medium", groundFeel: "low", durability: "high", value: "medium" }
   },
 
   // --- Saucony Ride 17 ---
@@ -2476,16 +2406,6 @@ export const reviews = [
   // --- Adidas Adizero Adios Pro 4 ---
   {
     shoe: "Adidas Adizero Adios Pro 4", brand: "Adidas", sport: "running", subreddit: "r/RunningShoeGeeks",
-    redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1lwok2z/adidas_adios_pro_4_after_100kms/",
-    author: "u/eranbeard", date: "2025-07-10",
-    summary: "A 100 km review covering fast 5Ks, 10Ks, and sprint triathlons. The reviewer praised the Adios Pro 4 as a durable PR-chasing racer with forgiving Lightstrike Pro cushioning, strong wet traction, secure race-day fit, and a smooth snappy ride. Main caveats were narrow/wide-foot fit, short laces, moisture retention, and a somewhat squishy rear for heel strikers.",
-    playstyle: "Race Day", courtType: "Road", sizingNote: "True to size for medium feet; wide feet may size up", verdict: "Elite", wordCount: 477,
-    fullText: "The reviewer put about 100 km into the Adidas Adizero Adios Pro 4 across fast 5Ks, 10Ks, and three sprint triathlons, comparing it mostly against the Alphafly 3. They described it as very good for chasing PRs without feeling like a one-race-only shoe. Cushioning hit a strong balance: soft enough for longer efforts, springy and fast, more forgiving than ZoomX for them, and helped them feel fresher than usual after triathlons. The 6 mm drop felt natural. Fit was race-day snug but not suffocating for medium-width feet in regular size, with a thin light upper and enough structure for lockdown; wide feet may need a half size up, and the laces were too short for easy heel-lock double-knotting. Road traction was excellent, including wet pavement, and stability felt better than many max-stack racers, though heel strikers may find the rear soft. After 100 km, the outsole was barely worn, foam still felt fresh, and the upper had not frayed. Breathability was decent, but the upper held moisture and dried slowly. The shoe felt light, nimble, quiet, smooth, and snappy at tempo, with enough training durability to justify the $250 price.",
-    ratings: { cushioning: 8.8, traction: 9.0, support: 8.0, fit: 7.5, breathability: 7.0, groundFeel: 8.0, durability: 8.8, value: 8.0 },
-    confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "high", groundFeel: "medium", durability: "high", value: "high" }
-  },
-  {
-    shoe: "Adidas Adizero Adios Pro 4", brand: "Adidas", sport: "running", subreddit: "r/RunningShoeGeeks",
     redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1jyxzp4/adizero_adios_pro_4_first_impressions_after_a_few/",
     author: "u/OllieBobbins23", date: "2025-04-14",
     summary: "First impressions after a few runs from a 165lb midfoot striker who has used nearly every major plated shoe. The Adios Pro 4 delivers an immediate, explosive energy return from LSII foam with a responsive plate that propels without feeling harsh. The outsole is grippier and more durable than AP3. Fit runs slightly narrow with a low toe box; best for midfoot to forefoot strikers who want a snappy, aggressive race sensation.",
@@ -2493,28 +2413,6 @@ export const reviews = [
     fullText: "165lbs midfoot striker. I've run in the AP1, AP2, AP3, Metaspeed Sky+, Alphafly 2 and 3, Vaporfly 3, NEXT% 2, Prime X 2, and Adios Pro Evo 1 — I've tried most of the major plated shoes over the years. The AP4 is a legitimate step forward from AP3. The Lightstrike Pro II foam is more explosive — you get an immediate energy return that feels sharper and quicker off the ground than AP3. The plate response is crisp; it's not the pillowy propulsion of Alphafly or Vaporfly — it's more ground-connected and aggressive. If you like feeling the road while going fast, this is your shoe. Fit: runs slightly narrow and the toe box is low — if you have wider feet or high instep, size up. For medium feet it's a snug, locked-in race fit. Upper is thin, breathable, and secure. The outsole grip is noticeably better than AP3 — more rubber coverage, better wet road confidence. That was one of my issues with AP3 and they fixed it. Durability looks better too based on first impressions. Weight feels right for a race shoe. For pure racing feel and snap, this is one of the best shoes on the market right now. My go-to for 5K through half marathon. For marathon I'd want a bit more cushion protection.",
     ratings: { cushioning: 8.0, traction: 9.0, support: 7.5, fit: 8.0, breathability: 8.5, groundFeel: 9.0, durability: 8.5, value: 8.5 },
     confidences: { cushioning: "high", traction: "high", support: "medium", fit: "high", breathability: "high", groundFeel: "high", durability: "medium", value: "high" }
-  },
-  {
-    shoe: "Adidas Adizero Adios Pro 4", brand: "Adidas", sport: "running", subreddit: "r/RunningShoeGeeks",
-    redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1j208ln/weekly_rotation_post_march_3_2025/",
-    author: "u/highdon", date: "2025-03-03",
-    summary: "Brief rotation post mention from a runner comparing the AP4 against 7 other plated shoes. The AP4 earned top marks for ride quality and responsiveness in that week's rotation — described as the snappiest, most confidence-inspiring option for short fast efforts and races. Slight deductions for narrow fit and thin outsole coverage.",
-    playstyle: "Race Day", courtType: "Road", sizingNote: "Narrow — size up for wide feet", verdict: "Elite", wordCount: 85,
-    fullText: "Weekly rotation: Metaspeed Sky Paris, AP4, Vaporfly 3, Prime X 2, Alphafly 3, SC Elite v3, Adios Pro Evo 1, Rocket X 2. AP4 was the standout this week. Snappiest ride of the bunch for short fast stuff. The LS Pro II foam is dialed in — precise and explosive. Narrower fit than most so size accordingly. Outsole coverage could be better but grip has been fine on dry roads. Best for 5K-HM racing. Would put it in the top tier of current plated shoes.",
-    ratings: { cushioning: 8.0, traction: 8.5, support: 7.5, fit: 7.5, breathability: 8.0, groundFeel: 9.0, durability: 7.5, value: 8.0 },
-    confidences: { cushioning: "medium", traction: "medium", support: "low", fit: "high", breathability: "low", groundFeel: "high", durability: "medium", value: "low" }
-  },
-
-  // --- HOKA Rocket X 3 ---
-  {
-    shoe: "HOKA Rocket X 3", brand: "HOKA", sport: "running", subreddit: "r/RunningShoeGeeks",
-    redditUrl: "https://www.reddit.com/r/RunningShoeGeeks/comments/1oe70rp/hoka_rocket_x3_100_mile_review_comparisons/",
-    author: "u/LeonPortnoy", date: "2025-10-23",
-    summary: "A 100-mile review from a 60 kg faster runner using the Rocket X 3 for track workouts, fartleks, threshold work, long steady runs, and a 10K race. They liked it as a stable, efficient, normal-feeling racer/training hybrid that works best around 10K to half-marathon pace. The fit was narrow with heel slip, and the foam felt flatter by 100 miles, making it more of a workout shoe than a fresh race-day pick after that point.",
-    playstyle: "Tempo", courtType: "Road", sizingNote: "True to size but narrow midfoot/toebox with heel slip", verdict: "Solid", wordCount: 551,
-    fullText: "The reviewer is a 5'9, 60 kg runner with easy pace around 7:00-8:00 per mile, threshold around 5:20, and 5K pace around 4:50. They used the Rocket X 3 for track workouts, fartleks, threshold sessions, steady long runs, warmups and cooldowns, and a 10K race. Fit was slightly narrower than the average race shoe through the midfoot and toe box, with surprising volume up front. Their wider foot only had problems past 10 miles, so they would take it to a half marathon but not a marathon. Heel slip remained noticeable even with lace locking, though not enough to stop running in it, and the upper material and serrated laces were positives. The ride worked from target 5K pace to marathon pace and felt best around 10K to half-marathon pace. It was reasonably flexible, efficient through heel-to-toe transitions, and notably stable, making it easier to run without thinking about foot strike. The reviewer rated the ride very highly as fun and no-nonsense, but durability was mixed: forefoot outsole openings showed wear from gravel sessions and the foam felt flatter before the outsole was done. They would no longer race in that pair at 100 miles but would keep it for workouts.",
-    ratings: { cushioning: 7.8, traction: 7.0, support: 8.8, fit: 7.0, breathability: 7.0, groundFeel: 8.5, durability: 6.5, value: 7.0 },
-    confidences: { cushioning: "medium", traction: "low", support: "high", fit: "high", breathability: "low", groundFeel: "high", durability: "high", value: "medium" }
   },
 ];
 
@@ -2543,7 +2441,7 @@ export const shoePrices = {
   "Li-Ning Gamma 1": "290-1250", "Li-Ning Gamma 2": "400-1267", "Li-Ning Liren 6v2": 180,
   "Li-Ning Wade 808 3 Ultra v2": 130, "ANTA Kai 3": "135-150",
   "Adidas Don Issue 7": 120, "Adidas Harden 9": 160, "Adidas Crazy Energy": 150,
-  "SPO Game 1 High": 180, "Li-Ning All City 14": 130,
+  "SPO Game 1 High": 180,
   // New basketball
   "Nike Ja 1": "110-120", "Nike Ja 2": 125, "Nike Kobe 8 Protro": "180-200",
   "Nike KD 17": 150, "Nike GT Jump 2": 180, "Nike Zoom Freak 5": 130,
@@ -2584,16 +2482,16 @@ export const shoePrices = {
   "ASICS Metaspeed Sky Paris": 250, "Puma Deviate Nitro 3": 160, "Puma Deviate Nitro Elite 3": 230,
   "Nike Pegasus Plus": 180, "HOKA Mach X 2": 190, "Saucony Triumph 22": 160,
   // New running (batch 5)
-  "HOKA Skyward X": 225, "HOKA Cielo X1 3.0": 275, "Nike Alphafly 3": 285,
+  "HOKA Skyward X": 225, "Nike Alphafly 3": 285,
   "Saucony Endorphin Pro 4": 225, "New Balance SC Elite v4": 250,
   // New running (batch 6)
-  "Brooks Hyperion Max 2": 180, "New Balance Fresh Foam X 1080 v14": 165,
-  "Saucony Ride 17": 140, "Adidas Adizero Adios Pro 4": 250, "HOKA Rocket X 3": 250,
+  "Brooks Hyperion Max 2": 180,
+  "Saucony Ride 17": 140, "Adidas Adizero Adios Pro 4": 250,
 };
 
 // Direct product-image CDN URLs (brand assets or official-store CDNs), verified to load.
 // Join key matches `shoe` name. Shoes without a confirmed image are intentionally absent
-// (361 Joker 2 Low, Li-Ning All City 14) so getShoes() falls back to the placeholder.
+// (361 Joker 2 Low) so getShoes() falls back to the placeholder.
 export const shoeImages = {
   // === Basketball ===
   "Nike LeBron 21":                     "/shoes/nike-lebron-21.png",
@@ -2618,7 +2516,6 @@ export const shoeImages = {
   "Li-Ning Gamma 2":                    "/shoes/li-ning-gamma-2.png",
   "Li-Ning Liren 6v2":                  "/shoes/li-ning-liren-6v2.png",
   "Li-Ning Wade 808 3 Ultra v2":        "/shoes/li-ning-wade-808-3-ultra-v2.png",
-  "Li-Ning All City 14":                "/shoes/li-ning-all-city-14.png",
   "ANTA Kai 3":                         "/shoes/anta-kai-3.png",
   "Jordan Tatum 3":                     "/shoes/jordan-tatum-3.png",
   "UA Curry 12":                        "/shoes/ua-curry-12.png",
@@ -2709,12 +2606,9 @@ export const shoeImages = {
   "Saucony Endorphin Pro 4":            "/shoes/saucony-endorphin-pro-4.png",
   "New Balance SC Elite v4":            "/shoes/new-balance-sc-elite-v4.png",
   "Brooks Hyperion Max 2":              "/shoes/brooks-hyperion-max-2.png",
-  "New Balance Fresh Foam X 1080 v14":  "/shoes/new-balance-fresh-foam-x-1080-v14.png",
   "Saucony Ride 17":                    "/shoes/saucony-ride-17.png",
   "Adidas Adizero Adios Pro 4":         "/shoes/adidas-adizero-adios-pro-4.png",
   "HOKA Skyward X":                     "/shoes/hoka-skyward-x.png",
-  "HOKA Cielo X1 3.0":                  "/shoes/hoka-cielo-x1-3-0.png",
-  "HOKA Rocket X 3":                    "/shoes/hoka-rocket-x-3.png",
   "HOKA Mach X 2":                      "/shoes/hoka-mach-x-2.png",
 };
 
@@ -2745,7 +2639,6 @@ export const shoeImagesOriginal = {
   "Li-Ning Gamma 2":                    "https://wowsole.com/wp-content/uploads/2026/02/LiNing-Gamma-2-Plato-4.jpg",
   "Li-Ning Liren 6v2":                  "https://www.shopnings.com/media/catalog/product/cache/7604690e2431281e8194543462f8084a/a/b/abav087-22.jpeg",
   "Li-Ning Wade 808 3 Ultra v2":        "https://www.shopnings.com/media/catalog/product/cache/7604690e2431281e8194543462f8084a/b/4/b4e4c1abb0dc930fd22f5f871d82b3f5564a8bfb0752c4692192284c990aa467b38624078f777ed3.jpg",
-  "Li-Ning All City 14":                "https://wowsole.com/wp-content/uploads/2025/12/Way-of-Wade-All-City-14-Caution.jpg",
   "ANTA Kai 3":                         "https://www.kicksown.com/cdn/shop/files/1_4496f94f-eef5-421e-9377-6cfdcf8caac9.jpg?v=1777193755&width=960",
   "Jordan Tatum 3":                     "https://www.kicksown.com/cdn/shop/files/079204c899792b7f094aa45a381f1b65_1_5dfc9c0b-c135-4a8e-b435-4992be6489aa.jpg?v=1761116343&width=960",
   "UA Curry 12":                        "https://www.basketballemotion.com/imagesarticulos/236924/750/zapatillas-under-armour-curry-12-shooting-star-white-1.webp",
@@ -2836,12 +2729,9 @@ export const shoeImagesOriginal = {
   "Saucony Endorphin Pro 4":            "https://cdn.media.amplience.net/i/scheelspoc/19502116018?w=1200&h=1200&fmt=auto&v=1",
   "New Balance SC Elite v4":            "https://runpacers.com/cdn/shop/files/Mens-New-Balance-FuelCell-SuperComp-Elite-v4-White-Angora-Hot-Mango.jpg?v=1730822399&width=2200",
   "Brooks Hyperion Max 2":              "https://restart.brooksrunning.com/cdn/shop/files/eoqs42ytnleuxug5q5lf.png?v=1761938256&width=1946",
-  "New Balance Fresh Foam X 1080 v14":  "https://cdn.media.amplience.net/i/scheelspoc/19796613551?w=1200&h=1200&fmt=auto&v=1",
   "Saucony Ride 17":                    "https://therunhouse.com/cdn/shop/files/rs_5_b0edee21-b6b2-4e7d-824a-05bf7939a273.webp?v=1719763802&width=1080",
   "Adidas Adizero Adios Pro 4":         "https://cdn.media.amplience.net/i/scheelspoc/19832139779?w=1200&h=1200&fmt=auto&v=1",
   "HOKA Skyward X":                     "https://www.fit2run.com/cdn/shop/files/1147911-BVR_1.png?v=1743077318&width=1200",
-  "HOKA Cielo X1 3.0":                  "https://www.fit2run.com/cdn/shop/files/1171927-NYZ_1.png?v=1768312227&width=1200",
-  "HOKA Rocket X 3":                    "https://cdn.media.amplience.net/i/scheelspoc/19860519457?w=1200&h=1200&fmt=auto&v=1",
   "HOKA Mach X 2":                      "https://www.fit2run.com/cdn/shop/files/1155119-GFRT_1.png?v=1737553911",
 };
 

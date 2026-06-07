@@ -55,6 +55,18 @@ Scripts: `npm run dev` · `build` · `preview` (= `next start`) · `lint` · `sc
 - **`brand` string drives the brand pill**; **`sport`** (`basketball`/`running`) drives the sport filter. Misspellings create stray pills.
 - Status colors come from CSS vars (`--color-elite/-solid/-mediocre`), not literals.
 
+## Anti-fabrication rules (mandatory — applies to all agents)
+
+A June 2026 full-dataset audit found fabricated reviews that had been in production: invented post ids, non-existent authors, and real post URLs with completely different content than the entry claimed. Every review must be traceable to a real Reddit post that was actually fetched and read.
+
+**Hard rules:**
+- **No fabricated `redditUrl`** — every URL must be a real `/comments/<id>/…` post you fetched. Never use a search URL (`/search/?q=…`) as a `redditUrl`.
+- **No invented authors** — if the author doesn't appear in PullPush results, the entry is hallucinated.
+- **No content invention** — `fullText`/`summary` must reflect what the real source actually says, not a plausible-sounding alternative. Confirm by reading the actual post body.
+- **No entry when source is missing** — if PullPush and WebSearch both find nothing for a shoe, skip it and say so. A missing entry is fine; a fabricated one is a public fraud (clickable affiliate links, "View on Reddit" buttons).
+- **2026 PullPush gap**: post IDs starting `1s…` (March–April 2026) are often not yet indexed by PullPush; `{"data":[]}` is a coverage gap, not necessarily a fabrication. Fall back to WebSearch. If that also finds nothing, skip the entry.
+- Always run the `review-auditor` after a collection batch. It re-fetches sources independently and catches mismatches the collector missed.
+
 ## Growing the dataset (live workflow)
 
 > **Full runbook:** [shoe-review-image-collection-process.md](shoe-review-image-collection-process.md) — self-contained handoff (schema, PullPush usage, dedup rules, image pipeline, pitfalls, current seams) so any agent can continue cold. The summary below mirrors it.
