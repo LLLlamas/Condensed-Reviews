@@ -46,6 +46,20 @@ export function formatPrice(price, priceApprox) {
   return `${prefix}$${price}`;
 }
 
+export function formatWeight(weight) {
+  if (!weight) return null;
+  if (typeof weight === 'string') return weight;
+  if (weight.label) return weight.label;
+  const parts = [];
+  if (weight.oz || weight.oz === 0) {
+    parts.push(`${Number(weight.oz).toFixed(1)} oz`);
+  }
+  if (weight.grams || weight.grams === 0) {
+    parts.push(`(${weight.grams}g)`);
+  }
+  return parts.length ? parts.join(' ') : null;
+}
+
 export function avgScore(shoe) {
   const vals = Object.values(shoe.avgRatings).filter(Boolean);
   return vals.length ? vals.reduce((a, b) => a + b, 0) / vals.length : 0;

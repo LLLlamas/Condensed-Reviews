@@ -8,7 +8,7 @@ export const amazonLinks = {
   "Nike LeBron 20":          "https://www.amazon.com/dp/B0CQGZJ46R?tag=llamas02-20",
   "Nike KD 14":              "https://www.amazon.com/dp/B096WQ876Z?tag=llamas02-20",
   "Nike Sabrina 2":          "https://www.amazon.com/dp/B0DH37WK24?tag=llamas02-20",
-  "Nike AE 1":               "https://www.amazon.com/dp/B0CZ7JQ6CH?tag=llamas02-20",
+  "Adidas AE 1":             "https://www.amazon.com/dp/B0CZ7JQ6CH?tag=llamas02-20",
   "Nike Shai 001":           "https://www.converse.com/shop/p/shai-001-basketball-low-top-shoe/A18771MP.html",
   "Nike GT Cut 3":           "https://www.amazon.com/dp/B0FQTNXTPB?tag=llamas02-20",
   "Nike GT Cut 4":           "https://www.amazon.com/dp/B0GT1LPB1Z?tag=llamas02-20",
@@ -91,6 +91,21 @@ export const amazonLinks = {
   "UA Curry Flow 10":        "https://www.amazon.com/s?k=UA+Curry+Flow+10+basketball+shoe&tag=llamas02-20",
   "ANTA Shock Wave 5 Pro":   "https://anta.com",
 
+  // === Basketball — batch 7 ===
+  "Jordan Heir":              "https://www.amazon.com/s?k=Jordan+Heir+basketball+shoe&tag=llamas02-20",
+  "Nike Kobe 5 Protro":       "https://www.amazon.com/s?k=Nike+Kobe+5+Protro+basketball+shoe&tag=llamas02-20",
+  "Nike Kyrie Low 5":         "https://www.amazon.com/s?k=Nike+Kyrie+Low+5+basketball+shoe&tag=llamas02-20",
+  "Adidas Harden Vol 9":      "https://www.amazon.com/s?k=Adidas+Harden+Vol+9+basketball+shoe&tag=llamas02-20",
+  "Puma Stewie 3":            "https://www.amazon.com/s?k=Puma+Stewie+3+basketball+shoe&tag=llamas02-20",
+
+  // === Basketball - batch 8 (PullPush verified) ===
+  "Nike Kobe 10 Low":          "https://www.amazon.com/s?k=Nike+Kobe+10+Low+basketball+shoe&tag=llamas02-20",
+  "Li-Ning Wade Shadow 6":     "https://www.wayofwade.com/search?q=wade+shadow+6",
+  "New Balance Fresh Foam BB v3": "https://www.amazon.com/s?k=New+Balance+Fresh+Foam+BB+v3+basketball+shoe&tag=llamas02-20",
+  "SPO Player 1 Plus":         "https://seriousplayeronly.com/collections/player-1-plus",
+  "ANTA GH3":                  "https://www.wowsole.com/search?q=anta+gh3",
+  "361 Degrees Light Up PRM":   "https://www.amazon.com/s?k=361+Degrees+Light+Up+PRM+basketball+shoe&tag=llamas02-20",
+
   // === Running ===
   "HOKA Mach 6":             "https://www.amazon.com/dp/B0D1949J9T?tag=llamas02-20",
   "Brooks Ghost 17":         "https://www.amazon.com/dp/B0DDHL8RY2?tag=llamas02-20",
@@ -157,16 +172,6 @@ export const reviews = [
   // --- LeBron 21 ---
   {
     shoe: "Nike LeBron 21", brand: "Nike", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1sfd8j4/lebron_21_performance_review/",
-    author: "u/Bbakes_", date: "2026-04-08",
-    summary: "TTS fit but painful break-in period — the hard plastic upper and razor tongue cause blisters early on. After breaking in with a swapped insole, comfort becomes amazing and court feel is excellent. Traction picks up dust easily and heel slippage is occasional. Best at a discount.",
-    playstyle: "Quick Guard", courtType: "Indoor", sizingNote: "True to size", verdict: "Solid", wordCount: 439,
-    fullText: "Background: I play organized pickup 3x a week. Play style is that of a quick guard. Things I look for in a shoe - comfort where I don't even think about what's on my feet when playing. Confidence in the traction with every cut. Review: Good looking shoe overall. Break in time was not good for these. The upper is a semi hard plastic material that took some serious playing time to break in. Lace irritation was pretty awful. BUT - after hours of breaking them in and swapping out the insole, comfort became amazing. Court feel is really good. The only issues I have with them are traction and heel slippage. Traction is pretty good overall but they pick up dust easily. Heel slippage can happen from time to time. I got these heavily discounted and for the price, they're a steal.",
-    ratings: { cushioning: 8.5, traction: 7.5, support: 7.5, fit: 7.0, breathability: 5.5, groundFeel: 8.5, durability: 7.0, value: 8.5 },
-    confidences: { cushioning: "high", traction: "medium", support: "medium", fit: "low", breathability: "medium", groundFeel: "high", durability: "low", value: "high" }
-  },
-  {
-    shoe: "Nike LeBron 21", brand: "Nike", sport: "basketball", subreddit: "r/BBallShoes",
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1h03ud7/my_almost_perfect_hoop_shoe_rotation/",
     author: "u/MxykoFPS", date: "2024-11-26",
     summary: "6'2\", 235 lb shifty guard (recovering from meniscus tear). Great on clean courts but slides badly on dusty courts — unexpected for a shoe praised for traction. Cushion feels very stiff after ~20 hours, not as bouncy as billed. TTS leaves extra toebox space with early heel slippage. Ranked 5th of 6 in rotation, hoping extended break-in improves cushion.",
@@ -176,39 +181,7 @@ export const reviews = [
     confidences: { cushioning: "high", traction: "high", support: "medium", fit: "high", breathability: "low", groundFeel: "low", durability: "low", value: "low" }
   },
 
-  // --- LeBron 20 ---
-  {
-    shoe: "Nike LeBron 20", brand: "Nike", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1shphbj/rate_the_rotation/",
-    author: "u/Typical-Public4166", date: "2026-04-10",
-    summary: "Exceptional traction (top 3 all-time) and elite bouncy cushioning with a 1:1 TTS fit. Heel doesn't lock down perfectly and on hard cuts the foot goes over the lateral flange. A phenomenal shoe if heel lockdown isn't a dealbreaker.",
-    playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size", verdict: "Elite", wordCount: 1054,
-    fullText: "Lebron 20: these are in my locker at the gym, but these are exceptional. Traction is top 3 all time imo, cushion is my third favorite all time, and fit is good. These fit 1:1, which is great for me, but the heel doesn't lock down well. The cushion is great, best bouncy cushion I have currently. On hard cuts/direction changes my foot goes over the flange.",
-    ratings: { cushioning: 9.5, traction: 9.5, support: 7.0, fit: 8.0, breathability: 6.5, groundFeel: 8.0, durability: 8.0, value: 8.5 },
-    confidences: { cushioning: "high", traction: "high", support: "low", fit: "medium", breathability: "low", groundFeel: "medium", durability: "medium", value: "high" }
-  },
-  {
-    shoe: "Nike LeBron 20", brand: "Nike", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1sfcz3v/lebron_20_heel_slip/",
-    author: "u/Shanlangmalakas", date: "2026-04-07",
-    summary: "Calls it a 'goated shoe' but the heel slippage is real and persistent — ankle wraps, runner's knots, and double socks all failed to fix it. Despite that, loves the shoe overall. Ankle wraps cause overheating.",
-    playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size", verdict: "Solid", wordCount: 166,
-    fullText: "This is my first time trying the lebron 20s and I must say this is goated shoes, just with a bit of inconveniences in heel slippage. I bought myself ankle wraps for extra padding but my feet heats up rather fast. Tried runners knot but laces are too short. Thick/double sock doesn't work either.",
-    ratings: { cushioning: 9.0, traction: 9.0, support: 6.5, fit: 7.0, breathability: 5.5, groundFeel: 8.0, durability: 8.0, value: 9.0 },
-    confidences: { cushioning: "high", traction: "high", support: "low", fit: "low", breathability: "medium", groundFeel: "medium", durability: "medium", value: "high" }
-  },
-
   // --- KD 14 ---
-  {
-    shoe: "Nike KD 14", brand: "Nike", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1shphbj/rate_the_rotation/",
-    author: "u/Typical-Public4166", date: "2026-04-10",
-    summary: "The reviewer's GOAT shoe. Zoom strobel + Cushlon is the best cushion setup ever. Lockdown and support are amazing, and despite looking bulky they don't feel heavy. Traction is 10/10 indoors. Only weakness: outdoor durability is terrible.",
-    playstyle: "All-Around", courtType: "Indoor only", sizingNote: "True to size", verdict: "Solid", wordCount: 1054,
-    fullText: "Kd 14: if you've seen my profile before you know these are my GOATs. Zoom strobel and cushlon is the best cushion setup ever, lockdown and support are amazing, and even though they look and are bulky, they don't feel like it. Traction is 10/10 on indoor courts. Don't use these outdoors, durability outside is the only thing wrong with these.",
-    ratings: { cushioning: 10, traction: 10, support: 9.5, fit: 9.0, breathability: 7.0, groundFeel: 8.0, durability: 5.0, value: 9.0 },
-    confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "low", groundFeel: "medium", durability: "medium", value: "high" }
-  },
   {
     shoe: "Nike KD 14", brand: "Nike", sport: "basketball", subreddit: "r/BBallShoes",
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/nu70s1/kd14_in_outdoor_performance/",
@@ -223,16 +196,6 @@ export const reviews = [
   // --- Sabrina 2 ---
   {
     shoe: "Nike Sabrina 2", brand: "Nike", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1shphbj/rate_the_rotation/",
-    author: "u/Typical-Public4166", date: "2026-04-10",
-    summary: "An easy, comfortable option with great lockdown and no pinch. Feels minimalist after break-in with solid shock absorption. 10/10 traction works on any court including outdoors. Big downside: upper durability is horrible — uppers fall apart before the sole.",
-    playstyle: "All-Around", courtType: "Indoor / Outdoor", sizingNote: "True to size", verdict: "Solid", wordCount: 1054,
-    fullText: "Sabrina 2: I love these as an easy option. Comfortable, fits with no pinch, great lockdown, won't hurt my knees. After broken in, feels like a minimalist shoe but shock absorption is great. Traction is 10/10, works on any court. I use these outside and they've held up. Only thing wrong: upper durability is horrible, uppers fall apart before the midsole or outsole.",
-    ratings: { cushioning: 7.5, traction: 10, support: 8.0, fit: 9.0, breathability: 7.0, groundFeel: 8.5, durability: 5.0, value: 8.0 },
-    confidences: { cushioning: "medium", traction: "high", support: "medium", fit: "high", breathability: "low", groundFeel: "high", durability: "medium", value: "medium" }
-  },
-  {
-    shoe: "Nike Sabrina 2", brand: "Nike", sport: "basketball", subreddit: "r/BBallShoes",
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1id6q2i/sabrina_2_performance_review/",
     author: "u/Quiet-Land7112", date: "2025-01-29",
     summary: "5'7\" PG (class of 2029) rates the Sabrina 2 at 8.5/10. Court feel is one of the best aspects at 9.5/10 — impeccable for guards. Traction is great on clean courts but needs wiping on dusty floors. Cushion is mediocre at 7/10 and supplemental insoles are needed for sessions over two hours. Stability is strong at 9/10.",
@@ -244,17 +207,7 @@ export const reviews = [
 
   // --- AE 1 ---
   {
-    shoe: "Nike AE 1", brand: "Nike", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1shphbj/rate_the_rotation/",
-    author: "u/Typical-Public4166", date: "2026-04-10",
-    summary: "Runs big — half size down recommended. With double socks, lockdown becomes possibly the best ever. Traction is strong but thin tread lines peel. Upper durability is top-tier indoors but outsole falls apart outdoors. Cushion fades over time.",
-    playstyle: "All-Around", courtType: "Indoor only", sizingNote: "Half size down", verdict: "Solid", wordCount: 1054,
-    fullText: "Ae 1: pretty good, nothing exceptional. Ran big, would go half size down. With double sock, lockdown was amazing. Traction is really good but thin lines rip off on sides. Upper durability is top tier but don't wear outside. Cushion is good when it's good, but after that it's done. High stack but feels low to the ground.",
-    ratings: { cushioning: 7.0, traction: 8.5, support: 8.0, fit: 6.5, breathability: 6.5, groundFeel: 8.0, durability: 7.0, value: 7.0 },
-    confidences: { cushioning: "low", traction: "high", support: "medium", fit: "low", breathability: "low", groundFeel: "medium", durability: "low", value: "low" }
-  },
-  {
-    shoe: "Nike AE 1", brand: "Nike", sport: "basketball", subreddit: "r/BBallShoes",
+    shoe: "Adidas AE 1", brand: "Adidas", sport: "basketball", subreddit: "r/BBallShoes",
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1i47nal/adidas_ae_1_revisit_review_after_a_full_day_of/",
     author: "u/MyManD", date: "2025-01-18",
     summary: "Revisit after a full day of tournament play. Cushioning degraded badly under competitive intensity — foot fatigue and pain set in by game two, forcing a switch to LeBron 21s. Traction remained good. Fit loosened during actual game pace requiring frequent relacing, with occasional toe-jamming on hard stops. Downgraded from 8.1 to 7.5 — now a practice shoe only.",
@@ -264,85 +217,7 @@ export const reviews = [
     confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "low", groundFeel: "low", durability: "medium", value: "medium" }
   },
 
-  // --- Shai 001 ---
-  {
-    shoe: "Nike Shai 001", brand: "Nike", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1sdg9dk/i_gave_them_an_honest_shot/",
-    author: "u/Ok-Network8411", date: "2026-04-05",
-    summary: "Coolest silhouette since the OG Foamposite with the most plush, responsive cushion Nike has created. But the razor tongue ruins it — zero padding, digs into the foot causing blisters across 3 colorways and 32+ hours. Heartbreaking for those it doesn't fit.",
-    playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size", verdict: "Solid", wordCount: 256,
-    fullText: "I truly wanted these to be it. Coolest silhouette since the OG foamposite. Most plush, responsive and bouncy basketball sneaker Nike has created. But the razor tongue has ZERO padding and pushes into the upper bridge of your foot painfully. Played 20 hours in preloved blue, bought two more colorways, blisters returned. Break in didn't help.",
-    ratings: { cushioning: 9.5, traction: 8.5, support: 7.5, fit: 4.5, breathability: 6.0, groundFeel: 8.5, durability: 7.5, value: 5.0 },
-    confidences: { cushioning: "high", traction: "high", support: "medium", fit: "medium", breathability: "low", groundFeel: "high", durability: "medium", value: "medium" }
-  },
-  {
-    shoe: "Nike Shai 001", brand: "Nike", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1s49lxa/shai_001_performance_review/",
-    author: "u/anumberxaspace", date: "2026-03-19",
-    summary: "After 2 months of play, traction is elite — the go-to for terrible gym courts. Great impact protection, responsive cushioning, and solid lockdown. However, breathability is poor (feet get hot), upper creases badly, and the tongue padding is minimal. An underrated sneaker with real performance chops.",
-    playstyle: "Guard / Wing", courtType: "Indoor", sizingNote: "True to size (slightly narrow)", verdict: "Solid", wordCount: 1115,
-    fullText: "I've been playing in the Shai 001s for about 2 months now, and I honestly think they're an underrated sneaker. Traction has been elite — my go-to men's league shoes as they grip terrible gym courts. Impact protection and responsiveness are great. Lockdown is solid. Breathability is poor, feet get hot. Upper creases badly. Tongue padding is minimal.",
-    ratings: { cushioning: 8.5, traction: 9.5, support: 8.0, fit: 7.5, breathability: 4.5, groundFeel: 8.0, durability: 6.5, value: 7.5 },
-    confidences: { cushioning: "high", traction: "high", support: "medium", fit: "medium", breathability: "medium", groundFeel: "medium", durability: "low", value: "medium" }
-  },
-
-  // --- GT Cut 3 ---
-  {
-    shoe: "Nike GT Cut 3", brand: "Nike", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1sgkzig/2026_shoe_rotation/",
-    author: "u/SadGuitarNoises29", date: "2026-04-09",
-    summary: "Personal workhorse shoe. Great cushion, amazing traction, fits like a glove. Indoor only recommended.",
-    playstyle: "All-Around", courtType: "Indoor only", sizingNote: "True to size", verdict: "Solid", wordCount: 192,
-    fullText: "GT CUT 3: Cushion is great, Traction is amazing! Fits like a glove!! My personal workhorse. Indoor courts only recommended.",
-    ratings: { cushioning: 8.5, traction: 9.5, support: 8.0, fit: 9.5, breathability: 7.0, groundFeel: 8.5, durability: 7.0, value: 8.0 },
-    confidences: { cushioning: "high", traction: "high", support: "medium", fit: "high", breathability: "low", groundFeel: "high", durability: "low", value: "medium" }
-  },
-
-  // --- GT Cut 4 ---
-  {
-    shoe: "Nike GT Cut 4", brand: "Nike", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1s2uooi/gt_cut_4_on_court_review/",
-    author: "u/Longgadogforlife", date: "2026-03-21",
-    summary: "Not as terrible as YouTube makes it out to be — actually one of the best hoop shoes played in. Zoom strobel + ZoomX + traction all work in perfect sync. 10/10 cushion for heavy guards. Pinky toe pinch is real but not a dealbreaker for everyone. Court feel and responsiveness are incredible.",
-    playstyle: "Heavy Guard", courtType: "Indoor", sizingNote: "True to size (pinky toe may pinch)", verdict: "Elite", wordCount: 512,
-    fullText: "Not as terrible as YouTube makes it out to be. These are one of the best hoop shoes I've played in because of how they managed to make the zoom strobel, zoomx, court feel and traction all work together. Cushion: 10/10 — insanely plush and bouncy and responsive. Best iteration of zoom strobel. Traction: 9/10 — ridiculous bite. Court Feel: 9/10 — connected to the court. The pinky toe issue exists but isn't universal.",
-    ratings: { cushioning: 10, traction: 9.0, support: 8.5, fit: 7.0, breathability: 6.0, groundFeel: 9.0, durability: 7.5, value: 8.5 },
-    confidences: { cushioning: "high", traction: "high", support: "high", fit: "low", breathability: "low", groundFeel: "high", durability: "medium", value: "high" }
-  },
-  {
-    shoe: "Nike GT Cut 4", brand: "Nike", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1s49v5e/non_biased_gt_cut_4_review/",
-    author: "u/Open_Bake_8013", date: "2026-03-19",
-    summary: "Went TTS with flat feet. Some dead space at tip which is unusual. The infamous pinky toe pinch wasn't bad for this reviewer's foot shape. Once laces dialed in, lockdown is excellent. Traction and cushion both perform well. Solid shoe if the shape works for your foot.",
-    playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size (flat foot friendly)", verdict: "Solid", wordCount: 447,
-    fullText: "Size 9.5 mens TTS, flat foot but not wide. Some deadspace at the tip. The pinky toe pinch wasn't bad for my foot shape. Once laces dialed in, lockdown and comfort were excellent. Traction and cushion both perform well.",
-    ratings: { cushioning: 8.5, traction: 9.0, support: 8.0, fit: 7.5, breathability: 6.0, groundFeel: 8.5, durability: 7.0, value: 7.5 },
-    confidences: { cushioning: "high", traction: "high", support: "medium", fit: "medium", breathability: "low", groundFeel: "high", durability: "low", value: "medium" }
-  },
-
-  // --- Ja 3 ---
-  {
-    shoe: "Nike Ja 3", brand: "Nike", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1sb5mvh/uncles_2026_rotation/",
-    author: "u/TakoOne", date: "2026-04-03",
-    summary: "Very fun shoe — lightweight and bouncy as hell. Heel stability is a big minus, but manageable if you transition to midfoot/forefoot faster. A secondary rotation option for lighter play sessions.",
-    playstyle: "Guard / Quick Cuts", courtType: "Indoor", sizingNote: "True to size", verdict: "Solid", wordCount: 692,
-    fullText: "Nike Ja 3 (secondary rotation): Very fun shoe thanks to being lightweight and bouncy as hell. Heel stability is a big minus but manageable if you transition into midfoot and forefoot faster.",
-    ratings: { cushioning: 8.0, traction: 8.0, support: 6.0, fit: 8.0, breathability: 7.5, groundFeel: 8.5, durability: 7.0, value: 8.0 },
-    confidences: { cushioning: "medium", traction: "medium", support: "low", fit: "medium", breathability: "medium", groundFeel: "high", durability: "low", value: "medium" }
-  },
-
   // --- Kobe 6 Protro ---
-  {
-    shoe: "Nike Kobe 6 Protro", brand: "Nike", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1sckw9p/shoe_rotation_pic_what_should_i_add_next_wide/",
-    author: "u/Icy-Factor-8752", date: "2026-04-04",
-    summary: "Great performance for league games and nicer courts, but kills wide feet — tight on sides with excessive heat. Not wide-foot friendly. Beautiful shoe with top-tier court feel if your feet can handle the narrow fit.",
-    playstyle: "Power Forward", courtType: "Indoor", sizingNote: "True to size (not wide-foot friendly)", verdict: "Solid", wordCount: 258,
-    fullText: "Kobe 6 Protro All-Star: Performance is great, but they kill my feet every time — really tight on the sides and my feet heat up a lot. Probably not wide-foot friendly (I'm a 10.5).",
-    ratings: { cushioning: 7.5, traction: 9.0, support: 8.0, fit: 5.0, breathability: 4.5, groundFeel: 9.5, durability: 8.0, value: 7.0 },
-    confidences: { cushioning: "medium", traction: "high", support: "medium", fit: "medium", breathability: "medium", groundFeel: "high", durability: "medium", value: "low" }
-  },
   {
     shoe: "Nike Kobe 6 Protro", brand: "Nike", sport: "basketball", subreddit: "r/BBallShoes",
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1g1c1gf/hoop_shoe_rotation/",
@@ -354,169 +229,11 @@ export const reviews = [
     confidences: { cushioning: "medium", traction: "high", support: "high", fit: "medium", breathability: "low", groundFeel: "high", durability: "low", value: "high" }
   },
 
-  // --- Air Jordan 40 ---
-  {
-    shoe: "Air Jordan 40", brand: "Jordan", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1s7tebq/jordan_40_the_best_jordans_for_hooping/",
-    author: "u/dzDiyos", date: "2026-03-26",
-    summary: "Extremely comfortable, premium materials, one of the best break-ins experienced. Possibly the cleanest silhouette on the market. Snug fit — most recommend half size up. After breaking in, one of the top all-rounders with great stability and molds around feet perfectly.",
-    playstyle: "All-Around", courtType: "Indoor", sizingNote: "Half size up (snug)", verdict: "Elite", wordCount: 649,
-    fullText: "Comfortable. Extremely stable. Premium materials. Molds around your feet and has one of the best break-ins. Possibly the cleanest silhouette on the market. Fit is snug — most advise half size up. After breaking in, one of the top all-rounders. Well engineered with great tech.",
-    ratings: { cushioning: 9.0, traction: 8.5, support: 9.5, fit: 8.0, breathability: 5.5, groundFeel: 8.0, durability: 8.5, value: 8.0 },
-    confidences: { cushioning: "high", traction: "high", support: "high", fit: "medium", breathability: "medium", groundFeel: "medium", durability: "high", value: "medium" }
-  },
-
-  // =====================================================
-  // === 361 DEGREES ===
-  // =====================================================
-
-  // --- Joker 1 GT ---
-  {
-    shoe: "361 Joker 1 GT", brand: "361 Degrees", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1sgrpzy/rotation_from_a_primarily_volleyball_player/",
-    author: "u/Single-Ninja8886", date: "2026-04-09",
-    summary: "Beats every shoe in the rotation for comfort + cushioning, ties JB3 for traction. Court feel is slightly less responsive due to cushion amount. Played 6 hours across three sports — felt divine when swapped in. The safest, most comfortable shoe.",
-    playstyle: "All-Around", courtType: "Indoor", sizingNote: "Half size down (slightly wide)", verdict: "Elite", wordCount: 783,
-    fullText: "Joker1GT: Beats every shoe here for Comfort + Cushion and ties JB3 for traction. Court feel slightly less responsive due to cushion amount but traction compensates. Bounce is great. Played 2hrs bball, 1hr badminton, 3hrs vball — these felt divine when swapped in.",
-    ratings: { cushioning: 10, traction: 9.5, support: 8.5, fit: 8.5, breathability: 6.0, groundFeel: 7.0, durability: 8.0, value: 9.0 },
-    confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "low", groundFeel: "low", durability: "medium", value: "high" }
-  },
-  {
-    shoe: "361 Joker 1 GT", brand: "361 Degrees", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1sb1a5o/jb3_vs_joker_1_gt/",
-    author: "u/Terrible-Day3117", date: "2026-04-03",
-    summary: "Glove-like fit, bouncy like a full-length Zoom Air pod. First run felt slow and laterally unstable, but after 10+ hours it becomes rejuvenating. Traction is sneaky great — feels like you'll slip but never do. Limited colorways.",
-    playstyle: "Hustle Player", courtType: "Indoor", sizingNote: "True to size (wide flat foot friendly)", verdict: "Elite", wordCount: 290,
-    fullText: "Late 30s, 6' 190, hustle player, wide-ish flat foot. Glove like fit, bouncy like a full length zoom air pod. First run felt slow and unstable laterally. After 10hrs, really appreciating how rejuvenating they feel. Traction is sneaky great — feels like you'll slip but never do.",
-    ratings: { cushioning: 9.5, traction: 8.5, support: 7.0, fit: 9.0, breathability: 5.5, groundFeel: 7.5, durability: 8.0, value: 8.5 },
-    confidences: { cushioning: "high", traction: "high", support: "low", fit: "high", breathability: "medium", groundFeel: "medium", durability: "medium", value: "high" }
-  },
-  {
-    shoe: "361 Joker 1 GT", brand: "361 Degrees", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1sbfevb/outdoor_and_durable_for_everyday_practices/",
-    author: "u/CoffeeExtension4794", date: "2026-04-03",
-    summary: "Same soft vibe as WoW 12 but slightly less bouncy. Squeaks on dusty courts though slips at some points. The safest, most comfortable option — the go-to for relaxed play.",
-    playstyle: "All-Around", courtType: "Indoor / Outdoor", sizingNote: "Half size down", verdict: "Solid", wordCount: 377,
-    fullText: "Joker 1 GT: same vibe as Wow 12 in terms of softness but not that bouncy. Squeaky even on dust courts but slips at some points. The safest, most comfortable shoe in the rotation.",
-    ratings: { cushioning: 9.0, traction: 7.5, support: 8.0, fit: 8.5, breathability: 6.0, groundFeel: 7.5, durability: 8.0, value: 8.5 },
-    confidences: { cushioning: "high", traction: "medium", support: "medium", fit: "high", breathability: "low", groundFeel: "medium", durability: "medium", value: "high" }
-  },
-  {
-    shoe: "361 Joker 1 GT", brand: "361 Degrees", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1s5l8y6/joker_1_vs_joker_1_gt_comparo/",
-    author: "u/Chinokio", date: "2026-03-23",
-    summary: "Great cushion bounce, forgiving fit, ample support. Traction works even on dusty courts. The regular Joker 1 is close but the GT has better bounce and slightly more forgiving fit. Praises are warranted.",
-    playstyle: "All-Around", courtType: "Indoor / Outdoor", sizingNote: "True to size", verdict: "Solid", wordCount: 182,
-    fullText: "Got the GTs and love em! Great cushion bounce, forgiving fit, ample support. Traction has been great even on dusty courts. The praises are warranted.",
-    ratings: { cushioning: 9.5, traction: 8.5, support: 8.5, fit: 9.0, breathability: 6.0, groundFeel: 7.5, durability: 8.0, value: 9.0 },
-    confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "low", groundFeel: "medium", durability: "medium", value: "high" }
-  },
-
-  // --- Joker 2 ---
-  {
-    shoe: "361 Joker 2", brand: "361 Degrees", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1s8xlzl/joker_2_review_comparison_with_wow_12_and_joker_gt1/",
-    author: "u/ChanbanX", date: "2026-03-30",
-    summary: "Super comfortable with a snug lockdown — no heel slip at all. Cushion is nice and responsive without being too plush. Stability is the best feature — almost impossible to roll your ankle. Traction is average, picks up dust like Jordan 37s. Better stability than GT 1s.",
-    playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size (hard to get foot in initially)", verdict: "Solid", wordCount: 387,
-    fullText: "Super comfortable, snug lockdown, no heel slippage. Cushion feels good — nice bounce and responsive. Stability is probably the best part — can't roll your foot even if you tried. Traction is average, picks up dust. Comparable to Jordan 37s.",
-    ratings: { cushioning: 8.5, traction: 7.0, support: 10, fit: 8.5, breathability: 6.0, groundFeel: 8.0, durability: 8.0, value: 8.0 },
-    confidences: { cushioning: "high", traction: "low", support: "high", fit: "high", breathability: "low", groundFeel: "medium", durability: "medium", value: "medium" }
-  },
-
-  // --- Joker 2 Low ---
-  {
-    shoe: "361 Joker 2 Low", brand: "361 Degrees", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1s49oqe/361_joker_2_low_duality/",
-    author: "u/Dwreckshoelander", date: "2026-03-19",
-    summary: "Cushioning is as advertised — very responsive in forefoot and heel, great for players always on the balls of their feet. Traction is top-tier indoors but won't last outdoors. Ventilation is lacking in a warm gym. Diamond rubber herringbone does its job inside.",
-    playstyle: "Guard", courtType: "Indoor only", sizingNote: "True to size", verdict: "Solid", wordCount: 235,
-    fullText: "Ventilation is lacking — had to take shoes off between games. Traction does its job indoors but would burn through outdoors. Cushioning is as advertised — very responsive forefoot and heel. Great for players on the balls of their feet and heel landers.",
-    ratings: { cushioning: 8.5, traction: 8.5, support: 8.0, fit: 8.0, breathability: 5.0, groundFeel: 8.0, durability: 6.5, value: 7.5 },
-    confidences: { cushioning: "high", traction: "high", support: "medium", fit: "medium", breathability: "medium", groundFeel: "medium", durability: "low", value: "medium" }
-  },
-
-  // --- Joker 2 GT ---
-  {
-    shoe: "361 Joker 2 GT", brand: "361 Degrees", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1sb5mvh/uncles_2026_rotation/",
-    author: "u/TakoOne", date: "2026-04-03",
-    summary: "Slotting in as the primary 'mad bouncy' shoe. Still in testing but looking like a permanent rotation piece for a veteran reviewer with a massive collection.",
-    playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size", verdict: "Solid", wordCount: 692,
-    fullText: "361 Joker 2 GT (testing/primary rotation): Barring surprise discoveries, these are going to slot in as my primary 'I just want some mad bouncy today' shoes.",
-    ratings: { cushioning: 9.5, traction: 8.5, support: 8.5, fit: 8.0, breathability: 6.5, groundFeel: 8.0, durability: 8.0, value: 8.0 },
-    confidences: { cushioning: "high", traction: "high", support: "high", fit: "medium", breathability: "low", groundFeel: "medium", durability: "medium", value: "medium" }
-  },
-
   // =====================================================
   // === LI-NING ===
   // =====================================================
 
-  // --- JB3 ---
-  {
-    shoe: "Li-Ning JB3", brand: "Li-Ning", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1sgrpzy/rotation_from_a_primarily_volleyball_player/",
-    author: "u/Single-Ninja8886", date: "2026-04-09",
-    summary: "By far the best fitting shoe for wide feet — fills out perfectly at TTS. Traction is absurd and trustworthy. Feels slightly clunky compared to lighter options but still top-tier in bounce. Cushion is a bit bare and heel-to-toe is average.",
-    playstyle: "Wide Feet / All-Around", courtType: "Indoor", sizingNote: "True to size (extremely wide foot friendly)", verdict: "Solid", wordCount: 783,
-    fullText: "JB3s: by far the best fitting shoe for my feet at TTS. Extremely wide foot friendly. Clunky in comparison but still top tier feel and bounce. Traction is absurd — I trust it with my life. Cushion is a bit bare, heel-to-toe is average.",
-    ratings: { cushioning: 7.0, traction: 10, support: 8.5, fit: 10, breathability: 5.5, groundFeel: 8.5, durability: 8.5, value: 8.5 },
-    confidences: { cushioning: "low", traction: "high", support: "high", fit: "high", breathability: "medium", groundFeel: "high", durability: "high", value: "high" }
-  },
-  {
-    shoe: "Li-Ning JB3", brand: "Li-Ning", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1sb1a5o/jb3_vs_joker_1_gt/",
-    author: "u/Terrible-Day3117", date: "2026-04-03",
-    summary: "Light, springy, smooth heel-to-toe transition on first run. Great materials with zero break-in needed. Traction is insane. But second run was flat with no bounce — inconsistent ride quality is concerning. Breathability is poor.",
-    playstyle: "Hustle Player", courtType: "Indoor", sizingNote: "True to size (wide flat foot friendly)", verdict: "Solid", wordCount: 290,
-    fullText: "First run was surprisingly fun — light, springy, smooth heel-to-toe transition. Materials are great, no break-in needed. Traction is insane. Second run was bizarre — no quickness or bounce, felt like great effort to move. Switched to Jokers and instantly felt better.",
-    ratings: { cushioning: 7.0, traction: 9.5, support: 8.0, fit: 8.5, breathability: 5.0, groundFeel: 8.0, durability: 8.0, value: 7.5 },
-    confidences: { cushioning: "low", traction: "high", support: "medium", fit: "high", breathability: "medium", groundFeel: "medium", durability: "medium", value: "medium" }
-  },
-
-  // --- Way of Wade 12 ---
-  {
-    shoe: "Li-Ning Way of Wade 12", brand: "Li-Ning", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1sgrpzy/rotation_from_a_primarily_volleyball_player/",
-    author: "u/Single-Ninja8886", date: "2026-04-09",
-    summary: "Comfort meets performance — high-performing but cushion slightly dampens raw barebones feedback. TTS, slightly wider than Gammas. Obsidian colorway has impeccable traction even on dusty courts.",
-    playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size (slightly wide)", verdict: "Elite", wordCount: 783,
-    fullText: "WoW 12s: Comfort performance. High performers but cushion slightly dampens the barebones feedback. TTS, slightly wider than Gammas. Obsidian colourway has impeccable traction even on dusty courts.",
-    ratings: { cushioning: 9.0, traction: 9.0, support: 8.5, fit: 9.0, breathability: 6.5, groundFeel: 7.5, durability: 8.5, value: 8.5 },
-    confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "low", groundFeel: "medium", durability: "high", value: "high" }
-  },
-  {
-    shoe: "Li-Ning Way of Wade 12", brand: "Li-Ning", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1s8apw6/wow_12_year_of_the_horse_review/",
-    author: "u/Fabulous_Ad8642", date: "2026-03-29",
-    summary: "Probably best shoes on market but overpriced. TTS fit with snug midfoot and roomy toe box. Traction ranges 8.5-9.5 depending on court condition. Amazing for on-ball defense. No weak points besides price. 9/10 overall.",
-    playstyle: "Guard / Wing", courtType: "Indoor", sizingNote: "True to size", verdict: "Elite", wordCount: 496,
-    fullText: "Probably best shoes on market but overpriced. TTS fit, snug midfoot, space in toebox. Traction 8.5-9.5 depending on court condition — perfect on clean, decent on dusty. Amazing for on-ball defence, wings, guards. No weak points. 9/10.",
-    ratings: { cushioning: 9.0, traction: 8.5, support: 9.0, fit: 9.0, breathability: 7.0, groundFeel: 8.5, durability: 8.0, value: 7.0 },
-    confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "low", groundFeel: "high", durability: "medium", value: "low" }
-  },
-  {
-    shoe: "Li-Ning Way of Wade 12", brand: "Li-Ning", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1s7thno/wow_12_after_months_of_play_elite_comfort/",
-    author: "u/BOSSFORTHECAUSE", date: "2026-03-26",
-    summary: "One of the most comfortable hoop shoes ever. Cushioning is crazy, fit is dialed right out the box. Barely any break-in needed. But traction is frustrating — forefoot rubber picks up dust, requiring constant wiping. Feels like the shoe isn't made for everyday hoopers.",
-    playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size", verdict: "Solid", wordCount: 211,
-    fullText: "One of the most comfortable hoop shoes I've played in. Cushioning is crazy, fit is dialed right out the box. But the traction — forefoot is rubber not GCU. On a moderately clean Lifetime court, wiping every couple plays. WOW 10s had more bite on the same court.",
-    ratings: { cushioning: 9.5, traction: 6.0, support: 8.5, fit: 9.5, breathability: 6.5, groundFeel: 8.0, durability: 8.0, value: 7.5 },
-    confidences: { cushioning: "high", traction: "low", support: "high", fit: "high", breathability: "low", groundFeel: "medium", durability: "medium", value: "medium" }
-  },
-
   // --- Gamma 1 ---
-  {
-    shoe: "Li-Ning Gamma 1", brand: "Li-Ning", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1sgrpzy/rotation_from_a_primarily_volleyball_player/",
-    author: "u/Single-Ninja8886", date: "2026-04-09",
-    summary: "Unreal lightness with epic heel-to-toe transition and top-tier traction. Court feel is perfect. Fits slightly narrow but thin uppers conform beautifully. Improves everything the WoW 10s did well. An elite lightweight performer.",
-    playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size (slightly narrow, conforms)", verdict: "Elite", wordCount: 783,
-    fullText: "Gamma 1s: Fits slightly narrow but uppers are thin and conform very well. Lightness is unreal, heel-to-toe transition is epic, traction is top tier. Feeling on foot is seamless, court feel is perfect. Improves on everything about the WoW 10s.",
-    ratings: { cushioning: 8.0, traction: 9.0, support: 8.0, fit: 8.5, breathability: 8.0, groundFeel: 9.5, durability: 8.0, value: 9.0 },
-    confidences: { cushioning: "medium", traction: "high", support: "medium", fit: "high", breathability: "medium", groundFeel: "high", durability: "medium", value: "high" }
-  },
   {
     shoe: "Li-Ning Gamma 1", brand: "Li-Ning", sport: "basketball", subreddit: "r/BBallShoes",
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1i5y52t/lining_gamma_1/",
@@ -538,125 +255,11 @@ export const reviews = [
     confidences: { cushioning: "medium", traction: "high", support: "high", fit: "high", breathability: "low", groundFeel: "high", durability: "low", value: "medium" }
   },
 
-  // --- Gamma 2 ---
-  {
-    shoe: "Li-Ning Gamma 2", brand: "Li-Ning", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1sb5mvh/uncles_2026_rotation/",
-    author: "u/TakoOne", date: "2026-04-03",
-    summary: "Gamma 1s but better — no surprises. A primary rotation shoe that improves on the already excellent formula.",
-    playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size", verdict: "Elite", wordCount: 692,
-    fullText: "Li Ning Gamma 2s (primary rotation): No surprises here. Gamma 1s but better.",
-    ratings: { cushioning: 8.5, traction: 9.5, support: 8.5, fit: 9.0, breathability: 8.0, groundFeel: 9.5, durability: 8.5, value: 9.0 },
-    confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "medium", groundFeel: "high", durability: "high", value: "high" }
-  },
-  {
-    shoe: "Li-Ning Gamma 2", brand: "Li-Ning", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1s5l6l7/my_new_goat_li_ning_gamma_2_review/",
-    author: "u/SirGiannino", date: "2026-03-23",
-    summary: "New GOAT — best fit of all time with zero dead space anywhere and zero pinching right out of the box. Lockdown is crazy good. Traction is elite-tier. Cushioning is responsive with great court feel. The complete package, though pricey.",
-    playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size (perfect fit)", verdict: "Elite", wordCount: 827,
-    fullText: "Best fit of all time — zero dead space anywhere, zero pinching right out of the box. Lockdown is crazy good. Traction is elite-tier. Cushioning is responsive with great court feel. These might just be the best fitting shoes ever.",
-    ratings: { cushioning: 9.0, traction: 9.5, support: 9.0, fit: 10, breathability: 7.5, groundFeel: 9.0, durability: 8.5, value: 7.5 },
-    confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "medium", groundFeel: "high", durability: "high", value: "medium" }
-  },
-
-  // --- Liren 6v2 ---
-  {
-    shoe: "Li-Ning Liren 6v2", brand: "Li-Ning", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1s8bxqy/liren_6v2_initial_review/",
-    author: "u/dual_hearts", date: "2026-03-29",
-    summary: "SuperBOOM cushion starts stiff but softens up nicely — comparable to WoW 10s. Fits longer/narrower with a V-shaped heel cup. Lockdown is 9/10. 6'9\" 235lb ex-college player says arch support is less than expected due to lack of carbon fiber plate. Great bounce once broken in.",
-    playstyle: "Big Man (6'9\" 235lbs)", courtType: "Indoor", sizingNote: "Runs slightly long/narrow", verdict: "Solid", wordCount: 386,
-    fullText: "6'9 235lb ex college player, size 13US. Some foot soreness in arches initially but went away. Cushion started stiff but comparable to WoW 10s after playing. Fits longer/narrower, V-shaped heel cup. Lockdown is 9/10. Lack of carbon fiber means less arch support.",
-    ratings: { cushioning: 8.5, traction: 8.5, support: 7.5, fit: 8.0, breathability: 7.0, groundFeel: 8.5, durability: 8.0, value: 8.0 },
-    confidences: { cushioning: "high", traction: "high", support: "medium", fit: "medium", breathability: "low", groundFeel: "high", durability: "medium", value: "medium" }
-  },
-
-  // --- Wade 808 3 Ultra v2 ---
-  {
-    shoe: "Li-Ning Wade 808 3 Ultra v2", brand: "Li-Ning", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1shphbj/rate_the_rotation/",
-    author: "u/Typical-Public4166", date: "2026-04-10",
-    summary: "Just great — nothing wrong at all. Half size down for perfect 1:1 fit. Almost impossible to roll your ankle. Cushion is solid but not trampoline-level. A reliable, well-rounded performer.",
-    playstyle: "All-Around", courtType: "Indoor / Outdoor", sizingNote: "Half size down", verdict: "Solid", wordCount: 1054,
-    fullText: "808 3 ultra v2: just great, nothing wrong with them at all. Half size down for 1:1 fit. Almost impossible to roll your ankle. Cushion is solid but not like SuperBoom trampoline level.",
-    ratings: { cushioning: 8.0, traction: 8.5, support: 9.5, fit: 9.0, breathability: 6.5, groundFeel: 8.0, durability: 9.0, value: 8.5 },
-    confidences: { cushioning: "medium", traction: "high", support: "high", fit: "high", breathability: "low", groundFeel: "medium", durability: "high", value: "high" }
-  },
-
-  // =====================================================
-  // === ANTA ===
-  // =====================================================
-
-  // --- Kai 3 ---
-  {
-    shoe: "ANTA Kai 3", brand: "ANTA", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1shphbj/rate_the_rotation/",
-    author: "u/Typical-Public4166", date: "2026-04-10",
-    summary: "Exceptional right out of the box — only traction needs breaking in. ANTA's N2 foam is the reviewer's second-favorite cushion ever. Lateral flange provides great support and wide fit while maintaining breathing room.",
-    playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size (wide fit)", verdict: "Elite", wordCount: 1054,
-    fullText: "Anta Kai 3: exceptional. Traction needs breaking in, but N2 foam from Anta is my second favorite cushion ever. Support is great, lateral flange makes the shoe super wide. Keeps 1:1 fit with breathing room.",
-    ratings: { cushioning: 9.5, traction: 8.0, support: 9.0, fit: 9.0, breathability: 7.0, groundFeel: 8.5, durability: 8.0, value: 9.0 },
-    confidences: { cushioning: "high", traction: "medium", support: "high", fit: "high", breathability: "low", groundFeel: "high", durability: "medium", value: "high" }
-  },
-  {
-    shoe: "ANTA Kai 3", brand: "ANTA", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1sb5mvh/uncles_2026_rotation/",
-    author: "u/TakoOne", date: "2026-04-03",
-    summary: "Just the Kai 2s but better. Motion engineering is the only downgrade, but every weakness of the Kai 2 (over-pronation, weird heel fit) has been improved. A primary rotation shoe.",
-    playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size", verdict: "Elite", wordCount: 692,
-    fullText: "ANTA Kai 3: Just the Kai 2s but better. Motion engineering is the only downgrade but it improves on every weakness of Kai 2 — over pronation, weird heel fit, etc.",
-    ratings: { cushioning: 9.0, traction: 9.0, support: 9.0, fit: 9.0, breathability: 7.0, groundFeel: 8.5, durability: 8.5, value: 9.0 },
-    confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "low", groundFeel: "high", durability: "high", value: "high" }
-  },
-
   // =====================================================
   // === ADIDAS ===
   // =====================================================
 
-  // --- Don Issue 7 ---
-  {
-    shoe: "Adidas Don Issue 7", brand: "Adidas", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1shphbj/rate_the_rotation/",
-    author: "u/Typical-Public4166", date: "2026-04-10",
-    summary: "Loved for more than looks — cushion, traction, and support are all amazing. Heel has good compression, forefoot is responsive and low to ground. Runs big though — had to double sock for 1:1 fit.",
-    playstyle: "All-Around", courtType: "Indoor", sizingNote: "Half size down (runs big)", verdict: "Solid", wordCount: 1054,
-    fullText: "Don issue 7: cushion, traction, and support are amazing. Heel has good compression, forefoot is responsive and low to ground. Runs big — had to double sock. Would go half size down.",
-    ratings: { cushioning: 8.5, traction: 9.0, support: 8.5, fit: 7.0, breathability: 7.0, groundFeel: 8.5, durability: 8.0, value: 8.5 },
-    confidences: { cushioning: "high", traction: "high", support: "high", fit: "low", breathability: "low", groundFeel: "high", durability: "medium", value: "high" }
-  },
-  {
-    shoe: "Adidas Don Issue 7", brand: "Adidas", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1sb5mvh/uncles_2026_rotation/",
-    author: "u/TakoOne", date: "2026-04-03",
-    summary: "Best Adidas shoe in the last 3 years. Only real downside is breathability. Even fixes Adidas' signature heel slip issue. A rare win for Adidas in performance basketball.",
-    playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size", verdict: "Solid", wordCount: 692,
-    fullText: "Adidas DON Issue 7: Best Adidas shoes in the last 3 years. Only downside is breathability. They even fix the Adidas signature heel slips!",
-    ratings: { cushioning: 8.5, traction: 8.5, support: 8.5, fit: 8.5, breathability: 5.5, groundFeel: 8.0, durability: 8.0, value: 8.5 },
-    confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "medium", groundFeel: "medium", durability: "medium", value: "high" }
-  },
-  {
-    shoe: "Adidas Don Issue 7", brand: "Adidas", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1s8xhs6/don_issue_7_all_star_31_usd/",
-    author: "u/MyManD", date: "2026-03-30",
-    summary: "Nabbed for $32 USD in Japan. Materials are synthetic but solid. Glue quality is poor. After two sessions: traction is very good with a 10-minute break-in, cushion is 'pleasant' — not booming but protective. Lockdown and support are excellent. Incredible value at sale price.",
-    playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size", verdict: "Solid", wordCount: 579,
-    fullText: "Got for $32 USD in Japan. Materials are synthetic but solid, poor glue quality. Traction: very good after 10-minute break-in. Cushion: 'pleasant' — not booming but protective. Lockdown and support are excellent. At this price, incredible value.",
-    ratings: { cushioning: 7.5, traction: 8.5, support: 9.0, fit: 8.5, breathability: 5.5, groundFeel: 8.0, durability: 7.5, value: 10 },
-    confidences: { cushioning: "medium", traction: "high", support: "high", fit: "high", breathability: "medium", groundFeel: "medium", durability: "medium", value: "high" }
-  },
-
   // --- Harden 9 ---
-  {
-    shoe: "Adidas Harden 9", brand: "Adidas", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1sa3zys/dissappointed_wife_with_harden_9s_and_comparisons/",
-    author: "u/in_vestigate311", date: "2026-04-02",
-    summary: "Best cushioning she's ever had, but major midfoot rubbing and terrible traction on dusty courts killed it after 10+ hours. Not the right shoe for dusty or imperfect court conditions.",
-    playstyle: "All-Around", courtType: "Indoor (clean only)", sizingNote: "True to size", verdict: "Mediocre", wordCount: 217,
-    fullText: "Best cushioning ever, but major rubbing on midfoot and terrible traction on dusty courts. After 10+ hours, not what she's after.",
-    ratings: { cushioning: 9.0, traction: 5.0, support: 7.0, fit: 5.5, breathability: 6.0, groundFeel: 7.0, durability: 7.0, value: 6.0 },
-    confidences: { cushioning: "high", traction: "medium", support: "low", fit: "medium", breathability: "low", groundFeel: "low", durability: "low", value: "low" }
-  },
   {
     shoe: "Adidas Harden 9", brand: "Adidas", sport: "basketball", subreddit: "r/BBallShoes",
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1htk2nm/harden_vol_9_review_after_playing_4_games/",
@@ -668,31 +271,9 @@ export const reviews = [
     confidences: { cushioning: "high", traction: "high", support: "low", fit: "high", breathability: "high", groundFeel: "low", durability: "low", value: "low" }
   },
 
-  // --- Crazy Energy + ---
-  {
-    shoe: "Adidas Crazy Energy", brand: "Adidas", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1s55ug7/adidas_crazy_energy/",
-    author: "u/1Ball1sLife1", date: "2026-03-22",
-    summary: "Solid 9/10 traction that works on dusty courts with minimal wiping. But lockdown is the biggest gripe — stiff, not breathable upper with slippery stock insoles and short lacing system. Heel slippage due to poor ankle lockdown. Cushion is bouncy with great court feel but overall ruined by the upper.",
-    playstyle: "All-Around", courtType: "Indoor / Outdoor", sizingNote: "True to size", verdict: "Solid", wordCount: 274,
-    fullText: "Traction 9/10 — solid grip, works on dusty courts. Lockdown 6.5/10 — biggest gripe! Upper is stiff and not breathable, stock insoles are slippery. Lacing doesn't run high enough. Some heel slippage. Cushion is bouncy with great court feel.",
-    ratings: { cushioning: 8.0, traction: 9.0, support: 6.5, fit: 6.5, breathability: 4.5, groundFeel: 8.5, durability: 8.0, value: 7.0 },
-    confidences: { cushioning: "medium", traction: "high", support: "low", fit: "low", breathability: "medium", groundFeel: "high", durability: "medium", value: "low" }
-  },
-
   // =====================================================
   // === SPO ===
   // =====================================================
-  {
-    shoe: "SPO Game 1 High", brand: "SPO", sport: "basketball", subreddit: "r/BBallShoes",
-    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1s1gkkh/serious_player_only_game_1_high/",
-    author: "u/HotWorldliness123", date: "2026-03-16",
-    summary: "Unbelievable traction — S tier 10/10 with an insanely consistent rubber compound that's tacky even on dusty courts. Zero slips, zero wiping needed. Great heel lockdown with 3D-printed heel counter. Cushion takes time to break in but becomes very comfortable. Shoes don't squeak at all, which some may miss.",
-    playstyle: "All-Around", courtType: "Indoor / Outdoor", sizingNote: "True to size", verdict: "Elite", wordCount: 779,
-    fullText: "Traction is unbelievable — insanely consistent rubber compound, tacky even on dusty courts. S tier, 10/10. Never had to wipe, never slipped. Heel lockdown is great with 3D printed counter. Cushion takes time to break in but becomes very comfortable. No squeaking at all.",
-    ratings: { cushioning: 8.0, traction: 10, support: 9.0, fit: 8.5, breathability: 7.0, groundFeel: 8.5, durability: 9.0, value: 8.5 },
-    confidences: { cushioning: "medium", traction: "high", support: "high", fit: "high", breathability: "low", groundFeel: "high", durability: "high", value: "high" }
-  },
   {
     shoe: "SPO Game 1 High", brand: "SPO", sport: "basketball", subreddit: "r/BBallShoes",
     redditUrl: "https://www.reddit.com/r/BBallShoes/comments/17dmxp9/serious_player_only_game_1_spider/",
@@ -1604,6 +1185,172 @@ export const reviews = [
   },
 
   // =====================================================
+  // === BASKETBALL — batch 7 (WebSearch-verified, proper post URLs) ===
+  // =====================================================
+
+  // --- Jordan Heir ---
+  {
+    shoe: "Jordan Heir", brand: "Jordan", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1ih4tb6/jordan_heir_indepth_review/",
+    author: "u/Biblical_Buckets", date: "2025-02-04",
+    summary: "Minimalist guard shoe with exceptional court feel and standout lockdown. Cushlon 3.0 sits low — god-like ground responsiveness but below-average impact protection. Traction is solid but dusts up requiring frequent wipes. Runs narrow-long: size down half. Comparable to Kobe 8/9 and Wade 808s in feel. Strong 8/10 for guards who prioritize feedback over cushion.",
+    playstyle: "Guard / Wing", courtType: "Indoor", sizingNote: "Half size down (runs narrow, long)", verdict: "Solid", wordCount: 410,
+    fullText: "After 2 weeks of court testing. Traction 8/10: herringbone pods, decent grip but picks up dust quickly — wipe frequently. Cushioning 8.5/10: Cushlon 3.0 drop-in, god-like court feel but impact protection is below average, sits low comparable to Kobe 8/9. Support 8.5/10: solid ankle stability for a low-top; bigger explosive players may need more. Fit 9/10: runs narrow but long — size down half. Materials 9.5/10: most minimalist hoop shoe from Jordan brand. Overall 8/10. Best for guards seeking lightweight, responsive, minimalist option. Similarities to Kobe 8/9 and Wade 808s noted.",
+    ratings: { cushioning: 7.0, traction: 8.0, support: 8.5, fit: 9.0, breathability: 7.0, groundFeel: 9.0, durability: 7.0, value: 7.5 },
+    confidences: { cushioning: "high", traction: "high", support: "medium", fit: "high", breathability: "low", groundFeel: "high", durability: "low", value: "medium" }
+  },
+
+  // --- Nike Kobe 5 Protro ---
+  {
+    shoe: "Nike Kobe 5 Protro", brand: "Nike", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1gritl2/kobe_5_protro_xray/",
+    author: "u/LouWillStan", date: "2024-11-14",
+    summary: "Heart-monitor outsole earns 9/10 — bites from the jump with minimal break-in, though edges fray after 20-25 hours and dust accumulates. Lockdown is 10/10: wide base, flywire, thick fused upper, and shank all work in concert. Cushion is responsive but unremarkable for a flagship. 2024 protros run snugger in midfoot than 2020 versions — go half size up. Fuse feels plasticky but the shoe stays in heavy rotation.",
+    playstyle: "Guard / Wing", courtType: "Indoor", sizingNote: "Half size up (2024 run snugger than 2020)", verdict: "Solid", wordCount: 350,
+    fullText: "Traction 9/10: solid grip from jump, minimal break-in, quiet on court but accumulates dust; edge fraying after 20-25 hours. Cushioning 8.5/10: good, not great — responsive, protective for multiple playstyles. Support & Lockdown 10/10: wide base, flywire, thick fused upper, shank — locked-in feel. Fit 9.5/10: half-size up — 2024 protros snugger in midfoot than 2020 due to thicker fuse layering and additional padding. Materials 7.5/10: functional but fuse feels plasticky. Shoe remains in regular rotation.",
+    ratings: { cushioning: 7.5, traction: 9.0, support: 9.5, fit: 9.0, breathability: 6.0, groundFeel: 8.0, durability: 7.5, value: 6.5 },
+    confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "low", groundFeel: "medium", durability: "medium", value: "medium" }
+  },
+  {
+    shoe: "Nike Kobe 5 Protro", brand: "Nike", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1ie71jy/honest_review_on_kobe_5_protro_from_a_first_timer/",
+    author: "u/Im-Finn-23", date: "2025-01-31",
+    summary: "8.8/10 overall from a first timer. Heart-monitor outsole delivers absolute bite — zero slips from day one. Fuse upper is rock-hard initially but conforms after 2 sessions with initial foot cramping that resolves. Zoom Turbo forefoot is responsive without maximum padding; reviewer completed knee rehab without pain. Mild heat buildup after extended play. Ideal for shooting guards with solid mechanics at retail price only.",
+    playstyle: "Guard / Wing", courtType: "Indoor", sizingNote: "True to size (expect stiff break-in period)", verdict: "Solid", wordCount: 280,
+    fullText: "Overall 8.8/10. Materials: fuse is HARD as hell at start, breaks in after 2 sessions, initial foot cramping resolves. Traction: heart monitor outsole — ZERO slips, responsive ground contact, consistent stopping power. Ventilation: mild heat after extended play. Cushioning: Zoom Turbo forefoot — responsive without max padding; completed knee rehab without pain during long sessions. Rewards players with solid mechanics and footwork. Ideal for shooting guards. Recommended at retail price only.",
+    ratings: { cushioning: 7.5, traction: 9.5, support: 9.0, fit: 8.5, breathability: 6.0, groundFeel: 8.0, durability: 7.5, value: 7.0 },
+    confidences: { cushioning: "medium", traction: "high", support: "high", fit: "high", breathability: "medium", groundFeel: "medium", durability: "low", value: "high" }
+  },
+
+  // --- Adidas Harden Vol 9 ---
+  {
+    shoe: "Adidas Harden Vol 9", brand: "Adidas", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/gallery/1j7upvw",
+    author: "u/Popular_Ad_1437", date: "2025-03-10",
+    summary: "Looks great but underdelivers on the floor. Traction is 'terrible on dusty courts' — translucent sole collects dust aggressively; only okay on clean courts. Eyelets dig into the ankle when fully laced (reverse lacing helps). Limited ventilation means sweaty feet after an hour. Upper creases heavily after 6 hours. Lightweight and adequately cushioned, but the traction flaw is a deal-breaker for typical gym conditions.",
+    playstyle: "Guard", courtType: "Indoor", sizingNote: "Runs slightly small — size 9 for Nike 9.5 wearer", verdict: "Mediocre", wordCount: 320,
+    fullText: "Size 9 is perfect fit (usually 9.5 Nike). Semi-wide feet, short toes. Toe box appears narrow but works. Upper creases heavily after 6 hours, limited ventilation — sweaty feet after 1 hour. Main complaint: eyelets scrunch and dig into ankle when fully laced; reverse lacing helped; metal aglets bounce noticeably. Traction: terrible on dusty courts — translucent sole collects dust significantly; okay on clean courts. Cushioning: good impact absorption, stiff initially, between guard and forward in responsiveness, lightweight. Design looks dope. Overall disappointed despite aesthetics.",
+    ratings: { cushioning: 7.5, traction: 5.0, support: 6.5, fit: 7.5, breathability: 5.5, groundFeel: 7.0, durability: 6.5, value: 6.0 },
+    confidences: { cushioning: "medium", traction: "high", support: "medium", fit: "high", breathability: "high", groundFeel: "low", durability: "medium", value: "medium" }
+  },
+
+  // --- Puma Stewie 3 ---
+  {
+    shoe: "Puma Stewie 3", brand: "Puma", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/gallery/1hkscdc",
+    author: "u/Additional-Grand6398", date: "2024-12-23",
+    summary: "Parent reviewing a 13-year-old guard's pair after 8-9 months of daily training plus 1-2 matches per week. Durability is the critical failure — one pair worn out in 8 months, another on its last legs. About 20% heavier than the Stewie 2. Traction dusts up requiring regular sole cleaning. Support held up with no major ankle injuries. Requires a full drying day between sessions — needs two-pair rotation.",
+    playstyle: "Guard / Wing", courtType: "Indoor", sizingNote: "Not specified (youth player review)", verdict: "Mediocre", wordCount: 270,
+    fullText: "Parent reviewing daughter's (13yo, 172cm, 50kg) Stewie 3 after 8-9 months of intensive daily training plus 1-2 matches per week. Weight: ~20% heavier than Stewie 2. Traction: compromised by dust accumulation, requires regular cleaning of soles. Support: minimal injuries despite high-impact use; after minor ankle sprain recovered by day three. Durability: not impressed — orange pair wore out completely in 8 months; blue-white pair expected to last 2-3 more weeks. Colorways yellowed over time. Requires one full day drying between uses — needs two-pair rotation. Exploring Nike JA2 and Kobe 9 Low Pro as replacements.",
+    ratings: { cushioning: 6.5, traction: 6.0, support: 7.5, fit: 7.0, breathability: 5.0, groundFeel: 6.5, durability: 4.5, value: 5.5 },
+    confidences: { cushioning: "low", traction: "medium", support: "medium", fit: "low", breathability: "medium", groundFeel: "low", durability: "high", value: "high" }
+  },
+
+  // --- Nike Kyrie Low 5 ---
+  {
+    shoe: "Nike Kyrie Low 5", brand: "Nike", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1jhee7z/kyrie_low_5_vs_kobe_5_protro_vs_sabrina_2/",
+    author: "u/Quiet-Land7112", date: "2025-03-22",
+    summary: "Three-shoe comparison where the Kyrie Low 5 earns 'most all-around' — balanced performance that holds up outdoors better than the Kobe 5 Protro or Sabrina 2. Cushion 7/10, Court Feel 8.5/10, Durability 8/10, Value 8/10, Lockdown 8.5/10. Overall 7.5/10. The balanced scorecard and outdoor capability make it the most versatile of the three.",
+    playstyle: "All-Around", courtType: "Indoor / Outdoor", sizingNote: "True to size (assumed)", verdict: "Solid", wordCount: 210,
+    fullText: "Three-shoe comparison vs Kobe 5 Protro and Sabrina 2. Kyrie Low 5: Cushion 7/10, Court Feel 8.5/10, Durability 8/10, Value 8/10, Lockdown/Stability 8.5/10, Overall 7.5/10. 'Most all around shoe of the three' — balanced performance, outdoor capable. For reference: Kobe 5 Protro scored 6/10 overall (excels in comfort/lockdown, poor price/durability); Sabrina 2 scored 7.5/10 (exceptional court feel, durability concern).",
+    ratings: { cushioning: 7.0, traction: 7.5, support: 8.5, fit: 8.0, breathability: 7.0, groundFeel: 8.5, durability: 8.0, value: 8.0 },
+    confidences: { cushioning: "high", traction: "medium", support: "high", fit: "low", breathability: "low", groundFeel: "high", durability: "high", value: "high" }
+  },
+
+  // =====================================================
+  // === BASKETBALL - batch 8 (PullPush verified) ===
+  // =====================================================
+
+  // --- Nike Kobe 10 Low ---
+  {
+    shoe: "Nike Kobe 10 Low", brand: "Nike", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1k67etf/kobe_10_low_review/",
+    author: "u/Low_Recognition4940", date: "2025-04-23",
+    summary: "A long-term review built from multiple pairs and thousands of play hours. The Kobe 10 Low gets elite praise for traction, fit, lockdown, versatility, lateral movement, and soft-but-bouncy Zoom cushioning. Durability is the tradeoff: mesh tears, outsole separation, worn traction, and popped Zoom units are real risks on old pairs.",
+    playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size; narrow feet may go half down", verdict: "Elite", wordCount: 987,
+    fullText: "The reviewer has owned three Kobe 10 Lows since 2018 with roughly 2.5k-3k total play hours. Fit and lockdown were compared favorably to Kobe 6s: the upper breaks in quickly, containment is excellent, the toebox works well after a short pinchy break-in, and narrow feet may benefit from half size down. Durability is mixed: one mesh panel ripped after a month, old outsole sections separated and needed glue, traction naturally wore down, and a popped Zoom unit would be a serious failure. Versatility is the standout. The reviewer says the shoe can work for a short guard or a big, with top-tier traction even on dusty courts, a wide base for lateral landings, enough carbon/shank support for speed and jumping, and soft cushioning with Zoom bounce that protects knees without feeling dead. They call it the most underrated shoe of all time and warn against the high-top version.",
+    ratings: { cushioning: 8.5, traction: 9.5, support: 8.5, fit: 9.0, breathability: 7.0, groundFeel: 8.5, durability: 6.5, value: 8.5 },
+    confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "low", groundFeel: "high", durability: "high", value: "high" }
+  },
+
+  // --- Li-Ning Wade Shadow 6 ---
+  {
+    shoe: "Li-Ning Wade Shadow 6", brand: "Li-Ning", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1k66fpk/wade_shadow_6_review/",
+    author: "u/Low_Recognition4940", date: "2025-04-23",
+    summary: "A 6'7\", 230 lb player calls the Wade Shadow 6 a goated budget option after roughly 70 hours. Fit is the standout: true to size, molded quickly, no room around the toebox, and bead-like laces stayed tied. The hard outsole is durable and elite on pristine courts, but dusty courts make it slide badly. Bounce, shank support, and lateral containment are excellent for wings/forwards.",
+    playstyle: "Wing", courtType: "Indoor", sizingNote: "True to size; narrow feet may go half down", verdict: "Great", wordCount: 685,
+    fullText: "The reviewer is 6'7\" and 230 lb and used the Wade Shadow 6 primarily for practices after buying them around $110. Fit was 5/5: they molded to the foot in about two hours, fit true to size, and the bead-like laces did not untie during play. Durability was strong after roughly 70 hours, with the hard outsole still looking new, though the reviewer noted a small crack in the rear plastic after an awkward landing. The shoe works for most positions except possibly very heavy centers; the shank and full-length Boom setup felt stiff and supportive enough for jumping, especially for 2-4 players. Performance was the high point: the shoe felt bouncy, supportive, and secure laterally, encouraging drives and explosive movement. Traction is elite on pristine courts but a major issue on dusty courts, where the hard plastic rubber slid badly and needed constant wiping.",
+    ratings: { cushioning: 8.0, traction: 8.0, support: 8.5, fit: 9.5, breathability: 7.0, groundFeel: 8.0, durability: 8.0, value: 9.0 },
+    confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "low", groundFeel: "medium", durability: "high", value: "high" }
+  },
+
+  // --- New Balance Fresh Foam BB v3 ---
+  {
+    shoe: "New Balance Fresh Foam BB v3", brand: "New Balance", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1k3uoog/finally_sharing_my_performance_review_for_the_new/",
+    author: "u/GorillaX", date: "2025-04-20",
+    summary: "A wide-foot, post-surgery player initially disliked the Fresh Foam BB v3, then found it transformed after break-in. Cushioning became soft, comfortable, and responsive without feeling mushy; traction was excellent from the start and barely affected by dust. Early heel slip and ankle-roll concerns faded after the collar broke in, and the upper felt forgiving for a very wide foot.",
+    playstyle: "All-Around", courtType: "Indoor", sizingNote: "Wide-foot friendly after break-in", verdict: "Great", wordCount: 620,
+    fullText: "The reviewer is in their late 30s and coming off major foot surgery, with one foot now extremely wide. They had returned multiple shoes due to pain or numbness and could not fit into the Fresh Foam BB v2. The BB v3 surprised them: it did not feel like a high, slow, squishy max-cushion shoe. Early sessions were underwhelming, including two ankle rolls on flat ground, unimpressive cushion, and annoying heel slippage. After break-in, the shoe felt dramatically better. The Fresh Foam became soft, comfortable, and responsive without feeling mushy, and after 2.5 hours their feet, ankles, and knees felt great. Traction was fantastic from the start, barely affected by dust and potentially their favorite basketball traction. Heel slippage disappeared as the ankle collar softened, lockdown improved, and the upper felt forgiving with no numbness or lace irritation. The shoe felt grounded, moved well laterally and north-south, and seemed wide-foot friendly.",
+    ratings: { cushioning: 8.5, traction: 9.5, support: 7.5, fit: 8.0, breathability: 7.0, groundFeel: 7.5, durability: 7.0, value: 7.0 },
+    confidences: { cushioning: "high", traction: "high", support: "medium", fit: "high", breathability: "low", groundFeel: "medium", durability: "low", value: "low" }
+  },
+
+  // --- SPO Player 1 Plus ---
+  {
+    shoe: "SPO Player 1 Plus", brand: "SPO", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1itsnev/spo_player_1_plus_sleepless_city_review_the/",
+    author: "u/MyManD", date: "2025-02-20",
+    summary: "A two-session initial review of the Player 1 Plus Sleepless City. Materials and build quality impressed, with thick fuse, strong rubber, clean gluing, a massive carbon plate, and hard durable outsole rubber. Traction was excellent even with dust but slipped on sweat. Fit/heel slip and lace pressure needed break-in, while cushioning stayed minimal and Kobe 8-like across both drop-in midsoles.",
+    playstyle: "All-Around", courtType: "Indoor", sizingNote: "True to size; width/heel slip may need break-in", verdict: "Great", wordCount: 908,
+    fullText: "The reviewer tested the SPO Player 1 Plus across two court practices/scrimmages and two weight room plyometric/powerlifting sessions. They loved the Sleepless City colorway and gave materials nearly perfect marks: thick fuse, nylon side strands, rubberized toe layer, excellent gluing, a massive carbon plate, and thick heel felt. Traction was 9.2/10: the translucent outsole was very hard, outdoor-confident, and amazing on dust, with no slips until sweat/moisture built up. Fit and support were more tentative. True-to-size length was perfect, but width near the top lacing caused pressure under the inner ankle when tightened enough to prevent heel slip; the reviewer expected break-in might improve it. Cushioning was minimal rather than plush, similar to Kobe 8s. The Quick and Strength drop-ins felt more similar than expected, with the Strength setup slightly heavier and mushier in the heel. Overall the shoe was bought partly as an art piece but performed very well.",
+    ratings: { cushioning: 7.0, traction: 9.0, support: 8.0, fit: 7.5, breathability: 7.0, groundFeel: 8.5, durability: 9.0, value: 7.0 },
+    confidences: { cushioning: "high", traction: "high", support: "medium", fit: "high", breathability: "low", groundFeel: "high", durability: "medium", value: "low" }
+  },
+
+  // --- ANTA GH3 ---
+  {
+    shoe: "ANTA GH3", brand: "ANTA", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1i86i9l/anta_gh3_gordon_hayward_detailed_review/",
+    author: "u/Biblical_Buckets", date: "2025-01-23",
+    summary: "A year-plus review of the ANTA GH3 as a maximalist, supportive low top. Traction worked well indoors and outdoors but became risky when dust built up. Cushioning was plush, protective, and slightly bouncy, with Nitroedge in the forefoot. Support was the standout: TPU shank, firm heel counter, sturdy build, and no heel slip. Fit was true to size but snug, with a heavier, bottom-heavy feel.",
+    playstyle: "All-Around", courtType: "Indoor / Outdoor", sizingNote: "True to size, slightly snug", verdict: "Solid", wordCount: 677,
+    fullText: "The reviewer used the ANTA GH3 for more than a year and felt it deserved more attention. Traction was 8/10: good on clean indoor courts and outdoor courts, but dangerous slips happened when too much dust accumulated. Cushioning was 9/10, using A-Flash Edge with Nitroedge in the forefoot. It felt comfortable, plush, somewhat bouncy, and protective enough to avoid knee pain, though slightly bottom-heavy and not ideal for those wanting maximum court feel. Support was 10/10 despite the low collar: the exposed TPU shank, firm heel counter, and sturdy construction made the shoe very stable with no heel slippage. Fit was 9.5/10, true to size but snug; going up half may help if more space is desired. Materials and design felt sturdy and reminiscent of earlier Adidas basketball shoes, though somewhat heavy. Overall, the reviewer called it a surprising performer for those wanting maximum impact protection and support.",
+    ratings: { cushioning: 9.0, traction: 8.0, support: 9.5, fit: 9.0, breathability: 7.0, groundFeel: 6.5, durability: 8.0, value: 8.0 },
+    confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "low", groundFeel: "high", durability: "medium", value: "medium" }
+  },
+
+  // =====================================================
+  // === BASKETBALL - batch 9 (PullPush verified) ===
+  // =====================================================
+
+  // --- 361 Degrees Light Up PRM ---
+  {
+    shoe: "361 Degrees Light Up PRM", brand: "361", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1ke2w45/361_degrees_light_up_prm_size_11/",
+    author: "u/Pachinko-Nator", date: "2025-05-03",
+    summary: "A 6'1\", 335 lb weekend player found the budget Light Up PRM surprisingly protective. Cushioning was the highlight: excellent step-in feel, resilient bounce, and strong joint protection during play. Fit runs long with a roomy toebox and better accommodation for high-volume feet than narrow feet. Traction was fine outdoors, containment was strong, but stiff plastic/mesh materials and a thin tongue felt cheap.",
+    playstyle: "Forward / Outdoor", courtType: "Outdoor / Rubberized Concrete", sizingNote: "Runs long; narrow feet may go half down", verdict: "Solid", wordCount: 497,
+    fullText: "The reviewer is 6'1\", 335 lb, age 33, and usually true-to-size 10.5. They mostly play 1v1 on weekends and reviewed the 361 Degrees Light Up PRM from the perspective of a heavier player in a budget outdoor shoe. Fit was about a half size too big: long, decently roomy in the toebox, and better for a high-volume foot than a narrow foot. Cushioning was the main strength. Step-in feel was excellent, the Energ-X foam felt resilient and bouncy, the heel CQT insert and substantial shank worked well with the foam, and the reviewer reported no knee or joint pain during play. Traction was not special but gripped fine on asphalt and rubberized concrete, with a substantial outsole intended for outdoor use. Materials disappointed: cheap plastic/nylon panels, stiff mesh, thin tongue, and some eyelet irritation risk. Containment was still good because of the stiff upper, TPU reinforcement, thick laces, padded heel, and firm heel counter.",
+    ratings: { cushioning: 8.5, traction: 7.0, support: 8.0, fit: 7.5, breathability: 6.5, groundFeel: 6.0, durability: 7.0, value: 8.0 },
+    confidences: { cushioning: "high", traction: "medium", support: "high", fit: "high", breathability: "low", groundFeel: "low", durability: "medium", value: "high" }
+  },
+
+  // --- Nike Kobe 8 Protro ---
+  {
+    shoe: "Nike Kobe 8 Protro", brand: "Nike", sport: "basketball", subreddit: "r/BBallShoes",
+    redditUrl: "https://www.reddit.com/r/BBallShoes/comments/1kagcvt/kobe_8_protro_big_guy_review/",
+    author: "u/redacteddd23", date: "2025-04-29",
+    summary: "A 6'3\" larger player loved the Kobe 8 Protro after about four wears despite not being the intended build. Cushioning felt much more comfortable after break-in, support and lockdown were secure with only slight heel slip, and traction was flawless even on dusty courts. Fit is narrow but manageable true to size for the reviewer; wide feet may need half size up.",
+    playstyle: "All-Around", courtType: "Indoor", sizingNote: "Narrow fit; wide feet may go half up", verdict: "Elite", wordCount: 293,
+    fullText: "The reviewer is 6'3\" and describes themself as heavier than the ideal Kobe 8 Protro user. After about four wears, cushioning had broken in and formed to the foot enough to feel very comfortable. They rated cushion 9/10. Lockdown and support were also rated 9/10: the shoe felt secure, they did not feel at risk of rolling an ankle despite previous ankle issues, and the only caveat was slight heel slippage that might be lacing-related. Traction was the clear standout at 10/10, with no movement or complaints even on dusty courts. Fit was 8/10 because the shoe is narrow; the reviewer does not have a wide foot and stayed true to size, but noted it improved after a few sessions and wide-foot players may want half size up. Overall they rated the shoe 9/10 and made it their main shoe going forward.",
+    ratings: { cushioning: 9.0, traction: 9.5, support: 9.0, fit: 8.0, breathability: 7.0, groundFeel: 8.0, durability: 7.0, value: 8.5 },
+    confidences: { cushioning: "high", traction: "high", support: "high", fit: "high", breathability: "low", groundFeel: "medium", durability: "low", value: "medium" }
+  },
+
+  // =====================================================
   // === RUNNING — r/running_shoes ===
   // =====================================================
 
@@ -2433,7 +2180,7 @@ function bucketAggregateConfidence(totalWeight) {
 export const shoePrices = {
   // === Basketball ===
   "Nike LeBron 21": 200, "Nike LeBron 20": "150-200", "Nike KD 14": "100-150",
-  "Nike Sabrina 2": 130, "Nike AE 1": "110-120", "Nike Shai 001": "130-170",
+  "Nike Sabrina 2": 130, "Adidas AE 1": "110-120", "Nike Shai 001": "130-170",
   "Nike GT Cut 3": "190-210", "Nike GT Cut 4": "200-220", "Nike Ja 3": "125-135",
   "Nike Kobe 6 Protro": "175-200", "Nike Kobe AD NXT FF": 180, "Air Jordan 40": 200,
   "361 Joker 1 GT": 139, "361 Joker 2": 129, "361 Joker 2 GT": 189,
@@ -2464,6 +2211,14 @@ export const shoePrices = {
   // New basketball (batch 6)
   "Nike GT Cut 2": 170, "Nike GT Hustle 2": 170, "Nike Sabrina 1": 130,
   "UA Curry Flow 10": 160, "ANTA Shock Wave 5 Pro": 190,
+  // New basketball (batch 7)
+  "Jordan Heir": "120-160", "Nike Kobe 5 Protro": "180-250", "Nike Kyrie Low 5": "90-130",
+  "Adidas Harden Vol 9": 140, "Puma Stewie 3": "110-130",
+  // New basketball (batch 8)
+  "Nike Kobe 10 Low": "100-180", "Li-Ning Wade Shadow 6": "110-120",
+  "New Balance Fresh Foam BB v3": 130, "SPO Player 1 Plus": 180,
+  "ANTA GH3": "100-130",
+  "361 Degrees Light Up PRM": "70-100",
   // === Running ===
   "HOKA Mach 6": 140, "Brooks Ghost 17": 150, "ASICS Superblast 2": 200,
   "Saucony Endorphin Speed 5": 175, "Nike Pegasus 41": "130-140",
@@ -2489,6 +2244,95 @@ export const shoePrices = {
   "Saucony Ride 17": 140, "Adidas Adizero Adios Pro 4": 250,
 };
 
+// Source-backed per-shoe weights. Values vary by sample size and colorway; keep
+// missing entries absent until a real manufacturer/retailer/lab source is found.
+export const shoeWeights = {
+  // Basketball
+  "Nike LeBron 21": { oz: 14.2, grams: 403, size: "US M9", source: "RunRepeat lab" },
+  "Nike Sabrina 2": { oz: 12.0, grams: 339, size: "US M9", source: "RunRepeat lab" },
+  "Nike Ja 1": { oz: 12.7, grams: 361, size: "US M9", source: "RunRepeat lab" },
+  "Nike Ja 2": { oz: 11.9, grams: 336, size: "US M9", source: "RunRepeat lab" },
+  "Nike KD 17": { oz: 13.8, grams: 390, size: "US M9", source: "RunRepeat lab" },
+  "Nike GT Hustle 2": { oz: 12.0, grams: 340, size: "US M9", source: "RunRepeat lab" },
+  "Nike Book 1": { oz: 13.6, grams: 386, size: "US M9", source: "RunRepeat lab" },
+  "Adidas Harden Vol 9": { oz: 14.6, grams: 414, size: "US M9", source: "RunRepeat lab" },
+  "New Balance TWO WXY V5": { oz: 13.8, grams: 390, size: "US M9", source: "RunRepeat lab" },
+  "New Balance Fresh Foam BB v3": { oz: 14.0, grams: 397, size: "US M9", source: "RunRepeat lab" },
+  "Nike Kobe 10 Low": { oz: 13.9, grams: 367, size: "unspecified", source: "Live For BBALL" },
+  "SPO Player 1 Plus": { oz: 12.5, grams: 355, size: "US M9", source: "Basketball Store" },
+  "ANTA GH3": { oz: 13.4, grams: 380, size: "unspecified", source: "Info Hoops" },
+  "Puma Stewie 3": { oz: 14.0, size: "sample size varies", source: "Zappos" },
+  "Adidas Harden 9": { oz: 14.6, grams: 414, size: "US M9", source: "RunRepeat lab" },
+  "Adidas Harden Vol 8": { oz: 15.9, grams: 451, size: "US M9", source: "RunRepeat lab" },
+  "Adidas Trae Young 2": { label: "440-450g", size: "colorway/sample range", source: "TheHoopsGeek" },
+  "Air Jordan 38 Low": { label: "410-440g", size: "colorway/sample range", source: "TheHoopsGeek" },
+  "ANTA KT8": { oz: 14.6, grams: 413, size: "US M9", source: "Basketball Store" },
+  "ANTA KT9": { label: "approximately 380g", size: "unspecified", source: "POIZON" },
+  "ANTA Shock Wave 5 Pro": { label: "approximately 390g", size: "unspecified", source: "POIZON" },
+  "Jordan Luka 4": { oz: 12.9, grams: 366, size: "US M9", source: "RunRepeat lab" },
+  "Jordan Luka .77": { oz: 12.3, grams: 349, size: "US M9", source: "RunRepeat lab" },
+  "Jordan Tatum 3": { label: "around 350g", size: "27.0cm", source: "NBA Brooks review" },
+  "Li-Ning Gamma 1": { oz: 10.2, grams: 290, size: "US M9", source: "VJsneaker" },
+  "Li-Ning Liren 4 v2": { label: "around 407g", size: "EU 45", source: "Anto Sports" },
+  "Li-Ning Sonic 11": { oz: 13.6, grams: 385, size: "EU 42", source: "Anto Sports" },
+  "Li-Ning Speed XI": { label: "approximately 371g", size: "US M9.5 / EU 43.5", source: "HIBasketballShoes" },
+  "New Balance Fresh Foam BB v2": { oz: 14.1, grams: 400, size: "US M9", source: "RunRepeat lab" },
+  "Nike Giannis Immortality 3": { oz: 11.9, grams: 337, size: "US M9", source: "RunRepeat lab" },
+  "Nike GT Cut 2": { oz: 14.1, grams: 399, size: "US M9", source: "RunRepeat lab" },
+  "Nike GT Hustle 3": { label: "370-380g", size: "colorway/sample range", source: "TheHoopsGeek" },
+  "Nike GT Jump 2": { oz: 15.6, grams: 442, size: "US M9", source: "RunRepeat lab" },
+  "Nike Kobe 5 Protro": { label: "340-350g", size: "colorway/sample range", source: "TheHoopsGeek" },
+  "Nike Kobe 6 Protro": { label: "320-340g", size: "colorway/sample range", source: "TheHoopsGeek" },
+  "Nike Kyrie Low 5": { label: "330-350g", size: "colorway/sample range", source: "TheHoopsGeek" },
+  "Nike Sabrina 1": { label: "350-360g", size: "colorway/sample range", source: "TheHoopsGeek" },
+  "Nike Sabrina 3": { oz: 12.4, grams: 352, size: "US M9", source: "RunRepeat lab" },
+  "SPO Easy 1": { label: "approximately 380g", size: "US M9", source: "VJsneaker" },
+  "UA Curry 12": { label: "350-360g", size: "colorway/sample range", source: "TheHoopsGeek" },
+
+  // Running
+  "HOKA Mach 6": { oz: 8.2, grams: 232, size: "US M9", source: "Fleet Feet workbook" },
+  "HOKA Clifton 10": { oz: 9.8, grams: 278, size: "US M9", source: "Fleet Feet workbook" },
+  "HOKA Bondi 9": { oz: 10.5, grams: 298, size: "US M9", source: "Fleet Feet workbook" },
+  "HOKA Bondi 8": { oz: 10.8, grams: 307, size: "US M9", source: "Running Warehouse" },
+  "Brooks Ghost 17": { oz: 10.1, grams: 286, size: "US M9", source: "Brooks" },
+  "Brooks Glycerin 21": { oz: 9.8, grams: 278, size: "US M9", source: "Brooks" },
+  "Brooks Glycerin 22": { oz: 10.2, grams: 289, size: "US M9", source: "Brooks" },
+  "Brooks Hyperion Max 2": { oz: 9.1, grams: 258, size: "US M9", source: "Brooks" },
+  "ASICS Gel-Nimbus 26": { oz: 10.8, grams: 305, size: "US M9", source: "ASICS" },
+  "ASICS Novablast 4": { oz: 9.1, grams: 259, size: "US M9", source: "RunRepeat lab" },
+  "ASICS Superblast 2": { oz: 8.8, grams: 250, size: "US M9", source: "SoleReview" },
+  "ASICS Superblast 1": { oz: 8.4, grams: 239, size: "US M9", source: "SoleReview" },
+  "ASICS Novablast 5": { oz: 9.0, grams: 255, size: "US M9", source: "ASICS" },
+  "ASICS Metaspeed Sky Paris": { oz: 6.5, grams: 183, size: "US M9", source: "RunRepeat lab" },
+  "Nike Pegasus 41": { oz: 10.4, grams: 297, size: "US M9", source: "TechRadar" },
+  "Nike Pegasus Plus": { oz: 8.6, grams: 245, size: "US M10", source: "Nike" },
+  "Nike Vomero 18": { oz: 10.5, grams: 298, size: "US M9", source: "Doctors of Running" },
+  "Nike Vaporfly 3": { oz: 6.5, grams: 184, size: "US M10", source: "Nike" },
+  "Nike Vaporfly 4": { oz: 6.7, grams: 190, size: "US M10", source: "Nike" },
+  "Nike Alphafly 3": { oz: 7.7, grams: 218, size: "US M10", source: "Nike" },
+  "New Balance Rebel v4": { oz: 7.5, grams: 212, size: "US M9", source: "SoleReview" },
+  "New Balance SC Elite v4": { oz: 8.4, grams: 237, size: "US M9", source: "New Balance/retailer" },
+  "Adidas Adizero Adios Pro 4": { oz: 7.1, grams: 200, size: "UK 8.5", source: "Adidas" },
+  "Adidas Adizero Boston 13": { oz: 9.3, grams: 264, size: "reviewer sample", source: "Tom's Guide" },
+  "Adidas Adizero Evo SL": { oz: 7.9, grams: 224, size: "US M9.5", source: "Tom's Guide" },
+  "Adidas Adizero SL2": { oz: 8.4, grams: 238, size: "UK 8.5", source: "Adidas" },
+  "HOKA Mach X 2": { oz: 9.2, grams: 260, size: "US M9", source: "RTINGS lab" },
+  "HOKA Skyward X": { oz: 11.3, grams: 320, size: "US M9", source: "SportsShoes" },
+  "Li-Ning Challenger 5": { label: "~200g", size: "US M8.5", source: "VJsneaker" },
+  "Mizuno Neo Vista 2": { oz: 9.4, grams: 266, size: "US M9", source: "RunRepeat" },
+  "Mizuno Neo Zen": { oz: 8.3, grams: 235, size: "27.0cm", source: "Mizuno" },
+  "On Cloudmonster 2": { oz: 10.6, grams: 300, size: "US M8.5", source: "On" },
+  "Puma Fast-R Nitro Elite 3": { oz: 6.0, grams: 170, size: "US M9", source: "Puma" },
+  "Puma Deviate Nitro 3": { oz: 8.8, grams: 250, size: "UK 8", source: "Puma" },
+  "Puma Deviate Nitro Elite 3": { oz: 6.8, grams: 194, size: "UK 8", source: "Puma" },
+  "Salomon Aero Glide 3": { oz: 9.0, grams: 255, size: "unspecified", source: "Salomon" },
+  "Saucony Guide 17": { oz: 9.4, grams: 269, size: "US M9", source: "Saucony" },
+  "Saucony Triumph 22": { oz: 10.1, grams: 286, size: "US M9", source: "Saucony/retailer" },
+  "Saucony Ride 17": { oz: 9.9, grams: 282, size: "US M9", source: "retailer" },
+  "Saucony Endorphin Speed 5": { oz: 8.9, grams: 252, size: "US M9", source: "REI" },
+  "Saucony Endorphin Pro 4": { oz: 7.5, grams: 212, size: "US M9", source: "Saucony" },
+};
+
 // Direct product-image CDN URLs (brand assets or official-store CDNs), verified to load.
 // Join key matches `shoe` name. Shoes without a confirmed image are intentionally absent
 // (361 Joker 2 Low) so getShoes() falls back to the placeholder.
@@ -2498,7 +2342,7 @@ export const shoeImages = {
   "Nike LeBron 20":                     "/shoes/nike-lebron-20.png",
   "Nike KD 14":                         "/shoes/nike-kd-14.png",
   "Nike Sabrina 2":                     "/shoes/nike-sabrina-2.png",
-  "Nike AE 1":                          "/shoes/nike-ae-1.png",
+  "Adidas AE 1":                        "/shoes/nike-ae-1.png",
   "Nike Shai 001":                      "/shoes/nike-shai-001.png",
   "Nike GT Cut 3":                      "/shoes/nike-gt-cut-3.png",
   "Nike GT Cut 4":                      "/shoes/nike-gt-cut-4.png",
@@ -2567,6 +2411,21 @@ export const shoeImages = {
   "Nike GT Hustle 2":                   "/shoes/nike-gt-hustle-2.png",
   "UA Curry Flow 10":                   "/shoes/ua-curry-flow-10.png",
   "ANTA Shock Wave 5 Pro":              "/shoes/anta-shock-wave-5-pro.png",
+  "Qiaodan Sharp Fang 2 Pro SE":        "/shoes/qiaodan-sharp-fang-2-pro-se.png",
+  "Jordan Heir":                        "/shoes/jordan-heir.png",
+  "Nike Kobe 5 Protro":                 "/shoes/nike-kobe-5-protro.png",
+  "Adidas Harden Vol 9":                "/shoes/adidas-harden-vol-9.png",
+  "Puma Stewie 3":                      "/shoes/puma-stewie-3.png",
+  "Nike Kyrie Low 5":                   "/shoes/nike-kyrie-low-5.png",
+  "Nike Kobe 10 Low":                   "/shoes/nike-kobe-10-low.png",
+  "Li-Ning Wade Shadow 6":              "/shoes/li-ning-wade-shadow-6.png",
+  "New Balance Fresh Foam BB v3":       "/shoes/new-balance-fresh-foam-bb-v3.png",
+  "SPO Player 1 Plus":                  "/shoes/spo-player-1-plus.png",
+  "ANTA GH3":                           "/shoes/anta-gh3.png",
+  "361 Degrees Light Up PRM":           "/shoes/361-degrees-light-up-prm.png",
+  "HOKA Cielo X1 3.0":                  "/shoes/hoka-cielo-x1-3-0.png",
+  "New Balance Fresh Foam X 1080 v14":  "/shoes/new-balance-fresh-foam-x-1080-v14.png",
+  "HOKA Rocket X 3":                    "/shoes/hoka-rocket-x-3.png",
 
   // === Running ===
   "HOKA Mach 6":                        "/shoes/hoka-mach-6.png",
@@ -2621,7 +2480,7 @@ export const shoeImagesOriginal = {
   "Nike LeBron 20":                     "https://www.kicksown.com/cdn/shop/files/70_77143853-8dac-4e3f-ae57-a606cf53f2c7.jpg?v=1756111666&width=960",
   "Nike KD 14":                         "https://images.stockx.com/360/Nike-KD-14-TB-White-Black/Images/Nike-KD-14-TB-White-Black/Lv2/img01.jpg?w=1000&q=60&dpr=1&updated_at=1652300021",
   "Nike Sabrina 2":                     "https://www.kicksown.com/cdn/shop/files/46_82d9d6e9-bc13-4555-9ab4-c5d671c08b16.jpg?v=1754995618&width=960",
-  "Nike AE 1":                          "https://www.solestop.com/cdn/shop/files/adidas-men-anthony-edwards-ae-1-low-3ssb-cloud-white-acid-orange-jr3915-120_1200x.jpg?v=1759315220",
+  "Adidas AE 1":                        "https://www.solestop.com/cdn/shop/files/adidas-men-anthony-edwards-ae-1-low-3ssb-cloud-white-acid-orange-jr3915-120_1200x.jpg?v=1759315220",
   "Nike Shai 001":                      "https://www.basketballemotion.com/imagesarticulos/338303/750/zapatillas-converse-shai-001-white-white-white-1.webp",
   "Nike GT Cut 3":                      "https://www.kicksown.com/cdn/shop/files/6_731595d2-8628-47dc-9b79-a1ec8b3c9fae.jpg?v=1754387252&width=960",
   "Nike GT Cut 4":                      "https://www.kicksown.com/cdn/shop/files/1_c0874a3a-715d-4aaf-aecb-5157d64f6b3b.jpg?v=1768816288&width=960",
@@ -2690,6 +2549,21 @@ export const shoeImagesOriginal = {
   "Nike GT Hustle 2":                   "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2023%2F09%2Fnike-air-zoom-gt-hustle-2-white-black-dj9405-102-release-info-001.jpg",
   "UA Curry Flow 10":                   "https://www.basketballstore.net/cdn/shop/products/3026273-602-under-armour-unicorn-and-butterfly-curry-flow-10-stephen-curry-scarpe-da-basket-nba-5.jpg?v=1681903964&width=1600",
   "ANTA Shock Wave 5 Pro":              "https://anta-outlet.eu/web/image/product.product/930/image_1024/%5B812421111S-5-42%5D%20ANTA%20Shock%20Wave%205.0%20Pro%20KAI%20PE%20Basketball%20Shoes%20%2842%29?unique=5cd455b",
+  "Qiaodan Sharp Fang 2 Pro SE":        "https://antosports.com/cdn/shop/files/4BD2C46D-DE47-452D-8C62-EC686A2A6102.jpg?v=1754760297&width=1200",
+  "Jordan Heir":                        "https://dks.scene7.com/is/image/GolfGalaxy/25JORABASKWMNSHRSRHSU_Purple_Orange?fit=constrain&fmt=png&hei=1200&op_sharpen=1&wid=1200",
+  "Nike Kobe 5 Protro":                 "https://cdn.shopify.com/s/files/1/0603/3031/1875/files/main-square_c9416676-f898-4c9b-b451-8e5b3b001a1d_3840x.jpg",
+  "Adidas Harden Vol 9":                "https://basket-center.fr/media/catalog/product/a/d/adidas_jr2504_1_footwear_photography_side_lateral_center_view_white.jpg",
+  "Puma Stewie 3":                      "https://images.puma.com/image/upload/f_auto%2Cq_auto%2Cb_rgb%3Afafafa%2Cw_600%2Ch_600/global/380068/08/sv01/fnd/PNA/fmt/png/STEWIE-x-TEAM-Stewie-3-Women%27s-Basketball-Shoes",
+  "Nike Kyrie Low 5":                   "https://image.goat.com/transform/v1/attachments/product_template_additional_pictures/images/079/488/496/original/1018588_01.jpg.jpeg?action=crop&width=750",
+  "Nike Kobe 10 Low":                   "https://cdn.shopify.com/s/files/1/0603/3031/1875/files/main-square_d8716058-ef2a-44fc-a54a-0aa7ecd55998_3840x.jpg",
+  "Li-Ning Wade Shadow 6":              "https://www.chinasportshop.com/media/catalog/product/cache/1/thumbnail/1000x/17f82f742ffe127f42dca9de82fb58b1/a/b/abpu029-8_3.jpg",
+  "New Balance Fresh Foam BB v3":       "https://dks.scene7.com/is/image/GolfGalaxy/25NWBAFRSHFMBBV3NMNS_White?fit=constrain&fmt=png&hei=1200&op_sharpen=1&wid=1200",
+  "SPO Player 1 Plus":                  "https://seriousplayeronly.com/cdn/shop/files/Image_20250103224725.jpg?v=1735915715&width=5000",
+  "ANTA GH3":                           "https://www.hibasketballshoes.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/2/8/2802458e-21f7-4880-9fde-734f5fadbdd4.jpeg",
+  "361 Degrees Light Up PRM":           "https://cdna.lystit.com/520/650/n/photos/kickscrew/49dbc634/361-degrees-white-Light-Up-Prm.jpeg",
+  "HOKA Cielo X1 3.0":                  "https://dks.scene7.com/is/image/GolfGalaxy/26HOKARUNNCLX130LBIVS_Alabaster_Yellow_Gold?fit=constrain&fmt=png&hei=1200&op_sharpen=1&wid=1200",
+  "New Balance Fresh Foam X 1080 v14":  "https://www.rei.com/media/d65ae721-7d76-4e4a-ae47-b45de2ffaaba.jpg?size=1600x1200",
+  "HOKA Rocket X 3":                    "https://img.runningwarehouse.com/watermark/rs.php?nw=1200&path=HRX3U1-1.jpg",
 
   // === Running ===
   "HOKA Mach 6":                        "https://dms.deckers.com/hoka/image/upload/f_auto,q_40,dpr_2/w_414/v1718141189/1147790-ECC_1.png",
@@ -2741,7 +2615,7 @@ export function getShoes(sportFilter = 'all') {
     if (sportFilter !== 'all' && review.sport !== sportFilter) continue;
     const key = review.shoe;
     if (!shoeMap[key]) {
-      shoeMap[key] = { name: review.shoe, brand: review.brand, sport: review.sport, price: shoePrices[review.shoe] || null, priceApprox: getAmazonUrl(review.shoe, review.sport).includes('/s?k='), imageUrl: shoeImages[review.shoe] || null, imageOriginalUrl: shoeImagesOriginal[review.shoe] || null, reviews: [], avgRatings: {}, avgConfidences: {} };
+      shoeMap[key] = { name: review.shoe, brand: review.brand, sport: review.sport, price: shoePrices[review.shoe] || null, priceApprox: getAmazonUrl(review.shoe, review.sport).includes('/s?k='), weight: shoeWeights[review.shoe] || null, imageUrl: shoeImages[review.shoe] || null, imageOriginalUrl: shoeImagesOriginal[review.shoe] || null, reviews: [], avgRatings: {}, avgConfidences: {} };
     }
     shoeMap[key].reviews.push(review);
   }

@@ -27,12 +27,17 @@ All data lives in `src/data/reviews.js` (hand-curated). No backend.
 - Groups `reviews` by `shoe` (filtered by `sport` unless `'all'`).
 - Per trait, computes a **confidence-weighted average**: weight = `CONFIDENCE_WEIGHTS` (`high 1.0`, `medium 0.5`, `low 0.2`); missing rating skipped.
 - Sets `avgRatings[cat]` (weighted mean, 1 decimal, `0` if no signal) and `avgConfidences[cat]` (bucketed from summed weight: ≥1.5 high, ≥0.7 medium, else low).
-- Returns shoe objects `{ name, brand, sport, price, reviews[], avgRatings, avgConfidences }`, sorted by review count desc.
+- Returns shoe objects `{ name, brand, sport, price, weight, reviews[], avgRatings, avgConfidences }`, sorted by review count desc.
 - Helpers: `confidenceFor(review, cat)`, `bucketAggregateConfidence(totalWeight)`, constant `CONFIDENCE_WEIGHTS`.
 
 ## `shoePrices` map
 
 - `shoe name → USD number`. Read into `shoe.price` (or `null`). Powers price display, the max-price slider, and price sorts.
+
+## `shoeWeights` map
+
+- `shoe name -> { oz, grams, size, source }` or `{ label, size, source }` when a source only gives a range/approximation. Read into `shoe.weight` (or `null`) and displayed in modal/detail headers and compare.
+- Only add source-backed weights from manufacturer, retailer, or lab-review pages. Shoe weight varies by sample size and colorway, so keep `size` and `source` accurate and leave missing entries absent rather than guessing.
 
 ## `shoeImages` map
 

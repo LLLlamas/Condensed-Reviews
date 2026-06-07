@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import ScoreBadge from './ScoreBadge';
-import { CATEGORY_LABELS, avgScore, ratingColor } from './constants';
+import { CATEGORY_LABELS, avgScore, ratingColor, formatPrice, formatWeight } from './constants';
 
 export default function CompareScreen({ allShoes, compareA, compareB, onSetCompare, onOpen }) {
   const shoeA = allShoes.find(s => s.name === compareA);
@@ -18,7 +18,7 @@ export default function CompareScreen({ allShoes, compareA, compareB, onSetCompa
           <label className="filters__label">Shoe A</label>
           <select className="filters__select" value={compareA || ''} onChange={e => onSetCompare('a', e.target.value || null)}>
             <option value="">— pick a shoe —</option>
-            {allShoes.map(s => <option key={s.name} value={s.name}>{s.brand} · {s.name}{s.price ? ` · $${s.price}` : ''}</option>)}
+            {allShoes.map(s => <option key={s.name} value={s.name}>{s.brand} - {s.name}{s.price ? ` - ${formatPrice(s.price, s.priceApprox)}` : ''}{s.weight ? ` - ${formatWeight(s.weight)}` : ''}</option>)}
           </select>
         </div>
         <div className="compare-vs-label">vs</div>
@@ -26,7 +26,7 @@ export default function CompareScreen({ allShoes, compareA, compareB, onSetCompa
           <label className="filters__label">Shoe B</label>
           <select className="filters__select" value={compareB || ''} onChange={e => onSetCompare('b', e.target.value || null)}>
             <option value="">— pick a shoe —</option>
-            {allShoes.map(s => <option key={s.name} value={s.name}>{s.brand} · {s.name}{s.price ? ` · $${s.price}` : ''}</option>)}
+            {allShoes.map(s => <option key={s.name} value={s.name}>{s.brand} - {s.name}{s.price ? ` - ${formatPrice(s.price, s.priceApprox)}` : ''}{s.weight ? ` - ${formatWeight(s.weight)}` : ''}</option>)}
           </select>
         </div>
       </div>
@@ -35,6 +35,11 @@ export default function CompareScreen({ allShoes, compareA, compareB, onSetCompa
           <div className="compare-heads">
             {[shoeA, shoeB].map((shoe, si) => {
               const score = avgScore(shoe);
+              const compareMeta = [
+                shoe.price ? formatPrice(shoe.price, shoe.priceApprox) : null,
+                shoe.weight ? formatWeight(shoe.weight) : null,
+                `${shoe.reviews.length} reviews`,
+              ].filter(Boolean).join(' / ');
               return (
                 <div key={shoe.name} className={`compare-head compare-head--${si === 0 ? 'a' : 'b'}`}>
                   <div className="shoe-card__brand">{shoe.brand}</div>
@@ -44,7 +49,7 @@ export default function CompareScreen({ allShoes, compareA, compareB, onSetCompa
                     <ScoreBadge score={score} />
                   </div>
                   <div className="compare-head__meta">
-                    {shoe.price ? `$${shoe.price} · ` : ''}{shoe.reviews.length} reviews
+                    {compareMeta}
                   </div>
                   <button className="compare-head__open" onClick={() => onOpen(shoe.name)}>All reviews →</button>
                 </div>

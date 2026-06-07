@@ -350,6 +350,7 @@
   font-family: var(--font-body);
   font-size: 0.72rem;
   color: var(--outline);
+  line-height: 1.35;
 }
 
 .shoe-card__amazon {
@@ -1731,6 +1732,14 @@
   font-weight: 600;
   color: var(--on-surface-variant);
   margin-left: 0.25rem;
+}
+
+.modal__weight {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--outline);
+  white-space: nowrap;
 }
 
 .modal__header-actions {

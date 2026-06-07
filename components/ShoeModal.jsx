@@ -6,7 +6,7 @@ import RatingBar from './RatingBar';
 import ReviewCard from './ReviewCard';
 import ScoreBadge from './ScoreBadge';
 import { getAmazonUrl, isAmazonLink } from '../src/data/reviews';
-import { CATEGORY_LABELS, avgScore, buildHighlights, ratingColor, formatPrice } from './constants';
+import { CATEGORY_LABELS, avgScore, buildHighlights, ratingColor, formatPrice, formatWeight } from './constants';
 
 export default function ShoeModal({ shoe, sortBy, onClose }) {
   const score = avgScore(shoe);
@@ -51,6 +51,7 @@ export default function ShoeModal({ shoe, sortBy, onClose }) {
               <div className="modal__score-row">
                 <span className="modal__score" style={{ color: ratingColor(score) }}>{score.toFixed(1)}</span>
                 <ScoreBadge score={score} />
+                {shoe.weight && <span className="modal__weight" title={`Source: ${shoe.weight.source || 'verified source'}${shoe.weight.size ? `, ${shoe.weight.size}` : ''}`}>{formatWeight(shoe.weight)}</span>}
                 {shoe.price && <span className="modal__price">{formatPrice(shoe.price, shoe.priceApprox)}</span>}
               </div>
             </div>

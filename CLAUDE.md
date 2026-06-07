@@ -40,8 +40,8 @@ Scripts: `npm run dev` · `build` · `preview` (= `next start`) · `lint` · `sc
 | `scripts/flip-image.mjs` | Flip named normalized images horizontally in place to fix toe-right → toe-left (`npm run flip:image <slug>...`) |
 | `public/shoes/` | Normalized, self-hosted shoe images (output of `normalize:images`) |
 | `.claude/agents/shoe-image-fixer.md` | Subagent: sources + fixes clean, aligned shoe images in the `shoeImages` map |
-| `.claude/agents/review-collector.md` | Subagent: collects new Reddit reviews via WebSearch + PullPush (reddit.com is blocked in-env), returns schema-correct `reviews[]` + `shoePrices`/`amazonLinks` entries to merge. Also does the price/affiliate-link research (no separate price agent) |
-| `.claude/agents/review-auditor.md` | Subagent: READ-ONLY accuracy check — re-fetches each new review's source via PullPush and verifies shoe/author/date/content fidelity; returns corrections (never edits) |
+| `.claude/agents/review-collector.md` | Subagent: collects new Reddit reviews via **WebSearch only** (reddit.com is blocked in-env; PullPush is banned — it caused fabrications), returns schema-correct `reviews[]` + `shoePrices`/`amazonLinks` entries to merge. Also does the price/affiliate-link research (no separate price agent) |
+| `.claude/agents/review-auditor.md` | Subagent: READ-ONLY accuracy check — verifies each new review's source via WebSearch; returns corrections (never edits). **Do not use PullPush for verification.** |
 
 ## Conventions (must not break)
 
@@ -60,25 +60,26 @@ Scripts: `npm run dev` · `build` · `preview` (= `next start`) · `lint` · `sc
 A June 2026 full-dataset audit found fabricated reviews that had been in production: invented post ids, non-existent authors, and real post URLs with completely different content than the entry claimed. Every review must be traceable to a real Reddit post that was actually fetched and read.
 
 **Hard rules:**
-- **No fabricated `redditUrl`** — every URL must be a real `/comments/<id>/…` post you fetched. Never use a search URL (`/search/?q=…`) as a `redditUrl`.
-- **No invented authors** — if the author doesn't appear in PullPush results, the entry is hallucinated.
-- **No content invention** — `fullText`/`summary` must reflect what the real source actually says, not a plausible-sounding alternative. Confirm by reading the actual post body.
-- **No entry when source is missing** — if PullPush and WebSearch both find nothing for a shoe, skip it and say so. A missing entry is fine; a fabricated one is a public fraud (clickable affiliate links, "View on Reddit" buttons).
-- **2026 PullPush gap**: post IDs starting `1s…` (March–April 2026) are often not yet indexed by PullPush; `{"data":[]}` is a coverage gap, not necessarily a fabrication. Fall back to WebSearch. If that also finds nothing, skip the entry.
-- Always run the `review-auditor` after a collection batch. It re-fetches sources independently and catches mismatches the collector missed.
+- **No fabricated `redditUrl`** — every URL must be a real `/comments/<id>/…` post you found in WebSearch results. Never use a search URL (`/search/?q=…`) as a `redditUrl`. Never construct or guess a post ID.
+- **No invented authors** — if the author name and post are not visible in WebSearch results, do not add the entry.
+- **No content invention** — `fullText`/`summary` must reflect what the real source actually says, not a plausible-sounding alternative. Confirm by reading the actual post snippet in WebSearch results.
+- **No entry when source is missing** — if WebSearch finds nothing for a shoe, skip it and say so. A missing entry is fine; a fabricated one is a public fraud (clickable affiliate links, "View on Reddit" buttons).
+- **`1s…` ID zone = high-risk fabrication zone**: Post IDs in the `1s` range correspond to May+ 2026 (confirmed via base36 analysis against TakoOne's verified April 30, 2026 post `1kbsgjz`). Any entry claiming a March–April 2026 date with a `1s` post ID has an impossible date — flag as suspect and verify via WebSearch before trusting. A confirmed example: `1s7thno` was a fabricated URL (removed June 2026).
+- **DO NOT USE PullPush** (`api.pullpush.io`) — it was the root cause of fabricated entries entering the dataset. Use WebSearch exclusively.
+- Always run the `review-auditor` after a collection batch. It verifies sources independently via WebSearch and catches mismatches the collector missed.
 
 ## Growing the dataset (live workflow)
 
 > **Full runbook:** [shoe-review-image-collection-process.md](shoe-review-image-collection-process.md) — self-contained handoff (schema, PullPush usage, dedup rules, image pipeline, pitfalls, current seams) so any agent can continue cold. The summary below mirrors it.
 
-`reddit.com`'s JSON API and direct `WebFetch` are **blocked in this environment**, and the `scripts/` node pipeline (`scrape:backfill`/`scrape:daily`) needs Reddit API creds in `.env` (not configured). So growth happens through a **three-agent pipeline** that reads posts via the **PullPush archive API** (`api.pullpush.io`, not blocked) + `WebSearch`:
+`reddit.com`'s JSON API and direct `WebFetch` are **blocked in this environment**, and the `scripts/` node pipeline (`scrape:backfill`/`scrape:daily`) needs Reddit API creds in `.env` (not configured). **PullPush (`api.pullpush.io`) is BANNED** — it caused fabricated entries in the dataset. Growth happens via **WebSearch only**, searching `site:reddit.com/r/BBallShoes` and the running subs directly:
 
 1. **Build exclusion lists** from the current data (so nothing repeats):
    - shoes: `node -e "import('./src/data/reviews.js').then(m=>console.log([...new Set(m.reviews.map(r=>r.shoe))].sort().join(' | ')))"`
    - used post-IDs: `node -e "import('./src/data/reviews.js').then(m=>console.log([...new Set(m.reviews.map(r=>(r.redditUrl.match(/comments\/([a-z0-9]+)/)||[])[1]).filter(Boolean))].sort().join(', ')))"`
 2. **`review-collector`** (one or several in parallel) — pass it both exclusion lists. For a big sweep, run **partitioned** collectors so they don't overlap each other: e.g. (a) basketball mainstream US brands, (b) running across all run subs, (c) non-English brands (Li-Ning/ANTA/361/Xtep/Peak) + multi-shoe **rotation** posts. Each returns paste-ready `reviews[]` / `shoePrices` / `amazonLinks` blocks (it does NOT edit files), so parallel is safe.
 3. **Merge + dedup** into `src/data/reviews.js`. Dedup key is **`shoe` name + post-ID**, never `redditUrl` alone (rotation posts legitimately reuse one URL across shoes). Never split one shoe across two names (e.g. "Giannis Freak 5" → canonical "Nike Zoom Freak 5"; keep Jordan-line under brand "Jordan"). Verify: `node -e "import('./src/data/reviews.js').then(m=>{const rv=m.reviews;const p=new Set(),d=[];for(const r of rv){const k=r.shoe+'|'+r.redditUrl;p.has(k)?d.push(k):p.add(k)}console.log(m.getShoes().length,'shoes',rv.length,'reviews; dup(shoe+url):',d.length)})"`
-4. **`review-auditor`** (READ-ONLY) — re-fetches each new entry's source via PullPush, verifies shoe/author/date/content fidelity, returns corrections. Apply them.
+4. **`review-auditor`** (READ-ONLY) — verifies each new entry's source via WebSearch (not PullPush), confirms shoe/author/date/content fidelity, returns corrections. Apply them.
 5. **`shoe-image-fixer`** for net-new shoes → `npm run normalize:images` (downloads, trims, baseline-aligns, repoints `shoeImages` to `/shoes/*.png`; re-run if it hits the Windows file-lock `UNKNOWN: open reviews.js`) → **`npm run verify:images` gate: eyeball the `.image-audit/` sheets, `npm run flip:image <slug>` any toe-right ones, then `npm run verify:images -- --ack`.** The auto-orient is not trustworthy — this visual gate is mandatory.
 6. **Lint + commit**: `npm run lint`, then commit. The site reads `src/data/reviews.js` directly.
 

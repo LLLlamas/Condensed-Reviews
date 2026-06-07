@@ -12,6 +12,10 @@ export default function ShoeCard({ shoe, onOpen, onCompare, sortBy, rank }) {
   const ratingClass = score >= 8.5 ? 'badge--elite' : score >= 7.0 ? 'badge--solid' : 'badge--mediocre';
   const shoeUrl = getAmazonUrl(shoe.name, shoe.sport);
   const isAmazon = isAmazonLink(shoeUrl);
+  const cardMeta = [
+    `${shoe.reviews.length} review${shoe.reviews.length !== 1 ? 's' : ''}`,
+    shoe.price ? formatPrice(shoe.price, shoe.priceApprox) : null,
+  ].filter(Boolean);
 
   return (
     <motion.div
@@ -51,8 +55,7 @@ export default function ShoeCard({ shoe, onOpen, onCompare, sortBy, rank }) {
 
       <div className="shoe-card__footer">
         <span className="shoe-card__review-count">
-          {shoe.reviews.length} review{shoe.reviews.length !== 1 ? 's' : ''}
-          {shoe.price ? ` · ${formatPrice(shoe.price, shoe.priceApprox)}` : ''}
+          {cardMeta.join(' / ')}
         </span>
         <div className="shoe-card__footer-actions">
           <a
